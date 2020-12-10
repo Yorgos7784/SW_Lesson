@@ -1,0 +1,10 @@
+C:\Users\KB\Desktop\Java\Java_Lesson\c#\VerySimpleExample\VerySimpleExample\bin\Release\VerySimpleExample.exe.config
+C:\Users\KB\Desktop\Java\Java_Lesson\c#\VerySimpleExample\VerySimpleExample\bin\Release\VerySimpleExample.exe
+C:\Users\KB\Desktop\Java\Java_Lesson\c#\VerySimpleExample\VerySimpleExample\bin\Release\VerySimpleExample.pdb
+C:\Users\KB\Desktop\Java\Java_Lesson\c#\VerySimpleExample\VerySimpleExample\obj\Release\VerySimpleExample.csprojAssemblyReference.cache
+C:\Users\KB\Desktop\Java\Java_Lesson\c#\VerySimpleExample\VerySimpleExample\obj\Release\VerySimpleExample.Form1.resources
+C:\Users\KB\Desktop\Java\Java_Lesson\c#\VerySimpleExample\VerySimpleExample\obj\Release\VerySimpleExample.Properties.Resources.resources
+C:\Users\KB\Desktop\Java\Java_Lesson\c#\VerySimpleExample\VerySimpleExample\obj\Release\VerySimpleExample.csproj.GenerateResource.cache
+C:\Users\KB\Desktop\Java\Java_Lesson\c#\VerySimpleExample\VerySimpleExample\obj\Release\VerySimpleExample.csproj.CoreCompileInputs.cache
+C:\Users\KB\Desktop\Java\Java_Lesson\c#\VerySimpleExample\VerySimpleExample\obj\Release\VerySimpleExample.exe
+C:\Users\KB\Desktop\Java\Java_Lesson\c#\VerySimpleExample\VerySimpleExample\obj\Release\VerySimpleExample.pdb
