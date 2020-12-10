@@ -1,0 +1,10 @@
+C:\Users\KB\Desktop\Java\Java_Lesson\c#\sample_login_form\sample_login_form\bin\Debug\sample_login_form.exe.config
+C:\Users\KB\Desktop\Java\Java_Lesson\c#\sample_login_form\sample_login_form\bin\Debug\sample_login_form.exe
+C:\Users\KB\Desktop\Java\Java_Lesson\c#\sample_login_form\sample_login_form\bin\Debug\sample_login_form.pdb
+C:\Users\KB\Desktop\Java\Java_Lesson\c#\sample_login_form\sample_login_form\obj\Debug\sample_login_form.csprojAssemblyReference.cache
+C:\Users\KB\Desktop\Java\Java_Lesson\c#\sample_login_form\sample_login_form\obj\Debug\sample_login_form.Form1.resources
+C:\Users\KB\Desktop\Java\Java_Lesson\c#\sample_login_form\sample_login_form\obj\Debug\sample_login_form.Properties.Resources.resources
+C:\Users\KB\Desktop\Java\Java_Lesson\c#\sample_login_form\sample_login_form\obj\Debug\sample_login_form.csproj.GenerateResource.cache
+C:\Users\KB\Desktop\Java\Java_Lesson\c#\sample_login_form\sample_login_form\obj\Debug\sample_login_form.csproj.CoreCompileInputs.cache
+C:\Users\KB\Desktop\Java\Java_Lesson\c#\sample_login_form\sample_login_form\obj\Debug\sample_login_form.exe
+C:\Users\KB\Desktop\Java\Java_Lesson\c#\sample_login_form\sample_login_form\obj\Debug\sample_login_form.pdb
