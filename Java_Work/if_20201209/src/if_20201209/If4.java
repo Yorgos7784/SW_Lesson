@@ -12,15 +12,20 @@ public class If4 {
 
 		if (100 >= num && num >= 90) {
 			System.out.println("A학점");
-		} else if (90 > num && num >= 80) {
+		} 
+		else if (90 > num && num >= 80) {
 			System.out.println("B학점");
-		} else if (80 > num && num >= 70) {
+		} 
+		else if (80 > num && num >= 70) {
 			System.out.println("C학점");
-		} else if (70 > num && num >= 60) {
+		} 
+		else if (70 > num && num >= 60) {
 			System.out.println("D학점");
-		} else if (60 > num && num >= 50) {
+		} 
+		else if (60 > num && num >= 50) {
 			System.out.println("E학점");
-		} else {
+		} 
+		else {
 			System.out.println("F학점");
 		}
 		s.close();
