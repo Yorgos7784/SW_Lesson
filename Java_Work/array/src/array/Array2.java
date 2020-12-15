@@ -33,7 +33,7 @@ public class Array2 {
 		int cnum = 0;
 		
 		for(int i=0; i<sr.length;i++) {
-			cnum += sr[i].length();
+			cnum += sr[i].length(); // String 인스턴스의 length 메소드 순차적 호출!
 		}
 		System.out.println("총 문자의 수 : " + cnum);
 	}

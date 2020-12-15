@@ -19,16 +19,15 @@ public class Loop_practice6 {
 		System.out.println("1. 파일 생성 및 쓰기");
 		System.out.println("2. 파일 읽기");
 		System.out.println("3. 종료");
-		
-		
-		while(true) {
-			
+
+		while (true) {
+
 			System.out.println("-------------------------");
 			System.out.print("메뉴를 선택하세요 : ");
 			int num1 = s.nextInt();
 			System.out.println("-------------------------");
-			
-			if(num1 == 1) {
+
+			if (num1 == 1) {
 				System.out.println("1. 파일 생성 및 쓰기");
 				System.out.println("파일명 : test1.txt");
 				System.out.println("파일 내용 : 파일 생성 및 쓰기 예제입니다.");
@@ -36,20 +35,16 @@ public class Loop_practice6 {
 				System.out.println("파일명 : test1.txt");
 				BufferedOutputStream bs;
 				try {
-					bs = new BufferedOutputStream(
-							new FileOutputStream("d:/test1.txt"));
+					bs = new BufferedOutputStream(new FileOutputStream("d:/test1.txt"));
 					String str = "파일 생성 및 쓰기 예제입니다.";
 					bs.write(str.getBytes());
 					bs.close();
-				}
-				catch(FileNotFoundException e) {
+				} catch (FileNotFoundException e) {
+					e.printStackTrace();
+				} catch (IOException e) {
 					e.printStackTrace();
 				}
-				catch(IOException e) {
-					e.printStackTrace();
-				}
-			}
-			else if(num1 == 2) {
+			} else if (num1 == 2) {
 				System.out.println("2. 파일 읽기");
 				System.out.println("파일명 : test1.txt");
 				System.out.println("읽은 내용 : 파일 생성 및 쓰기 예제입니다.");
@@ -57,30 +52,28 @@ public class Loop_practice6 {
 				System.out.println("-------------------------");
 				BufferedReader br;
 				try {
-					br = new BufferedReader(
-							new FileReader(new File("d:/test1.txt")));
+					br = new BufferedReader(new FileReader(new File("d:/test1.txt")));
 					String str = br.readLine();
 					System.out.println("---파일에서 내용 읽어오기---");
 					System.out.println(str);
 					br.close();
-				}
+				} 
 				catch (FileNotFoundException e) {
 					e.printStackTrace();
-				}
+				} 
 				catch (IOException e) {
 					e.printStackTrace();
 				}
-			}
-			else if(num1 == 3) {
+			} 
+			else if (num1 == 3) {
 				System.out.println("시스템을 종료합니다.");
 				System.exit(0);
-			}
+			} 
 			else {
 				System.out.println("잘못 선택하였습니다.");
 				continue;
 			}
 		}
-		
 	}
 
 }
