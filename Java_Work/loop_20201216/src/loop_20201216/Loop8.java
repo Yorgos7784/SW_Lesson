@@ -1,18 +1,18 @@
 package loop_20201216;
 
-public class Loop7 {
+public class Loop8 {
 
 	public static void main(String[] args) {
 
 		int hap = 0;
-		for (int i = 0; i < 10; i++) {
-			if ((i + 1) % 3 == 0) {
-				continue; // => 반복문 처음으로 이동 (하위 단계들 실행 x)
+		for (int i = 1; i <= 10; i++) {
+			if (i % 3 == 0) {
+				continue; 
 			}
 
-			if (i + 1 == 5) {
+			if (i == 5) {
 				System.out.println("탈출");
-				break; // => 반복문 탈출
+				break; 
 			}
 			hap += i + 1;
 			System.out.println("i + 1 = " + (i + 1));
