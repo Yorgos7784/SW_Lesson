@@ -109,22 +109,6 @@ public class Array_practice {
 				}
 			}
 			System.out.print(arr[i] + " ");
-		}*/
-				
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-
-	}
+		}*/}
 
 }
