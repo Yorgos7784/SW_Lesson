@@ -1,6 +1,6 @@
 package loop_20201216;
 
-public class Loop_pracitce5 {
+public class Loop_practice5 {
 
 	public static void main(String[] args) {
 		System.out.println("------------------");
