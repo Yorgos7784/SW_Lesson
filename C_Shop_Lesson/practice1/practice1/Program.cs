@@ -33,9 +33,11 @@ namespace practice1
             Console.WriteLine(min + "분" + sec + "초");*/
 
             // 3번
-            /*for (int i = 0; i < 5; i++)
+            /*Console.Write("값을 입력하세요 : ");
+            int num = int.Parse(Console.ReadLine());
+            for (int i = 0; i < num; i++)
             {
-                for (int j = i; j < 4; j++)
+                for (int j = i; j < (num-1); j++)
                 {
                     Console.Write(" ");
                 }
@@ -95,9 +97,9 @@ namespace practice1
             Console.Write("두번째 값을 입력하세요(y 좌표) : ");
             int y = int.Parse(Console.ReadLine());
 
-            if (x >= 0)
+            if (x > 0)
             {
-                if (y >= 0)
+                if (y > 0)
                 {
                     Console.WriteLine("1");
                 }
@@ -105,10 +107,14 @@ namespace practice1
                 {
                     Console.WriteLine("4");
                 }
+                else if (y == 0)
+                {
+                    Console.WriteLine("X선 위에 있습니다.");
+                }
             }
             else if (x < 0)
             {
-                if (y >= 0)
+                if (y > 0)
                 {
                     Console.WriteLine("2");
                 }
@@ -116,9 +122,32 @@ namespace practice1
                 {
                     Console.WriteLine("3");
                 }
+                else if (y == 0)
+                {
+                    Console.WriteLine("X선 위에 있습니다.");
+                }
+            }
+            else if (x == 0)
+            {
+                if(y > 0)
+                {
+                    Console.WriteLine("Y선 위에 있습니다.");
+                }
+                else if (y < 0)
+                {
+                    Console.WriteLine("Y선 위에 있습니다.");
+                }
+                else if (y == 0)
+                {
+                    Console.WriteLine("0");
+                }
             }*/
+            
 
             // 7번
+
+
+
                       
             // 8번
             Console.Write("수를 입력하세요 : ");

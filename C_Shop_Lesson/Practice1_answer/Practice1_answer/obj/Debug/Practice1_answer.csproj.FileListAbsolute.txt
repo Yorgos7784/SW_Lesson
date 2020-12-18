@@ -1,0 +1,7 @@
+C:\Users\KB\Desktop\SW_Lesson\C_Shop_Lesson\Practice1_answer\Practice1_answer\bin\Debug\Practice1_answer.exe.config
+C:\Users\KB\Desktop\SW_Lesson\C_Shop_Lesson\Practice1_answer\Practice1_answer\bin\Debug\Practice1_answer.exe
+C:\Users\KB\Desktop\SW_Lesson\C_Shop_Lesson\Practice1_answer\Practice1_answer\bin\Debug\Practice1_answer.pdb
+C:\Users\KB\Desktop\SW_Lesson\C_Shop_Lesson\Practice1_answer\Practice1_answer\obj\Debug\Practice1_answer.csprojAssemblyReference.cache
+C:\Users\KB\Desktop\SW_Lesson\C_Shop_Lesson\Practice1_answer\Practice1_answer\obj\Debug\Practice1_answer.csproj.CoreCompileInputs.cache
+C:\Users\KB\Desktop\SW_Lesson\C_Shop_Lesson\Practice1_answer\Practice1_answer\obj\Debug\Practice1_answer.exe
+C:\Users\KB\Desktop\SW_Lesson\C_Shop_Lesson\Practice1_answer\Practice1_answer\obj\Debug\Practice1_answer.pdb

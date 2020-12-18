@@ -1,0 +1,7 @@
+C:\Users\KB\Desktop\SW_Lesson\C_Shop_Lesson\Practice1_answer\Practice1_algorithm\bin\Debug\Practice1_algorithm.exe.config
+C:\Users\KB\Desktop\SW_Lesson\C_Shop_Lesson\Practice1_answer\Practice1_algorithm\bin\Debug\Practice1_algorithm.exe
+C:\Users\KB\Desktop\SW_Lesson\C_Shop_Lesson\Practice1_answer\Practice1_algorithm\bin\Debug\Practice1_algorithm.pdb
+C:\Users\KB\Desktop\SW_Lesson\C_Shop_Lesson\Practice1_answer\Practice1_algorithm\obj\Debug\Practice1_algorithm.csproj.CoreCompileInputs.cache
+C:\Users\KB\Desktop\SW_Lesson\C_Shop_Lesson\Practice1_answer\Practice1_algorithm\obj\Debug\Practice1_algorithm.exe
+C:\Users\KB\Desktop\SW_Lesson\C_Shop_Lesson\Practice1_answer\Practice1_algorithm\obj\Debug\Practice1_algorithm.pdb
+C:\Users\KB\Desktop\SW_Lesson\C_Shop_Lesson\Practice1_answer\Practice1_algorithm\obj\Debug\Practice1_algorithm.csprojAssemblyReference.cache
