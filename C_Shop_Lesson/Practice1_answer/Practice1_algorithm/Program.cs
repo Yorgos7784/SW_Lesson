@@ -134,9 +134,11 @@ namespace Practice1_algorithm
                 end = end + number + count;
                 start = end;
             }*/
-
-            Console.WriteLine("-------------------------------------------------------------------------");
-            Console.WriteLine("7번 문제 : Centered Hexagonal Number");
+            
+            
+            
+            /*Console.WriteLine("-------------------------------------------------------------------------");
+            Console.WriteLine("8번 문제 1번째 해법 : Centered Hexagonal Number");
             Console.Write("숫자를 입력하세요 : ");
             int hexnum = int.Parse(Console.ReadLine());
             int max = 1; // 각 벌집의 최대값
@@ -144,18 +146,45 @@ namespace Practice1_algorithm
             while (true)
             {
                 max = max + (6 * counter);
-                if(max<hexnum)
+                if(max < hexnum)
                 {
                     counter++;
                     continue;
                 }
                 else
-                    Console.WriteLine($"{hexnum}은  {counter+1}번째 벌짐에 속함");
+                    Console.WriteLine($"{hexnum}은(는) {counter+1}번째 벌집에 속함");
                 break;
             }
 
+            Console.WriteLine("-------------------------------------------------------------------------");
+            Console.WriteLine("8번 문제 2번째 해법 : Centered Hexagonal Number");
+            Console.Write("숫자를 입력하세요 : ");
+            int hexnum2 = int.Parse(Console.ReadLine());
+            // 패턴 정리
+            // 1        1번 벌집 : 
+            // 2~7      2번 벌집 : 6
+            // 8~19     3번 벌집 : 12      => 각 벌집 최대값간의 차이
+            // 20~37    4번 벌집 : 18
+            // 38~61    5번 벌집 : 24
 
-
+            if (hexnum2 == 1)
+                Console.WriteLine("1번 벌집");
+            else if(hexnum2 <= 7) // hexnum2가 2부터 7인 경우
+                Console.WriteLine("2번 벌집");
+            else
+            {
+                int counter2 = 1; // 임의의 카운트 변수
+                int sub = 6; // 뺄셈을 할 변수
+                while (hexnum2>0)
+                {
+                    hexnum2 -= sub;
+                    sub += 6;
+                    counter2++;
+                    if (hexnum2 <= 1)
+                        break;
+                }
+                Console.WriteLine($"{counter2}번째 벌집에 속함");
+            }*/
 
 
         }
