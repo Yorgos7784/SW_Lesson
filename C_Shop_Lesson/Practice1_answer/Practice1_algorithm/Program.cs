@@ -99,7 +99,7 @@ namespace Practice1_algorithm
 
             if (num1 > 0 && num2 > 0)
                 Console.WriteLine("1");
-            else if (num1 < 0 && num2 < 0)
+            else if (num1 < 0 && num2 > 0)
                 Console.WriteLine("2");
             else if (num1 < 0 && num2 < 0)
                 Console.WriteLine("3");
