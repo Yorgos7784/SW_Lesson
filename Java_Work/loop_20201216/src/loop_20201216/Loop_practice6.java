@@ -32,7 +32,6 @@ public class Loop_practice6 {
 				System.out.println("파일명 : test1.txt");
 				System.out.println("파일 내용 : 파일 생성 및 쓰기 예제입니다.");
 				System.out.println("파일 생성이 성공하였습니다.");
-				System.out.println("파일명 : test1.txt");
 				BufferedOutputStream bs;
 				try {
 					bs = new BufferedOutputStream(new FileOutputStream("d:/test1.txt"));
@@ -67,6 +66,7 @@ public class Loop_practice6 {
 			} 
 			else if (num1 == 3) {
 				System.out.println("시스템을 종료합니다.");
+				s.close();
 				System.exit(0);
 			} 
 			else {
