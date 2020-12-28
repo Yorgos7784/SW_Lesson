@@ -20,7 +20,6 @@
     <fullyQualifiedTypeName name="Student"/>
     <fullyQualifiedTypeName name="sun.jvm.hotspot.ui.action.ShowAction"/>
     <fullyQualifiedTypeName name="car_class_practice.Carinfo"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.io.BufferedOutputStream"/>
     <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
     <fullyQualifiedTypeName name="java.util.RandomAccess"/>
@@ -31,4 +30,6 @@
     <fullyQualifiedTypeName name="car_practice.Carinfo"/>
     <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
     <fullyQualifiedTypeName name="class_practice.Arrsumave"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
 </qualifiedTypeNameHistroy>

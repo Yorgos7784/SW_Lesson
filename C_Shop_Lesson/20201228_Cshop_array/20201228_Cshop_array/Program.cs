@@ -11,7 +11,7 @@ namespace _20201228_Cshop_array
         static void Main(string[] args)
         {
             // 1, 2번 문제
-            /*Console.Write("숫자를 입력하세요(배열 크기) : ");
+            Console.Write("숫자를 입력하세요(배열 크기) : ");
             int arsize = int.Parse(Console.ReadLine());
             int[] arr = new int[arsize];
             Console.Write("수를 3개 입력하세요 : ");
@@ -23,30 +23,22 @@ namespace _20201228_Cshop_array
             int min = arr[0];
             int maxnum = 0;
             int minnum = 0;
-            for (int i = 0; i < arr.Length; i++)
+            for (int i = 0; i < arsize; i++)
             {
                 if (max < arr[i])
                 {
                     max = arr[i];
                     maxnum = i + 1;
                 }
-                else if (max == arr[0])
-                {
-                    maxnum = 1;
-                }
                 if (min > arr[i])
                 {
                     min = arr[i];
                     minnum = i + 1;
                 }
-                else if (min == arr[0])
-                {
-                    minnum = 1;
-                }
-
+               
             }
             Console.WriteLine($"최대값 : {max}({maxnum}번째)");
-            Console.WriteLine($"최소값 : {min}({minnum}번째)");*/
+            Console.WriteLine($"최소값 : {min}({minnum}번째)");
 
             // 3번
             Console.Write("수를 3개 입력하세요 : ");
