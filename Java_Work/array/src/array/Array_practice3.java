@@ -22,8 +22,8 @@ public class Array_practice3 {
 					count++;
 				}
 			}
-			//System.out.println(i + "의 갯수 : " + count);
-			System.out.println(count);
+			System.out.println(i + "의 갯수 : " + count);
+			
 		}
 
 	}

@@ -20,7 +20,7 @@ public class Array_practice2 {
 		int min = arr[0];
 		int maxnum = 0;
 		int minnum = 0;
-		for(int i = 0; i < arr.length; i++) {
+		 for(int i = 0; i < arr.length; i++) {
 			if(max < arr[i]) {
 				max = arr[i];
 				maxnum = i+1;
@@ -54,22 +54,26 @@ public class Array_practice2 {
 		// 배열에 값을 다 입력한 뒤에 최대, 최소값을 초기화
 		int max = numberList[0];
 		int min = numberList[0];
+		int maxnum = 1;
+		int minnum = 1;
 		for (int i = 0; i < numberList.length; i++) {
 			if(numberList[i] > max) {
 				max = numberList[i];
+				maxnum = i + 1;
 			}
 			if(numberList[i] < min) {
 				min = numberList[i];
+				minnum = i + 1;
 			}
 		}
-		System.out.println("최소값 : " + min);
-		System.out.println("최대값 : " + max);
+		System.out.println("최소값 : " + min + " (" + minnum + "번째)");
+		System.out.println("최대값 : " + max + " (" + maxnum + "번째)");
 		
 		// 두번째 방법
-		Arrays.sort(numberList);
-		System.out.println("최소값 : " + numberList[0]);
-		System.out.println("최대값 : " + numberList[numberList.length-1]);
-		
+//		Arrays.sort(numberList);
+//		System.out.println("최소값 : " + numberList[0]);
+//		System.out.println("최대값 : " + numberList[numberList.length-1]);
+//		
 		
 		
 		s.close();

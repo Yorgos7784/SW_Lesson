@@ -23,7 +23,6 @@
     <fullyQualifiedTypeName name="java.io.BufferedOutputStream"/>
     <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
     <fullyQualifiedTypeName name="java.util.RandomAccess"/>
-    <fullyQualifiedTypeName name="java.util.Random"/>
     <fullyQualifiedTypeName name="java.util.StringTokenizer"/>
     <fullyQualifiedTypeName name="class_tutorial1.Calculator"/>
     <fullyQualifiedTypeName name="class_tutorial1.Calculator3"/>
@@ -32,4 +31,6 @@
     <fullyQualifiedTypeName name="class_practice.Arrsumave"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
+    <fullyQualifiedTypeName name="class_practice.NameCreator"/>
 </qualifiedTypeNameHistroy>
