@@ -20,7 +20,11 @@ public class Method_practice6 {
 		int arr[] = new int[6];
 		for (int i = 0; i < arr.length; i++) {
 			arr[i] = rand.nextInt(45) + 1;
-			
+			for (int j = 0; j < i; j++) {
+				if(arr[j] == arr[i]) {
+					i--;
+				}
+			}
 		}
 		return arr;
 	}

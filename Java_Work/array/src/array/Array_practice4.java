@@ -14,34 +14,28 @@ public class Array_practice4 {
 		int que5[] = {21, 22, 23, 24, 25};
 		String score[] = new String[que.length];
 		
-		for (int i = 0; i < que.length; i++) {
-			System.out.println((i+1) + "번 문제");
-			System.out.println(que[i]);
-			for (int j = 0; j < que1.length; j++) {
-				System.out.println((j+1) + ") " + que1 [j]);
-			}
-			int input = s.nextInt();
-			if(input == Integer.parseInt(que[i])) {
-				score[i] = "O";
-			}
-			else {
-				score[i] = "X";
-			}
-			System.out.println(score[i]);	
-		}
+//		for (int i = 0; i < que.length; i++) {
+//			System.out.println((i+1) + "번 문제");
+//			System.out.println(que[i]);
+//			for (int j = 0; j < que1.length; j++) {
+//				System.out.println((j+1) + ") " + que1 [j]);
+//			}
+//			int input = s.nextInt();
+//			
+//		}
 		
-//		System.out.println("1번 문제");
-//		System.out.println(que[0]);
-//		for (int i = 0; i < que1.length; i++) {
-//			System.out.println((i+1) + ") " + que1 [i]);
-//		}
-//		int input = s.nextInt();
-//		if (input == que1[2]) {
-//			score[0] = "O";
-//		}
-//		else {
-//			score[0] = "X";
-//		}
+		System.out.println("1번 문제");
+		System.out.println(que[0]);
+		for (int i = 0; i < que1.length; i++) {
+			System.out.println((i+1) + ") " + que1 [i]);
+		}
+		int input = s.nextInt();
+		if (input == que1[2]) {
+			score[0] = "O";
+		}
+		else {
+			score[0] = "X";
+		}
 		
 				
 	}

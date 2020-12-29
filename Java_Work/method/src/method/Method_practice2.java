@@ -16,6 +16,7 @@ public class Method_practice2 {
 		
 		System.out.println(calc(num1, oper, num2));
 	}
+	
 	public static int calc (int num1, String oper, int num2) {
 		int result = 0;
 		if(oper.equals("+"))
