@@ -39,6 +39,15 @@
         .text-center {
             text-align: center;
         }
+
+        div.marginleft {
+            margin-left: 60px;
+            margin-right: 60px;
+        }
+
+        a.a-color {
+            color: aliceblue;
+        }
     </style>
     <!-- Custom styles for this template -->
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
@@ -74,13 +83,13 @@
         <div class="nav-scroller py-1 mb-2">
             <nav class="nav d-flex justify-content-between">
                 <a class="p-2 text-muted" href="#">Home</a>
-                <a class="p-2 text-muted" href="#">Movies</a>
-                <a class="p-2 text-muted" href="#">Actor/Actress</a>
-                <a class="p-2 text-muted" href="#">Director</a>
-                <a class="p-2 text-muted" href="#">Staffs</a>
-                <a class="p-2 text-muted" href="#">Box Office</a>
-                <a class="p-2 text-muted" href="#">Categories</a>
-                <a class="p-2 text-muted" href="#">Etc</a>
+                <a class="p-2 text-muted" href="#whatsnew">What's New?</a>
+                <a class="p-2 text-muted" href="#issue">Issue</a>
+                <a class="p-2 text-muted" href="#weeksreview">Week's Review</a>
+                <a class="p-2 text-muted" href="#boxoffice">Box Office</a>
+                <a class="p-2 text-muted" href="#comingsoon">Coming Soon</a>
+                <a class="p-2 text-muted" href="#etc">Etc</a>
+
                 <!-- <a class="p-2 text-muted" href="#">Science</a>
                 <a class="p-2 text-muted" href="#">Health</a>
                 <a class="p-2 text-muted" href="#">Style</a>
@@ -91,32 +100,8 @@
         <br>
 
         <div id="carouselExampleCaptions" class="carousel slide row mb-4" data-ride="carousel">
-            <div class="col-md-3">
-                <ul class="list-group list-group-flush">
-                    <h6>Box Office</h6>
-                    <li class="list-group-item"><a href="https://www.imdb.com/title/tt7126948/?ref_=nv_sr_srsg_0">1.
-                            Wonder Woman 1984</a></li>
-                    <li class="list-group-item"><a href="https://www.imdb.com/title/tt9695722/?ref_=nv_sr_srsg_0">2.
-                            Vanguard</a></li>
-                    <li class="list-group-item"><a href="https://www.imdb.com/title/tt0118694/?ref_=fn_al_tt_1">3. In
-                            The Mood For Love</a></li>
-                    <li class="list-group-item"><a href="https://www.imdb.com/title/tt4068576/?ref_=fn_al_tt_1">4. The
-                            Nightingale </a></li>
-                    <li class="list-group-item"><a href="https://www.imdb.com/title/tt10423120/?ref_=fn_al_tt_1">5.
-                            Matinee</a></li>
-                    <li class="list-group-item"><a href="https://www.imdb.com/title/tt13411298/?ref_=fn_al_tt_1">6.
-                            Josée</a></li>
-                    <li class="list-group-item"><a href="https://www.imdb.com/title/tt3783958/?ref_=fn_al_tt_1">7. La La
-                            Land</a></li>
-                    <li class="list-group-item"><a href="https://www.imdb.com/title/tt11588674/?ref_=fn_al_tt_1">8.
-                            Lucky Monster</a></li>
-                    <li class="list-group-item"><a href="https://www.imdb.com/title/tt1980929/?ref_=fn_al_tt_1">9. Begin
-                            Again</a></li>
-                    <li class="list-group-item"><a href="https://www.imdb.com/title/tt0113703/?ref_=fn_al_tt_1">10. Love
-                            Letter</a></li>
-                </ul>
-            </div>
-            <div class="col-md-9">
+
+            <div>
                 <ol class="carousel-indicators">
                     <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
                     <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
@@ -161,7 +146,7 @@
         <br>
 
         <div class="row mb-2">
-            <div class="col-md-6">
+            <div class="col-md-6" id="whatsnew">
                 <div
                     class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                     <div class="col p-4 d-flex flex-column position-static">
@@ -185,7 +170,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6" id="issue">
                 <div
                     class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                     <div class="col p-4 d-flex flex-column position-static">
@@ -214,13 +199,13 @@
         <br>
 
         <div class="row mb-4">
-            <div class="col-md-8">
+            <div class="col-md-8" id="weeksreview">
                 <h1 class="text-center">Week's Review</h1>
                 <hr>
                 <h3 class="text-center">'Run' Review : Bad Medicine</h3>
                 <p class="text-center">Sarah Paulson plays a menacing parent in this enjoyably ludicrous thriller.</p>
-                <p style="font-size: small;"><b>By. Jeannette Catsoulis</b></p>
-                <p style="font-size: smaller;">Published Nov. 19, 2020
+                <p style="font-size: 70%;"><b>By. Jeannette Catsoulis of "The New York Times"</The></b><br>
+                    Published Nov. 19, 2020
                     Updated Nov. 20, 2020</p>
                 <img src="Sources/Run.jpg" style="width: auto; height: auto;">
                 <br>
@@ -235,9 +220,79 @@
                     in the movie’s dementedly operatic final scenes, when the scales have slipped from Chloe’s eyes and
                     Diane is revealed in all her deranged glory.</p>
 
-                    
+                <a href="https://www.nytimes.com/2020/11/19/movies/run-review.html" style="float: right;"> Read More</a>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-3">
+                <div class="row mb-2" id="boxoffice">
+                    <h1>Box Office</h1>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="https://www.imdb.com/title/tt7126948/?ref_=nv_sr_srsg_0">1.
+                                Wonder Woman 1984</a></li>
+                        <li class="list-group-item"><a href="https://www.imdb.com/title/tt9695722/?ref_=nv_sr_srsg_0">2.
+                                Vanguard</a></li>
+                        <li class="list-group-item"><a href="https://www.imdb.com/title/tt0118694/?ref_=fn_al_tt_1">3.
+                                In
+                                The Mood For Love</a></li>
+                        <li class="list-group-item"><a href="https://www.imdb.com/title/tt4068576/?ref_=fn_al_tt_1">4.
+                                The
+                                Nightingale </a></li>
+                        <li class="list-group-item"><a href="https://www.imdb.com/title/tt10423120/?ref_=fn_al_tt_1">5.
+                                Matinee</a></li>
+                        <li class="list-group-item"><button type="button" class="btn btn-info"><a
+                                    href="https://www.imdb.com/chart/boxoffice/?ref_=nv_ch_cht" class="a-color">See
+                                    More</a></button></li>
+                    </ul>
+                </div>
+                <hr>
+                <div class="row mb-2" id="comingsoon">
+                    <h1>Coming Soon</h1>
+                    <ul class="list-group list-group-flush">
+
+                        <li class="list-group-item"><a
+                                href="https://www.imdb.com/title/tt5108870/?ref_=fn_al_tt_1">Morvius</a></li>
+                        <li class="list-group-item"><a href="https://www.imdb.com/title/tt2382320/">No Time To Die</a>
+                        </li>
+                        <li class="list-group-item"><a href="https://www.imdb.com/title/tt6856242/">The King's Man</a>
+                        </li>
+                        <li class="list-group-item"><a href="https://www.imdb.com/title/tt8332922/">A Quiet Place
+                                Part.2</a>
+                        </li>
+                        <li class="list-group-item"><a href="https://www.imdb.com/title/tt3480822/">Black Widow</a></li>
+                        <li class="list-group-item"><a href="https://www.imdb.com/title/tt5034838/">Godzilla vs Kong</a>
+                        </li>
+                        <li class="list-group-item"><a href="https://www.imdb.com/title/tt5433138/">Fast & Furious 9</a>
+                        </li>
+
+
+
+                        <li class="list-group-item"><a href="https://www.imdb.com/title/tt1160419/">Dune</a></li>
+
+                        <li class="list-group-item"><a href="https://www.imdb.com/title/tt9032400/">Eternals</a></li>
+                        <li class="list-group-item"><a href="https://www.imdb.com/title/tt3581652/">West Side Story</a>
+                        <li class="list-group-item"><button type="button" class="btn btn-info"><a
+                                    href="https://www.imdb.com/best-of/postponed-movies-coming-2021/ls082411486/mediaviewer/rm1928372737/?pf_rd_m=A2FGELUUNOQJNL&pf_rd_p=03b40671-982c-4732-a0af-20493b72c485&pf_rd_r=JDGM553VGRP447A0H1G5&pf_rd_s=right-3&pf_rd_t=15021&pf_rd_i=tt3581652&opfInternalRedirectSessionId=146-4407206-4538504"
+                                    class="a-color">See More</a></button></li>
+                        </li>
+                    </ul>
+                </div>
+
+
+
             </div>
 
+        </div>
+
+        <br>
+
+        <div class="jumbotron" style="background-image: url(Sources/wandavision.jpg); background-size: cover; color: aliceblue;" id="etc">
+            <h1 class="display-4">January's New TV & Movie</h1>
+            <p class="lead">WandaVision, Cobra Kai, Shadow in the Cloud Etc...</p>
+            <hr class="my-4">
+            <p>TV Serise & Movies, you can watch in January.2021</p>
+            <a class="btn btn-primary btn-lg"
+                href="https://www.imdb.com/imdbpicks/ls082466890/mediaviewer/rm3970552577/?pf_rd_r=TCCC6D10HF6Q9MT67W53&pf_rd_p=1266271a-dd8f-47b1-9274-40874735cef5&pf_rd_m=A2FGELUUNOQJNL&pf_rd_t=15061&pf_rd_i=home&pf_rd_s=featured-today-1&opfInternalRedirectSessionId=146-4407206-4538504"
+                role="button">See More</a>
         </div>
 
 
