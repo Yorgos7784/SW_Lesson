@@ -8,12 +8,13 @@ public class Method_practice11 {
 		Scanner s = new Scanner(System.in);
 		int students[][] = studentscore();
 		scoretable(students);
+		System.out.println("--------------------------------------");
 		System.out.print("몇 번 학생이 궁금하세요? : ");
 		int stunum = s.nextInt();
 		int sum = scoresum(students, stunum);
 		double ave = scoreave(sum);
 		String hakjeom = hakjeom(ave);
-		System.out.println("-------------------");
+		System.out.println("--------------------------------------");
 		System.out.println(stunum + "번 학생 결과");
 		System.out.println("총점 : " + sum);
 		System.out.println("평균 : " + ave);
