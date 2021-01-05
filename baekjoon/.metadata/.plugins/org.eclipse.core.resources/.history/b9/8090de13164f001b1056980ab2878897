@@ -1,0 +1,31 @@
+package ave_per;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+	
+		Scanner s = new Scanner(System.in);
+		int c = s.nextInt();
+		int ave[] = new int[c];
+		int sum = 0;
+		for (int i = 0; i < ave.length; i++) {
+			int arr[] = new int[s.nextInt()];
+			for (int j = 0; j < arr.length; j++) {
+				arr[j] = s.nextInt();
+				sum += arr[j];
+			}
+			ave[i] = sum / arr.length;
+		}
+		
+		for (int i = 0; i < ave.length; i++) {
+			System.out.println(ave[i]);
+		}
+		
+		
+		
+
+	}
+
+}
