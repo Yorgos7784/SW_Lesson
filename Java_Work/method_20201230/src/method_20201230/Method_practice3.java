@@ -5,22 +5,21 @@ import java.util.Scanner;
 public class Method_practice3 {
 
 	public static void main(String[] args) {
-		for (int i = 0; i < 10; i++) {
-			holjjack((int)(Math.random()*100)+1);
+		int arr[] = new int[10];
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = (int)(Math.random()*100)+1;
 		}
-
+		holjjack(arr);
 	}
 	
-	public static void holjjack(int a) {
-		if(a % 2 == 0) {
-			System.out.println(a + "는 짝수입니다.");
-		}
-		else if(a % 2 == 1) {
-			System.out.println(a + "는 홀수입니다.");
-		}
-		else {
-			System.out.println("판단불가");
+	public static void holjjack(int arr[]) {
+		for(int i : arr) {
+			if(i % 2 != 0) 
+				System.out.println(i + "는 홀수입니다.");
+			else
+				System.out.println(i + "는 짝수입니다.");
 		}
 	}
+	
 
 }

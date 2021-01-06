@@ -1,81 +1,47 @@
 package method_20201230;
 
-import java.util.Scanner;
-
 public class Method_practice11 {
-
 	public static void main(String[] args) {
-		Scanner s = new Scanner(System.in);
-		int students[][] = studentscore();
-		scoretable(students);
-		System.out.println("--------------------------------------");
-		System.out.print("몇 번 학생이 궁금하세요? : ");
-		int stunum = s.nextInt();
-		int sum = scoresum(students, stunum);
-		double ave = scoreave(sum);
-		String hakjeom = hakjeom(ave);
-		System.out.println("--------------------------------------");
-		System.out.println(stunum + "번 학생 결과");
-		System.out.println("총점 : " + sum);
-		System.out.println("평균 : " + ave);
-		System.out.println("학점 : " + hakjeom);
-		
-		
-		
-	}
-	
-	public static int[][] studentscore() {
-		int score[][] = new int[5][3];
-		for (int i = 0; i < score.length; i++) {
-			for (int j = 0; j < score[i].length; j++) {
-				score[i][j] = (int)(Math.random()*100)+1;
-			}
-		}
-		return score;
-	}
-	
-	public static void scoretable(int arr [][]) {
+		int arr[][] = getScore();
+		int hap = 0;
+		int ave = 0;
 		for (int i = 0; i < arr.length; i++) {
-			System.out.print((i+1) + "번째 학생 점수 : ");
+			System.out.print(i + 1 + "번 학생 점수 : ");
 			for (int j = 0; j < arr[i].length; j++) {
-				System.out.print(arr[i][j] + "\t");
+				System.out.print(arr[i][j] + " ");
+				hap += arr[i][j];
 			}
 			System.out.println();
+			System.out.println(i+1 + "번 학생 총점 : " + hap);
+			ave = hap/3;
+			System.out.print(i+1 + "번 학생 평균 : " + ave);
+			if(ave <= 100 && ave >= 90)
+				System.out.println(" A학점");
+			else if(ave <= 89 && ave >= 80)
+				System.out.println(" B학점");
+			else if(ave <= 79 && ave >= 70)
+				System.out.println(" C학점");
+			else if(ave <= 69 && ave >= 60)
+				System.out.println(" D학점");
+			else
+				System.out.println(" F학점");
+			System.out.println("-------------------");
+			hap = 0;
+			ave = 0;
+			
 		}
+		
 	}
 	
-	public static int scoresum(int arr[][], int num) {
-		int sum = 0;
-		for (int i = 0; i < arr[num-1].length; i++) {
-			sum += arr[num-1][i];
+	public static int[][] getScore(){
+		int arr[][] = new int[5][3];
+		
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j < arr[i].length; j++) {
+				arr[i][j] = (int)(Math.random() * 51) + 50;
+			}
 		}
-		return sum;
+		
+		return arr;
 	}
-	
-	public static double scoreave(int num) {
-		double ave = num/3.0;
-		return ave;
-	}
-	
-	public static String hakjeom(double num) {
-		String hakjeom = "";
-		if(100 >= num && num >= 90) {
-			hakjeom = "A";
-		}
-		else if(89 >= num && num >= 80) {
-			hakjeom = "B";
-		}
-		else if(79 >= num && num >= 70) {
-			hakjeom = "C";
-		}
-		else if(69 >= num && num >= 60) {
-			hakjeom = "D";
-		}
-		else {
-			hakjeom = "f";
-		}
-		return hakjeom;
-	}
-	
-
 }
