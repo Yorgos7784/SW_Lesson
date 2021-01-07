@@ -18,6 +18,7 @@
         .red {
             background-color: red;
             /* left: 10px; top: 10px; */
+           
         }
 
         .green {
@@ -33,10 +34,10 @@
             position: fixed;
             left: 100px; top: 100px;
         }
-        .purple{
-            background-color: purple;
+        .pink{
+            background-color: pink;
             position: absolute;
-            left: 10px; top: 10px;
+            left: 20px; top: 20px;
             width: 30px; height: 30px;
         }
     </style>
@@ -44,11 +45,18 @@
 
 <body>
     <div class="box red"></div>
+    
     <div class="box green">
-        <div class="box purple"></div>
+        <div class="box pink"></div>
     </div>
+    
     <div class="box blue"></div>
     
+    <div class="box red"> 두번째
+        <!-- absolute의 부모태그의 position이 static일 경우 fixed로 작용 -->
+        <div class="box pink"></div>
+    </div>
+
 </body>
 
 </html>
