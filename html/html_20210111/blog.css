@@ -186,10 +186,51 @@ img {
     margin-bottom: 10px;
 }
 #main_article>img{
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 #review{
     margin-bottom: 40px;
+}
+
+#movie_info{
+    width: 400px;
+    height: 175px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.616);
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 5px 5px 10px -1px rgba(0,0,0,0.5);
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+#movie_info>#movie_poster{
+    width: 125px;
+    float: left;
+}
+
+#movie_info>#movie_poster>#poster_img{
+    padding: 5px;
+}
+#movie_info>#movie_poster>#poster_img>img{
+    width: 115px;
+    height: auto;
+    border-radius: 10px 10px 10px 10px;
+}
+
+#movie_info>#movie_link{
+    width: 275px;
+    float: right;
+}
+
+#movie_info>#movie_link>#link_padding{
+    padding: 10px;
+}
+
+#movie_info>#movie_link>#link_padding>a{
+    display: block;
+    color: black;
+    font-size: smaller;
+    margin-top: 40px;
+    margin-left: 20px;
 }
 
 #main_aside>#aside_top{
