@@ -1,6 +1,7 @@
 package class_20210106_1;
 
 public class Student {
+	// 인스턴스 변수 - 속성(특징)
 	private String name;
 	private String tel;
 	private String email;
