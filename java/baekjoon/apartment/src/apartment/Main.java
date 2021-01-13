@@ -11,12 +11,13 @@ public class Main {
 		int k = s.nextInt();
 		int n = s.nextInt();
 		int sum = 0;
-		for (int i = 0; i < n; i++) {
-			sum += n;
-			for (int j = 0; j < n; j++) {
-				
+		for (int i = 1; i < k; i++) {
+			sum+=i;
+			for (int j = 1; j < n; j++) {
+				sum += j;
 			}
 		}
+		System.out.println(sum);
 
 	}
 
