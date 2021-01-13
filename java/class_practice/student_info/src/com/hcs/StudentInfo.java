@@ -5,6 +5,7 @@ public class StudentInfo {
 	private int age;
 	private char gender;
 	private String address;
+	
 	public String getName() {
 		return name;
 	}
@@ -37,12 +38,13 @@ public class StudentInfo {
 		this.gender = gender;
 		this.address = address;
 	}
+	
 	public void showStudentInfo() {
 		
-		System.out.println("학생 이름 : " + name);
-		System.out.println("학생 나이 : " + age);
-		System.out.println("학생 성별 : " + gender);
-		System.out.println("학생 주소 : " + address);
+		System.out.println("학생 이름 : " + getName());
+		System.out.println("학생 나이 : " + getAge());
+		System.out.println("학생 성별 : " + getGender());
+		System.out.println("학생 주소 : " + getAddress());
 		System.out.println("-------------------------");
 	}
 	
