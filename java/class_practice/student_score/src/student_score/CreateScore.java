@@ -4,6 +4,7 @@ public class CreateScore {
 	private int kor;
 	private int eng;
 	private int math;
+	
 	public int getKor() {
 		return kor;
 	}
@@ -22,13 +23,11 @@ public class CreateScore {
 	public void setMath(int math) {
 		this.math = math;
 	}
+	
 	public CreateScore() {
-		super();
 		kor = (int)(Math.random()*51)+50;
 		eng = (int)(Math.random()*51)+50;
 		math = (int)(Math.random()*51)+50;
 	}
-	
-	
 	 
 }
