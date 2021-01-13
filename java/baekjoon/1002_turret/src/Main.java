@@ -31,23 +31,32 @@ public class Main {
 		for (int i = 0; i < r2; i++) {
 			for (int j = 0; j < r2; j++) {
 				if((i*i) + (j*j) == (r2*r2)) {
-					r1x = i;
-					r1y = j;
+					r2x = i;
+					r2y = j;
 				}
 			}
 		}
 		
-//		int a = 37;
-//		double b = 0;
-//		double c = 0;
-//		for (double i = 0; i < a; i++) {
-//			for (double j = 0; j < a; j++) {
-//				if((i*i) + (j*j) == (a*a)) {
-//					b = i;
-//					c = j;
-//				}
-//			}
-//		}
+		if(x1 == x2 && y1 == y2) {
+			if(r1 == r2) 
+				System.out.println(-1);
+			else {
+				System.out.println(0);
+			}
+		}
+		else if(x1 == x2 && y1 != y2) {
+			if(y1 + r1 == y2 + r2 || y1 - r1 == y2 + r2 || y1 + r1 == y2 - r2 || y1 - r1 == y2 - r2) {
+				System.out.println(1);
+			}
+			else if(y1 + r1  < y2 + r2) {
+				
+			}
+		}
+		
+		
+		
+		
+		
 		
 	}
 	
