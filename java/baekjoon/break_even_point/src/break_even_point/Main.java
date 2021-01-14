@@ -10,11 +10,9 @@ public class Main {
 		long b = s.nextInt();
 		long c = s.nextInt();
 		int count = 1;
-		if(c <= b) {
-			System.out.println(-1);
-		}
-		else {
-			
-		}
+		
+		
+		
+		System.out.println(count);
 	}
 }
