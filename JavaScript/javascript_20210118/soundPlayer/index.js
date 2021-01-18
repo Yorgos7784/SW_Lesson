@@ -14,11 +14,10 @@ window.addEventListener('load', function () {
 
         // 초기화 할때 쓰임
         const colors = [
-            "lightblue",
             "brown",
             "cornflowerblue",
             "seagreen",
-            "toamto",
+            "tomato",
             "orchid",
             "rgb(255, 255, 95)"
         ];
@@ -33,28 +32,39 @@ window.addEventListener('load', function () {
             }
         )
 
-        pads.forEach( function(pad, index) {
-            pad.addEventListener('click', function(){
+        pads.forEach(function (pad, index) {
+            pad.addEventListener('click', function () {
                 //기존에 재생되는 음악을 중지 시켜야 한다.
-               sounds.forEach(function(inx) {
-                //console.log(inx);
-                inx.pause();
-               });
-               if(sounds[index]){
-                sounds[index].currentTime = 0;
-                sounds[index].play();
+                sounds.forEach(function (inx) {
+                    //console.log(inx);
+                    inx.pause();
+                });
+                if (sounds[index]) {
+                    sounds[index].currentTime = 0;
+                    sounds[index].play();
 
-                //뮤직 제목을 출력해 준다.
-                //console.log(sounds[index].src) ;
-                const strArray = sounds[index].src.split("sound/");
-                console.log(strArray[0]);
-                title.innerHTML = strArray[1];
-               }
-               
+                    //뮤직 제목을 출력해 준다.
+                    //console.log(sounds[index].src) ;
+                    const strArray = sounds[index].src.split("sound/");
+                    title.innerHTML = strArray[1];
+                }
+
                 //볼만들고 애니메이션 하기
-                //createBubbles(index);
+                createBubbles(index);
             });
         });
+
+        const createBubbles = function(index){
+            visual.innerHTML = "";
+            // div 태그 생성
+            const bubble = document.createElement("div");
+            // visual 태그 안에 div 태그 하나 집어넣는다
+            visual.appendChild(bubble);
+            bubble.style.backgroundColor = colors[index];
+            bubble.style.top = '300px';
+            // animation 관련은 html책 참고
+            bubble.style.animation = 'animation 2000ms linear infinite both';
+        }
 
     }
 
