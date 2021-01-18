@@ -74,7 +74,7 @@ header p{
 
 }
 .pad6{
-    background: lightyellow;
+    background: rgb(255, 255, 95);
 }
 
 @keyframes jump{
