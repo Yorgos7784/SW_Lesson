@@ -39,4 +39,8 @@ public class Student {
 		this.job = job;
 	}
 	
+	public void showStuInfo(int num) {
+		System.out.println(0 + "" + num + "\t" + getName() + "\t" + getGender() + "\t" + getAge() + "\t" + getJob());
+	}
+	
 }
