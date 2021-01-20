@@ -6,7 +6,33 @@ public class Main {
 
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
-		System.out.println(fibonacci(s.nextInt()));
+		int arr[] = new int[s.nextInt()];
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = s.nextInt();
+		}
+		
+		for (int i = 0; i < arr.length; i++) {
+			if(arr[i] == 0) {
+				System.out.println(1 + " " + 0);
+			}
+			else {
+				int count0 = fibonacci(arr[i]-1);
+				int count1 = fibonacci(arr[i]);
+				System.out.println(count0 + " " + count1);
+			}
+		}
+		
+		
+//		int n = s.nextInt();
+//		System.out.println(fibonacci(n));
+//		if(n == 0) {
+//			System.out.println(1 + " " + 0);
+//		}
+//		else {
+//			int count0 = fibonacci(n-1);
+//			int count1 = fibonacci(n);
+//			System.out.println(count0 + " " + count1);
+//		}
 		
 	}
 	
