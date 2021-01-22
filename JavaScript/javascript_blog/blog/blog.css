@@ -189,7 +189,7 @@ img {
     margin-bottom: 100px;
 }
 
-#main_article>p#blackbird{
+#main_article>p#p_margin{
     margin-bottom: 10px;
 }
 
@@ -252,7 +252,17 @@ img {
     top: 0px;
     left: 0px;
     
+    visibility: hidden;
+    opacity: 0;
+    
 }
+
+.movie_detail.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+
 
 .movie_detail>.detail_main{
     width:960px;
@@ -443,6 +453,10 @@ input:nth-of-type(2):checked~section.buttons> label:nth-of-type(2){
 .thumbnail>img{
     box-shadow: 5px 5px 10px -1px rgba(0,0,0,0.5);
     border-radius: 10px 10px 10px 10px;
+}
+
+#aside_bottom li:hover{
+    cursor: pointer;
 }
 
 #footer{

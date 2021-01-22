@@ -57,9 +57,9 @@
                 <hr>
                 <p id="main_begin">이번주 개봉작을 포함한 <br>최근 극장 상영작들에 대해 <br>한줄평과 별정을 올립니다</p>
 
-                <p id="blackbird">〈완벽한 가족〉<br>감독 : 로저 미첼 <br> 출연 : 수전 서렌든, 케이트 윈슬렛, 미아 바시코브스카, 샘 닐, 레인 윌슨</p>
+                <p id="p_margin">〈완벽한 가족〉<br>감독 : 로저 미첼 <br> 출연 : 수전 서렌든, 케이트 윈슬렛, 미아 바시코브스카, 샘 닐, 레인 윌슨</p>
                 <img src="Source/blackbird.jpg">
-                <div class="movie_info movie_one">
+                <div class="movie_info movie_blackbird">
                     <div id="movie_poster">
                         <div id="poster_img">
                             <img src="Source/family.jpg" alt="">
@@ -75,10 +75,10 @@
 
                 
 
-                <p id="blackbird">〈나이팅게일〉<br>감독 : 제니퍼 켄트 <br> 출연 : 아이슬링 프란시오시, 베이칼리 가남바르, 샘 클라플린</p>
+                <p id="p_margin">〈나이팅게일〉<br>감독 : 제니퍼 켄트 <br> 출연 : 아이슬링 프란시오시, 베이칼리 가남바르, 샘 클라플린</p>
                 <img src="Source/nightingale.jpg">
 
-                <div class="movie_info movie_two">
+                <div class="movie_info movie_nightingale">
                     <div id="movie_poster">
                         <div id="poster_img">
                             <img src="Source/nightingale2.jpg" alt="">
@@ -125,22 +125,22 @@
                 </section>
                 <div class="tab_item">
                     <ul>
-                        <li><a href="https://movie.naver.com/movie/bi/mi/basic.nhn?code=120793">
-                                <div class="thumbnail">
-                                    <img src="Source/the_lobster.jpg" alt="">
-                                </div>
-                                <div class="description">
-                                    <p>The Lobster</p>
-                                </div>
-                            </a></li>
-                        <li><a href="https://movie.naver.com/movie/bi/mi/basic.nhn?code=136869">
+                        <li id="side_lobster">
+                            <div class="thumbnail">
+                                <img src="Source/the_lobster.jpg" alt="">
+                            </div>
+                            <div class="description">
+                                <p>The Lobster</p>
+                            </div>
+                        </li>
+                        <li id="side_arrival">
                                 <div class="thumbnail">
                                     <img src="Source/arrival.jpg" alt="">
                                 </div>
                                 <div class="description">
                                     <p>Arrival</p>
                                 </div>
-                            </a></li>
+                            </li>
                         <li><a href="https://movie.naver.com/movie/bi/mi/basic.nhn?code=119632">
                                 <div class="thumbnail">
                                     <img src="Source/whiplash.jpg" alt="">
@@ -222,7 +222,7 @@
         <p>실습 자료입니다~ (참고 : 영화평론가 이동진님 블로그)</p>
     </div>
 
-    <div class="movie_detail">
+    <div class="movie_detail" id="blackbird">
         <div class="detail_main">
             <div class="detail_poster">
                 <div id="detail_img">
@@ -350,6 +350,350 @@
                     <img src="Source/blackbird_photos/movie_image (5).jpg" alt="">
                     <img src="Source/blackbird_photos/movie_image (6).jpg" alt="">
                     <img src="Source/blackbird_photos/movie_image (7).jpg" alt="">
+                </div>
+            </div>
+        </div>    
+    </div>
+
+    <div class="movie_detail" id="nightingale">
+        <div class="detail_main">
+            <div class="detail_poster">
+                <div id="detail_img">
+                    <img src="Source/nightingale2.jpg" alt="">
+                </div>
+            </div>
+            <div class="detail_content">
+                <div class="tab_bar">
+                    <ul class="tabs clearfix">
+                        <li><a href="#tab_main">기본정보</a></li>
+                        <li><a href="#tab_staff">감독/배우</a></li>
+                        <li><a href="#tab_video">예고편</a></li>
+                        <li><a href="#tab_photo">포토</a></li>
+                    </ul>
+                </div>
+                
+                <div class="tab_content" id="tab_main">
+                    <h2>나이팅게일</h2>
+                    <p id="eng_year">Blackbird, 2019</p>
+                    <p><b>개요</b> : 드라마, 모험, 스릴러 | 오스트레일리아 | 136분 | 2020.12.30개봉</p>
+                    <p><b>등급</b> : 청소년 관람불가</p>
+                    <hr id="hrhr">
+                    <h3>줄거리</h3>
+                    <br>
+                    <p>그날 밤, 나의 복수는 시작됐다<br>
+                        호주 태즈메이니아의 마을. <br>
+                         아름다운 노랫소리로 나이팅게일이라 불리는 ‘클레어’는 <br>
+                         어느 날, 폭주한 영국군 장교 ‘호킨스’에 의해 <br>
+                         남편과 아이, 자신의 모든 것을 잃게 된다. <br>
+                         <br>
+                         더 이상 잃을 것 없는 ‘클레어’는 처절한 복수를 다짐하며 <br>
+                         대위가 되기 위해 북부로 떠난 ‘호킨스’를 맹렬히 뒤쫓기 시작하는데… <br>
+                         놈을 죽이기 전엔 멈출 수 없다!</p>
+                </div>
+                <div class="tab_content" id="tab_staff">
+                    <h2>감독</h2>
+                    <div id="director">
+                        <div class="person_picture">
+                            <img src="Source/kent.jpg" alt="">
+                        </div>
+                        <div class="introduce">
+                            <p>제니퍼 켄트</p>
+                            <p>Jenifer Kent</p>
+                        </div>
+                    </div>
+                    <hr id="hrhr">
+                    <h2>배우</h2>
+                    <div id="director">
+                        <div class="person_picture">
+                            <img src="Source/Claflin.jpg" alt="">
+                        </div>
+                        <div class="introduce">
+                            <p>샘 크라플린</p>
+                            <p>Sam Claflin</p>
+                        </div>
+                    </div>
+                    <div id="director">
+                        <div class="person_picture">
+                            <img src="Source/Aisling.jpg" alt="">
+                        </div>
+                        <div class="introduce">
+                            <p>아이슬링 프란쵸시</p>
+                            <p>Aisling Franciosi</p>
+                        </div>
+                    </div>
+                    <div id="director">
+                        <div class="person_picture">
+                            <img src="Source/Damon_Herriman.jpg" alt="">
+                        </div>
+                        <div class="introduce">
+                            <p>데이몬 헤리맨</p>
+                            <p>Damon Herriman</p>
+                        </div>
+                    </div>
+                    <div id="director">
+                        <div class="person_picture">
+                            <img src="Source/Ewen.jpg" alt="">
+                        </div>
+                        <div class="introduce">
+                            <p>이웬 레슬리</p>
+                            <p>Ewen Leslie</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab_content" id="tab_video">
+                    <h1>예고편</h1>
+                    <hr id="hrhr">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/YuP8g_GQIgI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="tab_content" id="tab_photo">
+                    <h1>포토</h1>
+                    <hr id="hrhr">
+                    <img src="Source/nightingale_photos/movie_image.jpg" alt="">
+                    <img src="Source/nightingale_photos/movie_image (1).jpg" alt="">
+                    <img src="Source/nightingale_photos/movie_image (2).jpg" alt="">
+                    <img src="Source/nightingale_photos/movie_image (3).jpg" alt="">
+                    <img src="Source/nightingale_photos/movie_image (4).jpg" alt="">
+                    <img src="Source/nightingale_photos/movie_image (5).jpg" alt="">
+                    <img src="Source/nightingale_photos/movie_image (6).jpg" alt="">
+                    <img src="Source/nightingale_photos/movie_image (7).jpg" alt="">
+                </div>
+            </div>
+        </div>    
+    </div>
+
+    <div class="movie_detail" id="lobster">
+        <div class="detail_main">
+            <div class="detail_poster">
+                <div id="detail_img">
+                    <img src="Source/the_lobster.jpg" alt="">
+                </div>
+            </div>
+            <div class="detail_content">
+                <div class="tab_bar">
+                    <ul class="tabs clearfix">
+                        <li><a href="#tab_main">기본정보</a></li>
+                        <li><a href="#tab_staff">감독/배우</a></li>
+                        <li><a href="#tab_video">예고편</a></li>
+                        <li><a href="#tab_photo">포토</a></li>
+                    </ul>
+                </div>
+                
+                <div class="tab_content" id="tab_main">
+                    <h2>더 랍스터</h2>
+                    <p id="eng_year">The Lobster</p>
+                    <p><b>개요</b> : 멜로/로맨스, 판타지 | 그리스, 영국 | 118분 | 2015.10.29개봉</p>
+                    <p><b>등급</b> : 청소년 관람불가</p>
+                    <hr id="hrhr">
+                    <h3>줄거리</h3>
+                    <br>
+                    <p>전대미문의 커플 메이킹 호텔! 이곳에선 사랑에 빠지지 않은 자, 모두 유죄! <br>
+                        유예기간 45일 안에 짝을 찾지 못하면 동물이 되어야 한다! <br>
+                        <br>
+                        가까운 미래, 모든 사람들은 서로에게 완벽한 짝을 찾아야만 한다. <br>
+                        홀로 남겨진 이들은 45일간 커플 메이킹 호텔에 머무르며, 완벽한 커플이 되기 위한 교육을 받는다. <br>
+                        그럼에도 불구하고 짝을 얻지 못한 사람은 동물로 변해 영원히 숲 속에 버려지게 된다. <br>
+                        <br>
+                        근시란 이유로 아내에게 버림받고 호텔로 오게 된 데이비드(콜린 파렐)는 <br>
+                        새로운 짝을 찾기 위해 노력하지만 결국 참지 못하고 숲으로 도망친다. <br>
+                        숲에는 커플을 거부하고 혼자만의 삶을 선택한 솔로들이 모여 살고 있다. <br>
+                        솔로 생활을 유지하기 위한 그들의 절대규칙은 바로 절대 사랑에 빠지지 말 것! <br>
+                        아이러니하게도 데이비드는 사랑이 허락되지 않는 그곳에서 <br>
+                        자신과 같이 근시를 가진 완벽한 짝(레이첼 와이즈)을 만나고 마는데..!</p>
+                </div>
+                <div class="tab_content" id="tab_staff">
+                    <h2>감독</h2>
+                    <div id="director">
+                        <div class="person_picture">
+                            <img src="Source/Yorgos.jpg" alt="">
+                        </div>
+                        <div class="introduce">
+                            <p>요르고스 란티모스</p>
+                            <p>Yorgos Lanthimos</p>
+                        </div>
+                    </div>
+                    <hr id="hrhr">
+                    <h2>배우</h2>
+                    <div id="director">
+                        <div class="person_picture">
+                            <img src="Source/colin.jpg" alt="">
+                        </div>
+                        <div class="introduce">
+                            <p>콜린 파렐</p>
+                            <p>Colin Farrell</p>
+                        </div>
+                    </div>
+                    <div id="director">
+                        <div class="person_picture">
+                            <img src="Source/weisz.jpg" alt="">
+                        </div>
+                        <div class="introduce">
+                            <p>레이첼 와이즈</p>
+                            <p>Rachel Weisz</p>
+                        </div>
+                    </div>
+                    <div id="director">
+                        <div class="person_picture">
+                            <img src="Source/lea.jpg" alt="">
+                        </div>
+                        <div class="introduce">
+                            <p>레아 세이두</p>
+                            <p>Lea Seydoux</p>
+                        </div>
+                    </div>
+                    <div id="director">
+                        <div class="person_picture">
+                            <img src="Source/ben.jpg" alt="">
+                        </div>
+                        <div class="introduce">
+                            <p>벤 위쇼</p>
+                            <p>Ben Whishaw</p>
+                        </div>
+                    </div>
+                    <div id="director">
+                        <div class="person_picture">
+                            <img src="Source/colman.jpg" alt="">
+                        </div>
+                        <div class="introduce">
+                            <p>올리비아 콜맨</p>
+                            <p>Olivia Colman</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab_content" id="tab_video">
+                    <h1>예고편</h1>
+                    <hr id="hrhr">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/LTNZmOJxuAc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="tab_content" id="tab_photo">
+                    <h1>포토</h1>
+                    <hr id="hrhr">
+                    <img src="Source/the_lobster_photos/movie_image.jpg" alt="">
+                    <img src="Source/the_lobster_photos/movie_image (1).jpg" alt="">
+                    <img src="Source/the_lobster_photos/movie_image (2).jpg" alt="">
+                    <img src="Source/the_lobster_photos/movie_image (3).jpg" alt="">
+                    <img src="Source/the_lobster_photos/movie_image (4).jpg" alt="">
+                    <img src="Source/the_lobster_photos/movie_image (5).jpg" alt="">
+                    <img src="Source/the_lobster_photos/movie_image (6).jpg" alt="">
+                    <img src="Source/the_lobster_photos/movie_image (7).jpg" alt="">
+                </div>
+            </div>
+        </div>    
+    </div>
+
+    <div class="movie_detail" id="arrival">
+        <div class="detail_main">
+            <div class="detail_poster">
+                <div id="detail_img">
+                    <img src="Source/the_lobster.jpg" alt="">
+                </div>
+            </div>
+            <div class="detail_content">
+                <div class="tab_bar">
+                    <ul class="tabs clearfix">
+                        <li><a href="#tab_main">기본정보</a></li>
+                        <li><a href="#tab_staff">감독/배우</a></li>
+                        <li><a href="#tab_video">예고편</a></li>
+                        <li><a href="#tab_photo">포토</a></li>
+                    </ul>
+                </div>
+                
+                <div class="tab_content" id="tab_main">
+                    <h2>더 랍스터</h2>
+                    <p id="eng_year">The Lobster</p>
+                    <p><b>개요</b> : 멜로/로맨스, 판타지 | 그리스, 영국 | 118분 | 2015.10.29개봉</p>
+                    <p><b>등급</b> : 청소년 관람불가</p>
+                    <hr id="hrhr">
+                    <h3>줄거리</h3>
+                    <br>
+                    <p>전대미문의 커플 메이킹 호텔! 이곳에선 사랑에 빠지지 않은 자, 모두 유죄! <br>
+                        유예기간 45일 안에 짝을 찾지 못하면 동물이 되어야 한다! <br>
+                        <br>
+                        가까운 미래, 모든 사람들은 서로에게 완벽한 짝을 찾아야만 한다. <br>
+                        홀로 남겨진 이들은 45일간 커플 메이킹 호텔에 머무르며, 완벽한 커플이 되기 위한 교육을 받는다. <br>
+                        그럼에도 불구하고 짝을 얻지 못한 사람은 동물로 변해 영원히 숲 속에 버려지게 된다. <br>
+                        <br>
+                        근시란 이유로 아내에게 버림받고 호텔로 오게 된 데이비드(콜린 파렐)는 <br>
+                        새로운 짝을 찾기 위해 노력하지만 결국 참지 못하고 숲으로 도망친다. <br>
+                        숲에는 커플을 거부하고 혼자만의 삶을 선택한 솔로들이 모여 살고 있다. <br>
+                        솔로 생활을 유지하기 위한 그들의 절대규칙은 바로 절대 사랑에 빠지지 말 것! <br>
+                        아이러니하게도 데이비드는 사랑이 허락되지 않는 그곳에서 <br>
+                        자신과 같이 근시를 가진 완벽한 짝(레이첼 와이즈)을 만나고 마는데..!</p>
+                </div>
+                <div class="tab_content" id="tab_staff">
+                    <h2>감독</h2>
+                    <div id="director">
+                        <div class="person_picture">
+                            <img src="Source/Yorgos.jpg" alt="">
+                        </div>
+                        <div class="introduce">
+                            <p>요르고스 란티모스</p>
+                            <p>Yorgos Lanthimos</p>
+                        </div>
+                    </div>
+                    <hr id="hrhr">
+                    <h2>배우</h2>
+                    <div id="director">
+                        <div class="person_picture">
+                            <img src="Source/colin.jpg" alt="">
+                        </div>
+                        <div class="introduce">
+                            <p>콜린 파렐</p>
+                            <p>Colin Farrell</p>
+                        </div>
+                    </div>
+                    <div id="director">
+                        <div class="person_picture">
+                            <img src="Source/weisz.jpg" alt="">
+                        </div>
+                        <div class="introduce">
+                            <p>레이첼 와이즈</p>
+                            <p>Rachel Weisz</p>
+                        </div>
+                    </div>
+                    <div id="director">
+                        <div class="person_picture">
+                            <img src="Source/lea.jpg" alt="">
+                        </div>
+                        <div class="introduce">
+                            <p>레아 세이두</p>
+                            <p>Lea Seydoux</p>
+                        </div>
+                    </div>
+                    <div id="director">
+                        <div class="person_picture">
+                            <img src="Source/ben.jpg" alt="">
+                        </div>
+                        <div class="introduce">
+                            <p>벤 위쇼</p>
+                            <p>Ben Whishaw</p>
+                        </div>
+                    </div>
+                    <div id="director">
+                        <div class="person_picture">
+                            <img src="Source/colman.jpg" alt="">
+                        </div>
+                        <div class="introduce">
+                            <p>올리비아 콜맨</p>
+                            <p>Olivia Colman</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab_content" id="tab_video">
+                    <h1>예고편</h1>
+                    <hr id="hrhr">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/LTNZmOJxuAc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="tab_content" id="tab_photo">
+                    <h1>포토</h1>
+                    <hr id="hrhr">
+                    <img src="Source/the_lobster_photos/movie_image.jpg" alt="">
+                    <img src="Source/the_lobster_photos/movie_image (1).jpg" alt="">
+                    <img src="Source/the_lobster_photos/movie_image (2).jpg" alt="">
+                    <img src="Source/the_lobster_photos/movie_image (3).jpg" alt="">
+                    <img src="Source/the_lobster_photos/movie_image (4).jpg" alt="">
+                    <img src="Source/the_lobster_photos/movie_image (5).jpg" alt="">
+                    <img src="Source/the_lobster_photos/movie_image (6).jpg" alt="">
+                    <img src="Source/the_lobster_photos/movie_image (7).jpg" alt="">
                 </div>
             </div>
         </div>    
