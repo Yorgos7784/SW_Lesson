@@ -1,53 +1,43 @@
 package fibonacci;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 
 public class Main {
 
-	public static void main(String[] args) {
-		Scanner s = new Scanner(System.in);
-		int arr[] = new int[s.nextInt()];
-		for (int i = 0; i < arr.length; i++) {
-			arr[i] = s.nextInt();
-		}
-		
-		for (int i = 0; i < arr.length; i++) {
-			if(arr[i] == 0) {
-				System.out.println(1 + " " + 0);
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		int fibonacci[] = new int[41];
+		for (int i = 0; i < fibonacci.length; i++) {
+			if(i == 0 || i == 1) {
+				fibonacci[i] = i;
 			}
 			else {
-				int count0 = fibonacci(arr[i]-1);
-				int count1 = fibonacci(arr[i]);
-				System.out.println(count0 + " " + count1);
+				fibonacci[i] = fibonacci[i-1] + fibonacci[i-2];
 			}
 		}
-		
-		
-//		int n = s.nextInt();
-//		System.out.println(fibonacci(n));
-//		if(n == 0) {
-//			System.out.println(1 + " " + 0);
-//		}
-//		else {
-//			int count0 = fibonacci(n-1);
-//			int count1 = fibonacci(n);
-//			System.out.println(count0 + " " + count1);
-//		}
-		
+		int arr[] = new int[Integer.parseInt(br.readLine())];
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = Integer.parseInt(br.readLine());
+		}
+		br.close();
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] == 0) {
+				bw.write("1 0");
+				bw.newLine();
+			} else {
+				int count0 = fibonacci[arr[i] - 1];
+				int count1 = fibonacci[arr[i]];
+				bw.write(Integer.toString(count0) + " " + Integer.toString(count1));
+				bw.newLine();
+			}
+		}
+		bw.flush();
+		bw.close();
 	}
 	
-	public static int fibonacci(int num) {
-		if(num == 0) {
-//			System.out.println("0");
-			return 0;
-		}
-		else if(num == 1) {
-//			System.out.println("1");
-			return 1;
-		}
-		else {
-			return fibonacci(num - 1) + fibonacci(num - 2);
-		}
-	}
-
 }
