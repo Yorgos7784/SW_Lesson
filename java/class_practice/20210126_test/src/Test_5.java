@@ -10,22 +10,17 @@ public class Test_5 {
 			}
 		}
 		int count[] = new int[26];
-		char letters[] = new char[26];
-		for (int i = 0; i < letters.length; i++) {
-			letters[i] = (char)(i + 97);
-		}
-		for (int i = 0; i < letters.length; i++) {
-			int countword = 0;
+		for (int i = 0; i < count.length; i++) {
 			for (int j = 0; j < word.length; j++) {
-				if(letters[i] == word[j])
-					countword++;
+				if((char)(i+97) == word[j])
+					count[i]++;
 			}
-			count[i] = countword;
 		}
 		for (int i = 0; i < count.length; i++) {
 			if(count[i] != 0) {
-				System.out.println("'" + (char)letters[i] + "' 는" + count[i] + "글자입니다.");
+				System.out.println("'" + (char)(i+97)+ "' 는 " + count[i] + "글자 입니다.");
 			}
 		}
+		s.close();
 	}
 }

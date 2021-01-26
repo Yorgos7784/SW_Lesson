@@ -4,6 +4,7 @@ public class Test_2 {
 		Scanner s = new Scanner(System.in);
 		int year = s.nextInt();
 		System.out.println(getDDi(year));
+		s.close();
 	}
 	public static String getDDi(int num) {
 		if(num%12 == 1) {
