@@ -6,34 +6,24 @@ public class Main {
 
 		Scanner s = new Scanner(System.in);
 		int x = s.nextInt();
-		int count = 1;
-		int a = 1;
+		int count = 3;
+		int a = 2;
 		int b = 1;
-		while(true) {
-			b++;
-			count++;
-			if(count == x) {
-				break;
-			}
-			a++;
-			b--;
-			count++;
-			if(count == x) {
-				break;
-			}
-			a++;
-			count++;
-			if(count == x) {
-				break;
-			}
-			a--;
-			b++;
-			count++;
-			if(count == x) {
-				break;
-			}
+		if(x == 1) {
+			System.out.println(1 + "/" + 1);
 		}
-		System.out.println(a + "/" + b);
+		else {
+			while(true) {
+				if(count == x) {
+					break;
+				}
+				else {
+					
+				}
+			}
+			System.out.println(a + "/" + b);
+		}
+		
 
 	}
 
