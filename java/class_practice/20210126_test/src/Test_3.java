@@ -14,6 +14,7 @@ public class Test_3 {
 		}
 	}
 }
+
 class Student{
 	private String name;
 	private int hakbeon;
