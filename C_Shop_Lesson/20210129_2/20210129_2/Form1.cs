@@ -29,8 +29,6 @@ namespace _20210129_2
         {
             //String item = checkedListBox1.SelectedItem.ToString();
             //textBox1.Text += item + "\r\n";
-
-
         }
 
         private void button2_Click(object sender, EventArgs e)
