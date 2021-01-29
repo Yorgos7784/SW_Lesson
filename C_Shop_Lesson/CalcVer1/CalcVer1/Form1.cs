@@ -92,6 +92,11 @@ namespace CalcVer1
             ButtonsOperator(sender);
         }
 
+        private void button15_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
+        }
+
         void ButtonsClick(object sender)
         {
             Button btn = (Button)sender;
@@ -156,44 +161,27 @@ namespace CalcVer1
                 if (btn.Text.Equals("+"))
                 {
                     if (s1 == "+"){}
-                    else
-                    {
-                        textBox1.Text += btn.Text;
-                    }
+                    else{textBox1.Text += btn.Text;}
                 }
 
                 else if (btn.Text.Equals("-"))
                 {
                     if (s1 == "-") {}
-                    else
-                    {
-                        textBox1.Text += btn.Text;
-                    }
+                    else{textBox1.Text += btn.Text;}
                 }
 
                 else if (btn.Text.Equals("*"))
                 {
                     if (s1 == "*") {}
-                    else
-                    {
-                        textBox1.Text += btn.Text;
-                    }
+                    else{textBox1.Text += btn.Text;}
                 }
 
                 else if (btn.Text.Equals("/"))
                 {
                     if (s1 == "/") {}
-                    else
-                    {
-                        textBox1.Text += btn.Text;
-                    }
+                    else{textBox1.Text += btn.Text;}
                 }
             }
-        }
-
-        private void button15_Click(object sender, EventArgs e)
-        {
-            textBox1.Text = "";
         }
     }
 }
