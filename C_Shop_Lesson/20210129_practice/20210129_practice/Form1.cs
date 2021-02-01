@@ -89,5 +89,18 @@ namespace _20210129_practice
         {
             listBox1.Items.Add("First Item");
         }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            if(listBox1.SelectedIndex == -1)
+            {
+                // 선택된 항목이 없을 경우
+                MessageBox.Show("선택된 항목이 없습니다.");
+            }
+            else
+            {
+                listBox1.Items.RemoveAt(listBox1.SelectedIndex);
+            }
+        }
     }
 }

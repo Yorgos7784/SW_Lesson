@@ -29,6 +29,7 @@ namespace _20210129_practice
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -45,6 +46,11 @@ namespace _20210129_practice
             this.button10 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.button11 = new System.Windows.Forms.Button();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -169,7 +175,7 @@ namespace _20210129_practice
             this.checkBox1.AutoSize = true;
             this.checkBox1.Checked = true;
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Location = new System.Drawing.Point(403, 74);
+            this.checkBox1.Location = new System.Drawing.Point(509, 50);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(86, 16);
             this.checkBox1.TabIndex = 8;
@@ -178,18 +184,18 @@ namespace _20210129_practice
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(403, 44);
+            this.textBox2.Location = new System.Drawing.Point(403, 47);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 21);
             this.textBox2.TabIndex = 9;
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(403, 99);
+            this.button10.Location = new System.Drawing.Point(414, 80);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(75, 23);
             this.button10.TabIndex = 10;
-            this.button10.Text = "button10";
+            this.button10.Text = "Add";
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
@@ -206,16 +212,59 @@ namespace _20210129_practice
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 12;
-            this.listBox1.Location = new System.Drawing.Point(403, 140);
+            this.listBox1.Location = new System.Drawing.Point(403, 116);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(192, 292);
+            this.listBox1.Size = new System.Drawing.Size(192, 256);
             this.listBox1.TabIndex = 12;
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(510, 80);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(75, 23);
+            this.button11.TabIndex = 13;
+            this.button11.Text = "Delete";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(453, 385);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(92, 16);
+            this.radioButton1.TabIndex = 14;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "radioButton1";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(403, 410);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(192, 23);
+            this.progressBar1.TabIndex = 15;
+            this.progressBar1.Value = 25;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(624, 27);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(262, 413);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(622, 464);
+            this.ClientSize = new System.Drawing.Size(898, 464);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.button11);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button10);
@@ -233,8 +282,10 @@ namespace _20210129_practice
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Remote Controller";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -258,6 +309,10 @@ namespace _20210129_practice
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
