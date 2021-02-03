@@ -26,7 +26,7 @@ public class MySerial {
 					InputStream in = serialPort.getInputStream();
 					OutputStream out = serialPort.getOutputStream();
 					
-					new Thread(new SerialReader(in)).start();
+//					new Thread(new SerialReader(in)).start();
 					new Thread(new SerialWriter(out)).start();
 				}
 			}	
