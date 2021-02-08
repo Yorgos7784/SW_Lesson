@@ -49,6 +49,9 @@ namespace Class_20210208
                 stArr[i].printStudentInfo();
             }
 
+            // 클래스 변수 접근
+            Console.WriteLine("과정명 : " + Student2.CLASS);
+
         }
     }
 
