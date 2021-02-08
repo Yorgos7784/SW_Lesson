@@ -52,6 +52,17 @@ namespace Class_20210208
             // 클래스 변수 접근
             Console.WriteLine("과정명 : " + Student2.CLASS);
 
+            // 입력처리
+            Console.Write("이름 입력 : ");
+            string name = Console.ReadLine();
+            Console.Write("나이 입력 : ");
+            int age = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("이름 : " + name);
+            Console.WriteLine("나이 : " + age);
+
+
+
         }
     }
 
