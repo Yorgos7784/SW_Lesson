@@ -15,6 +15,11 @@ namespace Class_practice_2
         private int avg;
         private char hakjum;
 
+        public StudentScore()
+        {
+
+        }
+
         public StudentScore(int kor, int eng, int math)
         {
             this.kor = kor;
@@ -43,6 +48,39 @@ namespace Class_practice_2
                 hakjum = 'D';
             else
                 hakjum = 'F';
+
+            Console.WriteLine("총점 : " + sum);
+            Console.WriteLine("평균 : " + avg);
+            Console.WriteLine("학점 : " + hakjum);
+            Console.WriteLine("-------------------------");
+        }
+
+        public void calculator(int kor, int eng,  int math)
+        {
+            sum = kor + eng + math;
+            avg = sum / 3;
+            if (avg >= 90 && avg <= 100)
+                hakjum = 'A';
+            else if (avg >= 80 && avg <= 89)
+                hakjum = 'B';
+            else if (avg >= 70 && avg <= 79)
+                hakjum = 'C';
+            else if (avg >= 60 && avg <= 69)
+                hakjum = 'D';
+            else
+                hakjum = 'F';
+
+            Console.WriteLine("총점 : " + sum);
+            Console.WriteLine("평균 : " + avg);
+            Console.WriteLine("학점 : " + hakjum);
+            Console.WriteLine("-------------------------");
+        }
+
+        public void setAllPorperty(int kor, int eng, int math)
+        {
+            this.kor = kor;
+            this.eng = eng;
+            this.math = math;
         }
     }
 }

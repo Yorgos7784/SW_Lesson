@@ -23,6 +23,10 @@ namespace Class_practice_20210215
                 st[i] = new Student(name[r.Next(0, 5)], age[r.Next(0, 5)], gender[r.Next(0, 2)], address[r.Next(0, 5)]);
                 st[i].showStudentInfo();
             }
+
+            st[9] = new Student("전우치", 24, '남', "조선 한양인근 두메산골");
+            Console.WriteLine("----- 수정 완료 -----\n");
+            st[9].showStudentInfo();
         }
     }
 }
