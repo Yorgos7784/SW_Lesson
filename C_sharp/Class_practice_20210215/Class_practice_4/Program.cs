@@ -6,8 +6,6 @@ namespace Class_practice_4
     {
         static void Main(string[] args)
         {
-            Random r = new Random();
-
             string[] language = { "C/C++", "Python", "Java" };
             string[] lecture1 = { "윈도우 프로그래밍 학습", "GUI 프로그래밍 학습", "윈도우 프로그래밍 학습" };
             string[] lecture2 = { 
@@ -19,6 +17,25 @@ namespace Class_practice_4
             char[] gender = { '남', '여' };
             string[] job = { "회사원", "취업 준비생", "가수", "학생", "교사", "환경 미화원" };
 
+            Lecture[] lectures = new Lecture[3];
+            for (int i = 0; i < lectures.Length; i++)
+            {
+                lectures[i] = new Lecture(
+                    language[i], 
+                    lecture1[i], 
+                    lecture2[i], 
+                    students[i]
+                );
+                lectures[i].showLectureInfo();
+            }
+        }
+
+        public static Student[][] createStudents()
+        {
+            Random r = new Random();
+            string[] name = { "김길동", "홍길동", "박길동", "최길동", "이길동", "강길동" };
+            char[] gender = { '남', '여' };
+            string[] job = { "회사원", "취업 준비생", "가수", "학생", "교사", "환경 미화원" };
             Student[][] students = new Student[3][];
             for (int i = 0; i < students.Length; i++)
             {
@@ -33,18 +50,7 @@ namespace Class_practice_4
                     );
                 }
             }
-
-            Lecture[] lectures = new Lecture[3];
-            for (int i = 0; i < lectures.Length; i++)
-            {
-                lectures[i] = new Lecture(
-                    language[i], 
-                    lecture1[i], 
-                    lecture2[i], 
-                    students[i]
-                );
-                lectures[i].showLectureInfo();
-            }
+            return students;
         }
     }
 }
