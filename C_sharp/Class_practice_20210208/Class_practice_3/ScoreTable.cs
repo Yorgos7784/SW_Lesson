@@ -9,6 +9,9 @@ namespace Class_practice_3
     class ScoreTable
     {
         private int[] arr;
+        private int sum;
+        private int ave;
+        private string result;
 
         public ScoreTable(int[] arr)
         {
@@ -17,7 +20,7 @@ namespace Class_practice_3
 
         public int getSum()
         {
-            int sum = 0;
+            sum = 0;
             for (int i = 0; i < arr.Length; i++)
             {
                 sum += arr[i];
@@ -27,21 +30,23 @@ namespace Class_practice_3
 
         public int getAve(int sum)
         {
-            return sum / arr.Length;
+            ave = sum / arr.Length;
+            return ave;
         }
 
         public string getResult(int ave)
         {
             if (100 >= ave && ave >= 90)
-                return "A학점";
+                result = "A학점";
             else if (89 >= ave && ave >= 80)
-                return "B학점";
+                result = "B학점";
             else if (79 >= ave && ave >= 70)
-                return "c학점";
+                result = "c학점";
             else if (69 >= ave && ave >= 60)
-                return "D학점";
+                result = "D학점";
             else
-                return "B학점";
+                result = "B학점";
+            return result;
         }
 
         public void showResult(int num)

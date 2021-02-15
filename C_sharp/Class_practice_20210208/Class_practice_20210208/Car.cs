@@ -20,10 +20,10 @@ namespace Class_practice_20210208
         // 기본 생성자
         public Car()
         {
-            company = "기아";
+            /*company = "기아";
             color = "블랙";
             model = "K7";
-            price = "4천만원";
+            price = "4천만원";*/
         }
 
         // 오버로딩 (중복 정의)
@@ -42,12 +42,12 @@ namespace Class_practice_20210208
         public string Model { get => model; set => model = value; }
         public string Price { get => price; set => price = value; }
 
+
         /*public string Company
         {
             get { return company; }
             set { company = value; }
         }
-
 
         public string Color
         {

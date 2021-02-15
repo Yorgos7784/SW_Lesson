@@ -11,9 +11,16 @@ namespace Class_practice_2
         static void Main(string[] args)
         {
             int[] arr = { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 };
-            SumAve result = new SumAve();
-            Console.WriteLine("배열의 합 : " + result.getSum(arr));
-            Console.WriteLine("배열의 평균 : " + result.getAve(arr, result.getSum(arr)));
+            SumAve result = new SumAve(arr);
+
+            SumAve result2 = new SumAve();
+            result2.getSumAve(arr);
+
+            SumAve result3 = new SumAve();
+            result3.Arr = arr;
+            result3.getSumAve();
+
+            new SumAve(arr);
         }
     }
 }

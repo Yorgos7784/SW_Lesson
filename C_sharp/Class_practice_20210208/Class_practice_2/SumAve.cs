@@ -10,8 +10,45 @@ namespace Class_practice_2
     {
         private int sum;
         private int ave;
+        private int[] arr;
 
-        public int getSum(int[] arr)
+        public int Sum { get => sum; set => sum = value; }
+        public int Ave { get => ave; set => ave = value; }
+        public int[] Arr { get => arr; set => arr = value; }
+
+        public SumAve(){ }
+        public SumAve(int[] arr)
+        {
+            getSumAve(arr);
+        }
+
+        public void getSumAve(int[] arr)
+        {
+            for (int i = 0; i < arr.Length; i++)
+            {
+                sum += arr[i];
+            }
+            ave = sum / arr.Length;
+
+            Console.WriteLine("총점 : " + sum);
+            Console.WriteLine("평균 : " + ave);
+        }
+
+        public void getSumAve()
+        {
+            for (int i = 0; i < arr.Length; i++)
+            {
+                sum += arr[i];
+            }
+            ave = sum / arr.Length;
+
+            Console.WriteLine("총점 : " + sum);
+            Console.WriteLine("평균 : " + ave);
+        }
+
+
+
+        /*public int getSum(int[] arr)
         {
             sum = 0;
             for (int i = 0; i < arr.Length; i++)
@@ -25,6 +62,7 @@ namespace Class_practice_2
         {
             ave = sum / arr.Length;
             return ave;
-        }
+        }*/
+
     }
 }
