@@ -1,0 +1,6 @@
+C:\Users\KB\Desktop\SW_Lesson\C_sharp\basic_practice\Practice_1\Practice_2\bin\Debug\Practice_2.exe.config
+C:\Users\KB\Desktop\SW_Lesson\C_sharp\basic_practice\Practice_1\Practice_2\bin\Debug\Practice_2.exe
+C:\Users\KB\Desktop\SW_Lesson\C_sharp\basic_practice\Practice_1\Practice_2\bin\Debug\Practice_2.pdb
+C:\Users\KB\Desktop\SW_Lesson\C_sharp\basic_practice\Practice_1\Practice_2\obj\Debug\Practice_2.csproj.CoreCompileInputs.cache
+C:\Users\KB\Desktop\SW_Lesson\C_sharp\basic_practice\Practice_1\Practice_2\obj\Debug\Practice_2.exe
+C:\Users\KB\Desktop\SW_Lesson\C_sharp\basic_practice\Practice_1\Practice_2\obj\Debug\Practice_2.pdb

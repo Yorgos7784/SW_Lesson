@@ -1,0 +1,10 @@
+C:\Users\KB\Desktop\SW_Lesson\C_Shop_Lesson\20210129_2\20210129_2\bin\Debug\20210129_2.exe.config
+C:\Users\KB\Desktop\SW_Lesson\C_Shop_Lesson\20210129_2\20210129_2\bin\Debug\20210129_2.exe
+C:\Users\KB\Desktop\SW_Lesson\C_Shop_Lesson\20210129_2\20210129_2\bin\Debug\20210129_2.pdb
+C:\Users\KB\Desktop\SW_Lesson\C_Shop_Lesson\20210129_2\20210129_2\obj\Debug\20210129_2.csprojAssemblyReference.cache
+C:\Users\KB\Desktop\SW_Lesson\C_Shop_Lesson\20210129_2\20210129_2\obj\Debug\_20210129_2.Form1.resources
+C:\Users\KB\Desktop\SW_Lesson\C_Shop_Lesson\20210129_2\20210129_2\obj\Debug\_20210129_2.Properties.Resources.resources
+C:\Users\KB\Desktop\SW_Lesson\C_Shop_Lesson\20210129_2\20210129_2\obj\Debug\20210129_2.csproj.GenerateResource.cache
+C:\Users\KB\Desktop\SW_Lesson\C_Shop_Lesson\20210129_2\20210129_2\obj\Debug\20210129_2.csproj.CoreCompileInputs.cache
+C:\Users\KB\Desktop\SW_Lesson\C_Shop_Lesson\20210129_2\20210129_2\obj\Debug\20210129_2.exe
+C:\Users\KB\Desktop\SW_Lesson\C_Shop_Lesson\20210129_2\20210129_2\obj\Debug\20210129_2.pdb

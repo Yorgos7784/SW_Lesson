@@ -1,0 +1,10 @@
+C:\Users\KB\Desktop\SW_Lesson\C_Shop_Lesson\20210129_practice\20210129_practice\bin\Debug\20210129_practice.exe.config
+C:\Users\KB\Desktop\SW_Lesson\C_Shop_Lesson\20210129_practice\20210129_practice\bin\Debug\20210129_practice.exe
+C:\Users\KB\Desktop\SW_Lesson\C_Shop_Lesson\20210129_practice\20210129_practice\bin\Debug\20210129_practice.pdb
+C:\Users\KB\Desktop\SW_Lesson\C_Shop_Lesson\20210129_practice\20210129_practice\obj\Debug\20210129_practice.csprojAssemblyReference.cache
+C:\Users\KB\Desktop\SW_Lesson\C_Shop_Lesson\20210129_practice\20210129_practice\obj\Debug\_20210129_practice.Form1.resources
+C:\Users\KB\Desktop\SW_Lesson\C_Shop_Lesson\20210129_practice\20210129_practice\obj\Debug\_20210129_practice.Properties.Resources.resources
+C:\Users\KB\Desktop\SW_Lesson\C_Shop_Lesson\20210129_practice\20210129_practice\obj\Debug\20210129_practice.csproj.GenerateResource.cache
+C:\Users\KB\Desktop\SW_Lesson\C_Shop_Lesson\20210129_practice\20210129_practice\obj\Debug\20210129_practice.csproj.CoreCompileInputs.cache
+C:\Users\KB\Desktop\SW_Lesson\C_Shop_Lesson\20210129_practice\20210129_practice\obj\Debug\20210129_practice.exe
+C:\Users\KB\Desktop\SW_Lesson\C_Shop_Lesson\20210129_practice\20210129_practice\obj\Debug\20210129_practice.pdb

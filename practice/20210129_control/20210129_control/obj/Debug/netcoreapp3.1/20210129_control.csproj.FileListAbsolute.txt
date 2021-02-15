@@ -1,0 +1,15 @@
+C:\Users\KB\Desktop\SW_Lesson\C_Shop_Lesson\20210129_control\20210129_control\bin\Debug\netcoreapp3.1\20210129_control.exe
+C:\Users\KB\Desktop\SW_Lesson\C_Shop_Lesson\20210129_control\20210129_control\bin\Debug\netcoreapp3.1\20210129_control.deps.json
+C:\Users\KB\Desktop\SW_Lesson\C_Shop_Lesson\20210129_control\20210129_control\bin\Debug\netcoreapp3.1\20210129_control.runtimeconfig.json
+C:\Users\KB\Desktop\SW_Lesson\C_Shop_Lesson\20210129_control\20210129_control\bin\Debug\netcoreapp3.1\20210129_control.runtimeconfig.dev.json
+C:\Users\KB\Desktop\SW_Lesson\C_Shop_Lesson\20210129_control\20210129_control\bin\Debug\netcoreapp3.1\20210129_control.dll
+C:\Users\KB\Desktop\SW_Lesson\C_Shop_Lesson\20210129_control\20210129_control\bin\Debug\netcoreapp3.1\20210129_control.pdb
+C:\Users\KB\Desktop\SW_Lesson\C_Shop_Lesson\20210129_control\20210129_control\obj\Debug\netcoreapp3.1\20210129_control.csprojAssemblyReference.cache
+C:\Users\KB\Desktop\SW_Lesson\C_Shop_Lesson\20210129_control\20210129_control\obj\Debug\netcoreapp3.1\_20210129_control.Form1.resources
+C:\Users\KB\Desktop\SW_Lesson\C_Shop_Lesson\20210129_control\20210129_control\obj\Debug\netcoreapp3.1\20210129_control.csproj.GenerateResource.cache
+C:\Users\KB\Desktop\SW_Lesson\C_Shop_Lesson\20210129_control\20210129_control\obj\Debug\netcoreapp3.1\20210129_control.AssemblyInfoInputs.cache
+C:\Users\KB\Desktop\SW_Lesson\C_Shop_Lesson\20210129_control\20210129_control\obj\Debug\netcoreapp3.1\20210129_control.AssemblyInfo.cs
+C:\Users\KB\Desktop\SW_Lesson\C_Shop_Lesson\20210129_control\20210129_control\obj\Debug\netcoreapp3.1\20210129_control.csproj.CoreCompileInputs.cache
+C:\Users\KB\Desktop\SW_Lesson\C_Shop_Lesson\20210129_control\20210129_control\obj\Debug\netcoreapp3.1\20210129_control.dll
+C:\Users\KB\Desktop\SW_Lesson\C_Shop_Lesson\20210129_control\20210129_control\obj\Debug\netcoreapp3.1\20210129_control.pdb
+C:\Users\KB\Desktop\SW_Lesson\C_Shop_Lesson\20210129_control\20210129_control\obj\Debug\netcoreapp3.1\20210129_control.genruntimeconfig.cache
