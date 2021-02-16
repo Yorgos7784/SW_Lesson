@@ -26,9 +26,13 @@ void controlSystem(){
       digitalWrite(LED, LOW);
     }
     else if(ch == '3'){
-      digitalWrite(BUZZER, HIGH);
-      delay(100);
-      digitalWrite(BUZZER, LOW);
+      for(int i = 0; i < 3; i++){
+        digitalWrite(BUZZER, HIGH);
+        delay(100);
+        digitalWrite(BUZZER, LOW);
+        delay(100);
+      }
+      
     }
     else if(ch == '4'){
       for (pos = 0; pos <= 180; pos += 1) {

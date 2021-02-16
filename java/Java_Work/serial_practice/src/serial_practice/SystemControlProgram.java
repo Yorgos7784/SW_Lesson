@@ -12,7 +12,14 @@ public class SystemControlProgram {
 	static final int CLEANER_ON = 4;
 	static final int PROGRAM_EXIT = 5;
 	static SerialPort serialPort;
+	
+	static final char CMD_TV_ON = '1';
+	static final char CMD_TV_OFF = '2';
+	static final char CMD_BOILER_ON = '3';
+	static final char CMD_CLEANER_ON = '4';
+	
 
+	// 메뉴 입력
 	public static int getMenu(Scanner s) {
 		System.out.println("-------------------------");
 		System.out.println("   스마트 홈 프로그램 v1.0");
@@ -27,6 +34,7 @@ public class SystemControlProgram {
 		return s.nextInt();
 	}
 	
+	// 시리얼 포트 연결
 	public static void getSerialPort() {
 		String[] portNames = SerialPortList.getPortNames();
 		System.out.println(portNames[0]);
@@ -39,26 +47,42 @@ public class SystemControlProgram {
 		}
 	}
 	
-	public static void main(String[] args) throws SerialPortException {
+	public static void main(String[] args) {
 		getSerialPort();
 		Scanner s = new Scanner(System.in);
 		while(true) {
 			switch(getMenu(s)) {
 			case TV_ON :
 				System.out.println("TV ON!");
-				serialPort.writeInt(Character.forDigit(TV_ON, 10));
+				try {
+					serialPort.writeInt(CMD_TV_ON);
+				} catch (SerialPortException e) {
+					e.printStackTrace();
+				}
 				break;
 			case TV_OFF :
 				System.out.println("TV OFF!");
-				serialPort.writeInt(Character.forDigit(TV_OFF, 10));
+				try {
+					serialPort.writeInt(CMD_TV_OFF);
+				} catch (SerialPortException e) {
+					e.printStackTrace();
+				}
 				break;
 			case BOILER_ON :
 				System.out.println("BOILER ON!");
-				serialPort.writeInt(Character.forDigit(BOILER_ON, 10));
+				try {
+					serialPort.writeInt(CMD_BOILER_ON);
+				} catch (SerialPortException e) {
+					e.printStackTrace();
+				}
 				break;
 			case CLEANER_ON :
 				System.out.println("CLEANER ON!");
-				serialPort.writeInt(Character.forDigit(CLEANER_ON, 10));
+				try {
+					serialPort.writeInt(CMD_CLEANER_ON);
+				} catch (SerialPortException e) {
+					e.printStackTrace();
+				}
 				break;
 			case PROGRAM_EXIT :
 				System.out.println("BYE!");
@@ -69,22 +93,3 @@ public class SystemControlProgram {
 		}
 	}
 }
-
-//class WriteThread extends Thread{
-//	SerialPort serial;
-//
-//	WriteThread(SerialPort serial) {
-//		this.serial = serial;
-//	}
-//
-//	public void run() {
-//		try {
-//			int c = 0;
-//			while ((c = System.in.read()) > -1) {
-//				serial.writeInt(c);
-//			}
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//	}
-//}
