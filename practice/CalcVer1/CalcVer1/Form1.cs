@@ -140,7 +140,7 @@ namespace CalcVer1
 
             else if (textBox1.Text.Contains("/"))
             {
-                String[] str1 = textBox1.Text.Split("/".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+                String[] str1 = textBox1.Text.Split("/".ToCharArray(), StringSplitOptions.RemoveEmptyEntries); 
                 if (str1.Length == 2)
                 {
                     int num1 = Convert.ToInt32(str1[0]);
