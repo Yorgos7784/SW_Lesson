@@ -18,7 +18,6 @@ public class SystemControlProgram {
 	static final char CMD_BOILER_ON = '3';
 	static final char CMD_CLEANER_ON = '4';
 	
-
 	// 메뉴 입력
 	public static int getMenu(Scanner s) {
 		System.out.println("-------------------------");
@@ -37,7 +36,9 @@ public class SystemControlProgram {
 	// 시리얼 포트 연결
 	public static void getSerialPort() {
 		String[] portNames = SerialPortList.getPortNames();
-		System.out.println(portNames[0]);
+		for (int i = 0; i < portNames.length; i++) {
+			System.out.println(portNames[i]);
+		}
 		serialPort = new SerialPort(portNames[0]);
 		try {
 			serialPort.openPort();
