@@ -229,7 +229,7 @@ namespace Class_practice_20210218
                             }
                             else
                             {
-                                if (members[show-1].Name != null && members[show-1].Tel != null && members[show - 1].Address != null && members[show - 1].Email != null)
+                                if (members[show - 1].Name != null && members[show - 1].Tel != null && members[show - 1].Address != null && members[show - 1].Email != null)
                                 {
                                     Console.WriteLine();
                                     Console.WriteLine("---------------------------");
@@ -249,7 +249,8 @@ namespace Class_practice_20210218
                     case VIEW_ALL:
                         for (int i = 0; i < members.Count; i++)
                         {
-                            if (members[i].Name != null && members[i].Tel != null && members[i].Address != null && members[i].Email != null) {
+                            if (members[i].Name != null && members[i].Tel != null && members[i].Address != null && members[i].Email != null)
+                            {
                                 Console.WriteLine();
                                 Console.WriteLine("---------------------------");
                                 Console.WriteLine((i + 1) + "번 학생 정보");
@@ -287,7 +288,7 @@ namespace Class_practice_20210218
                 {
                     Console.WriteLine();
                     Console.WriteLine("---------------------------");
-                    Console.WriteLine(i+1 + "번 학생 정보");
+                    Console.WriteLine(i + 1 + "번 학생 정보");
                     viewItem(members[i]);
                 }
             }
@@ -498,16 +499,17 @@ namespace Class_practice_20210218
                     }
                     if (count == 1)
                     {
-                        for (int i = 0; i < members.Count; i++)
-                        {
-                            if (members[i].Name == input)
-                            {
-                                fixItem(members[i]);
-                                break;
-                            }
-                        }
+                        fixItem(members[numcopy]);
+                        return;
                     }
-                    
+                    else
+                    {
+                        Console.Write("몇번을 수정하시겠습니까? : ");
+                        int fixnum = Convert.ToInt32(Console.ReadLine());
+                        fixItem(members[fixnum - 1]);
+                        return;
+                    }
+
                 }
                 else
                 {
@@ -520,6 +522,7 @@ namespace Class_practice_20210218
 
         public static void fixItem(MemberInfo member)
         {
+            Console.WriteLine();
             viewItem(member);
             while (true)
             {
