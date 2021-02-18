@@ -229,20 +229,27 @@ namespace Class_practice_20210218
                             }
                             else
                             {
-                                Console.WriteLine();
-                                Console.WriteLine("---------------------------");
-                                Console.WriteLine(show + "번 학생 정보");
-                                viewItem(members[show - 1]);
-                                break;
+                                if (members[show-1].Name != null && members[show-1].Tel != null && members[show - 1].Address != null && members[show - 1].Email != null)
+                                {
+                                    Console.WriteLine();
+                                    Console.WriteLine("---------------------------");
+                                    Console.WriteLine(show + "번 학생 정보");
+                                    viewItem(members[show - 1]);
+                                    break;
+                                }
+                                else
+                                {
+                                    Console.WriteLine();
+                                    Console.WriteLine("---------------------------");
+                                    Console.WriteLine("없는 정보입니다. 다시 입력해 주세요");
+                                }
                             }
                         }
                         break;
                     case VIEW_ALL:
                         for (int i = 0; i < members.Count; i++)
                         {
-                            if (members[i].Name == " " && members[i].Tel == " " && members[i].Address == " " && members[i].Email == " ") { }
-                            else
-                            {
+                            if (members[i].Name != null && members[i].Tel != null && members[i].Address != null && members[i].Email != null) {
                                 Console.WriteLine();
                                 Console.WriteLine("---------------------------");
                                 Console.WriteLine((i + 1) + "번 학생 정보");
@@ -276,12 +283,11 @@ namespace Class_practice_20210218
         {
             for (int i = 0; i < members.Count; i++)
             {
-                if (members[i].Name == " " && members[i].Tel == " " && members[i].Address == " " && members[i].Email == " ") { }
-                else
+                if (members[i].Name != null && members[i].Tel != null && members[i].Address != null && members[i].Email != null)
                 {
                     Console.WriteLine();
                     Console.WriteLine("---------------------------");
-                    Console.WriteLine((i + 1) + "번 학생 정보");
+                    Console.WriteLine(i+1 + "번 학생 정보");
                     viewItem(members[i]);
                 }
             }
@@ -389,10 +395,10 @@ namespace Class_practice_20210218
                                 Console.WriteLine();
                                 Console.WriteLine("---------------------------");
                                 Console.WriteLine(members[numcopy].Name + "의 정보를 삭제 했습니다.");
-                                members[numcopy].Name = " ";
-                                members[numcopy].Tel = " ";
-                                members[numcopy].Address = " ";
-                                members[numcopy].Email = " ";
+                                members[numcopy].Name = null;
+                                members[numcopy].Tel = null;
+                                members[numcopy].Address = null;
+                                members[numcopy].Email = null;
                             }
                             else if (delCheck == "n")
                             {
@@ -419,10 +425,10 @@ namespace Class_practice_20210218
                                 Console.WriteLine();
                                 Console.WriteLine("---------------------------");
                                 Console.WriteLine(members[delnum - 1].Name + "의 정보를 삭제 했습니다.");
-                                members[delnum - 1].Name = " ";
-                                members[delnum - 1].Tel = " ";
-                                members[delnum - 1].Address = " ";
-                                members[delnum - 1].Email = " ";
+                                members[delnum - 1].Name = null;
+                                members[delnum - 1].Tel = null;
+                                members[delnum - 1].Address = null;
+                                members[delnum - 1].Email = null;
                             }
                             else if (delCheck == "n")
                             {
@@ -447,12 +453,11 @@ namespace Class_practice_20210218
         {
             for (int i = 0; i < members.Count; i++)
             {
-                if (members[i].Name == " " && members[i].Tel == " " && members[i].Address == " " && members[i].Email == " ") { }
-                else
+                if (members[i].Name != null && members[i].Tel != null && members[i].Address != null && members[i].Email != null)
                 {
                     Console.WriteLine();
                     Console.WriteLine("---------------------------");
-                    Console.WriteLine((i + 1) + "번 학생 정보");
+                    Console.WriteLine(i + 1 + "번 학생 정보");
                     viewItem(members[i]);
                 }
             }
@@ -477,14 +482,32 @@ namespace Class_practice_20210218
                 }
                 if (checkContains == true)
                 {
+                    int count = 0;
+                    int numcopy = 0;
                     for (int i = 0; i < members.Count; i++)
                     {
-                        if (members[i].Name == input)
+                        if (input == members[i].Name)
                         {
-                            fixItem(members[i]);
-                            break;
+                            count++;
+                            Console.WriteLine();
+                            Console.WriteLine("---------------------------");
+                            Console.WriteLine((i + 1) + "번 학생 정보");
+                            viewItem(members[i]);
+                            numcopy = i;
                         }
                     }
+                    if (count == 1)
+                    {
+                        for (int i = 0; i < members.Count; i++)
+                        {
+                            if (members[i].Name == input)
+                            {
+                                fixItem(members[i]);
+                                break;
+                            }
+                        }
+                    }
+                    
                 }
                 else
                 {
