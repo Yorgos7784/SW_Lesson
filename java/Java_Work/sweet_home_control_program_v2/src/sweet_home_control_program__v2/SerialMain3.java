@@ -42,8 +42,9 @@ public class SerialMain3 {
 	public static void openSerial(SerialPort serial) {
 		try {
 			serial.openPort();
-			serial.setParams(SerialPort.BAUDRATE_9600, 
-					SerialPort.DATABITS_8, SerialPort.STOPBITS_1,
+			serial.setParams(SerialPort.BAUDRATE_9600,
+					SerialPort.DATABITS_8,
+					SerialPort.STOPBITS_1,
 					SerialPort.PARITY_NONE);
 		} catch (SerialPortException e) {
 			e.printStackTrace();
@@ -52,7 +53,7 @@ public class SerialMain3 {
 	
 	public static String login(Scanner s) {
 		System.out.println("-----------------");
-		System.out.println("스마트홈 제어 로그인");
+		System.out.println(" 스마트홈 제어 로그인");
 		System.out.println("-----------------");
 		System.out.print("ID: ");
 		String id = s.next();
