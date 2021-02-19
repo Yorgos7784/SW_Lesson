@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+
 namespace Class_practice_20210218
 {
     class Program
@@ -32,17 +33,16 @@ namespace Class_practice_20210218
         const string FIX_GOBACK = "5";
 
         static List<MemberInfo> members = new List<MemberInfo>();
-        //static MemberInfo member;
-        static void Main(string[] args)
+        static Random r = new Random();
+
+        public static void Main(string[] args)
         {
-            Random r = new Random();
-            //member = MemberInfo.getInst();
             while (true)
             {
                 switch (getMenu())
                 {
                     case MENU_ADD_ITEM:
-                        addItemMenu(r);
+                        addItemMenu();
                         break;
                     case MENU_VIEW_ITEM:
                         // 주소록이 비어있을때
@@ -119,7 +119,7 @@ namespace Class_practice_20210218
         }
 
         // 정보 추가 메뉴
-        public static void addItemMenu(Random r)
+        public static void addItemMenu()
         {
             while (true)
             {
@@ -136,10 +136,10 @@ namespace Class_practice_20210218
                 switch (Console.ReadLine())
                 {
                     case ADD_SELF:
-                        addItem(r);
+                        addItem();
                         break;
                     case ADD_RND:
-                        addRandomItem(r);
+                        addRandomItem();
                         break;
                     case ADD_GOBACK:
                         return;
@@ -154,7 +154,7 @@ namespace Class_practice_20210218
         }
 
         // 정보 추가
-        public static void addItem(Random r)
+        public static void addItem()
         {
             Console.WriteLine();
             Console.WriteLine("---------------------------");
@@ -168,14 +168,14 @@ namespace Class_practice_20210218
             string address = Console.ReadLine();
             Console.Write("이메일 : ");
             string email = Console.ReadLine();
-            members.Add(new MemberInfo(getId(r), name, tel, address, email));
+            members.Add(new MemberInfo(getId(), name, tel, address, email));
             Console.WriteLine();
             Console.WriteLine("---------------------------");
             Console.WriteLine("정보가 정상적으로 입력되었습니다.");
         }
 
         // 랜덤 정보 추가
-        public static void addRandomItem(Random r)
+        public static void addRandomItem()
         {
             string[] lastName = { "김", "이", "박", "최", "강" };
             string[] firstName1 = { "춘", "덕", "광", "미", "용" };
@@ -196,13 +196,10 @@ namespace Class_practice_20210218
                 fullname = lastName[r.Next(0, lastName.Length)] + firstName1[r.Next(0, firstName1.Length)] + firstName2[r.Next(0, firstName2.Length)];
                 tel = "010 - " + Convert.ToString(r.Next(1000, 10000)) + " - " + Convert.ToString(r.Next(1000, 10000));
                 email = emailId[r.Next(0, emailId.Length)] + emailadd[r.Next(0, emailadd.Length)];
-                members.Add(new MemberInfo(getId(r), fullname, tel, address[r.Next(0, address.Length)], email));
-            }
-            for (int i = 0; i < members.Count; i++)
-            {
+                members.Add(new MemberInfo(getId(), fullname, tel, address[r.Next(0, address.Length)], email));
+                Console.WriteLine();
                 viewItem(members[i]);
             }
-            
             Console.WriteLine();
             Console.WriteLine("---------------------------");
             Console.WriteLine("추가되었습니다!");
@@ -672,12 +669,11 @@ namespace Class_practice_20210218
         }
 
         // 랜덤 ID 생성
-        static string getId(Random r)
+        static string getId()
         {
-            int n = r.Next(0, 1000);
-            string rdata = "abcdefghijklmnopqrstuvwxyz" + "ABCDEFGHIJKLMNOPQRSTUVWXYZ" + "0123456789" + "~!@#$%^&*?";
+            string rdata = "abcdefghijklmnopqrstuvwxyz" + "ABCDEFGHIJKLMNPQRSTUVWXYZ" + "0123456789" + "~!@#$%^&*?";
             StringBuilder sb = new StringBuilder();
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 10; i++)
             {
                 sb.Append(rdata[(int)(r.NextDouble() * rdata.Length)]);
             }
