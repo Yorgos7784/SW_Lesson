@@ -2,20 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Class_practice_20210218.controller;
+using System.Threading.Tasks;
 
-
-namespace Class_practice_20210218
+namespace StudentInfo_control_20210219.controller
 {
-    class Program
+    class StudentHandler
     {
-        const string MENU_ADD_ITEM = "1";
-        const string MENU_VIEW_ITEM = "2";
-        const string MENU_FIX_ITEM = "3";
-        const string MENU_DEL_ITEM = "4";
-        const string MENU_EXIT = "5";
-
-        /*const string VIEW_ONE = "1";
+        const string VIEW_ONE = "1";
         const string VIEW_ALL = "2";
         const string VIEW_GOBACK = "3";
 
@@ -33,73 +26,10 @@ namespace Class_practice_20210218
         const string FIX_EMAIL = "4";
         const string FIX_GOBACK = "5";
 
-        static List<MemberInfo> members = new List<MemberInfo>();
-        static Random r = new Random();*/
+        static List<model.Student> members = new List<model.Student>();
+        static Random r = new Random();
 
-        public static void Main(string[] args)
-        {
-            StudentMenu mainSystem = new StudentMenu();
-            List<MemberInfo> members = mainSystem.returnMembers();
-            while (true)
-            {
-                switch (mainSystem.getMenu())
-                {
-                    case MENU_ADD_ITEM:
-                        mainSystem.addItemMenu();
-                        break;
-                    case MENU_VIEW_ITEM:
-                        // 주소록이 비어있을때
-                        if (members.Count() < 1)
-                        {
-                            mainSystem.noInfo();
-                            break;
-                        }
-                        else
-                        {
-                            mainSystem.viewMenu();
-                            break;
-                        }
-                    case MENU_FIX_ITEM:
-                        // 주소록이 비어있을때
-                        if (members.Count() < 1)
-                        {
-                            mainSystem.noInfo();
-                            break;
-                        }
-                        else
-                        {
-                            mainSystem.fixItemMenu();
-                            break;
-                        }
-                    case MENU_DEL_ITEM:
-                        // 주소록이 비어있을때
-                        if (members.Count() < 1)
-                        {
-                            mainSystem.noInfo();
-                            break;
-                        }
-                        else
-                        {
-                            mainSystem.deleteItemMenu();
-                            break;
-                        }
-                    case MENU_EXIT:
-                        Console.WriteLine();
-                        Console.WriteLine("---------------------------");
-                        Console.WriteLine("프로그램 종료");
-                        Environment.Exit(0);
-                        break;
-                    default:
-                        Console.WriteLine();
-                        Console.WriteLine("---------------------------");
-                        Console.WriteLine("잘못 입력하셨습니다.");
-                        break;
-                }
-            }
-        }
-
-        // 메인메뉴
-        /*public static string getMenu()
+        public static string getMenu()
         {
             Console.WriteLine();
             Console.WriteLine("---------------------------");
@@ -165,7 +95,7 @@ namespace Class_practice_20210218
             string address = Console.ReadLine();
             Console.Write("이메일 : ");
             string email = Console.ReadLine();
-            members.Add(new MemberInfo(getId(), name, tel, address, email));
+            members.Add(new model.Student(getId(), name, tel, address, email));
             Console.WriteLine();
             Console.WriteLine("---------------------------");
             Console.WriteLine("정보가 정상적으로 입력되었습니다.");
@@ -193,7 +123,7 @@ namespace Class_practice_20210218
                 fullname = lastName[r.Next(0, lastName.Length)] + firstName1[r.Next(0, firstName1.Length)] + firstName2[r.Next(0, firstName2.Length)];
                 tel = "010 - " + Convert.ToString(r.Next(1000, 10000)) + " - " + Convert.ToString(r.Next(1000, 10000));
                 email = emailId[r.Next(0, emailId.Length)] + emailadd[r.Next(0, emailadd.Length)];
-                members.Add(new MemberInfo(getId(), fullname, tel, address[r.Next(0, address.Length)], email));
+                members.Add(new model.Student(getId(), fullname, tel, address[r.Next(0, address.Length)], email));
                 Console.WriteLine();
                 viewItem(members[i]);
             }
@@ -435,7 +365,7 @@ namespace Class_practice_20210218
                             string delnum = Console.ReadLine();
                             for (int i = 0; i < members.Count; i++)
                             {
-                                if(delnum == members[i].Id)
+                                if (delnum == members[i].Id)
                                 {
                                     Console.WriteLine();
                                     Console.WriteLine("---------------------------");
@@ -449,7 +379,7 @@ namespace Class_practice_20210218
                                     {
                                         Console.WriteLine();
                                         Console.WriteLine("---------------------------");
-                                        Console.WriteLine(members[i+1].Name + "의 정보를 삭제 했습니다.");
+                                        Console.WriteLine(members[i + 1].Name + "의 정보를 삭제 했습니다.");
                                         members[i].Name = " ";
                                         members[i].Tel = " ";
                                         members[i].Address = " ";
@@ -488,7 +418,7 @@ namespace Class_practice_20210218
             }
             while (true)
             {
-                
+
                 Console.WriteLine();
                 Console.WriteLine("---------------------------");
                 Console.Write("수정할 학생의 이름을 입력하세요(돌아가기 : -1, 빈 학생 정보 : 0) : ");
@@ -582,7 +512,7 @@ namespace Class_practice_20210218
                             string fixnum = Console.ReadLine();
                             for (int i = 0; i < members.Count; i++)
                             {
-                                if(fixnum == members[i].Id)
+                                if (fixnum == members[i].Id)
                                 {
                                     fixItem(members[i]);
                                 }
@@ -675,6 +605,11 @@ namespace Class_practice_20210218
                 sb.Append(rdata[(int)(r.NextDouble() * rdata.Length)]);
             }
             return sb.ToString();
-        }*/
+        }
+
+        public static List<MemberInfo> returnMembers()
+        {
+            return members;
+        }
     }
 }

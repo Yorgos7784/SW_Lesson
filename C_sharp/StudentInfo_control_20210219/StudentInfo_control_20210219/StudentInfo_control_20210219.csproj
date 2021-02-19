@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{938DD807-B24D-460C-B665-C3646D069078}</ProjectGuid>
+    <ProjectGuid>{AD4BCBA2-8202-49AE-B331-2CA738A7AD10}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Class_practice_20210218</RootNamespace>
-    <AssemblyName>Class_practice_20210218</AssemblyName>
+    <RootNamespace>StudentInfo_control_20210219</RootNamespace>
+    <AssemblyName>StudentInfo_control_20210219</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,8 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="controller\StudentController.cs" />
-    <Compile Include="controller\StudentMenu.cs" />
+    <Compile Include="controller\StudentHandler.cs" />
     <Compile Include="model\Student.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

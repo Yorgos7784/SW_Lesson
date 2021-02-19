@@ -16,9 +16,7 @@ namespace adressTest0218
         const int MENU_DELETE_ALL = 5;
         const int MENU_EXIT = 6;
 
-        static List<Student> addrList = 
-            new List<Student>();
-
+        static List<Student> addrList = new List<Student>();
         static Random r = new Random();
 
         static void Main(string[] args) {
@@ -61,8 +59,7 @@ namespace adressTest0218
             Console.Write("이메일: ");
             string email = Console.ReadLine();
 
-            addrList.Add(
-                new Student(getId(), name, tel, address, email));
+            addrList.Add(new Student(getId(), name, tel, address, email));
             Console.WriteLine("정보가 정상적으로 입력되었습니다.");
         }
 
@@ -99,17 +96,10 @@ namespace adressTest0218
         public static void randData()
         {
             string[] name =
-                {"홍길동", "김길동",
-                "이길동", "박길동", "최길동"};
-            string[] tel = {"010-1111-1111",
-                "010-2222-2222", "010-2222-3333",
-                "010-2222-4444", "010-2222-5555"};
-            string[] address = {"대구시 동구 신암동",
-                "광주시 동구 신암동", "서울시 동구 신암동",
-                "대전시 동구 신암동", "부산시 동구 신암동"};
-            string[] email = {"hong@naver.com",
-                "kim@naver.com", "lee@naver.com",
-                "park@naver.com", "choi@naver.com"};
+                {"홍길동", "김길동", "이길동", "박길동", "최길동"};
+            string[] tel = {"010-1111-1111", "010-2222-2222", "010-2222-3333", "010-2222-4444", "010-2222-5555"};
+            string[] address = {"대구시 동구 신암동", "광주시 동구 신암동", "서울시 동구 신암동", "대전시 동구 신암동", "부산시 동구 신암동"};
+            string[] email = {"hong@naver.com", "kim@naver.com", "lee@naver.com", "park@naver.com", "choi@naver.com"};
 
             //Random r = new Random();
             for (int i = 0; i < 50; i++)
