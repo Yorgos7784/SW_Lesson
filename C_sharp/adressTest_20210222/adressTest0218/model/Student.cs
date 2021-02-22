@@ -4,32 +4,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Class_practice_20210218
+namespace adressTest0218
 {
-    class MemberInfo
+    class Student
     {
         private string id;
         private string name;
         private string tel;
         private string address;
         private string email;
-        
-        /*private static MemberInfo inst;
-        public static MemberInfo getInst()
+        private static Student inst;
+
+        public static Student getInst()
         {
             if (inst == null)
             {
-                inst = new MemberInfo();
+                inst = new Student();
             }
             return inst;
-        }*/
-
-        public MemberInfo()
-        {
-
         }
 
-        public MemberInfo(string name, string tel, string address, string email)
+        public Student() { }
+
+        public Student(string name, string tel, 
+            string address, string email)
         {
             this.name = name;
             this.tel = tel;
@@ -37,7 +35,9 @@ namespace Class_practice_20210218
             this.email = email;
         }
 
-        public MemberInfo(string id, string name, string tel, string address, string email) : this(name, tel, address, email)
+        public Student(string id, string name, string tel, 
+            string address, string email) 
+            : this(name, tel, address, email)
         {
             this.id = id;
         }
@@ -48,7 +48,15 @@ namespace Class_practice_20210218
         public string Email { get => email; set => email = value; }
         public string Id { get => id; set => id = value; }
 
-        //public string ABC { get; set; }
-        //public string ABCC;
+        /*
+        public void showAddress()
+        {
+            Console.WriteLine("이름: {0}", name);
+            Console.WriteLine("전화: " + tel);
+            Console.WriteLine("주소: " + address);
+            Console.WriteLine("이메일: " + email);
+            Console.WriteLine("-----------------");
+        }
+        */
     }
 }

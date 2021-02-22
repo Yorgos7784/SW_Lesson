@@ -1,0 +1,7 @@
+C:\Users\KB\Desktop\SW_Lesson\C_sharp\adressTest_20210222\adressTest0218\bin\Debug\adressTest0218.exe.config
+C:\Users\KB\Desktop\SW_Lesson\C_sharp\adressTest_20210222\adressTest0218\bin\Debug\adressTest0218.exe
+C:\Users\KB\Desktop\SW_Lesson\C_sharp\adressTest_20210222\adressTest0218\bin\Debug\adressTest0218.pdb
+C:\Users\KB\Desktop\SW_Lesson\C_sharp\adressTest_20210222\adressTest0218\obj\Debug\adressTest0222.csprojAssemblyReference.cache
+C:\Users\KB\Desktop\SW_Lesson\C_sharp\adressTest_20210222\adressTest0218\obj\Debug\adressTest0222.csproj.CoreCompileInputs.cache
+C:\Users\KB\Desktop\SW_Lesson\C_sharp\adressTest_20210222\adressTest0218\obj\Debug\adressTest0218.exe
+C:\Users\KB\Desktop\SW_Lesson\C_sharp\adressTest_20210222\adressTest0218\obj\Debug\adressTest0218.pdb
