@@ -1,9 +1,5 @@
-﻿using Class_practice_20210218.controller;
-using Class_practice_20210218.view;
+﻿using Class_practice_20210218.view;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 
 namespace Class_practice_20210218
