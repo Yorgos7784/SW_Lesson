@@ -70,7 +70,6 @@ namespace Class_practice_20210218.controller
                         Console.WriteLine("---------------------------");
                         Console.WriteLine("잘못 입력하였습니다.");
                         break;
-
                 }
             }
         }
@@ -143,7 +142,6 @@ namespace Class_practice_20210218.controller
                         Console.WriteLine("---------------------------");
                         Console.WriteLine("잘못 입력하였습니다.");
                         break;
-
                 }
             }
         }
@@ -317,7 +315,6 @@ namespace Class_practice_20210218.controller
                             }
                             return;
                         }
-
                     }
                     else
                     {
@@ -335,6 +332,7 @@ namespace Class_practice_20210218.controller
             Console.WriteLine("---------------------------");
             Console.WriteLine("주소록 정보가 없습니다.");
         }
+
         // 처리된 정보 리턴
         public List<MemberInfo> returnMembers()
         {

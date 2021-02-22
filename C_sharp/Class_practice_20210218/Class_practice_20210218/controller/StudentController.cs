@@ -59,8 +59,11 @@ namespace Class_practice_20210218.controller
                 tel = "010 - " + Convert.ToString(r.Next(1000, 10000)) + " - " + Convert.ToString(r.Next(1000, 10000));
                 email = emailId[r.Next(0, emailId.Length)] + emailadd[r.Next(0, emailadd.Length)];
                 members.Add(new MemberInfo(getId(), fullname, tel, address[r.Next(0, address.Length)], email));
+            }
+            for (int i = 0; i < members.Count; i++)
+            {
                 Console.WriteLine();
-                viewItem(members[i], i+1);
+                viewItem(members[i], i + 1);
             }
             Console.WriteLine();
             Console.WriteLine("---------------------------");
