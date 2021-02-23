@@ -26,9 +26,9 @@ public class SerialMain3 {
 	public static final int MENU_EMARGENCY = 5;
 	
 	static final int CMD_TV_ON 		= '1';
-	static final int CMD_TV_OFF 	= '0';
-	static final int CMD_HEATER_ON 	= '2';
-	static final int CMD_CLEANER_ON = '3';
+	static final int CMD_TV_OFF 	= '2';
+	static final int CMD_HEATER_ON 	= '3';
+	static final int CMD_CLEANER_ON = '4';
 	
 	public static SerialPort initSerial() {
 		String[] portNames = SerialPortList.getPortNames();
