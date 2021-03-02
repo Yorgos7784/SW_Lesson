@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{89264DB9-A1D7-4DCB-AD00-28F50C43DD48}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <RootNamespace>addrWin_20210302</RootNamespace>
     <AssemblyName>addrWin_20210302</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -31,6 +31,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CxFlatUI, Version=1.0.0.4, Culture=neutral, processorArchitecture=MSIL">
@@ -60,6 +63,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="control\StudentCtrl.cs" />
+    <Compile Include="model\Student.cs" />
+    <Compile Include="ui\AddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\AddForm.Designer.cs">
+      <DependentUpon>AddForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ui\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +79,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="util\MyMenu.cs" />
+    <Compile Include="util\RandomData.cs" />
+    <EmbeddedResource Include="ui\AddForm.resx">
+      <DependentUpon>AddForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ui\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -104,10 +120,6 @@
     <Content Include="ReadMePng\Options.png" />
     <Content Include="ReadMePng\类库上右键.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="control\" />
-    <Folder Include="model\" />
-    <Folder Include="util\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

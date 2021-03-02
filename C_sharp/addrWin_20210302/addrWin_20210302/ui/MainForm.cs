@@ -1,4 +1,7 @@
-﻿using MaterialSkin.Controls;
+﻿using addrWin_20210302.ui;
+using adressTest0218.control;
+using adressTest0218.view;
+using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +16,9 @@ namespace addrWin_20210302
 {
     public partial class MainForm : MaterialForm
     {
+        MyMenu menu = new MyMenu();
+        StudentCtrl sc = new StudentCtrl();
+
         public MainForm()
         {
             InitializeComponent();
@@ -30,27 +36,28 @@ namespace addrWin_20210302
 
         private void addrAdd_Click(object sender, EventArgs e)
         {
-
+            // sc.addItem();
+            new AddForm(sc).ShowDialog();
         }
 
         private void addrAddRand_Click(object sender, EventArgs e)
         {
-
+            sc.randData();
         }
 
         private void addrView_Click(object sender, EventArgs e)
         {
-
+            sc.viewItem();
         }
 
         private void addrDel_Click(object sender, EventArgs e)
         {
-
+            sc.delItem();
         }
 
         private void addrDelAll_Click(object sender, EventArgs e)
         {
-
+            sc.delItemAll();
         }
 
         private void addrUpdt_Click(object sender, EventArgs e)

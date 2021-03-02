@@ -2,7 +2,7 @@
 
 namespace adressTest0218.view
 {
-    class Menu
+    class MyMenu
     {
         public const int MENU_MAIN_ADD = 1;
         public const int MENU_MAIN_VIEW = 2;

@@ -20,6 +20,11 @@ namespace adressTest0218.control
             rand = new RandomData(new Random());
         }
 
+        public List<Student> getList()
+        {
+            return addrList;
+        }
+
         public void addItem()
         {
             Console.WriteLine("-----------------");
@@ -42,6 +47,7 @@ namespace adressTest0218.control
             for (int i = 0; i < addrList.Count; i++)
             {
                 Console.WriteLine("번호: " + (i + 1));
+                Console.WriteLine("ID: " + addrList[i].Id);
                 Console.WriteLine("이름: " + addrList[i].Name);
                 Console.WriteLine("전화: " + addrList[i].Tel);
                 Console.WriteLine("주소: " + addrList[i].Address);
@@ -50,8 +56,10 @@ namespace adressTest0218.control
             }
         }
 
-        public void delItem(string name)
+        public void delItem()
         {
+            Console.Write("삭제할 이름 입력 : ");
+            string name = Console.ReadLine();
             for (int i = 0; i < addrList.Count; i++)
             {
                 if (name.Equals(addrList[i].Name))
@@ -66,9 +74,9 @@ namespace adressTest0218.control
             addrList.Clear();
         }
 
-        public void randData(int count)
+        public void randData()
         {
-            for (int i = 0; i < count; i++)
+            for (int i = 0; i < 10; i++)
             {
                 addrList.Add(new Student(rand.getId(), rand.getName(), rand.getTel(), rand.getAddr(), rand.getEmail()));
             }
