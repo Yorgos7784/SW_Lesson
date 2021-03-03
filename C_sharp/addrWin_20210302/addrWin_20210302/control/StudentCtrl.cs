@@ -12,12 +12,22 @@ namespace adressTest0218.control
         public const int MENU_UPDATE_EMAIL = 4;
         public const int MENU_UPDATE_EXIT = 5;
 
+        static StudentCtrl inst;
         List<Student> addrList = new List<Student>();
         RandomData rand;
 
+        public static StudentCtrl getInst()
+        {
+            if (inst == null)
+            {
+                inst = new StudentCtrl();
+            }
+            return inst;
+        }
+
         public StudentCtrl()
         {
-            rand = new RandomData(new Random());
+            rand = new RandomData();
         }
 
         public List<Student> getList()

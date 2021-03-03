@@ -45,6 +45,7 @@ namespace addrWin_20210302
             // 
             // addrAdd
             // 
+            this.addrAdd.BackColor = System.Drawing.Color.White;
             this.addrAdd.ButtonType = CxFlatUI.ButtonType.Primary;
             this.addrAdd.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.addrAdd.Location = new System.Drawing.Point(395, 154);

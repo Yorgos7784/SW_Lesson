@@ -45,7 +45,7 @@ namespace addrWin_20210302.ui
             // 
             this.name.BackColor = System.Drawing.Color.Transparent;
             this.name.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.name.Location = new System.Drawing.Point(99, 103);
+            this.name.Location = new System.Drawing.Point(201, 120);
             this.name.MinimumSize = new System.Drawing.Size(1, 1);
             this.name.Name = "name";
             this.name.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
@@ -60,7 +60,7 @@ namespace addrWin_20210302.ui
             // 
             this.tel.BackColor = System.Drawing.Color.Transparent;
             this.tel.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.tel.Location = new System.Drawing.Point(99, 163);
+            this.tel.Location = new System.Drawing.Point(201, 180);
             this.tel.MinimumSize = new System.Drawing.Size(1, 1);
             this.tel.Name = "tel";
             this.tel.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
@@ -74,7 +74,7 @@ namespace addrWin_20210302.ui
             // 
             this.addr.BackColor = System.Drawing.Color.Transparent;
             this.addr.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.addr.Location = new System.Drawing.Point(99, 223);
+            this.addr.Location = new System.Drawing.Point(201, 240);
             this.addr.MinimumSize = new System.Drawing.Size(1, 1);
             this.addr.Name = "addr";
             this.addr.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
@@ -88,7 +88,7 @@ namespace addrWin_20210302.ui
             // 
             this.email.BackColor = System.Drawing.Color.Transparent;
             this.email.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.email.Location = new System.Drawing.Point(99, 283);
+            this.email.Location = new System.Drawing.Point(201, 300);
             this.email.MinimumSize = new System.Drawing.Size(1, 1);
             this.email.Name = "email";
             this.email.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
@@ -103,7 +103,7 @@ namespace addrWin_20210302.ui
             this.addOK.BackColor = System.Drawing.Color.Transparent;
             this.addOK.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addOK.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.addOK.Location = new System.Drawing.Point(164, 359);
+            this.addOK.Location = new System.Drawing.Point(266, 376);
             this.addOK.MinimumSize = new System.Drawing.Size(1, 1);
             this.addOK.Name = "addOK";
             this.addOK.Size = new System.Drawing.Size(131, 35);
@@ -115,7 +115,7 @@ namespace addrWin_20210302.ui
             // 
             this.addCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addCancel.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.addCancel.Location = new System.Drawing.Point(319, 359);
+            this.addCancel.Location = new System.Drawing.Point(421, 376);
             this.addCancel.MinimumSize = new System.Drawing.Size(1, 1);
             this.addCancel.Name = "addCancel";
             this.addCancel.Size = new System.Drawing.Size(131, 35);
@@ -129,7 +129,7 @@ namespace addrWin_20210302.ui
             this.addName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.addName.FillColor = System.Drawing.Color.White;
             this.addName.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.addName.Location = new System.Drawing.Point(200, 108);
+            this.addName.Location = new System.Drawing.Point(302, 125);
             this.addName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.addName.Maximum = 2147483647D;
             this.addName.Minimum = -2147483648D;
@@ -144,7 +144,7 @@ namespace addrWin_20210302.ui
             this.addTel.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.addTel.FillColor = System.Drawing.Color.White;
             this.addTel.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.addTel.Location = new System.Drawing.Point(200, 168);
+            this.addTel.Location = new System.Drawing.Point(302, 185);
             this.addTel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.addTel.Maximum = 2147483647D;
             this.addTel.Minimum = -2147483648D;
@@ -159,7 +159,7 @@ namespace addrWin_20210302.ui
             this.addAddr.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.addAddr.FillColor = System.Drawing.Color.White;
             this.addAddr.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.addAddr.Location = new System.Drawing.Point(200, 228);
+            this.addAddr.Location = new System.Drawing.Point(302, 245);
             this.addAddr.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.addAddr.Maximum = 2147483647D;
             this.addAddr.Minimum = -2147483648D;
@@ -174,7 +174,7 @@ namespace addrWin_20210302.ui
             this.addEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.addEmail.FillColor = System.Drawing.Color.White;
             this.addEmail.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.addEmail.Location = new System.Drawing.Point(200, 288);
+            this.addEmail.Location = new System.Drawing.Point(302, 305);
             this.addEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.addEmail.Maximum = 2147483647D;
             this.addEmail.Minimum = -2147483648D;
@@ -188,7 +188,7 @@ namespace addrWin_20210302.ui
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(621, 452);
+            this.ClientSize = new System.Drawing.Size(818, 488);
             this.Controls.Add(this.addEmail);
             this.Controls.Add(this.addAddr);
             this.Controls.Add(this.addTel);

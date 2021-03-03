@@ -10,9 +10,9 @@ namespace adressTest0218.util
         static string[] address = { "대구시 동구 신암동", "광주시 동구 신암동", "서울시 동구 신암동", "대전시 동구 신암동", "부산시 동구 신암동" };
         static string[] email = { "hong@naver.com", "kim@naver.com", "lee@naver.com", "park@naver.com", "choi@naver.com" };
 
-        Random r;
+        Random r = new Random();
 
-        public RandomData(Random r) { this.r = r; }
+        public RandomData() { }
 
         public string getName() { return name[r.Next(0, 5)]; }
         public string getTel() { return tel[r.Next(0, 5)]; }

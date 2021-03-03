@@ -37,27 +37,29 @@ namespace addrWin_20210302
         private void addrAdd_Click(object sender, EventArgs e)
         {
             // sc.addItem();
-            new AddForm(sc).ShowDialog();
+            new AddForm().ShowDialog();
         }
 
         private void addrAddRand_Click(object sender, EventArgs e)
         {
-            sc.randData();
+            StudentCtrl.getInst().randData();
+            MessageBox.Show("추가되었습니다!");
         }
 
         private void addrView_Click(object sender, EventArgs e)
         {
-            sc.viewItem();
+            StudentCtrl.getInst().viewItem();
+            new viewForm().ShowDialog();
         }
 
         private void addrDel_Click(object sender, EventArgs e)
         {
-            sc.delItem();
+            StudentCtrl.getInst().delItem();
         }
 
         private void addrDelAll_Click(object sender, EventArgs e)
         {
-            sc.delItemAll();
+            StudentCtrl.getInst().delItemAll();
         }
 
         private void addrUpdt_Click(object sender, EventArgs e)

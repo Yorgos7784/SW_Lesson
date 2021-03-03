@@ -14,3 +14,4 @@ C:\Users\KB\Desktop\SW_Lesson\C_sharp\addrWin_20210302\addrWin_20210302\bin\Debu
 C:\Users\KB\Desktop\SW_Lesson\C_sharp\addrWin_20210302\addrWin_20210302\obj\Debug\addrWin_20210302.csproj.CopyComplete
 C:\Users\KB\Desktop\SW_Lesson\C_sharp\addrWin_20210302\addrWin_20210302\obj\Debug\addrWin_20210302.csprojAssemblyReference.cache
 C:\Users\KB\Desktop\SW_Lesson\C_sharp\addrWin_20210302\addrWin_20210302\obj\Debug\addrWin_20210302.ui.AddForm.resources
+C:\Users\KB\Desktop\SW_Lesson\C_sharp\addrWin_20210302\addrWin_20210302\obj\Debug\addrWin_20210302.ui.viewForm.resources
