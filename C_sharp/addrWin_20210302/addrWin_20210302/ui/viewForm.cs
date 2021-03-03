@@ -50,11 +50,6 @@ namespace addrWin_20210302.ui
             }
         }
 
-        private void viewReturn_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void viewForm_Load(object sender, EventArgs e)
         {
             initListView();
@@ -70,6 +65,14 @@ namespace addrWin_20210302.ui
             {
                 gridView.Rows.Add(new string[] { (i + 2).ToString(), "홍길동", "010-1234-5678", "조선 한양 홍대감댁", "hong@naver.com" });
             }
+            int count = gridView.Rows.Count - 1;
+            gridView.FirstDisplayedScrollingRowIndex = count;
+            gridView.CurrentCell = gridView.Rows[count - 1].Cells[0];
+        }
+
+        private void viewExti_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

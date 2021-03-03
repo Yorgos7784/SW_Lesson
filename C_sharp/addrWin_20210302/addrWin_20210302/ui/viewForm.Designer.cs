@@ -33,18 +33,18 @@ namespace addrWin_20210302.ui
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.listView = new System.Windows.Forms.ListView();
-            this.gridView = new Sunny.UI.UIDataGridView();
-            this.viewReturn = new Sunny.UI.UISymbolButton();
             this.listCount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listTel = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listAddr = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listEmail = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.gridView = new Sunny.UI.UIDataGridView();
             this.gridCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gridName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gridTel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gridAddr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gridEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.viewExit = new Sunny.UI.UISymbolButton();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,6 +65,35 @@ namespace addrWin_20210302.ui
             this.listView.TabIndex = 0;
             this.listView.UseCompatibleStateImageBehavior = false;
             this.listView.View = System.Windows.Forms.View.Details;
+            // 
+            // listCount
+            // 
+            this.listCount.Text = "번 호";
+            this.listCount.Width = 45;
+            // 
+            // listName
+            // 
+            this.listName.Text = "이 름";
+            this.listName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.listName.Width = 80;
+            // 
+            // listTel
+            // 
+            this.listTel.Text = "전 화";
+            this.listTel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.listTel.Width = 171;
+            // 
+            // listAddr
+            // 
+            this.listAddr.Text = "주 소";
+            this.listAddr.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.listAddr.Width = 248;
+            // 
+            // listEmail
+            // 
+            this.listEmail.Text = "이메일";
+            this.listEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.listEmail.Width = 232;
             // 
             // gridView
             // 
@@ -101,47 +130,6 @@ namespace addrWin_20210302.ui
             this.gridView.Size = new System.Drawing.Size(794, 162);
             this.gridView.TabIndex = 1;
             // 
-            // viewReturn
-            // 
-            this.viewReturn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.viewReturn.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.viewReturn.Location = new System.Drawing.Point(344, 431);
-            this.viewReturn.MinimumSize = new System.Drawing.Size(1, 1);
-            this.viewReturn.Name = "viewReturn";
-            this.viewReturn.Size = new System.Drawing.Size(131, 35);
-            this.viewReturn.TabIndex = 2;
-            this.viewReturn.Text = "확인";
-            this.viewReturn.Click += new System.EventHandler(this.viewReturn_Click);
-            // 
-            // listCount
-            // 
-            this.listCount.Text = "번 호";
-            this.listCount.Width = 45;
-            // 
-            // listName
-            // 
-            this.listName.Text = "이 름";
-            this.listName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.listName.Width = 80;
-            // 
-            // listTel
-            // 
-            this.listTel.Text = "전 화";
-            this.listTel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.listTel.Width = 171;
-            // 
-            // listAddr
-            // 
-            this.listAddr.Text = "주 소";
-            this.listAddr.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.listAddr.Width = 248;
-            // 
-            // listEmail
-            // 
-            this.listEmail.Text = "이메일";
-            this.listEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.listEmail.Width = 232;
-            // 
             // gridCount
             // 
             this.gridCount.HeaderText = "번 호";
@@ -172,12 +160,24 @@ namespace addrWin_20210302.ui
             this.gridEmail.Name = "gridEmail";
             this.gridEmail.Width = 200;
             // 
+            // viewExit
+            // 
+            this.viewExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.viewExit.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.viewExit.Location = new System.Drawing.Point(344, 431);
+            this.viewExit.MinimumSize = new System.Drawing.Size(1, 1);
+            this.viewExit.Name = "viewExit";
+            this.viewExit.Size = new System.Drawing.Size(131, 35);
+            this.viewExit.TabIndex = 2;
+            this.viewExit.Text = "확인";
+            this.viewExit.Click += new System.EventHandler(this.viewExti_Click);
+            // 
             // viewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(818, 488);
-            this.Controls.Add(this.viewReturn);
+            this.Controls.Add(this.viewExit);
             this.Controls.Add(this.gridView);
             this.Controls.Add(this.listView);
             this.Name = "viewForm";
@@ -193,7 +193,7 @@ namespace addrWin_20210302.ui
 
         private System.Windows.Forms.ListView listView;
         private Sunny.UI.UIDataGridView gridView;
-        private Sunny.UI.UISymbolButton viewReturn;
+        private Sunny.UI.UISymbolButton viewExit;
         private System.Windows.Forms.ColumnHeader listCount;
         private System.Windows.Forms.ColumnHeader listName;
         private System.Windows.Forms.ColumnHeader listTel;
