@@ -126,6 +126,7 @@ namespace addrWin_20210302.ui
             this.gridView.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.gridView.RowTemplate.Height = 29;
             this.gridView.SelectedIndex = -1;
+            this.gridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridView.ShowGridLine = true;
             this.gridView.Size = new System.Drawing.Size(794, 162);
             this.gridView.TabIndex = 1;

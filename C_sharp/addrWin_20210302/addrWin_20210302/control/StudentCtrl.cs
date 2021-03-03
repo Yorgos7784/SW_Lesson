@@ -66,10 +66,10 @@ namespace adressTest0218.control
             }
         }
 
-        public void delItem()
+        public void delItem(string name)
         {
-            Console.Write("삭제할 이름 입력 : ");
-            string name = Console.ReadLine();
+            //Console.Write("삭제할 이름 입력 : ");
+            //string name = Console.ReadLine();
             for (int i = 0; i < addrList.Count; i++)
             {
                 if (name.Equals(addrList[i].Name))
@@ -84,22 +84,20 @@ namespace adressTest0218.control
             addrList.Clear();
         }
 
-        public void randData()
+        public void randData(int num)
         {
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < num; i++)
             {
                 addrList.Add(new Student(rand.getId(), rand.getName(), rand.getTel(), rand.getAddr(), rand.getEmail()));
             }
         }
 
-        public void updateItem(int menu)
+        public void updateItem(int num, string name, string tel, string addr, string email)
         {
-            switch (menu)
-            {
-                case MENU_UPDATE_NAME:
-
-                    break;
-            }
+            addrList[num].Name = name;
+            addrList[num].Tel = tel;
+            addrList[num].Address = addr;
+            addrList[num].Email = email;
         }
     }
 }
