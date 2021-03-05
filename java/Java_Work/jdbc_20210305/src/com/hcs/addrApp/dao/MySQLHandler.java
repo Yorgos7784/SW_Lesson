@@ -204,86 +204,203 @@ public class MySQLHandler {
 	}
 	
 	public void updateData(String inputName) {
-		while(true) {
-			MySQLHandler.showData(String.format("select * from userinfo where name = '%s'", inputName));
-			System.out.println("---------------------");
-			System.out.println("1. 이름 수정");
-			System.out.println("2. 나이 수정");
-			System.out.println("3. 전화 수정");
-			System.out.println("4. 주소 수정");
-			System.out.println("5. 이메일 수정");
-			System.out.println("6. 돌아가기");
-			System.out.println("---------------------");
-			System.out.print("수정할 데이터의 항목을 입력하세요 : ");
-			int updateNum = s.nextInt();
-			String query = null;
-			switch(updateNum) {
-			case UPDATE_NAME:
-				System.out.print("\n변경할 이름을 입력하세요 : ");
-				String name = s.next();
-				query = String.format("update userinfo set name = '%s' where name = '%s'", name, inputName);
-				try {
-					state.executeUpdate(query);
-					System.out.println("\n수정되었습니다.");
-				} catch (SQLException e) {
-					e.printStackTrace();
+		int count = 0;
+		try {
+			ResultSet rs = state.executeQuery(String.format("select * from userinfo where name = '%s'", inputName));
+			
+			if (rs != null) {
+				rs = state.getResultSet();
+				System.out.print("\nID\t");
+				System.out.print("이름\t");
+				System.out.print("나이\t");
+				System.out.print("전화\t\t");
+				System.out.print("주소\t\t");
+				System.out.print("메일\t\t\t");
+				System.out.println("날짜");
+				System.out.println("========================================================================================================");
+				while (rs.next()) {
+					System.out.print(rs.getString("id") + "\t");
+					System.out.print(rs.getString("name") + "\t");
+					System.out.print(rs.getString("age") + "\t");
+					System.out.print(rs.getString("tel") + "\t");
+					System.out.print(rs.getString("address") + "\t");
+					System.out.print(rs.getString("email") + "\t");
+					System.out.println(rs.getString("date"));
+					count++;
 				}
-				break;
-			case UPDATE_AGE:
-				System.out.print("\n변경할 나이을 입력하세요 : ");
-				int age = s.nextInt();
-				query = String.format("update userinfo set age = '%d' where name = '%s'", age, inputName);
-				try {
-					state.executeUpdate(query);
-					System.out.println("\n수정되었습니다.");
-				} catch (SQLException e) {
-					e.printStackTrace();
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		if(count == 0) {
+			System.out.println("\n일치하는 데이터가 없습니다.");
+		}
+		else if(count > 1) {
+			System.out.print("\n수정할 데이터의 나이를 입력하세요 : ");
+			int inputAge = s.nextInt();
+			showData(String.format("select * from userinfo where name = '%s' and age = '%d'", inputName, inputAge));
+			while(true) {
+				System.out.println("---------------------");
+				System.out.println("1. 이름 수정");
+				System.out.println("2. 나이 수정");
+				System.out.println("3. 전화 수정");
+				System.out.println("4. 주소 수정");
+				System.out.println("5. 이메일 수정");
+				System.out.println("6. 돌아가기");
+				System.out.println("---------------------");
+				System.out.print("수정할 데이터의 항목을 입력하세요 : ");
+				int updateNum = s.nextInt();
+				String query = null;
+				switch(updateNum) {
+				case UPDATE_NAME:
+					System.out.print("\n변경할 이름을 입력하세요 : ");
+					String name = s.next();
+					query = String.format("update userinfo set name = '%s' where name = '%s' and age = '%d'", name, inputName, inputAge);
+					try {
+						state.executeUpdate(query);
+						System.out.println("\n수정되었습니다.");
+					} catch (SQLException e) {
+						e.printStackTrace();
+					}
+					break;
+				case UPDATE_AGE:
+					System.out.print("\n변경할 나이을 입력하세요 : ");
+					int age = s.nextInt();
+					query = String.format("update userinfo set age = '%d' where name = '%s' and age = '%d'", age, inputName, inputAge);
+					try {
+						state.executeUpdate(query);
+						System.out.println("\n수정되었습니다.");
+					} catch (SQLException e) {
+						e.printStackTrace();
+					}
+					break;
+				case UPDATE_TEL:
+					System.out.print("\n변경할 전화번호를 입력하세요 : ");
+					String tel = s.next();
+					query = String.format("update userinfo set tel = '%s' where name = '%s' and age = '%d'", tel, inputName, inputAge);
+					try {
+						state.executeUpdate(query);
+						System.out.println("\n수정되었습니다.");
+					} catch (SQLException e) {
+						e.printStackTrace();
+					}
+					break;
+				case UPDATE_ADDR:
+					System.out.print("\n변경할 주소을 입력하세요 : ");
+					BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+					String addr = null;
+					try {
+						addr = br.readLine();
+					} catch (IOException e1) {
+						e1.printStackTrace();
+					}
+					query = String.format("update userinfo set address = '%s' where name = '%s' and age = '%d'", addr, inputName, inputAge);
+					try {
+						state.executeUpdate(query);
+						System.out.println("\n수정되었습니다.");
+					} catch (SQLException e) {
+						e.printStackTrace();
+					}
+					break;
+				case UPDATE_EMAIL:
+					System.out.print("\n변경할 이메일을 입력하세요 : ");
+					String email = s.next();
+					query = String.format("update userinfo set email = '%s' where name = '%s' and age = '%d'", email, inputName, inputAge);
+					try {
+						state.executeUpdate(query);
+						System.out.println("\n수정되었습니다.");
+					} catch (SQLException e) {
+						e.printStackTrace();
+					}
+					break;
+				case UPDATE_EXIT:
+					System.out.println("\n메인 메뉴로 돌아갑니다.");
+					return;
 				}
-				break;
-			case UPDATE_TEL:
-				System.out.print("\n변경할 전화번호를 입력하세요 : ");
-				String tel = s.next();
-				query = String.format("update userinfo set tel = '%s' where name = '%s'", tel, inputName);
-				try {
-					state.executeUpdate(query);
-					System.out.println("\n수정되었습니다.");
-				} catch (SQLException e) {
-					e.printStackTrace();
-				}
-				break;
-			case UPDATE_ADDR:
-				System.out.print("\n변경할 주소을 입력하세요 : ");
-				BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-				String addr = null;
-				try {
-					addr = br.readLine();
-				} catch (IOException e1) {
-					e1.printStackTrace();
-				}
-				query = String.format("update userinfo set address = '%s' where name = '%s'", addr, inputName);
-				try {
-					state.executeUpdate(query);
-					System.out.println("\n수정되었습니다.");
-				} catch (SQLException e) {
-					e.printStackTrace();
-				}
-				break;
-			case UPDATE_EMAIL:
-				System.out.print("\n변경할 이메일을 입력하세요 : ");
-				String email = s.next();
-				query = String.format("update userinfo set email = '%s' where name = '%s'", email, inputName);
-				try {
-					state.executeUpdate(query);
-					System.out.println("\n수정되었습니다.");
-				} catch (SQLException e) {
-					e.printStackTrace();
-				}
-				break;
-			case UPDATE_EXIT:
-				System.out.println("\n메인 메뉴로 돌아갑니다.");
-				return;
 			}
 		}
+		else {
+			while(true) {
+				System.out.println("---------------------");
+				System.out.println("1. 이름 수정");
+				System.out.println("2. 나이 수정");
+				System.out.println("3. 전화 수정");
+				System.out.println("4. 주소 수정");
+				System.out.println("5. 이메일 수정");
+				System.out.println("6. 돌아가기");
+				System.out.println("---------------------");
+				System.out.print("수정할 데이터의 항목을 입력하세요 : ");
+				int updateNum = s.nextInt();
+				String query = null;
+				switch(updateNum) {
+				case UPDATE_NAME:
+					System.out.print("\n변경할 이름을 입력하세요 : ");
+					String name = s.next();
+					query = String.format("update userinfo set name = '%s' where name = '%s'", name, inputName);
+					try {
+						state.executeUpdate(query);
+						System.out.println("\n수정되었습니다.");
+					} catch (SQLException e) {
+						e.printStackTrace();
+					}
+					break;
+				case UPDATE_AGE:
+					System.out.print("\n변경할 나이을 입력하세요 : ");
+					int age = s.nextInt();
+					query = String.format("update userinfo set age = '%d' where name = '%s'", age, inputName);
+					try {
+						state.executeUpdate(query);
+						System.out.println("\n수정되었습니다.");
+					} catch (SQLException e) {
+						e.printStackTrace();
+					}
+					break;
+				case UPDATE_TEL:
+					System.out.print("\n변경할 전화번호를 입력하세요 : ");
+					String tel = s.next();
+					query = String.format("update userinfo set tel = '%s' where name = '%s'", tel, inputName);
+					try {
+						state.executeUpdate(query);
+						System.out.println("\n수정되었습니다.");
+					} catch (SQLException e) {
+						e.printStackTrace();
+					}
+					break;
+				case UPDATE_ADDR:
+					System.out.print("\n변경할 주소을 입력하세요 : ");
+					BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+					String addr = null;
+					try {
+						addr = br.readLine();
+					} catch (IOException e1) {
+						e1.printStackTrace();
+					}
+					query = String.format("update userinfo set address = '%s' where name = '%s'", addr, inputName);
+					try {
+						state.executeUpdate(query);
+						System.out.println("\n수정되었습니다.");
+					} catch (SQLException e) {
+						e.printStackTrace();
+					}
+					break;
+				case UPDATE_EMAIL:
+					System.out.print("\n변경할 이메일을 입력하세요 : ");
+					String email = s.next();
+					query = String.format("update userinfo set email = '%s' where name = '%s'", email, inputName);
+					try {
+						state.executeUpdate(query);
+						System.out.println("\n수정되었습니다.");
+					} catch (SQLException e) {
+						e.printStackTrace();
+					}
+					break;
+				case UPDATE_EXIT:
+					System.out.println("\n메인 메뉴로 돌아갑니다.");
+					return;
+				}
+			}
+		}
+		
 	}
 	
 	public void deleteData(int menu) {
@@ -313,6 +430,11 @@ public class MySQLHandler {
 			System.out.println("\n메인 메뉴로 돌아갑니다.");
 			return;
 		}
+	}
+	
+	public int doubleChecker(String name) {
+		int count = 0;
+		
 	}
 	
 	public void errorMessage(SQLException e) {
