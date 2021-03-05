@@ -1,4 +1,4 @@
-package jdbc_20210304.menu;
+package jdbc_20210304.util;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -9,6 +9,8 @@ import java.util.Scanner;
 public class MyMenu {
 	Scanner s;
 	Statement state;
+	
+	
 	
 	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	
@@ -115,6 +117,8 @@ public class MyMenu {
 		System.out.println("6. 주소로 검색");
 		System.out.println("7. 이메일로 검색");
 		System.out.println("8. 돌아가기");
+		System.out.println("---------------------");
+		System.out.print("메뉴 선택 : ");
 		return s.nextInt();
 	}
 }

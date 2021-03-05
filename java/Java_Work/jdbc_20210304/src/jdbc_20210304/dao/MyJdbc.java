@@ -1,4 +1,4 @@
-package jdbc_20210304.jdbc;
+package jdbc_20210304.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -9,14 +9,14 @@ import java.util.Scanner;
 
 public class MyJdbc {
 	private static Connection con;
-	private Statement state;
+	private static Statement state;
 	private static final String USER_ID = "root";
 	private static final String USER_PW = "1126";
 	private static final String DBNAME = "mydb";
 
 	private static String jdbcDriver = "com.mysql.cj.jdbc.Driver";
 	private static String dbUrl = "jdbc:mysql://localhost/" + DBNAME + "?autoReconnect=true&serverTimezone=UTC";
-
+	
 	static final int SELECT_ALL = 1;
 	static final int SELECT_NUM = 2;
 	static final int SELECT_NAME = 3;
@@ -132,7 +132,7 @@ public class MyJdbc {
 	}
 
 	public void selectData(int menu) {
-		switch (menu) {
+		switch(menu) {
 		case SELECT_ALL:
 			String query = "select * from userinfo";
 			try {
@@ -140,7 +140,7 @@ public class MyJdbc {
 				if (rs != null) {
 					rs = state.getResultSet();
 					int count = 0;
-					System.out.print("번호\t");
+					System.out.print("\n번호\t");
 					System.out.print("이름\t");
 					System.out.print("나이\t");
 					System.out.print("전화\t\t\t");
@@ -159,22 +159,22 @@ public class MyJdbc {
 						count++;
 					}
 				} else {
-					System.out.println("테이블이 비어있습니다.");
+					System.out.println("\n테이블이 비어있습니다.");
 				}
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
 			break;
 		case SELECT_NUM:
-			System.out.print("찾으시는 번호를 입력하세요 : ");
+			System.out.print("\n찾으시는 번호를 입력하세요 : ");
 			int num = s.nextInt();
-			String queryNum = "select * from userinfo where " + num;
+			String queryNum = "select * from userinfo where id = " + num;
 			try {
 				ResultSet rs = state.executeQuery(queryNum);
 				if (rs != null) {
 					rs = state.getResultSet();
 					int count = 0;
-					System.out.print("번호\t");
+					System.out.print("\n번호\t");
 					System.out.print("이름\t");
 					System.out.print("나이\t");
 					System.out.print("전화\t\t\t");
@@ -200,6 +200,38 @@ public class MyJdbc {
 			}
 			break;
 		case SELECT_NAME:
+			System.out.print("\n찾으시는 이름을 입력하세요 : ");
+			String name = s.next();
+			String queryName = "select * from userinfo where name = " + name;
+			try {
+				ResultSet rs = state.executeQuery(queryName);
+				if (rs != null) {
+					rs = state.getResultSet();
+					int count = 0;
+					System.out.print("\n번호\t");
+					System.out.print("이름\t");
+					System.out.print("나이\t");
+					System.out.print("전화\t\t\t");
+					System.out.print("주소\t\t");
+					System.out.print("메일\t\t");
+					System.out.println("날짜");
+					System.out.println("========================================================================================================");
+					while (rs.next()) {
+						System.out.print((count + 1) + "\t");
+						System.out.print(rs.getString("name") + "\t");
+						System.out.print(rs.getString("age") + "\t");
+						System.out.print(rs.getString("tel") + "\t");
+						System.out.print(rs.getString("address") + "\t");
+						System.out.print(rs.getString("email") + "\t");
+						System.out.println(rs.getString("date"));
+						count++;
+					}
+				} else {
+					System.out.println("테이블이 비어있습니다.");
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 			break;
 		case SELECT_AGE:
 			break;
@@ -214,21 +246,20 @@ public class MyJdbc {
 		default:
 			System.out.println("잘못 입력하셨습니다.");
 			break;
-
 		}
-
+		
 	}
-
+	
 	public void errorMessage(SQLException e) {
 		switch (e.getErrorCode()) {
 		case 1050:
-			System.out.println("테이블이 이미 존재합니다.");
+			System.out.println("\n테이블이 이미 존재합니다.");
 			break;
 		case 1051:
-			System.out.println("테이블이 존재하지 않습니다.");
+			System.out.println("\n테이블이 존재하지 않습니다.");
 			break;
 		case 1064:
-			System.out.println("쿼리를 잘못 입력하셨습니다.");
+			System.out.println("\n쿼리를 잘못 입력하셨습니다.");
 			break;
 		}
 	}

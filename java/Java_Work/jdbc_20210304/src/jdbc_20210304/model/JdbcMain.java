@@ -1,10 +1,10 @@
-package jdbc_20210304;
+package jdbc_20210304.model;
 
 import java.sql.Statement;
 import java.util.Scanner;
 
-import jdbc_20210304.jdbc.MyJdbc;
-import jdbc_20210304.menu.MyMenu;
+import jdbc_20210304.dao.MyJdbc;
+import jdbc_20210304.util.MyMenu;
 
 public class JdbcMain {
 	static final int CREATE_TABLE = 1;
@@ -43,7 +43,6 @@ public class JdbcMain {
 				break;
 			case VIEW_DATA:
 				//System.out.println("데이터 보기 메뉴");
-				db1.selectData(m1.selectMenu());
 				break;
 			case UPDATE_DATA:
 				System.out.println("데이터 수정 메뉴");
