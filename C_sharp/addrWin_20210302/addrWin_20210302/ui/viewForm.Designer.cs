@@ -39,12 +39,15 @@ namespace addrWin_20210302.ui
             this.listAddr = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listEmail = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.gridView = new Sunny.UI.UIDataGridView();
+            this.viewExit = new Sunny.UI.UISymbolButton();
+            this.viewUpdateButton = new Sunny.UI.UISymbolButton();
+            this.viewDelButton = new Sunny.UI.UISymbolButton();
+            this.viewAddButton = new Sunny.UI.UISymbolButton();
             this.gridCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gridName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gridTel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gridAddr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gridEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.viewExit = new Sunny.UI.UISymbolButton();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -131,6 +134,54 @@ namespace addrWin_20210302.ui
             this.gridView.Size = new System.Drawing.Size(794, 162);
             this.gridView.TabIndex = 1;
             // 
+            // viewExit
+            // 
+            this.viewExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.viewExit.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.viewExit.Location = new System.Drawing.Point(574, 431);
+            this.viewExit.MinimumSize = new System.Drawing.Size(1, 1);
+            this.viewExit.Name = "viewExit";
+            this.viewExit.Size = new System.Drawing.Size(131, 35);
+            this.viewExit.TabIndex = 2;
+            this.viewExit.Text = "확인";
+            this.viewExit.Click += new System.EventHandler(this.viewExti_Click);
+            // 
+            // viewUpdateButton
+            // 
+            this.viewUpdateButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.viewUpdateButton.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.viewUpdateButton.Location = new System.Drawing.Point(420, 431);
+            this.viewUpdateButton.MinimumSize = new System.Drawing.Size(1, 1);
+            this.viewUpdateButton.Name = "viewUpdateButton";
+            this.viewUpdateButton.Size = new System.Drawing.Size(131, 35);
+            this.viewUpdateButton.TabIndex = 2;
+            this.viewUpdateButton.Text = "수정";
+            this.viewUpdateButton.Click += new System.EventHandler(this.update_Click);
+            // 
+            // viewDelButton
+            // 
+            this.viewDelButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.viewDelButton.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.viewDelButton.Location = new System.Drawing.Point(266, 431);
+            this.viewDelButton.MinimumSize = new System.Drawing.Size(1, 1);
+            this.viewDelButton.Name = "viewDelButton";
+            this.viewDelButton.Size = new System.Drawing.Size(131, 35);
+            this.viewDelButton.TabIndex = 2;
+            this.viewDelButton.Text = "삭제";
+            this.viewDelButton.Click += new System.EventHandler(this.del_Click);
+            // 
+            // viewAddButton
+            // 
+            this.viewAddButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.viewAddButton.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.viewAddButton.Location = new System.Drawing.Point(112, 431);
+            this.viewAddButton.MinimumSize = new System.Drawing.Size(1, 1);
+            this.viewAddButton.Name = "viewAddButton";
+            this.viewAddButton.Size = new System.Drawing.Size(131, 35);
+            this.viewAddButton.TabIndex = 2;
+            this.viewAddButton.Text = "추가";
+            this.viewAddButton.Click += new System.EventHandler(this.add_Click);
+            // 
             // gridCount
             // 
             this.gridCount.HeaderText = "번 호";
@@ -153,7 +204,7 @@ namespace addrWin_20210302.ui
             // 
             this.gridAddr.HeaderText = "주 소";
             this.gridAddr.Name = "gridAddr";
-            this.gridAddr.Width = 200;
+            this.gridAddr.Width = 250;
             // 
             // gridEmail
             // 
@@ -161,23 +212,14 @@ namespace addrWin_20210302.ui
             this.gridEmail.Name = "gridEmail";
             this.gridEmail.Width = 200;
             // 
-            // viewExit
-            // 
-            this.viewExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.viewExit.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.viewExit.Location = new System.Drawing.Point(344, 431);
-            this.viewExit.MinimumSize = new System.Drawing.Size(1, 1);
-            this.viewExit.Name = "viewExit";
-            this.viewExit.Size = new System.Drawing.Size(131, 35);
-            this.viewExit.TabIndex = 2;
-            this.viewExit.Text = "확인";
-            this.viewExit.Click += new System.EventHandler(this.viewExti_Click);
-            // 
             // viewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(818, 488);
+            this.Controls.Add(this.viewAddButton);
+            this.Controls.Add(this.viewDelButton);
+            this.Controls.Add(this.viewUpdateButton);
             this.Controls.Add(this.viewExit);
             this.Controls.Add(this.gridView);
             this.Controls.Add(this.listView);
@@ -200,6 +242,9 @@ namespace addrWin_20210302.ui
         private System.Windows.Forms.ColumnHeader listTel;
         private System.Windows.Forms.ColumnHeader listAddr;
         private System.Windows.Forms.ColumnHeader listEmail;
+        private Sunny.UI.UISymbolButton viewUpdateButton;
+        private Sunny.UI.UISymbolButton viewDelButton;
+        private Sunny.UI.UISymbolButton viewAddButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn gridCount;
         private System.Windows.Forms.DataGridViewTextBoxColumn gridName;
         private System.Windows.Forms.DataGridViewTextBoxColumn gridTel;

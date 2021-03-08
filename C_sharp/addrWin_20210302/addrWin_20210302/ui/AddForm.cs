@@ -10,11 +10,6 @@ namespace addrWin_20210302.ui
 {
     partial class AddForm : MaterialForm
     {
-        public AddForm()
-        {
-            InitializeComponent();
-        }
-
         RandomData rand = new RandomData();
         StudentCtrl sc;
 
@@ -26,6 +21,7 @@ namespace addrWin_20210302.ui
 
         private void addOK_Click(object sender, EventArgs e)
         {
+            // 입력란이 비어있을 시
             if (addName.Text == "" || addTel.Text == "" || addAddr.Text == "" || addEmail.Text == "")
             {
                 string[] textInfo = { addName.Text, addTel.Text, addAddr.Text, addEmail.Text };
@@ -46,13 +42,13 @@ namespace addrWin_20210302.ui
                     messageshow += textList[i];
                 }
 
-                MessageBox.Show(messageshow + "의 정보를 입력 해주세요.");
+                MessageBox.Show(messageshow + "의 정보를 입력 해주세요.", "데이터 추가");
             }
 
             else
             {
-                StudentCtrl.getInst().getList().Add(new Student(rand.getId(), addName.Text, addTel.Text, addAddr.Text, addEmail.Text));
-                MessageBox.Show("추가되었습니다!");
+                sc.getList().Add(new Student(rand.getId(), addName.Text, addTel.Text, addAddr.Text, addEmail.Text));
+                MessageBox.Show("추가되었습니다!", "데이터 추가 완료");
                 Close();
             }
         }

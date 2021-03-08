@@ -12,18 +12,18 @@ namespace adressTest0218.control
         public const int MENU_UPDATE_EMAIL = 4;
         public const int MENU_UPDATE_EXIT = 5;
 
-        static StudentCtrl inst;
+        //static StudentCtrl inst;
         List<Student> addrList = new List<Student>();
         RandomData rand;
 
-        public static StudentCtrl getInst()
-        {
-            if (inst == null)
-            {
-                inst = new StudentCtrl();
-            }
-            return inst;
-        }
+        //public static StudentCtrl getInst()
+        //{
+        //    if (inst == null)
+        //    {
+        //        inst = new StudentCtrl();
+        //    }
+        //    return inst;
+        //}
 
         public StudentCtrl()
         {
@@ -79,6 +79,19 @@ namespace adressTest0218.control
             }
         }
 
+        public void delItem(string name, string tel)
+        {
+            //Console.Write("삭제할 이름 입력 : ");
+            //string name = Console.ReadLine();
+            for (int i = 0; i < addrList.Count; i++)
+            {
+                if (name.Equals(addrList[i].Name) && tel.Equals(addrList[i].Tel))
+                {
+                    addrList.RemoveAt(i--);
+                }
+            }
+        }
+
         public void delItemAll()
         {
             addrList.Clear();
@@ -98,6 +111,17 @@ namespace adressTest0218.control
             addrList[num].Tel = tel;
             addrList[num].Address = addr;
             addrList[num].Email = email;
+        }
+
+        public int counter(string name)
+        {
+            int count = 0;
+            for (int i = 0; i < addrList.Count; i++)
+            {
+                if (name == addrList[i].Name)
+                    count++;
+            }
+            return count;
         }
     }
 }

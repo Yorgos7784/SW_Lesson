@@ -432,11 +432,6 @@ public class MySQLHandler {
 		}
 	}
 	
-	public int doubleChecker(String name) {
-		int count = 0;
-		
-	}
-	
 	public void errorMessage(SQLException e) {
 		switch (e.getErrorCode()) {
 		case 1050:
