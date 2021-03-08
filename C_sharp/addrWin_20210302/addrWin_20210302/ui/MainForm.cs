@@ -58,7 +58,7 @@ namespace addrWin_20210302
             else
             {
                 //StudentCtrl.getInst().viewItem();
-                new viewForm(sc).ShowDialog();
+                new listView(sc).ShowDialog();
             }
         }
 

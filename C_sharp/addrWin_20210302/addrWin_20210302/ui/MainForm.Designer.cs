@@ -60,7 +60,7 @@ namespace addrWin_20210302
             // 
             this.addrView.ButtonType = CxFlatUI.ButtonType.Primary;
             this.addrView.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.addrView.Location = new System.Drawing.Point(395, 242);
+            this.addrView.Location = new System.Drawing.Point(395, 330);
             this.addrView.Name = "addrView";
             this.addrView.Size = new System.Drawing.Size(168, 62);
             this.addrView.TabIndex = 6;
@@ -72,7 +72,7 @@ namespace addrWin_20210302
             // 
             this.addrAddRand.ButtonType = CxFlatUI.ButtonType.Primary;
             this.addrAddRand.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.addrAddRand.Location = new System.Drawing.Point(583, 154);
+            this.addrAddRand.Location = new System.Drawing.Point(395, 242);
             this.addrAddRand.Name = "addrAddRand";
             this.addrAddRand.Size = new System.Drawing.Size(168, 62);
             this.addrAddRand.TabIndex = 6;
@@ -84,7 +84,7 @@ namespace addrWin_20210302
             // 
             this.addrDel.ButtonType = CxFlatUI.ButtonType.Primary;
             this.addrDel.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.addrDel.Location = new System.Drawing.Point(583, 242);
+            this.addrDel.Location = new System.Drawing.Point(583, 154);
             this.addrDel.Name = "addrDel";
             this.addrDel.Size = new System.Drawing.Size(168, 62);
             this.addrDel.TabIndex = 6;
@@ -96,7 +96,7 @@ namespace addrWin_20210302
             // 
             this.addrDelAll.ButtonType = CxFlatUI.ButtonType.Primary;
             this.addrDelAll.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.addrDelAll.Location = new System.Drawing.Point(395, 330);
+            this.addrDelAll.Location = new System.Drawing.Point(583, 242);
             this.addrDelAll.Name = "addrDelAll";
             this.addrDelAll.Size = new System.Drawing.Size(168, 62);
             this.addrDelAll.TabIndex = 6;

@@ -12,11 +12,11 @@ using System.Windows.Forms;
 
 namespace addrWin_20210302.ui
 {
-    partial class viewForm : MaterialForm
+    partial class listView : MaterialForm
     {
         StudentCtrl sc;
 
-        public viewForm(StudentCtrl sc)
+        public listView(StudentCtrl sc)
         {
             InitializeComponent();
             this.sc = sc;
@@ -34,7 +34,7 @@ namespace addrWin_20210302.ui
 
             for (int i = 0; i < sc.getList().Count; i++)
             {
-                listView.Items.Add(new ListViewItem(new string[] 
+                listView1.Items.Add(new ListViewItem(new string[] 
                 { (i + 1).ToString(), 
                     sc.getList()[i].Name,
                     sc.getList()[i].Tel,
@@ -42,11 +42,11 @@ namespace addrWin_20210302.ui
                     sc.getList()[i].Email }));
             }
             
-            setRowColor(listView, Color.White, Color.Gainsboro);
-            int index = listView.Items.Count - 1;
+            setRowColor(listView1, Color.White, Color.Gainsboro);
+            int index = listView1.Items.Count - 1;
             //listView.Items[index].Selected = true;
-            listView.Items[index].Focused = true;
-            listView.EnsureVisible(index);
+            listView1.Items[index].Focused = true;
+            listView1.EnsureVisible(index);
         }
 
         private void setRowColor(ListView list, Color color1, Color color2)
@@ -67,33 +67,9 @@ namespace addrWin_20210302.ui
         private void viewForm_Load(object sender, EventArgs e)
         {
             initListView();
-            initGridView();
         }
 
-        private void initGridView()
-        {
-            /*string[] data = { "1", "홍길동", "010-1234-5678", "조선 한양 홍대감댁", "hong@naver.com" };
-            gridView.Rows.Add(data);
-
-            for (int i = 0; i < 50; i++)
-            {
-                gridView.Rows.Add(new string[] { (i + 2).ToString(), "홍길동", "010-1234-5678", "조선 한양 홍대감댁", "hong@naver.com" });
-            }*/
-
-            for (int i = 0; i < sc.getList().Count; i++)
-            {
-                gridView.Rows.Add(new string[]
-                { (i + 1).ToString(),
-                    sc.getList()[i].Name,
-                    sc.getList()[i].Tel,
-                    sc.getList()[i].Address,
-                    sc.getList()[i].Email });
-            }
-
-            int count = gridView.Rows.Count - 1;
-            gridView.FirstDisplayedScrollingRowIndex = count;
-            gridView.CurrentCell = gridView.Rows[count - 1].Cells[0];
-        }
+        
 
         private void viewExti_Click(object sender, EventArgs e)
         {
@@ -119,59 +95,78 @@ namespace addrWin_20210302.ui
 
         private void del_Click(object sender, EventArgs e)
         {
-            if(listView.SelectedItems.Count != 0)
+            if (listView1.SelectedItems.Count != 0)
             {
-                int n = listView.SelectedItems[0].Index;
-                String name = listView.Items[n].SubItems[1].Text;
-                String tel = listView.Items[n].SubItems[2].Text;
-                String delChecker = MainForm.myInputBox(name + "의 정보를 삭제하시겠습니까? (y/n)", "데이터 삭제", "");
-                if(delChecker == "y")
+                int n = listView1.SelectedItems[0].Index;
+                String name = listView1.Items[n].SubItems[1].Text;
+                String tel = listView1.Items[n].SubItems[2].Text;
+                DialogResult viewDeldr = MainForm.getDialogResult("선택한 데이터를 삭제하시겠습니까?", "데이터 삭제");
+                if (viewDeldr == DialogResult.Yes)
                 {
                     sc.delItem(name, tel);
                     MessageBox.Show("삭제되었습니다.", "데이터 삭제 완료");
-
-                    listView.Items.Clear();
-                    initListView();
-
-                    gridView.Rows.Clear();
-                    initGridView();
+                    resetList();
                 }
-                else if(delChecker == "n")
+                else if (viewDeldr == DialogResult.No)
                 {
                     MessageBox.Show("취소되었습니다.", "데이터 삭제 취소");
-                }
-                else
-                {
-                    MessageBox.Show("잘못 입력하셨습니다.", "잘못된 입력");
                 }
             }
         }
 
         private void update_Click(object sender, EventArgs e)
         {
-            if (listView.SelectedItems.Count != 0)
+            if (listView1.SelectedItems.Count != 0)
             {
-                int n = listView.SelectedItems[0].Index;
-                String name = listView.Items[n].SubItems[1].Text;
-                String tel = listView.Items[n].SubItems[2].Text;
+                int n = listView1.SelectedItems[0].Index;
+                String name = listView1.Items[n].SubItems[1].Text;
+                String tel = listView1.Items[n].SubItems[2].Text;
                 new UpdateDetail(name, tel, sc).ShowDialog();
-
-                listView.Items.Clear();
-                initListView();
-
-                gridView.Rows.Clear();
-                initGridView();
+                resetList();
             }
         }
 
         private void add_Click(object sender, EventArgs e)
         {
             new AddForm(sc).ShowDialog();
-            listView.Items.Clear();
-            initListView();
+            resetList();
+        }
 
-            gridView.Rows.Clear();
-            initGridView();
+        private void addRand_Click(object sender, EventArgs e)
+        {
+            string cnt = MainForm.myInputBox("랜덤 데이터를 생성할 갯수를 입력하세요", "랜덤 데이터 생성", "0");
+            if (cnt == "") return;
+            //StudentCtrl.getInst().randData(Convert.ToInt32(cnt));
+            sc.randData(Convert.ToInt32(cnt));
+            MessageBox.Show("추가되었습니다!", "랜덤 데이터 추가 완료");
+            resetList();
+        }
+
+        private void resetList()
+        {
+            if (sc.getList().Count < 1)
+            {
+                Close();
+            }
+            else
+            {
+                listView1.Items.Clear();
+                initListView();
+            }
+        }
+
+        private void delAll_Click(object sender, EventArgs e)
+        {
+            DialogResult delAlldr = MainForm.getDialogResult("전체 데이터를 삭제하시겠습니까?", "데이터 삭제");
+            if (delAlldr == DialogResult.Yes)
+            {
+                sc.delItemAll();
+                MessageBox.Show("삭제되었습니다.", "삭제 완료");
+            }
+            else if (delAlldr == DialogResult.No)
+            {
+                MessageBox.Show("취소되었습니다.", "데이터 삭제 취소");
+            }
         }
     }
 }
