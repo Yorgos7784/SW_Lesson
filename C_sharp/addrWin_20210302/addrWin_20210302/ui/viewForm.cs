@@ -1,22 +1,16 @@
 ﻿using adressTest0218.control;
 using MaterialSkin.Controls;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace addrWin_20210302.ui
 {
-    partial class listView : MaterialForm
+    partial class viewForm : MaterialForm
     {
         StudentCtrl sc;
 
-        public listView(StudentCtrl sc)
+        public viewForm(StudentCtrl sc)
         {
             InitializeComponent();
             this.sc = sc;
@@ -34,26 +28,29 @@ namespace addrWin_20210302.ui
 
             for (int i = 0; i < sc.getList().Count; i++)
             {
-                listView1.Items.Add(new ListViewItem(new string[] 
-                { (i + 1).ToString(), 
+                listView.Items.Add(new ListViewItem(new string[]
+                { (i + 1).ToString(),
                     sc.getList()[i].Name,
                     sc.getList()[i].Tel,
                     sc.getList()[i].Address,
                     sc.getList()[i].Email }));
             }
-            
-            setRowColor(listView1, Color.White, Color.Gainsboro);
-            int index = listView1.Items.Count - 1;
-            //listView.Items[index].Selected = true;
-            listView1.Items[index].Focused = true;
-            listView1.EnsureVisible(index);
+
+            setRowColor(listView, Color.White, Color.Gainsboro);
+            if (listView.Items.Count > 0)
+            {
+                int index = listView.Items.Count - 1;
+                //listView.Items[index].Selected = true;
+                listView.Items[index].Focused = true;
+                listView.EnsureVisible(index);
+            }
         }
 
         private void setRowColor(ListView list, Color color1, Color color2)
         {
-            foreach(ListViewItem item in list.Items)
+            foreach (ListViewItem item in list.Items)
             {
-                if((item.Index % 2) == 0)
+                if ((item.Index % 2) == 0)
                 {
                     item.BackColor = color1;
                 }
@@ -69,7 +66,7 @@ namespace addrWin_20210302.ui
             initListView();
         }
 
-        
+
 
         private void viewExti_Click(object sender, EventArgs e)
         {
@@ -95,11 +92,11 @@ namespace addrWin_20210302.ui
 
         private void del_Click(object sender, EventArgs e)
         {
-            if (listView1.SelectedItems.Count != 0)
+            if (listView.SelectedItems.Count != 0)
             {
-                int n = listView1.SelectedItems[0].Index;
-                String name = listView1.Items[n].SubItems[1].Text;
-                String tel = listView1.Items[n].SubItems[2].Text;
+                int n = listView.SelectedItems[0].Index;
+                String name = listView.Items[n].SubItems[1].Text;
+                String tel = listView.Items[n].SubItems[2].Text;
                 DialogResult viewDeldr = MainForm.getDialogResult("선택한 데이터를 삭제하시겠습니까?", "데이터 삭제");
                 if (viewDeldr == DialogResult.Yes)
                 {
@@ -116,11 +113,11 @@ namespace addrWin_20210302.ui
 
         private void update_Click(object sender, EventArgs e)
         {
-            if (listView1.SelectedItems.Count != 0)
+            if (listView.SelectedItems.Count != 0)
             {
-                int n = listView1.SelectedItems[0].Index;
-                String name = listView1.Items[n].SubItems[1].Text;
-                String tel = listView1.Items[n].SubItems[2].Text;
+                int n = listView.SelectedItems[0].Index;
+                string name = listView.Items[n].SubItems[1].Text;
+                string tel = listView.Items[n].SubItems[2].Text;
                 new UpdateDetail(name, tel, sc).ShowDialog();
                 resetList();
             }
@@ -144,15 +141,8 @@ namespace addrWin_20210302.ui
 
         private void resetList()
         {
-            if (sc.getList().Count < 1)
-            {
-                Close();
-            }
-            else
-            {
-                listView1.Items.Clear();
-                initListView();
-            }
+            listView.Items.Clear();
+            initListView();
         }
 
         private void delAll_Click(object sender, EventArgs e)
@@ -162,6 +152,7 @@ namespace addrWin_20210302.ui
             {
                 sc.delItemAll();
                 MessageBox.Show("삭제되었습니다.", "삭제 완료");
+                resetList();
             }
             else if (delAlldr == DialogResult.No)
             {

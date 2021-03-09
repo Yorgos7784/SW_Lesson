@@ -17,4 +17,4 @@ C:\Users\KB\Desktop\SW_Lesson\C_sharp\addrWin_20210302\addrWin_20210302\obj\Debu
 C:\Users\KB\Desktop\SW_Lesson\C_sharp\addrWin_20210302\addrWin_20210302\obj\Debug\addrWin_20210302.ui.delForm.resources
 C:\Users\KB\Desktop\SW_Lesson\C_sharp\addrWin_20210302\addrWin_20210302\obj\Debug\addrWin_20210302.ui.UpdateForm.resources
 C:\Users\KB\Desktop\SW_Lesson\C_sharp\addrWin_20210302\addrWin_20210302\obj\Debug\addrWin_20210302.ui.UpdateDetail.resources
-C:\Users\KB\Desktop\SW_Lesson\C_sharp\addrWin_20210302\addrWin_20210302\obj\Debug\addrWin_20210302.ui.listView.resources
+C:\Users\KB\Desktop\SW_Lesson\C_sharp\addrWin_20210302\addrWin_20210302\obj\Debug\addrWin_20210302.ui.viewForm.resources

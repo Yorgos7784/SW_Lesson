@@ -11,7 +11,7 @@ namespace addrWin_20210302
     {
         MyMenu menu = new MyMenu();
         StudentCtrl sc = new StudentCtrl();
-        
+
         public MainForm()
         {
             InitializeComponent();
@@ -26,9 +26,29 @@ namespace addrWin_20210302
         // 정보보기 버튼
         private void addrHelp_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Update 2021.03.02. by Yorgos7784", "작성자 정보");
+            MessageBox.Show("Update 2021.03.09 by Yorgos7784", "프로그램 정보");
         }
 
+        // 데이터 보기
+        private void addrView_Click(object sender, EventArgs e)
+        {
+            new viewForm(sc).ShowDialog();
+        }
+        
+        // 메시지 입력 박스
+        public static string myInputBox(string body, string title, string prompt)
+        {
+            string input = Microsoft.VisualBasic.Interaction.InputBox(body, title, prompt, -1, -1);
+            return input;
+        }
+
+        public static DialogResult getDialogResult(string body, string title)
+        {
+            DialogResult dr = MessageBox.Show(body, title, MessageBoxButtons.YesNo);
+            return dr;
+        }
+
+/*
         // 데이터 추가
         private void addrAdd_Click(object sender, EventArgs e)
         {
@@ -46,22 +66,6 @@ namespace addrWin_20210302
             MessageBox.Show("추가되었습니다!", "랜덤 데이터 추가 완료");
         }
 
-        // 데이터 보기
-        private void addrView_Click(object sender, EventArgs e)
-        {
-            // 데이터가 없을 때
-            if(sc.getList().Count < 1)
-            {
-                MessageBox.Show("데이터가 없습니다.", "데이터 없음");
-            }
-
-            else
-            {
-                //StudentCtrl.getInst().viewItem();
-                new listView(sc).ShowDialog();
-            }
-        }
-
         // 데이터 삭제
         private void addrDel_Click(object sender, EventArgs e)
         {
@@ -74,7 +78,7 @@ namespace addrWin_20210302
                 //StudentCtrl.getInst().delItem();
                 new delForm(sc).ShowDialog();
             }
-            
+
         }
 
         // 데이터 전체 삭제
@@ -86,7 +90,7 @@ namespace addrWin_20210302
                 sc.delItemAll();
                 MessageBox.Show("삭제되었습니다.", "삭제 완료");
             }
-            else if(delAlldr == DialogResult.No)
+            else if (delAlldr == DialogResult.No)
             {
                 MessageBox.Show("취소되었습니다.", "데이터 삭제 취소");
             }
@@ -104,19 +108,6 @@ namespace addrWin_20210302
                 //StudentCtrl.getInst().delItem();
                 new UpdateForm(sc).ShowDialog();
             }
-        }
-
-        // 메시지 입력 박스
-        public static string myInputBox(string body, string title, string prompt)
-        {
-            string input = Microsoft.VisualBasic.Interaction.InputBox(body, title, prompt, -1, -1);
-            return input;
-        }
-
-        public static DialogResult getDialogResult(string body, string title)
-        {
-            DialogResult dr = MessageBox.Show(body, title, MessageBoxButtons.YesNo);
-            return dr;
-        }
+        }*/
     }
 }

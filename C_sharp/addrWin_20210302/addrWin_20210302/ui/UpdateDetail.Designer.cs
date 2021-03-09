@@ -33,8 +33,8 @@ namespace addrWin_20210302.ui
             this.updateAddr = new Sunny.UI.UITextBox();
             this.updateTel = new Sunny.UI.UITextBox();
             this.updateName = new Sunny.UI.UITextBox();
-            this.updateCancel = new Sunny.UI.UISymbolButton();
-            this.updateConfirm = new Sunny.UI.UISymbolButton();
+            this.addCancel = new Sunny.UI.UISymbolButton();
+            this.addOK = new Sunny.UI.UISymbolButton();
             this.email = new Sunny.UI.UISymbolLabel();
             this.addr = new Sunny.UI.UISymbolLabel();
             this.tel = new Sunny.UI.UISymbolLabel();
@@ -46,7 +46,7 @@ namespace addrWin_20210302.ui
             this.updateEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.updateEmail.FillColor = System.Drawing.Color.White;
             this.updateEmail.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.updateEmail.Location = new System.Drawing.Point(120, 276);
+            this.updateEmail.Location = new System.Drawing.Point(120, 275);
             this.updateEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.updateEmail.Maximum = 2147483647D;
             this.updateEmail.Minimum = -2147483648D;
@@ -61,7 +61,7 @@ namespace addrWin_20210302.ui
             this.updateAddr.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.updateAddr.FillColor = System.Drawing.Color.White;
             this.updateAddr.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.updateAddr.Location = new System.Drawing.Point(120, 216);
+            this.updateAddr.Location = new System.Drawing.Point(120, 215);
             this.updateAddr.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.updateAddr.Maximum = 2147483647D;
             this.updateAddr.Minimum = -2147483648D;
@@ -76,7 +76,7 @@ namespace addrWin_20210302.ui
             this.updateTel.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.updateTel.FillColor = System.Drawing.Color.White;
             this.updateTel.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.updateTel.Location = new System.Drawing.Point(120, 156);
+            this.updateTel.Location = new System.Drawing.Point(120, 155);
             this.updateTel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.updateTel.Maximum = 2147483647D;
             this.updateTel.Minimum = -2147483648D;
@@ -91,7 +91,7 @@ namespace addrWin_20210302.ui
             this.updateName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.updateName.FillColor = System.Drawing.Color.White;
             this.updateName.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.updateName.Location = new System.Drawing.Point(120, 96);
+            this.updateName.Location = new System.Drawing.Point(120, 95);
             this.updateName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.updateName.Maximum = 2147483647D;
             this.updateName.Minimum = -2147483648D;
@@ -101,37 +101,37 @@ namespace addrWin_20210302.ui
             this.updateName.Size = new System.Drawing.Size(308, 29);
             this.updateName.TabIndex = 13;
             // 
-            // updateCancel
+            // addCancel
             // 
-            this.updateCancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.updateCancel.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.updateCancel.Location = new System.Drawing.Point(239, 347);
-            this.updateCancel.MinimumSize = new System.Drawing.Size(1, 1);
-            this.updateCancel.Name = "updateCancel";
-            this.updateCancel.Size = new System.Drawing.Size(131, 35);
-            this.updateCancel.Symbol = 61453;
-            this.updateCancel.TabIndex = 8;
-            this.updateCancel.Text = "취소";
-            this.updateCancel.Click += new System.EventHandler(this.updateCancel_Click);
+            this.addCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addCancel.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.addCancel.Location = new System.Drawing.Point(243, 346);
+            this.addCancel.MinimumSize = new System.Drawing.Size(1, 1);
+            this.addCancel.Name = "addCancel";
+            this.addCancel.Size = new System.Drawing.Size(131, 35);
+            this.addCancel.Symbol = 61453;
+            this.addCancel.TabIndex = 8;
+            this.addCancel.Text = "취소";
+            this.addCancel.Click += new System.EventHandler(this.addCancel_Click);
             // 
-            // updateConfirm
+            // addOK
             // 
-            this.updateConfirm.BackColor = System.Drawing.Color.Transparent;
-            this.updateConfirm.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.updateConfirm.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.updateConfirm.Location = new System.Drawing.Point(84, 347);
-            this.updateConfirm.MinimumSize = new System.Drawing.Size(1, 1);
-            this.updateConfirm.Name = "updateConfirm";
-            this.updateConfirm.Size = new System.Drawing.Size(131, 35);
-            this.updateConfirm.TabIndex = 9;
-            this.updateConfirm.Text = "수정";
-            this.updateConfirm.Click += new System.EventHandler(this.updateConfirm_Click);
+            this.addOK.BackColor = System.Drawing.Color.Transparent;
+            this.addOK.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addOK.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.addOK.Location = new System.Drawing.Point(88, 346);
+            this.addOK.MinimumSize = new System.Drawing.Size(1, 1);
+            this.addOK.Name = "addOK";
+            this.addOK.Size = new System.Drawing.Size(131, 35);
+            this.addOK.TabIndex = 9;
+            this.addOK.Text = "수정";
+            this.addOK.Click += new System.EventHandler(this.addOK_Click);
             // 
             // email
             // 
             this.email.BackColor = System.Drawing.Color.Transparent;
             this.email.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.email.Location = new System.Drawing.Point(19, 271);
+            this.email.Location = new System.Drawing.Point(19, 270);
             this.email.MinimumSize = new System.Drawing.Size(1, 1);
             this.email.Name = "email";
             this.email.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
@@ -145,7 +145,7 @@ namespace addrWin_20210302.ui
             // 
             this.addr.BackColor = System.Drawing.Color.Transparent;
             this.addr.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.addr.Location = new System.Drawing.Point(19, 211);
+            this.addr.Location = new System.Drawing.Point(19, 210);
             this.addr.MinimumSize = new System.Drawing.Size(1, 1);
             this.addr.Name = "addr";
             this.addr.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
@@ -159,7 +159,7 @@ namespace addrWin_20210302.ui
             // 
             this.tel.BackColor = System.Drawing.Color.Transparent;
             this.tel.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.tel.Location = new System.Drawing.Point(19, 151);
+            this.tel.Location = new System.Drawing.Point(19, 150);
             this.tel.MinimumSize = new System.Drawing.Size(1, 1);
             this.tel.Name = "tel";
             this.tel.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
@@ -173,11 +173,12 @@ namespace addrWin_20210302.ui
             // 
             this.name.BackColor = System.Drawing.Color.Transparent;
             this.name.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.name.Location = new System.Drawing.Point(19, 91);
+            this.name.Location = new System.Drawing.Point(19, 90);
             this.name.MinimumSize = new System.Drawing.Size(1, 1);
             this.name.Name = "name";
             this.name.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
             this.name.Size = new System.Drawing.Size(86, 38);
+            this.name.Style = Sunny.UI.UIStyle.Custom;
             this.name.Symbol = 61447;
             this.name.SymbolColor = System.Drawing.SystemColors.Highlight;
             this.name.TabIndex = 7;
@@ -192,15 +193,15 @@ namespace addrWin_20210302.ui
             this.Controls.Add(this.updateAddr);
             this.Controls.Add(this.updateTel);
             this.Controls.Add(this.updateName);
-            this.Controls.Add(this.updateCancel);
-            this.Controls.Add(this.updateConfirm);
+            this.Controls.Add(this.addCancel);
+            this.Controls.Add(this.addOK);
             this.Controls.Add(this.email);
             this.Controls.Add(this.addr);
             this.Controls.Add(this.tel);
             this.Controls.Add(this.name);
             this.Name = "UpdateDetail";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "데이터 수정";
+            this.Text = "주소록 데이터 수정";
             this.Load += new System.EventHandler(this.UpdateDetail_Load);
             this.ResumeLayout(false);
 
@@ -212,8 +213,8 @@ namespace addrWin_20210302.ui
         private Sunny.UI.UITextBox updateAddr;
         private Sunny.UI.UITextBox updateTel;
         private Sunny.UI.UITextBox updateName;
-        private Sunny.UI.UISymbolButton updateCancel;
-        private Sunny.UI.UISymbolButton updateConfirm;
+        private Sunny.UI.UISymbolButton addCancel;
+        private Sunny.UI.UISymbolButton addOK;
         private Sunny.UI.UISymbolLabel email;
         private Sunny.UI.UISymbolLabel addr;
         private Sunny.UI.UISymbolLabel tel;

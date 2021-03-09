@@ -1,0 +1,14 @@
+C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarCustomerInfo\CarCustomerInfo\bin\Debug\CarCustomerInfo.exe.config
+C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarCustomerInfo\CarCustomerInfo\bin\Debug\CarCustomerInfo.exe
+C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarCustomerInfo\CarCustomerInfo\bin\Debug\CarCustomerInfo.pdb
+C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarCustomerInfo\CarCustomerInfo\obj\Debug\CarCustomerInfo.csprojAssemblyReference.cache
+C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarCustomerInfo\CarCustomerInfo\obj\Debug\CarCustomerInfo.csproj.CoreCompileInputs.cache
+C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarCustomerInfo\CarCustomerInfo\obj\Debug\CarCustomerInfo.exe
+C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarCustomerInfo\CarCustomerInfo\obj\Debug\CarCustomerInfo.pdb
+C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarCustomerInfo\CarCustomerInfo\obj\Debug\CarCustomerInfo.ui.mainForm.resources
+C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarCustomerInfo\CarCustomerInfo\obj\Debug\CarCustomerInfo.csproj.GenerateResource.cache
+C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarCustomerInfo\CarCustomerInfo\bin\Debug\CxFlatUI.dll
+C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarCustomerInfo\CarCustomerInfo\bin\Debug\MaterialSkin.dll
+C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarCustomerInfo\CarCustomerInfo\bin\Debug\SunnyUI.Common.dll
+C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarCustomerInfo\CarCustomerInfo\bin\Debug\SunnyUI.dll
+C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarCustomerInfo\CarCustomerInfo\obj\Debug\CarCustomerInfo.csproj.CopyComplete

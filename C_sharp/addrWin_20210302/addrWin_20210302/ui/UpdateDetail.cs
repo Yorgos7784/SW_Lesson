@@ -14,10 +14,10 @@ namespace addrWin_20210302.ui
 {
     partial class UpdateDetail : MaterialForm
     {
+        StudentCtrl sc;
         private string inputname;
         private string inputtel;
-        public int num;
-        StudentCtrl sc;
+        private int updateNum;
 
         public UpdateDetail(string name, string tel, StudentCtrl sc)
         {
@@ -31,26 +31,26 @@ namespace addrWin_20210302.ui
         {
             for (int i = 0; i < sc.getList().Count; i++)
             {
-                if(sc.getList()[i].Name == inputname && sc.getList()[i].Tel== inputtel)
+                if(sc.getList()[i].Name == inputname && sc.getList()[i].Tel == inputtel)
                 {
-                    num = i;
                     updateName.Text = sc.getList()[i].Name;
                     updateTel.Text = sc.getList()[i].Tel;
                     updateAddr.Text = sc.getList()[i].Address;
                     updateEmail.Text = sc.getList()[i].Email;
+                    updateNum = i;
                 }
             }
         }
 
-        private void updateCancel_Click(object sender, EventArgs e)
+        private void addOK_Click(object sender, EventArgs e)
         {
+            sc.updateItem(updateNum, updateName.Text, updateTel.Text, updateAddr.Text, updateEmail.Text);
+            MessageBox.Show("수정되었습니다.", "데이터 수정 완료");
             Close();
         }
 
-        private void updateConfirm_Click(object sender, EventArgs e)
+        private void addCancel_Click(object sender, EventArgs e)
         {
-            sc.updateItem(num, updateName.Text, updateTel.Text, updateAddr.Text, updateEmail.Text);
-            MessageBox.Show("수정되었습니다.", "데이터 수정 완료");
             Close();
         }
     }
