@@ -159,5 +159,73 @@ namespace addrWin_20210302.ui
                 MessageBox.Show("취소되었습니다.", "데이터 삭제 취소");
             }
         }
+
+        private void serchButton_Click(object sender, EventArgs e)
+        {
+            if(inputSerchName.Text.Length > 0)
+            {
+                int count = 0;
+                for (int i = 0; i < sc.getList().Count; i++)
+                {
+                    if (sc.getList()[i].Name == inputSerchName.Text)
+                    {
+                        count++;
+                    }
+                }
+                if(count > 0)
+                {
+                    listView.Items.Clear();
+                    for (int i = 0; i < sc.getList().Count; i++)
+                    {
+                        if (sc.getList()[i].Name == inputSerchName.Text)
+                        {
+                            listView.Items.Add(new ListViewItem(new string[]{
+                                (i + 1).ToString(),
+                                sc.getList()[i].Name,
+                                sc.getList()[i].Tel,
+                                sc.getList()[i].Address,
+                                sc.getList()[i].Email }));
+                        }
+                    }
+
+                    setRowColor(listView, Color.White, Color.Gainsboro);
+                    if (listView.Items.Count > 0)
+                    {
+                        int index = listView.Items.Count - 1;
+                        //listView.Items[index].Selected = true;
+                        listView.Items[index].Focused = true;
+                        listView.EnsureVisible(index);
+                    }
+                }
+
+                else
+                {
+                    MessageBox.Show("일치하는 데이터가 없습니다.", "검색 실패");
+                }
+            }
+        }
+
+        private void resetButton_Click(object sender, EventArgs e)
+        {
+            resetList();
+        }
+
+        private void inputSerchName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                serchButton_Click(sender, e);
+            else if(e.KeyCode == Keys.F5)
+            {
+                resetList();
+            }
+        }
+
+        private void viewForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F5)
+            {
+                resetList();
+            }
+        }
     }
 }

@@ -41,6 +41,10 @@ namespace addrWin_20210302.ui
             this.tel = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.addr = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.email = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.uiLabel1 = new Sunny.UI.UILabel();
+            this.inputSerchName = new CxFlatUI.CxFlatTextBox();
+            this.serchButton = new CxFlatUI.CxFlatRoundButton();
+            this.resetButton = new CxFlatUI.CxFlatRoundButton();
             this.SuspendLayout();
             // 
             // viewExit
@@ -152,9 +156,9 @@ namespace addrWin_20210302.ui
             this.listView.FullRowSelect = true;
             this.listView.HideSelection = false;
             this.listView.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.listView.Location = new System.Drawing.Point(11, 72);
+            this.listView.Location = new System.Drawing.Point(11, 110);
             this.listView.Name = "listView";
-            this.listView.Size = new System.Drawing.Size(644, 407);
+            this.listView.Size = new System.Drawing.Size(644, 369);
             this.listView.TabIndex = 3;
             this.listView.UseCompatibleStateImageBehavior = false;
             this.listView.View = System.Windows.Forms.View.Details;
@@ -183,11 +187,71 @@ namespace addrWin_20210302.ui
             this.email.Text = "이메일";
             this.email.Width = 200;
             // 
+            // uiLabel1
+            // 
+            this.uiLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.uiLabel1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.uiLabel1.Location = new System.Drawing.Point(229, 76);
+            this.uiLabel1.Name = "uiLabel1";
+            this.uiLabel1.Size = new System.Drawing.Size(81, 23);
+            this.uiLabel1.TabIndex = 4;
+            this.uiLabel1.Text = "이름 검색";
+            this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // inputSerchName
+            // 
+            this.inputSerchName.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.inputSerchName.Hint = "";
+            this.inputSerchName.Location = new System.Drawing.Point(316, 68);
+            this.inputSerchName.MaxLength = 32767;
+            this.inputSerchName.Multiline = false;
+            this.inputSerchName.Name = "inputSerchName";
+            this.inputSerchName.PasswordChar = '\0';
+            this.inputSerchName.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.inputSerchName.SelectedText = "";
+            this.inputSerchName.SelectionLength = 0;
+            this.inputSerchName.SelectionStart = 0;
+            this.inputSerchName.Size = new System.Drawing.Size(129, 38);
+            this.inputSerchName.TabIndex = 5;
+            this.inputSerchName.TabStop = false;
+            this.inputSerchName.UseSystemPasswordChar = false;
+            this.inputSerchName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.inputSerchName_KeyDown);
+            // 
+            // serchButton
+            // 
+            this.serchButton.BackColor = System.Drawing.Color.Transparent;
+            this.serchButton.ButtonType = CxFlatUI.ButtonType.Primary;
+            this.serchButton.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.serchButton.Location = new System.Drawing.Point(456, 72);
+            this.serchButton.Name = "serchButton";
+            this.serchButton.Size = new System.Drawing.Size(95, 31);
+            this.serchButton.TabIndex = 6;
+            this.serchButton.Text = "검색";
+            this.serchButton.TextColor = System.Drawing.Color.White;
+            this.serchButton.Click += new System.EventHandler(this.serchButton_Click);
+            // 
+            // resetButton
+            // 
+            this.resetButton.BackColor = System.Drawing.Color.Transparent;
+            this.resetButton.ButtonType = CxFlatUI.ButtonType.Primary;
+            this.resetButton.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.resetButton.Location = new System.Drawing.Point(557, 72);
+            this.resetButton.Name = "resetButton";
+            this.resetButton.Size = new System.Drawing.Size(95, 31);
+            this.resetButton.TabIndex = 6;
+            this.resetButton.Text = "초기화";
+            this.resetButton.TextColor = System.Drawing.Color.White;
+            this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
+            // 
             // viewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(838, 488);
+            this.Controls.Add(this.resetButton);
+            this.Controls.Add(this.serchButton);
+            this.Controls.Add(this.inputSerchName);
+            this.Controls.Add(this.uiLabel1);
             this.Controls.Add(this.listView);
             this.Controls.Add(this.viewDelAll);
             this.Controls.Add(this.viewRandData);
@@ -199,6 +263,7 @@ namespace addrWin_20210302.ui
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "주소록 데이터 보기";
             this.Load += new System.EventHandler(this.viewForm_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.viewForm_KeyDown);
             this.ResumeLayout(false);
 
         }
@@ -216,5 +281,9 @@ namespace addrWin_20210302.ui
         private System.Windows.Forms.ColumnHeader tel;
         private System.Windows.Forms.ColumnHeader addr;
         private System.Windows.Forms.ColumnHeader email;
+        private Sunny.UI.UILabel uiLabel1;
+        private CxFlatUI.CxFlatTextBox inputSerchName;
+        private CxFlatUI.CxFlatRoundButton serchButton;
+        private CxFlatUI.CxFlatRoundButton resetButton;
     }
 }

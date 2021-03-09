@@ -42,14 +42,14 @@ namespace addrWin_20210302
             return input;
         }
 
+        // 예/아니오 메시지 박스
         public static DialogResult getDialogResult(string body, string title)
         {
             DialogResult dr = MessageBox.Show(body, title, MessageBoxButtons.YesNo);
             return dr;
         }
 
-/*
-        // 데이터 추가
+        /*// 데이터 추가
         private void addrAdd_Click(object sender, EventArgs e)
         {
             // sc.addItem();

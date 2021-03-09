@@ -12,3 +12,4 @@ C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarCustomerInfo\CarCustomerInfo\bin\Debug\
 C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarCustomerInfo\CarCustomerInfo\bin\Debug\SunnyUI.Common.dll
 C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarCustomerInfo\CarCustomerInfo\bin\Debug\SunnyUI.dll
 C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarCustomerInfo\CarCustomerInfo\obj\Debug\CarCustomerInfo.csproj.CopyComplete
+C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarCustomerInfo\CarCustomerInfo\obj\Debug\CarCustomerInfo.Properties.Resources.resources

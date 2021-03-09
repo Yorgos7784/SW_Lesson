@@ -32,6 +32,7 @@ namespace CarCustomerInfo.ui
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.uiSymbolLabel1 = new Sunny.UI.UISymbolLabel();
             this.cxFlatPictureBox1 = new CxFlatUI.CxFlatPictureBox();
+            this.cxFlatRoundButton1 = new CxFlatUI.CxFlatRoundButton();
             ((System.ComponentModel.ISupportInitialize)(this.cxFlatPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,12 +55,23 @@ namespace CarCustomerInfo.ui
             // cxFlatPictureBox1
             // 
             this.cxFlatPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("cxFlatPictureBox1.Image")));
-            this.cxFlatPictureBox1.Location = new System.Drawing.Point(4, 68);
+            this.cxFlatPictureBox1.Location = new System.Drawing.Point(40, 67);
             this.cxFlatPictureBox1.Name = "cxFlatPictureBox1";
-            this.cxFlatPictureBox1.Size = new System.Drawing.Size(410, 381);
+            this.cxFlatPictureBox1.Size = new System.Drawing.Size(404, 381);
             this.cxFlatPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.cxFlatPictureBox1.TabIndex = 1;
             this.cxFlatPictureBox1.TabStop = false;
+            // 
+            // cxFlatRoundButton1
+            // 
+            this.cxFlatRoundButton1.ButtonType = CxFlatUI.ButtonType.Primary;
+            this.cxFlatRoundButton1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.cxFlatRoundButton1.Location = new System.Drawing.Point(469, 80);
+            this.cxFlatRoundButton1.Name = "cxFlatRoundButton1";
+            this.cxFlatRoundButton1.Size = new System.Drawing.Size(100, 100);
+            this.cxFlatRoundButton1.TabIndex = 2;
+            this.cxFlatRoundButton1.Text = "cxFlatRoundButton1";
+            this.cxFlatRoundButton1.TextColor = System.Drawing.Color.White;
             // 
             // MainForm
             // 
@@ -67,6 +79,7 @@ namespace CarCustomerInfo.ui
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cxFlatRoundButton1);
             this.Controls.Add(this.cxFlatPictureBox1);
             this.Controls.Add(this.uiSymbolLabel1);
             this.Name = "MainForm";
@@ -80,5 +93,6 @@ namespace CarCustomerInfo.ui
 
         private Sunny.UI.UISymbolLabel uiSymbolLabel1;
         private CxFlatUI.CxFlatPictureBox cxFlatPictureBox1;
+        private CxFlatUI.CxFlatRoundButton cxFlatRoundButton1;
     }
 }
