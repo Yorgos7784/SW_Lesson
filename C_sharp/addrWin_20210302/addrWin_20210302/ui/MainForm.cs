@@ -4,6 +4,8 @@ using adressTest0218.view;
 using MaterialSkin.Controls;
 using System;
 using System.Windows.Forms;
+using System.Drawing.Text;
+using System.Drawing;
 
 namespace addrWin_20210302
 {
@@ -15,6 +17,11 @@ namespace addrWin_20210302
         public MainForm()
         {
             InitializeComponent();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            //initFont();
         }
 
         // 나가기 버튼
@@ -47,6 +54,18 @@ namespace addrWin_20210302
         {
             DialogResult dr = MessageBox.Show(body, title, MessageBoxButtons.YesNo);
             return dr;
+        }
+
+        // 외부 폰트 적용
+        private void initFont()
+        {
+            PrivateFontCollection pFont = new PrivateFontCollection();
+            pFont.AddFontFile("Cinema.ttf");
+            Font font = new Font(pFont.Families[0], 12f);
+            addrView.Font = font;
+            addrHelp.Font = font;
+            addrExit.Font = font;
+            programTitle.Font = font;
         }
 
         /*// 데이터 추가

@@ -31,7 +31,7 @@ namespace addrWin_20210302
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.addrView = new CxFlatUI.CxFlatSimpleButton();
-            this.uiSymbolLabel1 = new Sunny.UI.UISymbolLabel();
+            this.programTitle = new Sunny.UI.UISymbolLabel();
             this.cxFlatPictureBox1 = new CxFlatUI.CxFlatPictureBox();
             this.addrHelp = new CxFlatUI.CxFlatSimpleButton();
             this.addrExit = new CxFlatUI.CxFlatSimpleButton();
@@ -50,29 +50,29 @@ namespace addrWin_20210302
             this.addrView.TextColor = System.Drawing.Color.White;
             this.addrView.Click += new System.EventHandler(this.addrView_Click);
             // 
-            // uiSymbolLabel1
+            // programTitle
             // 
-            this.uiSymbolLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.uiSymbolLabel1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiSymbolLabel1.ForeColor = System.Drawing.Color.White;
-            this.uiSymbolLabel1.Location = new System.Drawing.Point(1, 27);
-            this.uiSymbolLabel1.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiSymbolLabel1.Name = "uiSymbolLabel1";
-            this.uiSymbolLabel1.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
-            this.uiSymbolLabel1.Size = new System.Drawing.Size(250, 35);
-            this.uiSymbolLabel1.Style = Sunny.UI.UIStyle.Custom;
-            this.uiSymbolLabel1.Symbol = 62142;
-            this.uiSymbolLabel1.SymbolColor = System.Drawing.Color.Gold;
-            this.uiSymbolLabel1.TabIndex = 7;
-            this.uiSymbolLabel1.Text = "주소록 관리 프로그램 v1.0";
+            this.programTitle.BackColor = System.Drawing.Color.Transparent;
+            this.programTitle.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.programTitle.ForeColor = System.Drawing.Color.White;
+            this.programTitle.Location = new System.Drawing.Point(1, 27);
+            this.programTitle.MinimumSize = new System.Drawing.Size(1, 1);
+            this.programTitle.Name = "programTitle";
+            this.programTitle.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
+            this.programTitle.Size = new System.Drawing.Size(250, 35);
+            this.programTitle.Style = Sunny.UI.UIStyle.Custom;
+            this.programTitle.Symbol = 62142;
+            this.programTitle.SymbolColor = System.Drawing.Color.Gold;
+            this.programTitle.TabIndex = 7;
+            this.programTitle.Text = "주소록 관리 프로그램 v1.0";
             // 
             // cxFlatPictureBox1
             // 
             this.cxFlatPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("cxFlatPictureBox1.Image")));
-            this.cxFlatPictureBox1.Location = new System.Drawing.Point(-10, 91);
+            this.cxFlatPictureBox1.Location = new System.Drawing.Point(-10, 68);
             this.cxFlatPictureBox1.Name = "cxFlatPictureBox1";
-            this.cxFlatPictureBox1.Size = new System.Drawing.Size(405, 366);
-            this.cxFlatPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.cxFlatPictureBox1.Size = new System.Drawing.Size(405, 418);
+            this.cxFlatPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.cxFlatPictureBox1.TabIndex = 8;
             this.cxFlatPictureBox1.TabStop = false;
             // 
@@ -106,13 +106,14 @@ namespace addrWin_20210302
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(670, 488);
-            this.Controls.Add(this.uiSymbolLabel1);
+            this.Controls.Add(this.programTitle);
             this.Controls.Add(this.addrExit);
             this.Controls.Add(this.addrHelp);
             this.Controls.Add(this.addrView);
             this.Controls.Add(this.cxFlatPictureBox1);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cxFlatPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -120,7 +121,7 @@ namespace addrWin_20210302
 
         #endregion
         private CxFlatUI.CxFlatSimpleButton addrView;
-        private Sunny.UI.UISymbolLabel uiSymbolLabel1;
+        private Sunny.UI.UISymbolLabel programTitle;
         private CxFlatUI.CxFlatPictureBox cxFlatPictureBox1;
         private CxFlatUI.CxFlatSimpleButton addrHelp;
         private CxFlatUI.CxFlatSimpleButton addrExit;

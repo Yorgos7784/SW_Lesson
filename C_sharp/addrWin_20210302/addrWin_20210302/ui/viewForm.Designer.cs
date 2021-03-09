@@ -51,7 +51,7 @@ namespace addrWin_20210302.ui
             // 
             this.viewExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.viewExit.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.viewExit.Location = new System.Drawing.Point(681, 408);
+            this.viewExit.Location = new System.Drawing.Point(683, 412);
             this.viewExit.MinimumSize = new System.Drawing.Size(1, 1);
             this.viewExit.Name = "viewExit";
             this.viewExit.Size = new System.Drawing.Size(131, 35);
@@ -63,7 +63,7 @@ namespace addrWin_20210302.ui
             // 
             this.viewUpdateButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.viewUpdateButton.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.viewUpdateButton.Location = new System.Drawing.Point(681, 346);
+            this.viewUpdateButton.Location = new System.Drawing.Point(683, 350);
             this.viewUpdateButton.MinimumSize = new System.Drawing.Size(1, 1);
             this.viewUpdateButton.Name = "viewUpdateButton";
             this.viewUpdateButton.Size = new System.Drawing.Size(131, 35);
@@ -80,7 +80,7 @@ namespace addrWin_20210302.ui
             this.viewDelButton.FillPressColor = System.Drawing.Color.Maroon;
             this.viewDelButton.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.viewDelButton.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.viewDelButton.Location = new System.Drawing.Point(681, 222);
+            this.viewDelButton.Location = new System.Drawing.Point(683, 226);
             this.viewDelButton.MinimumSize = new System.Drawing.Size(1, 1);
             this.viewDelButton.Name = "viewDelButton";
             this.viewDelButton.Size = new System.Drawing.Size(131, 35);
@@ -98,7 +98,7 @@ namespace addrWin_20210302.ui
             this.viewAddButton.FillPressColor = System.Drawing.Color.Green;
             this.viewAddButton.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.viewAddButton.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.viewAddButton.Location = new System.Drawing.Point(681, 98);
+            this.viewAddButton.Location = new System.Drawing.Point(683, 102);
             this.viewAddButton.MinimumSize = new System.Drawing.Size(1, 1);
             this.viewAddButton.Name = "viewAddButton";
             this.viewAddButton.Size = new System.Drawing.Size(131, 35);
@@ -116,7 +116,7 @@ namespace addrWin_20210302.ui
             this.viewRandData.FillPressColor = System.Drawing.Color.Green;
             this.viewRandData.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.viewRandData.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.viewRandData.Location = new System.Drawing.Point(681, 160);
+            this.viewRandData.Location = new System.Drawing.Point(683, 164);
             this.viewRandData.MinimumSize = new System.Drawing.Size(1, 1);
             this.viewRandData.Name = "viewRandData";
             this.viewRandData.Size = new System.Drawing.Size(131, 35);
@@ -134,7 +134,7 @@ namespace addrWin_20210302.ui
             this.viewDelAll.FillPressColor = System.Drawing.Color.Maroon;
             this.viewDelAll.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.viewDelAll.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.viewDelAll.Location = new System.Drawing.Point(681, 284);
+            this.viewDelAll.Location = new System.Drawing.Point(683, 288);
             this.viewDelAll.MinimumSize = new System.Drawing.Size(1, 1);
             this.viewDelAll.Name = "viewDelAll";
             this.viewDelAll.Size = new System.Drawing.Size(131, 35);
@@ -156,7 +156,7 @@ namespace addrWin_20210302.ui
             this.listView.FullRowSelect = true;
             this.listView.HideSelection = false;
             this.listView.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.listView.Location = new System.Drawing.Point(11, 110);
+            this.listView.Location = new System.Drawing.Point(10, 110);
             this.listView.Name = "listView";
             this.listView.Size = new System.Drawing.Size(644, 369);
             this.listView.TabIndex = 3;
@@ -191,11 +191,11 @@ namespace addrWin_20210302.ui
             // 
             this.uiLabel1.BackColor = System.Drawing.Color.Transparent;
             this.uiLabel1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiLabel1.Location = new System.Drawing.Point(229, 76);
+            this.uiLabel1.Location = new System.Drawing.Point(227, 76);
             this.uiLabel1.Name = "uiLabel1";
-            this.uiLabel1.Size = new System.Drawing.Size(81, 23);
+            this.uiLabel1.Size = new System.Drawing.Size(90, 23);
             this.uiLabel1.TabIndex = 4;
-            this.uiLabel1.Text = "이름 검색";
+            this.uiLabel1.Text = "이름 검색 :";
             this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // inputSerchName
@@ -263,7 +263,6 @@ namespace addrWin_20210302.ui
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "주소록 데이터 보기";
             this.Load += new System.EventHandler(this.viewForm_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.viewForm_KeyDown);
             this.ResumeLayout(false);
 
         }

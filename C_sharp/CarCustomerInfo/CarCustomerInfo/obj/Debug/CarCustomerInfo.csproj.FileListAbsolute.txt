@@ -13,3 +13,6 @@ C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarCustomerInfo\CarCustomerInfo\bin\Debug\
 C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarCustomerInfo\CarCustomerInfo\bin\Debug\SunnyUI.dll
 C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarCustomerInfo\CarCustomerInfo\obj\Debug\CarCustomerInfo.csproj.CopyComplete
 C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarCustomerInfo\CarCustomerInfo\obj\Debug\CarCustomerInfo.Properties.Resources.resources
+C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarCustomerInfo\CarCustomerInfo\obj\Debug\CarCustomerInfo.ui.AddCarInfo.resources
+C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarCustomerInfo\CarCustomerInfo\obj\Debug\CarCustomerInfo.ui.CarInfoForm.resources
+C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarCustomerInfo\CarCustomerInfo\obj\Debug\CarCustomerInfo.ui.UpdateCarInfo.resources

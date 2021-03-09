@@ -69,6 +69,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="ui\AddCarInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\AddCarInfo.Designer.cs">
+      <DependentUpon>AddCarInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\CarInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\CarInfoForm.Designer.cs">
+      <DependentUpon>CarInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\UpdateCarInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\UpdateCarInfo.Designer.cs">
+      <DependentUpon>UpdateCarInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="util\RandData.cs" />
     <Compile Include="ui\MainForm.cs">
       <SubType>Form</SubType>
@@ -97,8 +115,17 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="ui\AddCarInfo.resx">
+      <DependentUpon>AddCarInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\CarInfoForm.resx">
+      <DependentUpon>CarInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ui\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\UpdateCarInfo.resx">
+      <DependentUpon>UpdateCarInfo.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

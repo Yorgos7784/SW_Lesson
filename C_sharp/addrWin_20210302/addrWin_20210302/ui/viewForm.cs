@@ -215,17 +215,7 @@ namespace addrWin_20210302.ui
             if (e.KeyCode == Keys.Enter)
                 serchButton_Click(sender, e);
             else if(e.KeyCode == Keys.F5)
-            {
                 resetList();
-            }
-        }
-
-        private void viewForm_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.F5)
-            {
-                resetList();
-            }
         }
     }
 }

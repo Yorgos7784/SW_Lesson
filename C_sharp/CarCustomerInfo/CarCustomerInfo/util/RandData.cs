@@ -42,17 +42,17 @@ namespace CarCustomerInfo
             return company[r.Next(0, company.Length)];
         }
 
-        public string getmodel()
+        public string getModel()
         {
             return model[r.Next(0, model.Length)];
         }
 
-        public string getcolor()
+        public string getColor()
         {
             return color[r.Next(0, color.Length)];
         }
 
-        public string getprice()
+        public string getPrice()
         {
             return r.Next(1000, 10000) + "만원";
         }

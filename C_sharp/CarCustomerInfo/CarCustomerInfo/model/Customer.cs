@@ -13,6 +13,11 @@ namespace CarCustomerInfo
         private string address;
         private string email;
 
+        public Customer(string name)
+        {
+            this.name = name;
+        }
+
         public Customer(string name, string tel, string address, string email)
         {
             this.name = name;

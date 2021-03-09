@@ -14,7 +14,7 @@ namespace CarCustomerInfo
         private string price;
         private Customer customer;
 
-        public Car(string company, string model, string color, string price, Customer customer)
+        public Car(string model, string color, string company, string price, Customer customer)
         {
             this.company = company;
             this.model = model;
