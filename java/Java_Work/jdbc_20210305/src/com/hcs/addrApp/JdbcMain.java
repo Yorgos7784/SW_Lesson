@@ -46,8 +46,8 @@ public class JdbcMain {
 				break;
 			case MyMenu.PROGRAM_EXIT:
 				db1.closeDB();
-				System.out.println("Thanks for Using!");
 				s.close();
+				System.out.println("Thanks for Using!");
 				System.exit(0);
 				break;
 			default:

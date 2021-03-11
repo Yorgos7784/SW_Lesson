@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>
+        JQuery(document).ready(function () {
+            JQuery("#displayDiv").css("display", "none");
+
+            JQuery("#btn").click(function () {
+                if (JQuery("#displayDiv").css("display") == "none") {
+                    JQuery("#displayDiv").css("display", "block");
+                } else {
+                    JQuery("#displayDiv").css("display", "none");
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h1>이미지 출력 및 숨기기</h1>
+    <p>
+        <button type="button" id="btn">보기 또는 숨기기</button>
+        <div id="displayDiv">
+            <img src="images/view.jpg" width="1280" height="767">
+        </div>
+</body>
+
+</html>

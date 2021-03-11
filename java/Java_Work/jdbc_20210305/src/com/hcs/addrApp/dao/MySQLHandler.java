@@ -199,6 +199,7 @@ public class MySQLHandler {
 					System.out.println(rs.getString("date"));
 					n++;
 				}
+				rs.close();
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -448,4 +449,5 @@ public class MySQLHandler {
 			break;
 		}
 	}
+
 }
