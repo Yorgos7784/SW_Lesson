@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>이미지 변경</title>
+</head>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#displayDiv").css("display", "none");
+
+		$("#btn").click(function() {
+			if ($("#displayDiv").css("display") == "none") {
+				$("#displayDiv").css("display", "block");
+			} 
+			else {
+				$("#displayDiv").css("display", "none");
+			}
+		});
+	});
+</script>
+<body>
+	<h1>이미지 출력 및 숨기기</h1><p>
+	<button type="button" id="btn">보기 또는 숨기기</button>
+	<div id="displayDiv">
+		<!-- 상대경로 : 같은 폴더 아래의 다른 폴더의 파일경로 -->
+		<!-- .. : 상위 폴더 -->
+		<img src="../images/view.jpg" width="1280" height="767">
+	</div>
+</body>
+</html>

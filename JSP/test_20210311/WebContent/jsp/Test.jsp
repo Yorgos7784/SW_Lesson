@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Insert title here</title>
+<title>My First JSP</title>
 </head>
 <body>
 	Hello JSP 파일

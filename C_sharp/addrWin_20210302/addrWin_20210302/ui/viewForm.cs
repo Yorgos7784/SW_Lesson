@@ -66,8 +66,6 @@ namespace addrWin_20210302.ui
             initListView();
         }
 
-
-
         private void viewExti_Click(object sender, EventArgs e)
         {
             Close();
