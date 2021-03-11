@@ -45,8 +45,8 @@ public class JdbcMain {
 				db1.deleteData(me.deleteMenu());
 				break;
 			case MyMenu.PROGRAM_EXIT:
-				System.out.println("\nThanks for Using!");
 				db1.closeDB();
+				System.out.println("Thanks for Using!");
 				s.close();
 				System.exit(0);
 				break;

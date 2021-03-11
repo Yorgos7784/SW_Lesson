@@ -140,33 +140,33 @@ public class MySQLHandler {
 			showData(query);
 			break;
 		case SELECT_NAME:
-			System.out.print("\n찾으시는 데이터 번호를 입력하세요 : ");
+			System.out.print("\n찾으시는 데이터 이름을 입력하세요 : ");
 			String name = s.next();
-			query = "select * from userinfo where name = " + name;
+			query = String.format("select * from userinfo where name = '%s'", name);
 			showData(query);
 			break;
 		case SELECT_AGE:
-			System.out.print("\n찾으시는 데이터 번호를 입력하세요 : ");
+			System.out.print("\n찾으시는 데이터 나이를 입력하세요 : ");
 			int age = s.nextInt();
-			query = "select * from userinfo where age = " + age;
+			query = String.format("select * from userinfo where age = %d", age);
 			showData(query);
 			break;
 		case SELECT_TEL:
-			System.out.print("\n찾으시는 데이터 번호를 입력하세요 : ");
+			System.out.print("\n찾으시는 데이터 전화번호를 입력하세요 : ");
 			String tel = s.next();
-			query = "select * from userinfo where tel = " + tel;
+			query = String.format("select * from userinfo where tel = '%s'", tel);
 			showData(query);
 			break;
 		case SELECT_ADDR:
-			System.out.print("\n찾으시는 데이터 번호를 입력하세요 : ");
+			System.out.print("\n찾으시는 데이터 주소를 입력하세요 : ");
 			String addr = s.next();
-			query = "select * from userinfo where addr = " + addr;
+			query = String.format("select * from userinfo where address = '%s'", addr);
 			showData(query);
 			break;
 		case SELECT_EMAIL:
-			System.out.print("\n찾으시는 데이터 번호를 입력하세요 : ");
+			System.out.print("\n찾으시는 데이터 이메일을 입력하세요 : ");
 			String email = s.next();
-			query = "select * from userinfo where email = " + email;
+			query = String.format("select * from userinfo where email = '%s'", email);
 			showData(query);
 			break;
 		case SELECT_EXIT:
@@ -180,22 +180,24 @@ public class MySQLHandler {
 			ResultSet rs = state.executeQuery(query);
 			if (rs != null) {
 				rs = state.getResultSet();
-				System.out.print("\nID\t");
-				System.out.print("이름\t");
-				System.out.print("나이\t");
-				System.out.print("전화\t\t");
-				System.out.print("주소\t\t");
-				System.out.print("메일\t\t\t");
-				System.out.println("날짜");
+//				System.out.print("\nID\t");
+//				System.out.print("이름\t");
+//				System.out.print("나이\t");
+//				System.out.print("전화\t\t");
+//				System.out.print("주소\t\t");
+//				System.out.print("메일\t\t\t");
+//				System.out.println("날짜");
 				System.out.println("========================================================================================================");
 				while (rs.next()) {
-					System.out.print(rs.getString("id") + "\t");
+					int n = 0;
+					System.out.print((n+1) + "\t");
 					System.out.print(rs.getString("name") + "\t");
 					System.out.print(rs.getString("age") + "\t");
 					System.out.print(rs.getString("tel") + "\t");
 					System.out.print(rs.getString("address") + "\t");
 					System.out.print(rs.getString("email") + "\t");
 					System.out.println(rs.getString("date"));
+					n++;
 				}
 			}
 		} catch (SQLException e) {
@@ -238,8 +240,8 @@ public class MySQLHandler {
 		else if(count > 1) {
 			System.out.print("\n수정할 데이터의 나이를 입력하세요 : ");
 			int inputAge = s.nextInt();
-			showData(String.format("select * from userinfo where name = '%s' and age = '%d'", inputName, inputAge));
 			while(true) {
+				showData(String.format("select * from userinfo where name = '%s' and age = '%d'", inputName, inputAge));
 				System.out.println("---------------------");
 				System.out.println("1. 이름 수정");
 				System.out.println("2. 나이 수정");
@@ -321,6 +323,7 @@ public class MySQLHandler {
 		}
 		else {
 			while(true) {
+				showData(String.format("select * from userinfo where name = '%s'", inputName));
 				System.out.println("---------------------");
 				System.out.println("1. 이름 수정");
 				System.out.println("2. 나이 수정");
