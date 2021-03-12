@@ -10,6 +10,7 @@
 <body>
 <%
 request.setCharacterEncoding("UTF-8");
+
 String id = request.getParameter("id");
 String password = request.getParameter("pswd1");
 String name = request.getParameter("name");
