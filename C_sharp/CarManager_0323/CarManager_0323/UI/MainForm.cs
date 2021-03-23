@@ -22,24 +22,5 @@ namespace CarManager_0323
             InitializeComponent();
         }
         
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
-
-        }
-
-        private void createTBBtn_Click(object sender, EventArgs e)
-        {
-            dao.makeTables();
-        }
-
-        private void dropTBBtn_Click(object sender, EventArgs e)
-        {
-            dao.dropTables();
-        }
     }
 }

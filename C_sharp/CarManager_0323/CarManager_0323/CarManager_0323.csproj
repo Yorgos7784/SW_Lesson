@@ -63,6 +63,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DB\DaoOracle.cs" />
+    <Compile Include="Model\Car.cs" />
+    <Compile Include="Model\Customer.cs" />
+    <Compile Include="Model\OrderTable.cs" />
+    <Compile Include="Model\Seller.cs" />
     <Compile Include="UI\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,7 +102,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Handler\" />
-    <Folder Include="Model\" />
     <Folder Include="Util\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
