@@ -47,16 +47,5 @@ namespace adressTest0218
         public string Address { get => address; set => address = value; }
         public string Email { get => email; set => email = value; }
         public string Id { get => id; set => id = value; }
-
-        /*
-        public void showAddress()
-        {
-            Console.WriteLine("이름: {0}", name);
-            Console.WriteLine("전화: " + tel);
-            Console.WriteLine("주소: " + address);
-            Console.WriteLine("이메일: " + email);
-            Console.WriteLine("-----------------");
-        }
-        */
     }
 }

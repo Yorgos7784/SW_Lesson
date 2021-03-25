@@ -113,7 +113,6 @@ namespace addrWin_20210302
             this.Controls.Add(this.cxFlatPictureBox1);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cxFlatPictureBox1)).EndInit();
             this.ResumeLayout(false);
 

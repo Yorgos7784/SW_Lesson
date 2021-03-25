@@ -12,7 +12,7 @@ namespace adressTest0218.util
         private static string[] emailId = { "hong", "kim", "park", "choi", "kang", "lee" };
         private static string[] emailadd = { "@naver.com", "@gmail.com", "@hanmail.net" };
 
-        Random r = new Random();
+        readonly Random r = new Random();
 
         public RandomData() { }
 
@@ -41,7 +41,6 @@ namespace adressTest0218.util
             {
                 rs.Append(rdata[(int)(r.NextDouble() * rdata.Length)]);
             }
-            //Console.WriteLine("id: " + rs.ToString());
             return rs.ToString();
         }
     }

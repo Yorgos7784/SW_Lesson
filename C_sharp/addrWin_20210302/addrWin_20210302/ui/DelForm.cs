@@ -42,15 +42,15 @@ namespace addrWin_20210302.ui
         private void delOk_Click(object sender, EventArgs e)
         {
             // 입력받은 이름
-            string delName = delInput.Text;
-            int count = sc.counter(delName);
+            string delNameInput = delInput.Text;
+            int count = sc.counter(delNameInput);
 
             if (count == 1)
             {
-                DialogResult delItemdr = MainForm.getDialogResult(delName + "의 정보를 삭제하시겠습니까?", "데이터 삭제");
+                DialogResult delItemdr = MainForm.getDialogResult(delNameInput + "의 정보를 삭제하시겠습니까?", "데이터 삭제");
                 if (delItemdr == DialogResult.Yes)
                 {
-                    sc.delItem(delName);
+                    sc.delItem(delNameInput);
                     MessageBox.Show("삭제되었습니다.", "데이터 삭제 완료");
                     if (sc.getList().Count < 1)
                     {
@@ -69,23 +69,23 @@ namespace addrWin_20210302.ui
 
             else if(count > 1)
             {
-                string delTel = MainForm.myInputBox("삭제할 사람의 전화번호를 입력하세요.", "데이터 삭제", "");
+                string delTelInput = MainForm.myInputBox("삭제할 사람의 전화번호를 입력하세요.", "데이터 삭제", "");
                 bool telChecker = false;
                 for (int i = 0; i < sc.getList().Count; i++)
                 {
-                    if (delTel == sc.getList()[i].Tel)
+                    if (delTelInput == sc.getList()[i].Tel)
                         telChecker = true;
                 }
                 if (telChecker)
                 {
                     for (int i = 0; i < sc.getList().Count; i++)
                     {
-                        if (delName == sc.getList()[i].Name && sc.getList()[i].Tel == delTel)
+                        if (delNameInput == sc.getList()[i].Name && sc.getList()[i].Tel == delTelInput)
                         {
-                            DialogResult delItemdr = MainForm.getDialogResult(delName + "의 정보를 삭제하시겠습니까?", "데이터 삭제");
+                            DialogResult delItemdr = MainForm.getDialogResult(delNameInput + "의 정보를 삭제하시겠습니까?", "데이터 삭제");
                             if (delItemdr == DialogResult.Yes)
                             {
-                                sc.delItem(delName, delTel);
+                                sc.delItem(delNameInput, delTelInput);
                                 MessageBox.Show("삭제되었습니다.", "데이터 삭제 완료");
 
                                 if (sc.getList().Count < 1)

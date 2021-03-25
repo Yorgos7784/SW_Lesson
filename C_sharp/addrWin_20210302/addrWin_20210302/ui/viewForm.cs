@@ -18,14 +18,6 @@ namespace addrWin_20210302.ui
 
         private void initListView()
         {
-            /*string[] data = { "1", "홍길동", "010-1234-5678", "조선 한양 홍대감댁", "hong@naver.com" };
-            listView.Items.Add(new ListViewItem(data));
-
-            for (int i = 0; i < 50; i++)
-            {
-                listView.Items.Add(new ListViewItem(new string[] { (i + 2).ToString(), "홍길동", "010-1234-5678", "조선 한양 홍대감댁", "hong@naver.com" }));
-            }*/
-
             for (int i = 0; i < sc.getList().Count; i++)
             {
                 listView.Items.Add(new ListViewItem(new string[]
@@ -40,7 +32,6 @@ namespace addrWin_20210302.ui
             if (listView.Items.Count > 0)
             {
                 int index = listView.Items.Count - 1;
-                //listView.Items[index].Selected = true;
                 listView.Items[index].Focused = true;
                 listView.EnsureVisible(index);
             }
@@ -71,34 +62,17 @@ namespace addrWin_20210302.ui
             Close();
         }
 
-        /*private void listView_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            // listview에서 선택한 아이템 정보
-            if (listView.SelectedItems.Count != 0)
-            {
-                int n = listView.SelectedItems[0].Index;
-                String name = listView.Items[n].SubItems[1].Text;
-                String tel = listView.Items[n].SubItems[2].Text;
-                String addr = listView.Items[n].SubItems[3].Text;
-                String email = listView.Items[n].SubItems[4].Text;
-                Console.WriteLine("이름 : {0}", name);
-                Console.WriteLine("전화 : {0}", tel);
-                Console.WriteLine("주소 : {0}", addr);
-                Console.WriteLine("메일 : {0}", email);
-            }
-        }*/
-
         private void del_Click(object sender, EventArgs e)
         {
             if (listView.SelectedItems.Count != 0)
             {
                 int n = listView.SelectedItems[0].Index;
-                String name = listView.Items[n].SubItems[1].Text;
-                String tel = listView.Items[n].SubItems[2].Text;
+                string name1 = listView.Items[n].SubItems[1].Text;
+                string tel1 = listView.Items[n].SubItems[2].Text;
                 DialogResult viewDeldr = MainForm.getDialogResult("선택한 데이터를 삭제하시겠습니까?", "데이터 삭제");
                 if (viewDeldr == DialogResult.Yes)
                 {
-                    sc.delItem(name, tel);
+                    sc.delItem(name1, tel1);
                     MessageBox.Show("삭제되었습니다.", "데이터 삭제 완료");
                     resetList();
                 }
@@ -114,9 +88,9 @@ namespace addrWin_20210302.ui
             if (listView.SelectedItems.Count != 0)
             {
                 int n = listView.SelectedItems[0].Index;
-                string name = listView.Items[n].SubItems[1].Text;
-                string tel = listView.Items[n].SubItems[2].Text;
-                new UpdateDetail(name, tel, sc).ShowDialog();
+                string name2 = listView.Items[n].SubItems[1].Text;
+                string tel2 = listView.Items[n].SubItems[2].Text;
+                new UpdateDetail(name2, tel2, sc).ShowDialog();
                 resetList();
             }
         }
@@ -131,7 +105,6 @@ namespace addrWin_20210302.ui
         {
             string cnt = MainForm.myInputBox("랜덤 데이터를 생성할 갯수를 입력하세요", "랜덤 데이터 생성", "0");
             if (cnt == "") return;
-            //StudentCtrl.getInst().randData(Convert.ToInt32(cnt));
             sc.randData(Convert.ToInt32(cnt));
             MessageBox.Show("추가되었습니다!", "랜덤 데이터 추가 완료");
             resetList();
@@ -190,7 +163,6 @@ namespace addrWin_20210302.ui
                     if (listView.Items.Count > 0)
                     {
                         int index = listView.Items.Count - 1;
-                        //listView.Items[index].Selected = true;
                         listView.Items[index].Focused = true;
                         listView.EnsureVisible(index);
                     }

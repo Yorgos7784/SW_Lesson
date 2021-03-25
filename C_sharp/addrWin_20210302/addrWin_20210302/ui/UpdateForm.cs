@@ -41,14 +41,6 @@ namespace addrWin_20210302.ui
 
         private void initListView()
         {
-            /*string[] data = { "1", "홍길동", "010-1234-5678", "조선 한양 홍대감댁", "hong@naver.com" };
-            listView.Items.Add(new ListViewItem(data));
-
-            for (int i = 0; i < 50; i++)
-            {
-                listView.Items.Add(new ListViewItem(new string[] { (i + 2).ToString(), "홍길동", "010-1234-5678", "조선 한양 홍대감댁", "hong@naver.com" }));
-            }*/
-
             for (int i = 0; i < sc.getList().Count; i++)
             {
                 upList.Items.Add(new ListViewItem(new string[]
@@ -64,7 +56,6 @@ namespace addrWin_20210302.ui
             if (upList.Items.Count > 0)
             {
                 int index = upList.Items.Count - 1;
-                //listView.Items[index].Selected = true;
                 upList.Items[index].Focused = true;
                 upList.EnsureVisible(index);
             }
