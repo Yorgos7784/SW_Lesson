@@ -11,7 +11,7 @@
 		<div class="container">
 			<div class="navbar-header">
 				<a class="navbar-brand" href="index.jsp">Home</a>
-				<a class="navbar-brand" href="products.jsp">Product List</a>
+				<a class="navbar-brand" href="products_list.jsp">Product List</a>
 				<a class="navbar-brand" href="#">Menu2</a>
 			</div>
 		</div>

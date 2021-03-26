@@ -8,6 +8,20 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <title>Thanks For Visiting</title>
 </head>
+<style>
+	div.jumbotron{
+		background-color: white;
+		background-image: url(./img/back.jpg);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 250px;
+	}
+	.jumbo-text{
+		color: white;
+		text-shadow: 4px 4px 4px #000000;
+	}
+</style>
 <body>
 	<%@ include file="menu.jsp" %>
 	<%!
@@ -17,7 +31,7 @@
 	
 	<div class="jumbotron">
 		<div class="container">
-			<h1 class="display-3">
+			<h1 class="display-3 jumbo-text">
 				<%=greeting %>
 			</h1>
 		</div>

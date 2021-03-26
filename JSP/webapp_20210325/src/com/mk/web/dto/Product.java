@@ -2,6 +2,7 @@ package com.mk.web.dto;
 
 import java.io.Serializable;
 
+// 데이터의 안정성(정확성)을 위해 통신할 떄 필수적으로 Serializable 참조
 public class Product implements Serializable {
 	private String productId; 
 	private String pname; 
