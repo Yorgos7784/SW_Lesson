@@ -79,6 +79,12 @@
     <Compile Include="UI\InstCustomerForm.Designer.cs">
       <DependentUpon>InstCustomerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\InstOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\InstOrderForm.Designer.cs">
+      <DependentUpon>InstOrderForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\InstSellerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\InstCustomerForm.resx">
       <DependentUpon>InstCustomerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\InstOrderForm.resx">
+      <DependentUpon>InstOrderForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\InstSellerForm.resx">
       <DependentUpon>InstSellerForm.cs</DependentUpon>
