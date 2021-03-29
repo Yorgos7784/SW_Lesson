@@ -47,7 +47,7 @@ namespace CarManager_0323
             this.cxFlatPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("cxFlatPictureBox1.Image")));
             this.cxFlatPictureBox1.Location = new System.Drawing.Point(-1, 65);
             this.cxFlatPictureBox1.Name = "cxFlatPictureBox1";
-            this.cxFlatPictureBox1.Size = new System.Drawing.Size(577, 458);
+            this.cxFlatPictureBox1.Size = new System.Drawing.Size(577, 455);
             this.cxFlatPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.cxFlatPictureBox1.TabIndex = 0;
             this.cxFlatPictureBox1.TabStop = false;
