@@ -106,7 +106,7 @@ namespace CarManager_0323.DB
                     "cus_id INT NOT NULL, " +
                     "name VARCHAR2(20) NOT NULL, " +
                     "tel VARCHAR2(20) NOT NULL, " +
-                    "addr VARCHAR2(20) NOT NULL, " +
+                    "addr VARCHAR2(50) NOT NULL, " +
                     "email VARCHAR2(20), " +
                     "CONSTRAINT CUSTOMER_PK PRIMARY KEY(cus_id))";
                 cmd.Connection = conn;
@@ -116,7 +116,7 @@ namespace CarManager_0323.DB
                 string querySeq = "CREATE SEQUENCE CUSTOMER_SEQ START WITH 1 INCREMENT BY 1";
                 cmd.CommandText = querySeq;
                 cmd.ExecuteNonQuery();
-                Console.WriteLine("테이블, 시퀀스 삭제 성공!");
+                Console.WriteLine("테이블, 시퀀스 생성 성공!");
             }
             catch (OracleException e)
             {
@@ -219,6 +219,7 @@ namespace CarManager_0323.DB
                 string querySeq = "DROP SEQUENCE " + seqName;
                 cmd.CommandText = querySeq;
                 cmd.ExecuteNonQuery();
+
                 Console.WriteLine("테이블, 시퀀스 삭제 성공!");
             }
             catch (OracleException e)
@@ -237,10 +238,10 @@ namespace CarManager_0323.DB
 
         public void dropTables()
         {
+            dropTable("ORDER_TABLE", "ORDER_TABLE_SEQ");
             dropTable("CUSTOMER", "CUSTOMER_SEQ");
             dropTable("CAR", "CAR_SEQ");
             dropTable("SELLER", "SELLER_SEQ");
-            dropTable("ORDER_TABLE", "ORDER_TABLE_SEQ");
         }
 
         public void errorMsg(OracleException e, string msg)
@@ -249,9 +250,126 @@ namespace CarManager_0323.DB
             Console.WriteLine(msg + "에러 내용 : " + e.Message);
         }
 
-        public void insertCarInfo(Car car)
+        public void insertCar(Car car)
         {
+            try
+            {
+                string query = string.Format("INSERT INTO CAR VALUES (CAR_SEQ.NEXTVAL,'{0}', '{1}', '{2}', {3}, '{4}')", car.Model, car.Color, car.Company, car.Price, car.Year);
+                cmd.Connection = conn;
+                cmd.CommandText = query;
+                cmd.ExecuteNonQuery();
+                Console.WriteLine("데이터 추가 성공!!");
+            }
+            catch (OracleException e)
+            {
+                errorMsg(e, "insertCar()");
+            }
+        }
 
+        public void insertCar()
+        {
+            try
+            {
+                string query = "INSERT INTO CAR VALUES (CAR_SEQ.NEXTVAL,'그랜저', '은색', '현대', 40000000, '2021년')";
+                cmd.Connection = conn;
+                cmd.CommandText = query;
+                cmd.ExecuteNonQuery();
+                Console.WriteLine("데이터 추가 성공!!");
+            }
+            catch (OracleException e)
+            {
+                errorMsg(e, "insertCar()");
+            }
+        }
+
+        public void insertCustomer()
+        {
+            try
+            {
+                string query = "INSERT INTO CUSTOMER VALUES (CUSTOMER_SEQ.NEXTVAL,'홍길동', '010-1234-5678', '조선 한양 홍대감댁', 'hong@naver.com')";
+                cmd.Connection = conn;
+                cmd.CommandText = query;
+                cmd.ExecuteNonQuery();
+                Console.WriteLine("데이터 추가 성공!!");
+            }
+            catch (OracleException e)
+            {
+                errorMsg(e, "insertCustomer()");
+            }
+        }
+
+        public void insertCustomer(Customer customer)
+        {
+            try
+            {
+                string query = string.Format("INSERT INTO CUSTOMER VALUES (CUSTOMER_SEQ.NEXTVAL,'{0}', '{1}', '{2}', '{3}')", customer.Name, customer.Tel, customer.Addr, customer.Email);
+                cmd.Connection = conn;
+                cmd.CommandText = query;
+                cmd.ExecuteNonQuery();
+                Console.WriteLine("데이터 추가 성공!!");
+            }
+            catch (OracleException e)
+            {
+                errorMsg(e, "insertCustomer()");
+            }
+        }
+        
+        public void insertSeller()
+        {
+            try
+            {
+                string query = "INSERT INTO SELLER VALUES (SELLER_SEQ.NEXTVAL,'전우치', '010-9876-5432', 'jun@gmail.com', '사원', '동대구점')";
+                cmd.Connection = conn;
+                cmd.CommandText = query;
+                cmd.ExecuteNonQuery();
+                Console.WriteLine("데이터 추가 성공!!");
+            }
+            catch (OracleException e)
+            {
+                errorMsg(e, "insertSeller()");
+            }
+        }
+        
+        public void insertSeller(Seller seller)
+        {
+            try
+            {
+                string query = string.Format("INSERT INTO SELLER VALUES (SELLER_SEQ.NEXTVAL,'{0}', '{1}', '{2}', '{3}', '{4}')", seller.Name, seller.Tel, seller.Email, seller.Grade, seller.Derijum);
+                cmd.Connection = conn;
+                cmd.CommandText = query;
+                cmd.ExecuteNonQuery();
+                Console.WriteLine("데이터 추가 성공!!");
+            }
+            catch (OracleException e)
+            {
+                errorMsg(e, "insertSeller()");
+            }
+        }
+
+        public void insertOrder()
+        {
+            try
+            {
+                string query = "INSERT INTO ORDER_TABLE (ORDER_NUM, ORDER_DATE, SELLER_ID, CUS_ID, CAR_ID) " +
+                    "(SELECT ORDER_TABLE_SEQ.NEXTVAL, SYSDATE, S.SELLER_ID, CU.CUS_ID, CA.CAR_ID " +
+                    "FROM SELLER S NATURAL JOIN CUSTOMER CU NATURAL JOIN CAR CA WHERE CU.NAME='홍길동' AND CA.MODEL='그랜저' AND S.NAME='전우치')";
+                cmd.Connection = conn;
+                cmd.CommandText = query;
+                cmd.ExecuteNonQuery();
+                Console.WriteLine("데이터 추가 성공!!");
+            }
+            catch (OracleException e)
+            {
+                errorMsg(e, "insertOrder()");
+            }
+        }
+
+        public void insertDatas()
+        {
+            insertCar();
+            insertCustomer();
+            insertSeller();
+            insertOrder();
         }
     }
 }

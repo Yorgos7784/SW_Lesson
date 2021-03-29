@@ -5,7 +5,6 @@ C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarManager_0323\CarManager_0323\bin\Debug\
 C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarManager_0323\CarManager_0323\bin\Debug\MaterialSkin.dll
 C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarManager_0323\CarManager_0323\bin\Debug\SunnyUI.Common.dll
 C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarManager_0323\CarManager_0323\bin\Debug\SunnyUI.dll
-C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarManager_0323\CarManager_0323\obj\Debug\CarManager_0323.csprojAssemblyReference.cache
 C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarManager_0323\CarManager_0323\obj\Debug\CarManager_0323.MainForm.resources
 C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarManager_0323\CarManager_0323\obj\Debug\CarManager_0323.Properties.Resources.resources
 C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarManager_0323\CarManager_0323\obj\Debug\CarManager_0323.csproj.GenerateResource.cache
@@ -14,3 +13,7 @@ C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarManager_0323\CarManager_0323\obj\Debug\
 C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarManager_0323\CarManager_0323\obj\Debug\CarManager_0323.exe
 C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarManager_0323\CarManager_0323\obj\Debug\CarManager_0323.pdb
 C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarManager_0323\CarManager_0323\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarManager_0323\CarManager_0323\obj\Debug\CarManager_0323.csprojAssemblyReference.cache
+C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarManager_0323\CarManager_0323\obj\Debug\CarManager_0323.UI.InstCarForm.resources
+C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarManager_0323\CarManager_0323\obj\Debug\CarManager_0323.UI.InstCustomerForm.resources
+C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarManager_0323\CarManager_0323\obj\Debug\CarManager_0323.UI.InstSellerForm.resources
