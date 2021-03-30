@@ -56,7 +56,7 @@ namespace CarManager_0323.UI
             this.carPrice.Name = "carPrice";
             this.carPrice.Padding = new System.Windows.Forms.Padding(5);
             this.carPrice.Size = new System.Drawing.Size(308, 29);
-            this.carPrice.TabIndex = 10;
+            this.carPrice.TabIndex = 4;
             // 
             // carCompany
             // 
@@ -71,7 +71,7 @@ namespace CarManager_0323.UI
             this.carCompany.Name = "carCompany";
             this.carCompany.Padding = new System.Windows.Forms.Padding(5);
             this.carCompany.Size = new System.Drawing.Size(308, 29);
-            this.carCompany.TabIndex = 11;
+            this.carCompany.TabIndex = 3;
             // 
             // carColor
             // 
@@ -86,7 +86,7 @@ namespace CarManager_0323.UI
             this.carColor.Name = "carColor";
             this.carColor.Padding = new System.Windows.Forms.Padding(5);
             this.carColor.Size = new System.Drawing.Size(308, 29);
-            this.carColor.TabIndex = 12;
+            this.carColor.TabIndex = 2;
             // 
             // carModel
             // 
@@ -101,7 +101,7 @@ namespace CarManager_0323.UI
             this.carModel.Name = "carModel";
             this.carModel.Padding = new System.Windows.Forms.Padding(5);
             this.carModel.Size = new System.Drawing.Size(308, 29);
-            this.carModel.TabIndex = 13;
+            this.carModel.TabIndex = 1;
             // 
             // carCancel
             // 
@@ -113,7 +113,7 @@ namespace CarManager_0323.UI
             this.carCancel.Size = new System.Drawing.Size(131, 35);
             this.carCancel.Symbol = 61453;
             this.carCancel.TabIndex = 8;
-            this.carCancel.Text = "취소";
+            this.carCancel.Text = "나가기";
             this.carCancel.Click += new System.EventHandler(this.carCancel_Click);
             // 
             // carOK
@@ -125,6 +125,7 @@ namespace CarManager_0323.UI
             this.carOK.MinimumSize = new System.Drawing.Size(1, 1);
             this.carOK.Name = "carOK";
             this.carOK.Size = new System.Drawing.Size(131, 35);
+            this.carOK.Style = Sunny.UI.UIStyle.Custom;
             this.carOK.TabIndex = 9;
             this.carOK.Text = "추가";
             this.carOK.Click += new System.EventHandler(this.carOK_Click);
@@ -213,7 +214,7 @@ namespace CarManager_0323.UI
             this.carYear.Name = "carYear";
             this.carYear.Padding = new System.Windows.Forms.Padding(5);
             this.carYear.Size = new System.Drawing.Size(308, 29);
-            this.carYear.TabIndex = 10;
+            this.carYear.TabIndex = 5;
             // 
             // InstCarForm
             // 

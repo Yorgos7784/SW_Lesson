@@ -37,6 +37,8 @@ namespace CarManager_0323.UI
             this.addr = new Sunny.UI.UISymbolLabel();
             this.tel = new Sunny.UI.UISymbolLabel();
             this.name = new Sunny.UI.UISymbolLabel();
+            this.uiSymbolLabel1 = new Sunny.UI.UISymbolLabel();
+            this.cusEmail = new Sunny.UI.UITextBox();
             this.SuspendLayout();
             // 
             // cusAddr
@@ -52,7 +54,7 @@ namespace CarManager_0323.UI
             this.cusAddr.Name = "cusAddr";
             this.cusAddr.Padding = new System.Windows.Forms.Padding(5);
             this.cusAddr.Size = new System.Drawing.Size(308, 29);
-            this.cusAddr.TabIndex = 23;
+            this.cusAddr.TabIndex = 3;
             // 
             // cusTel
             // 
@@ -67,7 +69,7 @@ namespace CarManager_0323.UI
             this.cusTel.Name = "cusTel";
             this.cusTel.Padding = new System.Windows.Forms.Padding(5);
             this.cusTel.Size = new System.Drawing.Size(308, 29);
-            this.cusTel.TabIndex = 24;
+            this.cusTel.TabIndex = 2;
             // 
             // cusName
             // 
@@ -82,19 +84,19 @@ namespace CarManager_0323.UI
             this.cusName.Name = "cusName";
             this.cusName.Padding = new System.Windows.Forms.Padding(5);
             this.cusName.Size = new System.Drawing.Size(308, 29);
-            this.cusName.TabIndex = 25;
+            this.cusName.TabIndex = 1;
             // 
             // cusCancel
             // 
             this.cusCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cusCancel.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.cusCancel.Location = new System.Drawing.Point(252, 306);
+            this.cusCancel.Location = new System.Drawing.Point(252, 355);
             this.cusCancel.MinimumSize = new System.Drawing.Size(1, 1);
             this.cusCancel.Name = "cusCancel";
             this.cusCancel.Size = new System.Drawing.Size(131, 35);
             this.cusCancel.Symbol = 61453;
             this.cusCancel.TabIndex = 19;
-            this.cusCancel.Text = "취소";
+            this.cusCancel.Text = "나가기";
             this.cusCancel.Click += new System.EventHandler(this.cusCancel_Click);
             // 
             // cusOK
@@ -102,7 +104,7 @@ namespace CarManager_0323.UI
             this.cusOK.BackColor = System.Drawing.Color.Transparent;
             this.cusOK.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cusOK.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.cusOK.Location = new System.Drawing.Point(97, 306);
+            this.cusOK.Location = new System.Drawing.Point(97, 355);
             this.cusOK.MinimumSize = new System.Drawing.Size(1, 1);
             this.cusOK.Name = "cusOK";
             this.cusOK.Size = new System.Drawing.Size(131, 35);
@@ -153,15 +155,46 @@ namespace CarManager_0323.UI
             this.name.TabIndex = 18;
             this.name.Text = "이름";
             // 
+            // uiSymbolLabel1
+            // 
+            this.uiSymbolLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.uiSymbolLabel1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.uiSymbolLabel1.Location = new System.Drawing.Point(27, 283);
+            this.uiSymbolLabel1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiSymbolLabel1.Name = "uiSymbolLabel1";
+            this.uiSymbolLabel1.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
+            this.uiSymbolLabel1.Size = new System.Drawing.Size(86, 38);
+            this.uiSymbolLabel1.Symbol = 61573;
+            this.uiSymbolLabel1.SymbolColor = System.Drawing.SystemColors.Highlight;
+            this.uiSymbolLabel1.TabIndex = 16;
+            this.uiSymbolLabel1.Text = "이메일";
+            // 
+            // cusEmail
+            // 
+            this.cusEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.cusEmail.FillColor = System.Drawing.Color.White;
+            this.cusEmail.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.cusEmail.Location = new System.Drawing.Point(128, 288);
+            this.cusEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cusEmail.Maximum = 2147483647D;
+            this.cusEmail.Minimum = -2147483648D;
+            this.cusEmail.MinimumSize = new System.Drawing.Size(1, 1);
+            this.cusEmail.Name = "cusEmail";
+            this.cusEmail.Padding = new System.Windows.Forms.Padding(5);
+            this.cusEmail.Size = new System.Drawing.Size(308, 29);
+            this.cusEmail.TabIndex = 4;
+            // 
             // InstCustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(474, 387);
+            this.ClientSize = new System.Drawing.Size(474, 449);
+            this.Controls.Add(this.cusEmail);
             this.Controls.Add(this.cusAddr);
             this.Controls.Add(this.cusTel);
             this.Controls.Add(this.cusName);
             this.Controls.Add(this.cusCancel);
+            this.Controls.Add(this.uiSymbolLabel1);
             this.Controls.Add(this.cusOK);
             this.Controls.Add(this.addr);
             this.Controls.Add(this.tel);
@@ -182,5 +215,7 @@ namespace CarManager_0323.UI
         private Sunny.UI.UISymbolLabel addr;
         private Sunny.UI.UISymbolLabel tel;
         private Sunny.UI.UISymbolLabel name;
+        private Sunny.UI.UISymbolLabel uiSymbolLabel1;
+        private Sunny.UI.UITextBox cusEmail;
     }
 }

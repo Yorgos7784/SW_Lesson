@@ -45,9 +45,9 @@ namespace CarManager_0323
             // cxFlatPictureBox1
             // 
             this.cxFlatPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("cxFlatPictureBox1.Image")));
-            this.cxFlatPictureBox1.Location = new System.Drawing.Point(-1, 65);
+            this.cxFlatPictureBox1.Location = new System.Drawing.Point(1, 241);
             this.cxFlatPictureBox1.Name = "cxFlatPictureBox1";
-            this.cxFlatPictureBox1.Size = new System.Drawing.Size(577, 455);
+            this.cxFlatPictureBox1.Size = new System.Drawing.Size(836, 279);
             this.cxFlatPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.cxFlatPictureBox1.TabIndex = 0;
             this.cxFlatPictureBox1.TabStop = false;
@@ -88,7 +88,7 @@ namespace CarManager_0323
             // 
             this.insertData.Cursor = System.Windows.Forms.Cursors.Hand;
             this.insertData.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.insertData.Location = new System.Drawing.Point(606, 118);
+            this.insertData.Location = new System.Drawing.Point(74, 93);
             this.insertData.MinimumSize = new System.Drawing.Size(1, 1);
             this.insertData.Name = "insertData";
             this.insertData.Size = new System.Drawing.Size(170, 41);
@@ -100,7 +100,7 @@ namespace CarManager_0323
             // 
             this.insertCar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.insertCar.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.insertCar.Location = new System.Drawing.Point(606, 178);
+            this.insertCar.Location = new System.Drawing.Point(330, 93);
             this.insertCar.MinimumSize = new System.Drawing.Size(1, 1);
             this.insertCar.Name = "insertCar";
             this.insertCar.Size = new System.Drawing.Size(170, 41);
@@ -112,7 +112,7 @@ namespace CarManager_0323
             // 
             this.insertSeller.Cursor = System.Windows.Forms.Cursors.Hand;
             this.insertSeller.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.insertSeller.Location = new System.Drawing.Point(606, 298);
+            this.insertSeller.Location = new System.Drawing.Point(74, 167);
             this.insertSeller.MinimumSize = new System.Drawing.Size(1, 1);
             this.insertSeller.Name = "insertSeller";
             this.insertSeller.Size = new System.Drawing.Size(170, 41);
@@ -124,7 +124,7 @@ namespace CarManager_0323
             // 
             this.insertCustomer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.insertCustomer.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.insertCustomer.Location = new System.Drawing.Point(606, 238);
+            this.insertCustomer.Location = new System.Drawing.Point(586, 93);
             this.insertCustomer.MinimumSize = new System.Drawing.Size(1, 1);
             this.insertCustomer.Name = "insertCustomer";
             this.insertCustomer.Size = new System.Drawing.Size(170, 41);
@@ -136,7 +136,7 @@ namespace CarManager_0323
             // 
             this.insertOrder.Cursor = System.Windows.Forms.Cursors.Hand;
             this.insertOrder.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.insertOrder.Location = new System.Drawing.Point(606, 358);
+            this.insertOrder.Location = new System.Drawing.Point(330, 167);
             this.insertOrder.MinimumSize = new System.Drawing.Size(1, 1);
             this.insertOrder.Name = "insertOrder";
             this.insertOrder.Size = new System.Drawing.Size(170, 41);
@@ -148,7 +148,7 @@ namespace CarManager_0323
             // 
             this.programExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.programExit.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.programExit.Location = new System.Drawing.Point(606, 418);
+            this.programExit.Location = new System.Drawing.Point(586, 167);
             this.programExit.MinimumSize = new System.Drawing.Size(1, 1);
             this.programExit.Name = "programExit";
             this.programExit.Size = new System.Drawing.Size(170, 41);

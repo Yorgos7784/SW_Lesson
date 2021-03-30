@@ -56,7 +56,7 @@ namespace CarManager_0323.UI
             this.sellerDerijum.Name = "sellerDerijum";
             this.sellerDerijum.Padding = new System.Windows.Forms.Padding(5);
             this.sellerDerijum.Size = new System.Drawing.Size(308, 29);
-            this.sellerDerijum.TabIndex = 21;
+            this.sellerDerijum.TabIndex = 5;
             // 
             // sellerGrade
             // 
@@ -71,7 +71,7 @@ namespace CarManager_0323.UI
             this.sellerGrade.Name = "sellerGrade";
             this.sellerGrade.Padding = new System.Windows.Forms.Padding(5);
             this.sellerGrade.Size = new System.Drawing.Size(308, 29);
-            this.sellerGrade.TabIndex = 22;
+            this.sellerGrade.TabIndex = 4;
             // 
             // sellerEmail
             // 
@@ -86,7 +86,7 @@ namespace CarManager_0323.UI
             this.sellerEmail.Name = "sellerEmail";
             this.sellerEmail.Padding = new System.Windows.Forms.Padding(5);
             this.sellerEmail.Size = new System.Drawing.Size(308, 29);
-            this.sellerEmail.TabIndex = 23;
+            this.sellerEmail.TabIndex = 3;
             // 
             // sellerTel
             // 
@@ -101,7 +101,7 @@ namespace CarManager_0323.UI
             this.sellerTel.Name = "sellerTel";
             this.sellerTel.Padding = new System.Windows.Forms.Padding(5);
             this.sellerTel.Size = new System.Drawing.Size(308, 29);
-            this.sellerTel.TabIndex = 24;
+            this.sellerTel.TabIndex = 2;
             // 
             // sellerName
             // 
@@ -116,7 +116,7 @@ namespace CarManager_0323.UI
             this.sellerName.Name = "sellerName";
             this.sellerName.Padding = new System.Windows.Forms.Padding(5);
             this.sellerName.Size = new System.Drawing.Size(308, 29);
-            this.sellerName.TabIndex = 25;
+            this.sellerName.TabIndex = 1;
             // 
             // sellerCancel
             // 
@@ -128,7 +128,7 @@ namespace CarManager_0323.UI
             this.sellerCancel.Size = new System.Drawing.Size(131, 35);
             this.sellerCancel.Symbol = 61453;
             this.sellerCancel.TabIndex = 19;
-            this.sellerCancel.Text = "취소";
+            this.sellerCancel.Text = "나가기";
             this.sellerCancel.Click += new System.EventHandler(this.sellerCancel_Click);
             // 
             // uiSymbolLabel1

@@ -63,9 +63,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DB\DaoOracle.cs" />
+    <Compile Include="Handler\dealHandler.cs" />
     <Compile Include="Model\Car.cs" />
     <Compile Include="Model\Customer.cs" />
-    <Compile Include="Model\OrderTable.cs" />
+    <Compile Include="Model\Deal.cs" />
     <Compile Include="Model\Seller.cs" />
     <Compile Include="UI\InstCarForm.cs">
       <SubType>Form</SubType>
@@ -78,12 +79,6 @@
     </Compile>
     <Compile Include="UI\InstCustomerForm.Designer.cs">
       <DependentUpon>InstCustomerForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\InstOrderForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\InstOrderForm.Designer.cs">
-      <DependentUpon>InstOrderForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\InstSellerForm.cs">
       <SubType>Form</SubType>
@@ -104,9 +99,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\InstCustomerForm.resx">
       <DependentUpon>InstCustomerForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\InstOrderForm.resx">
-      <DependentUpon>InstOrderForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\InstSellerForm.resx">
       <DependentUpon>InstSellerForm.cs</DependentUpon>
@@ -137,7 +129,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Handler\" />
     <Folder Include="Util\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
