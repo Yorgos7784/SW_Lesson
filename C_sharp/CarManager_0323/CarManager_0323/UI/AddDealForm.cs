@@ -33,7 +33,7 @@ namespace CarManager_0323.UI
             this.dHandler = dHandler;
         }
 
-        private void sellerOK_Click(object sender, EventArgs e)
+        private void dealOK_Click(object sender, EventArgs e)
         {
             insertCar();
             insertCustomer();
@@ -96,7 +96,7 @@ namespace CarManager_0323.UI
             }
         }
 
-        private void sellerCancel_Click(object sender, EventArgs e)
+        private void dealCancel_Click(object sender, EventArgs e)
         {
             Close();
         }

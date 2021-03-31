@@ -423,8 +423,6 @@ namespace CarManager_0323.DB
                     cmd.Connection = conn;
                     cmd.CommandText = query;
                     cmd.ExecuteNonQuery();
-                    Console.WriteLine("데이터 추가 성공!!");
-                    MessageBox.Show("추가되었습니다", "추가 완료");
                 }
                 catch (OracleException e)
                 {
@@ -493,10 +491,7 @@ namespace CarManager_0323.DB
                 {
                     while (reader.Read())
                     {
-                        cus1.Name = Convert.ToString(reader["c_name"]);
-                        cus1.Tel= Convert.ToString(reader["c_tel"]);
-                        cus1.Addr = Convert.ToString(reader["c_addr"]);
-                        cus1.Email = Convert.ToString(reader["c_email"]);
+                        cus1 = new Customer(Convert.ToString(reader["c_name"]), Convert.ToString(reader["c_tel"]), Convert.ToString(reader["c_addr"]), Convert.ToString(reader["c_email"]));
                     }
                 }
                 else

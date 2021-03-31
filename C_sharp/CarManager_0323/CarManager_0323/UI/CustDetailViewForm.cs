@@ -47,5 +47,10 @@ namespace CarManager_0323.UI
 
             }
         }
+
+        private void cusCancel_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

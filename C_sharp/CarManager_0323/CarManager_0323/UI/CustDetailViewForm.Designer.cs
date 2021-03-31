@@ -169,6 +169,7 @@ namespace CarManager_0323.UI
             this.cusCancel.Symbol = 61453;
             this.cusCancel.TabIndex = 27;
             this.cusCancel.Text = "나가기";
+            this.cusCancel.Click += new System.EventHandler(this.cusCancel_Click);
             // 
             // cusOK
             // 

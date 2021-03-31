@@ -60,8 +60,8 @@ namespace CarManager_0323.UI
             this.uiSymbolLabel11 = new Sunny.UI.UISymbolLabel();
             this.uiSymbolLabel12 = new Sunny.UI.UISymbolLabel();
             this.uiSymbolLabel13 = new Sunny.UI.UISymbolLabel();
-            this.sellerCancel = new Sunny.UI.UISymbolButton();
-            this.sellerOK = new Sunny.UI.UISymbolButton();
+            this.dealCancel = new Sunny.UI.UISymbolButton();
+            this.DealOK = new Sunny.UI.UISymbolButton();
             this.SuspendLayout();
             // 
             // carYear
@@ -77,7 +77,7 @@ namespace CarManager_0323.UI
             this.carYear.Name = "carYear";
             this.carYear.Padding = new System.Windows.Forms.Padding(5);
             this.carYear.Size = new System.Drawing.Size(308, 29);
-            this.carYear.TabIndex = 14;
+            this.carYear.TabIndex = 12;
             // 
             // carPrice
             // 
@@ -235,7 +235,7 @@ namespace CarManager_0323.UI
             this.cusEmail.Name = "cusEmail";
             this.cusEmail.Padding = new System.Windows.Forms.Padding(5);
             this.cusEmail.Size = new System.Drawing.Size(308, 29);
-            this.cusEmail.TabIndex = 22;
+            this.cusEmail.TabIndex = 16;
             // 
             // cusAddr
             // 
@@ -250,7 +250,7 @@ namespace CarManager_0323.UI
             this.cusAddr.Name = "cusAddr";
             this.cusAddr.Padding = new System.Windows.Forms.Padding(5);
             this.cusAddr.Size = new System.Drawing.Size(308, 29);
-            this.cusAddr.TabIndex = 21;
+            this.cusAddr.TabIndex = 15;
             // 
             // cusTel
             // 
@@ -265,7 +265,7 @@ namespace CarManager_0323.UI
             this.cusTel.Name = "cusTel";
             this.cusTel.Padding = new System.Windows.Forms.Padding(5);
             this.cusTel.Size = new System.Drawing.Size(308, 29);
-            this.cusTel.TabIndex = 20;
+            this.cusTel.TabIndex = 14;
             // 
             // cusName
             // 
@@ -280,7 +280,7 @@ namespace CarManager_0323.UI
             this.cusName.Name = "cusName";
             this.cusName.Padding = new System.Windows.Forms.Padding(5);
             this.cusName.Size = new System.Drawing.Size(308, 29);
-            this.cusName.TabIndex = 19;
+            this.cusName.TabIndex = 13;
             // 
             // uiSymbolLabel3
             // 
@@ -364,7 +364,7 @@ namespace CarManager_0323.UI
             this.sellerDerijum.Name = "sellerDerijum";
             this.sellerDerijum.Padding = new System.Windows.Forms.Padding(5);
             this.sellerDerijum.Size = new System.Drawing.Size(308, 29);
-            this.sellerDerijum.TabIndex = 31;
+            this.sellerDerijum.TabIndex = 22;
             // 
             // sellerGrade
             // 
@@ -379,7 +379,7 @@ namespace CarManager_0323.UI
             this.sellerGrade.Name = "sellerGrade";
             this.sellerGrade.Padding = new System.Windows.Forms.Padding(5);
             this.sellerGrade.Size = new System.Drawing.Size(308, 29);
-            this.sellerGrade.TabIndex = 30;
+            this.sellerGrade.TabIndex = 20;
             // 
             // sellerEmail
             // 
@@ -394,7 +394,7 @@ namespace CarManager_0323.UI
             this.sellerEmail.Name = "sellerEmail";
             this.sellerEmail.Padding = new System.Windows.Forms.Padding(5);
             this.sellerEmail.Size = new System.Drawing.Size(308, 29);
-            this.sellerEmail.TabIndex = 29;
+            this.sellerEmail.TabIndex = 19;
             // 
             // sellerTel
             // 
@@ -409,7 +409,7 @@ namespace CarManager_0323.UI
             this.sellerTel.Name = "sellerTel";
             this.sellerTel.Padding = new System.Windows.Forms.Padding(5);
             this.sellerTel.Size = new System.Drawing.Size(308, 29);
-            this.sellerTel.TabIndex = 28;
+            this.sellerTel.TabIndex = 18;
             // 
             // sellerName
             // 
@@ -424,7 +424,7 @@ namespace CarManager_0323.UI
             this.sellerName.Name = "sellerName";
             this.sellerName.Padding = new System.Windows.Forms.Padding(5);
             this.sellerName.Size = new System.Drawing.Size(308, 29);
-            this.sellerName.TabIndex = 27;
+            this.sellerName.TabIndex = 17;
             // 
             // uiSymbolLabel8
             // 
@@ -509,39 +509,39 @@ namespace CarManager_0323.UI
             this.uiSymbolLabel13.TabIndex = 18;
             this.uiSymbolLabel13.Text = "판매자 정보";
             // 
-            // sellerCancel
+            // dealCancel
             // 
-            this.sellerCancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.sellerCancel.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.sellerCancel.Location = new System.Drawing.Point(754, 606);
-            this.sellerCancel.MinimumSize = new System.Drawing.Size(1, 1);
-            this.sellerCancel.Name = "sellerCancel";
-            this.sellerCancel.Size = new System.Drawing.Size(131, 35);
-            this.sellerCancel.Symbol = 61453;
-            this.sellerCancel.TabIndex = 37;
-            this.sellerCancel.Text = "나가기";
-            this.sellerCancel.Click += new System.EventHandler(this.sellerCancel_Click);
+            this.dealCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dealCancel.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.dealCancel.Location = new System.Drawing.Point(754, 606);
+            this.dealCancel.MinimumSize = new System.Drawing.Size(1, 1);
+            this.dealCancel.Name = "dealCancel";
+            this.dealCancel.Size = new System.Drawing.Size(131, 35);
+            this.dealCancel.Symbol = 61453;
+            this.dealCancel.TabIndex = 37;
+            this.dealCancel.Text = "나가기";
+            this.dealCancel.Click += new System.EventHandler(this.dealCancel_Click);
             // 
-            // sellerOK
+            // DealOK
             // 
-            this.sellerOK.BackColor = System.Drawing.Color.Transparent;
-            this.sellerOK.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.sellerOK.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.sellerOK.Location = new System.Drawing.Point(599, 606);
-            this.sellerOK.MinimumSize = new System.Drawing.Size(1, 1);
-            this.sellerOK.Name = "sellerOK";
-            this.sellerOK.Size = new System.Drawing.Size(131, 35);
-            this.sellerOK.TabIndex = 38;
-            this.sellerOK.Text = "등록";
-            this.sellerOK.Click += new System.EventHandler(this.sellerOK_Click);
+            this.DealOK.BackColor = System.Drawing.Color.Transparent;
+            this.DealOK.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DealOK.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.DealOK.Location = new System.Drawing.Point(599, 606);
+            this.DealOK.MinimumSize = new System.Drawing.Size(1, 1);
+            this.DealOK.Name = "DealOK";
+            this.DealOK.Size = new System.Drawing.Size(131, 35);
+            this.DealOK.TabIndex = 38;
+            this.DealOK.Text = "등록";
+            this.DealOK.Click += new System.EventHandler(this.dealOK_Click);
             // 
             // AddDealForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(982, 670);
-            this.Controls.Add(this.sellerCancel);
-            this.Controls.Add(this.sellerOK);
+            this.Controls.Add(this.dealCancel);
+            this.Controls.Add(this.DealOK);
             this.Controls.Add(this.sellerDerijum);
             this.Controls.Add(this.sellerGrade);
             this.Controls.Add(this.sellerEmail);
@@ -612,7 +612,7 @@ namespace CarManager_0323.UI
         private Sunny.UI.UISymbolLabel uiSymbolLabel11;
         private Sunny.UI.UISymbolLabel uiSymbolLabel12;
         private Sunny.UI.UISymbolLabel uiSymbolLabel13;
-        private Sunny.UI.UISymbolButton sellerCancel;
-        private Sunny.UI.UISymbolButton sellerOK;
+        private Sunny.UI.UISymbolButton dealCancel;
+        private Sunny.UI.UISymbolButton DealOK;
     }
 }
