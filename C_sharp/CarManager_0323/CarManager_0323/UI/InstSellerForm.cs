@@ -11,7 +11,8 @@ namespace CarManager_0323.UI
     partial class InstSellerForm : MaterialForm
     {
         DaoOracle dao;
-        dealHandler oh;
+        List<Deal> list;
+        
         public InstSellerForm()
         {
             InitializeComponent();
@@ -22,12 +23,12 @@ namespace CarManager_0323.UI
             InitializeComponent();
             this.dao = dao;
         }
-        
-        public InstSellerForm(DaoOracle dao, dealHandler oh)
+
+        public InstSellerForm(DaoOracle dao, List<Deal> list)
         {
             InitializeComponent();
             this.dao = dao;
-            this.oh = oh;
+            this.list = list;
         }
 
         private void sellerOK_Click(object sender, EventArgs e)
@@ -39,19 +40,9 @@ namespace CarManager_0323.UI
 
             else
             {
-                List<Deal> list = oh.getOrderList();
                 Seller seller = new Seller(sellerName.Text, sellerTel.Text, sellerEmail.Text, sellerGrade.Text, sellerDerijum.Text);
-                if(list[0].Seller == null)
-                {
-                    list[0].Seller = seller;
-                    dao.insertSeller(seller);
-                    Close();
-                }
-                else
-                {
-                    MessageBox.Show("판매자 정보가 이미 저장되었습니다.", "판매자 추가 에러");
-                    Close();
-                }
+                dao.insertSeller(seller, list);
+                Close();
             }
         }
 

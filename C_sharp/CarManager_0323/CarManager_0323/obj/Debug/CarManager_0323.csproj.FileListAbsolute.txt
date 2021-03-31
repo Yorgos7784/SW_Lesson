@@ -13,7 +13,10 @@ C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarManager_0323\CarManager_0323\obj\Debug\
 C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarManager_0323\CarManager_0323\obj\Debug\CarManager_0323.exe
 C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarManager_0323\CarManager_0323\obj\Debug\CarManager_0323.pdb
 C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarManager_0323\CarManager_0323\bin\Debug\Oracle.ManagedDataAccess.dll
-C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarManager_0323\CarManager_0323\obj\Debug\CarManager_0323.csprojAssemblyReference.cache
 C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarManager_0323\CarManager_0323\obj\Debug\CarManager_0323.UI.InstCarForm.resources
 C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarManager_0323\CarManager_0323\obj\Debug\CarManager_0323.UI.InstCustomerForm.resources
 C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarManager_0323\CarManager_0323\obj\Debug\CarManager_0323.UI.InstSellerForm.resources
+C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarManager_0323\CarManager_0323\obj\Debug\CarManager_0323.csprojAssemblyReference.cache
+C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarManager_0323\CarManager_0323\obj\Debug\CarManager_0323.UI.CustDetailViewForm.resources
+C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarManager_0323\CarManager_0323\obj\Debug\CarManager_0323.UI.DealViewForm.resources
+C:\Users\KB\Desktop\SW_Lesson\C_sharp\CarManager_0323\CarManager_0323\obj\Debug\CarManager_0323.UI.AddDealForm.resources

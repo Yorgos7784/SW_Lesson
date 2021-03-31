@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace CarManager_0323.Handler
 {
-    class dealHandler
+    class DealHandler
     {
         List<Deal> dealList = new List<Deal>();
 
-        public dealHandler()
+        public DealHandler()
         {
             dealList.Add(new Deal(null, null, null));
         }

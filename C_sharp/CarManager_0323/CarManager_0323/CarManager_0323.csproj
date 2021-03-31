@@ -63,11 +63,30 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DB\DaoOracle.cs" />
-    <Compile Include="Handler\dealHandler.cs" />
+    <Compile Include="Handler\DealHandler.cs" />
     <Compile Include="Model\Car.cs" />
     <Compile Include="Model\Customer.cs" />
     <Compile Include="Model\Deal.cs" />
+    <Compile Include="Model\ListModel.cs" />
     <Compile Include="Model\Seller.cs" />
+    <Compile Include="UI\AddDealForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AddDealForm.Designer.cs">
+      <DependentUpon>AddDealForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CustDetailViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CustDetailViewForm.Designer.cs">
+      <DependentUpon>CustDetailViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DealViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DealViewForm.Designer.cs">
+      <DependentUpon>DealViewForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\InstCarForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +113,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="UI\AddDealForm.resx">
+      <DependentUpon>AddDealForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CustDetailViewForm.resx">
+      <DependentUpon>CustDetailViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DealViewForm.resx">
+      <DependentUpon>DealViewForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\InstCarForm.resx">
       <DependentUpon>InstCarForm.cs</DependentUpon>
     </EmbeddedResource>

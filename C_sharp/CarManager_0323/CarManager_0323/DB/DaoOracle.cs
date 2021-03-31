@@ -1,6 +1,9 @@
 ﻿using CarManager_0323.Model;
+using CarManager_0323.UI;
 using Oracle.ManagedDataAccess.Client;
 using System;
+using System.Collections.Generic;
+using System.Data;
 using System.Windows.Forms;
 
 namespace CarManager_0323.DB
@@ -54,155 +57,6 @@ namespace CarManager_0323.DB
                 errorMsg(e, DISCONNECT_ERROR);
             }
         }
-
-        /* public void createTable()
-         {
-             try
-             {
-                 string query = "create table test0323 (id number not null, name varchar(20) not null, age number not null, constraint pk_test0323_id primary key(id))";
-                 cmd.Connection = conn;
-                 cmd.CommandText = query;
-                 cmd.ExecuteNonQuery();
-
-                 string querySeq = "create sequence seq_test0323_id increment by 1 start with 1";
-                 cmd.CommandText = querySeq;
-                 cmd.ExecuteNonQuery();
-                 Console.WriteLine("테이블, 시퀀스 생성 성공!");
-             }
-             catch (OracleException e)
-             {
-                 errorMsg(e, CREATE_TB_ERROR);
-             }
-         }
-
-         public void dropTable()
-         {
-             try
-             {
-                 string query = "drop table test0323";
-                 cmd.Connection = conn;
-                 cmd.CommandText = query;
-                 cmd.ExecuteNonQuery();
-
-                 string querySeq = "drop sequence seq_test0323_id";
-                 cmd.CommandText = querySeq;
-                 cmd.ExecuteNonQuery();
-                 Console.WriteLine("테이블, 시퀀스 삭제 성공!");
-             }
-             catch (OracleException e)
-             {
-                 errorMsg(e, DROP_TB_ERROR);
-             }
-         }*/
-
-        /*public void makeTbCustomer()
-        {
-            try
-            {
-                string query = "CREATE TABLE CUSTOMER(" +
-                    "cus_id INT NOT NULL, " +
-                    "name VARCHAR2(20) NOT NULL, " +
-                    "tel VARCHAR2(20) NOT NULL, " +
-                    "addr VARCHAR2(50) NOT NULL, " +
-                    "email VARCHAR2(20), " +
-                    "CONSTRAINT CUSTOMER_PK PRIMARY KEY(cus_id))";
-                cmd.Connection = conn;
-                cmd.CommandText = query;
-                cmd.ExecuteNonQuery();
-
-                string querySeq = "CREATE SEQUENCE CUSTOMER_SEQ START WITH 1 INCREMENT BY 1";
-                cmd.CommandText = querySeq;
-                cmd.ExecuteNonQuery();
-                Console.WriteLine("테이블, 시퀀스 생성 성공!");
-            }
-            catch (OracleException e)
-            {
-                errorMsg(e, CREATE_TB_ERROR);
-            }
-        }
-
-        public void makeTbCar()
-        {
-            try
-            {
-                string query = "CREATE TABLE CAR(" +
-                    "car_id INT NOT NULL, " +
-                    "model VARCHAR2(20) NOT NULL, " +
-                    "color VARCHAR2(20) NOT NULL, " +
-                    "company VARCHAR2(20) NOT NULL, " +
-                    "price INT NOT NULL, " +
-                    "year VARCHAR2(20) NOT NULL, " +
-                    "CONSTRAINT CAR_PK PRIMARY KEY(car_id))";
-                cmd.Connection = conn;
-                cmd.CommandText = query;
-                cmd.ExecuteNonQuery();
-
-                string querySeq = "CREATE SEQUENCE CAR_SEQ START WITH 1 INCREMENT BY 1";
-                cmd.CommandText = querySeq;
-                cmd.ExecuteNonQuery();
-                Console.WriteLine("테이블, 시퀀스 생성 성공!");
-            }
-            catch (OracleException e)
-            {
-                errorMsg(e, CREATE_TB_ERROR);
-            }
-        }
-
-        public void makeTbSeller()
-        {
-            try
-            {
-                string query = "CREATE TABLE SELLER(" +
-                    "seller_id INT NOT NULL, " +
-                    "name VARCHAR2(20) NOT NULL, " +
-                    "tel VARCHAR2(20) NOT NULL, " +
-                    "email VARCHAR2(20), " +
-                    "grade VARCHAR2(20) NOT NULL, " +
-                    "derijum VARCHAR2(20) NOT NULL, " +
-                    "CONSTRAINT SELLER_PK PRIMARY KEY(seller_id))";
-                cmd.Connection = conn;
-                cmd.CommandText = query;
-                cmd.ExecuteNonQuery();
-
-                string querySeq = "CREATE SEQUENCE SELLER_SEQ START WITH 1 INCREMENT BY 1";
-                cmd.CommandText = querySeq;
-                cmd.ExecuteNonQuery();
-                Console.WriteLine("테이블, 시퀀스 생성 성공!");
-            }
-            catch (OracleException e)
-            {
-                errorMsg(e, CREATE_TB_ERROR);
-            }
-        }
-
-        public void makeTbOrderTable()
-        {
-            try
-            {
-                string query = "CREATE TABLE ORDER_TABLE(" +
-                    "order_num INT NOT NULL, " +
-                    "order_date VARCHAR2(20) NOT NULL, " +
-                    "seller_id INT NOT NULL, " +
-                    "cus_id INT NOT NULL, " +
-                    "car_id INT NOT NULL, " +
-                    "CONSTRAINT ORDER_TABLE_PK PRIMARY KEY(order_num), " +
-                    "CONSTRAINT FK_order_table_seller_id_selle FOREIGN KEY(seller_id) REFERENCES seller(seller_id), " +
-                    "CONSTRAINT FK_order_table_cus_id_customer FOREIGN KEY(cus_id) REFERENCES customer(cus_id), " +
-                    "CONSTRAINT FK_order_table_car_id_car_car_ FOREIGN KEY(car_id) REFERENCES car(car_id))";
-                cmd.Connection = conn;
-                cmd.CommandText = query;
-                cmd.ExecuteNonQuery();
-
-                string querySeq = "CREATE SEQUENCE ORDER_TABLE_SEQ START WITH 1 INCREMENT BY 1";
-                cmd.CommandText = querySeq;
-                cmd.ExecuteNonQuery();
-                Console.WriteLine("테이블, 시퀀스 생성 성공!");
-            }
-            catch (OracleException e)
-            {
-                errorMsg(e, CREATE_TB_ERROR);
-            }
-        }*/
 
         public void makeTbCustomer()
         {
@@ -351,7 +205,7 @@ namespace CarManager_0323.DB
                     break;
             }
         }
-
+        
         public void insertCar()
         {
             try
@@ -367,8 +221,23 @@ namespace CarManager_0323.DB
                 errorMsg(e, "insertCar()");
             }
         }
-
+        
         public void insertCar(Car car)
+        {
+            try
+            {
+                string query = string.Format("INSERT INTO CAR_T VALUES (CAR_T_SEQ.NEXTVAL,'{0}', '{1}', '{2}', {3}, '{4}')", car.Model, car.Color, car.Company, car.Price, car.Year);
+                cmd.Connection = conn;
+                cmd.CommandText = query;
+                cmd.ExecuteNonQuery();
+            }
+            catch (OracleException e)
+            {
+                errorMsg(e, "insertCar()");
+            }
+        }
+
+        public void insertCar(Car car, List<Deal> list)
         {
             try
             {
@@ -378,6 +247,7 @@ namespace CarManager_0323.DB
                 cmd.ExecuteNonQuery();
                 Console.WriteLine("데이터 추가 성공!!");
                 MessageBox.Show("추가되었습니다", "추가 완료");
+                list[0].Car = car;
             }
             catch (OracleException e)
             {
@@ -402,8 +272,23 @@ namespace CarManager_0323.DB
                 errorMsg(e, "insertCustomer()");
             }
         }
-
+        
         public void insertCustomer(Customer customer)
+        {
+            try
+            {
+                string query = string.Format("INSERT INTO CUSTOMER_T VALUES (CUSTOMER_T_SEQ.NEXTVAL,'{0}', '{1}', '{2}', '{3}')", customer.Name, customer.Tel, customer.Addr, customer.Email);
+                cmd.Connection = conn;
+                cmd.CommandText = query;
+                cmd.ExecuteNonQuery();
+            }
+            catch (OracleException e)
+            {
+                errorMsg(e, "insertCustomer()");
+            }
+        }
+
+        public void insertCustomer(Customer customer, List<Deal> list)
         {
             try
             {
@@ -413,6 +298,7 @@ namespace CarManager_0323.DB
                 cmd.ExecuteNonQuery();
                 Console.WriteLine("데이터 추가 성공!!");
                 MessageBox.Show("추가되었습니다", "추가 완료");
+                list[0].Customer = customer;
             }
             catch (OracleException e)
             {
@@ -436,8 +322,23 @@ namespace CarManager_0323.DB
                 errorMsg(e, "insertSeller()");
             }
         }
-
+        
         public void insertSeller(Seller seller)
+        {
+            try
+            {
+                string query = string.Format("INSERT INTO SELLER_T VALUES (SELLER_T_SEQ.NEXTVAL,'{0}', '{1}', '{2}', '{3}', '{4}')", seller.Name, seller.Tel, seller.Email, seller.Grade, seller.Derijum);
+                cmd.Connection = conn;
+                cmd.CommandText = query;
+                cmd.ExecuteNonQuery();
+            }
+            catch (OracleException e)
+            {
+                errorMsg(e, "insertSeller()");
+            }
+        }
+
+        public void insertSeller(Seller seller, List<Deal> list)
         {
             try
             {
@@ -447,6 +348,7 @@ namespace CarManager_0323.DB
                 cmd.ExecuteNonQuery();
                 Console.WriteLine("데이터 추가 성공!!");
                 MessageBox.Show("추가되었습니다", "추가 완료");
+                list[0].Seller = seller;
             }
             catch (OracleException e)
             {
@@ -473,7 +375,7 @@ namespace CarManager_0323.DB
             }
         }
 
-        public void insertOrder(Deal deal)
+        public void insertDeal(Deal deal)
         {
             if(deal.Car == null || deal.Customer == null || deal.Seller == null)
             {
@@ -500,6 +402,36 @@ namespace CarManager_0323.DB
                 }
             }
         }
+        
+        public void insertDeal(Seller seller, Customer cust, Car car)
+        {
+            if(car == null || cust == null || seller == null)
+            {
+                MessageBox.Show("거래 정보가 없습니다.", "거래 정보 없음");
+            }
+
+            else
+            {
+                try
+                {
+                    string query = string.Format("insert into deal_t values " +
+                        "(DEAL_T_SEQ.nextval, sysdate, " +
+                        "(select s_id from seller_t where s_name = '{0}' and s_tel = '{1}'), " +
+                        "(select cus_id from customer_t where c_name = '{2}' and c_tel = '{3}'), " +
+                        "(select car_id from car_t where car_model = '{4}' and car_price = {5}))", 
+                        seller.Name, seller.Tel, cust.Name, cust.Tel, car.Model, car.Price);
+                    cmd.Connection = conn;
+                    cmd.CommandText = query;
+                    cmd.ExecuteNonQuery();
+                    Console.WriteLine("데이터 추가 성공!!");
+                    MessageBox.Show("추가되었습니다", "추가 완료");
+                }
+                catch (OracleException e)
+                {
+                    errorMsg(e, "insertOrder()");
+                }
+            }
+        }
 
         public void insertDatas()
         {
@@ -507,6 +439,139 @@ namespace CarManager_0323.DB
             insertCustomer();
             insertSeller();
             insertOrder();
+        }
+
+        public List<ListModel> selectDeal()
+        {
+            List<ListModel> list = new List<ListModel>();
+            try
+            {
+                string query = "select c_name, car_model, car_price, s_name, d_date " +
+                    "from DEAL_T d, CAR_T ca, CUSTOMER_T cu, SELLER_T s " +
+                    "where d.car_id=ca.car_id and d.cus_id=cu.cus_id and d.s_id = s.s_id";
+                cmd.Connection = conn;
+                cmd.CommandText = query;
+                cmd.CommandType = System.Data.CommandType.Text;
+                OracleDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        list.Add(new ListModel(
+                            Convert.ToString(reader["c_name"]),
+                            Convert.ToString(reader["car_model"]),
+                            Convert.ToString(reader["car_price"]) + "만원",
+                            Convert.ToString(reader["s_name"]),
+                            Convert.ToString(reader["d_date"])
+                            ));
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("데이터가 존재하지 않습니다.");
+                }
+                reader.Close();
+            }
+            catch (OracleException e)
+            {
+                errorMsg(e, "selectDeal()");
+            }
+            return list;
+        }
+
+        public Customer selectCustomer(string cus_name)
+        {
+            Customer cus1 = null;
+            try
+            {
+                string query = string.Format("SELECT C_NAME, C_TEL, C_ADDR, C_EMAIL FROM CUSTOMER_T WHERE C_NAME='{0}'", cus_name);
+                cmd.Connection = conn;
+                cmd.CommandText = query;
+                cmd.CommandType = System.Data.CommandType.Text;
+                OracleDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        cus1.Name = Convert.ToString(reader["c_name"]);
+                        cus1.Tel= Convert.ToString(reader["c_tel"]);
+                        cus1.Addr = Convert.ToString(reader["c_addr"]);
+                        cus1.Email = Convert.ToString(reader["c_email"]);
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("데이터가 존재하지 않습니다.");
+                }
+                reader.Close();
+            }
+            catch (OracleException e)
+            {
+                errorMsg(e, "selectDeal()");
+            }
+            return cus1;
+        }
+
+        public int tableChecker(string tableName)
+        {
+            int count = 0;
+            try
+            {
+                string query = string.Format("select count(*) from all_tables where table_name = '{0}'", tableName);
+                cmd.Connection = conn;
+                cmd.CommandText = query;
+                cmd.CommandType = System.Data.CommandType.Text;
+                OracleDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        count =Convert.ToInt32(reader["count(*)"]);
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("데이터가 존재하지 않습니다.");
+                }
+                reader.Close();
+                
+            }
+            catch (OracleException e)
+            {
+                errorMsg(e, "tableChecker()");
+            }
+            return count;
+        }
+
+        public int cusCount(string tableName, string data)
+        {
+            int count = 0;
+            try
+            {
+                string query = string.Format("select count(*) from {0} where c_name = '{1}'", tableName, data);
+                cmd.Connection = conn;
+                cmd.CommandText = query;
+                cmd.CommandType = System.Data.CommandType.Text;
+                OracleDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        count = Convert.ToInt32(reader["count(*)"]);
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("데이터가 존재하지 않습니다.");
+                }
+                reader.Close();
+
+            }
+            catch (OracleException e)
+            {
+                errorMsg(e, "tableChecker()");
+            }
+            return count;
         }
     }
 }
