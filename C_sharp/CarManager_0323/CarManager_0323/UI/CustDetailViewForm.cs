@@ -66,12 +66,14 @@ namespace CarManager_0323.UI
             Customer customer = new Customer(cusName.Text, cusTel.Text, cusAddr.Text, cusEmail.Text);
             if(count == 1)
             {
-
+                oracle.updateCustomer(customer, cus_name);
+                Close();
             }
 
             else
             {
-
+                oracle.updateCustomer(customer, cus_name, cus_tel);
+                Close();
             }
         }
     }

@@ -35,6 +35,8 @@ namespace CarManager_0323.UI
                 string cus_name = dealList.Items[n].SubItems[1].Text;
                 new CustDetailViewForm(oracle, cus_name).ShowDialog();
             }
+            dealList.Items.Clear();
+            initDealView();
         }
 
         public void initDealView()
