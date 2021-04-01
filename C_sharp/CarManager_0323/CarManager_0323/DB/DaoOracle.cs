@@ -506,6 +506,68 @@ namespace CarManager_0323.DB
             }
             return cus1;
         }
+        
+        public Customer selectCustomer(string cus_name, string cus_tel)
+        {
+            Customer cus1 = null;
+            try
+            {
+                string query = string.Format("SELECT C_NAME, C_TEL, C_ADDR, C_EMAIL FROM CUSTOMER_T WHERE C_NAME='{0}' AND C_TEL='{1}'", cus_name, cus_tel);
+                cmd.Connection = conn;
+                cmd.CommandText = query;
+                cmd.CommandType = System.Data.CommandType.Text;
+                OracleDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        cus1 = new Customer(Convert.ToString(reader["c_name"]), Convert.ToString(reader["c_tel"]), Convert.ToString(reader["c_addr"]), Convert.ToString(reader["c_email"]));
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("데이터가 존재하지 않습니다.");
+                }
+                reader.Close();
+            }
+            catch (OracleException e)
+            {
+                errorMsg(e, "selectDeal()");
+            }
+            return cus1;
+        }
+
+        public void updateCustomer(Customer customer, string cus_name)
+        {
+            try
+            {
+                string query = string.Format("UPDATE CUSTOMER_T SET C_NAME='{0}', C_TEL='{1}', C_ADDR='{2}', C_EMAIL='{3}' WHERE C_NAME='{4}'", customer.Name, customer.Tel, customer.Addr, customer.Email, cus_name);
+                cmd.Connection = conn;
+                cmd.CommandText = query;
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("수정되었습니다.", "수정 완료");
+            }
+            catch (OracleException e)
+            {
+                errorMsg(e, "selectDeal()");
+            }
+        }
+        
+        public void updateCustomer(Customer customer, string cus_name, string cus_tel)
+        {
+            try
+            {
+                string query = string.Format("UPDATE CUSTOMER_T SET C_NAME='{0}', C_TEL='{1}', C_ADDR='{2}', C_EMAIL='{3}' WHERE C_NAME='{4}' AND C_TEL='{5}'", customer.Name, customer.Tel, customer.Addr, customer.Email, cus_name, cus_tel);
+                cmd.Connection = conn;
+                cmd.CommandText = query;
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("수정되었습니다.", "수정 완료");
+            }
+            catch (OracleException e)
+            {
+                errorMsg(e, "selectDeal()");
+            }
+        }
 
         public int tableChecker(string tableName)
         {

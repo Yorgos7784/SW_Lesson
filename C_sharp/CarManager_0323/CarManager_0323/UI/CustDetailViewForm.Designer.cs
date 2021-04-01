@@ -181,7 +181,8 @@ namespace CarManager_0323.UI
             this.cusOK.Name = "cusOK";
             this.cusOK.Size = new System.Drawing.Size(131, 35);
             this.cusOK.TabIndex = 28;
-            this.cusOK.Text = "추가";
+            this.cusOK.Text = "수정";
+            this.cusOK.Click += new System.EventHandler(this.cusOK_Click);
             // 
             // CustDetailViewForm
             // 
