@@ -1,0 +1,16 @@
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\bin\Debug\MovieReviewProgram.exe.config
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\bin\Debug\MovieReviewProgram.exe
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\bin\Debug\MovieReviewProgram.pdb
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\bin\Debug\CxFlatUI.dll
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\bin\Debug\MaterialSkin.dll
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\bin\Debug\SunnyUI.Common.dll
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\bin\Debug\SunnyUI.dll
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Debug\MovieReviewProgram.csprojAssemblyReference.cache
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Debug\MovieReviewProgram.Properties.Resources.resources
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Debug\MovieReviewProgram.csproj.GenerateResource.cache
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Debug\MovieReviewProgram.csproj.CoreCompileInputs.cache
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Debug\MovieReviewProgram.csproj.CopyComplete
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Debug\MovieReviewProgram.exe
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Debug\MovieReviewProgram.pdb
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Debug\MovieReviewProgram.LonInForm.resources

@@ -1,0 +1,16 @@
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\API_practice\API_practice\bin\Debug\API_practice.exe.config
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\API_practice\API_practice\bin\Debug\API_practice.exe
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\API_practice\API_practice\bin\Debug\API_practice.pdb
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\API_practice\API_practice\bin\Debug\Newtonsoft.Json.dll
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\API_practice\API_practice\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\API_practice\API_practice\bin\Debug\TMDbLib.dll
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\API_practice\API_practice\bin\Debug\Newtonsoft.Json.xml
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\API_practice\API_practice\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\API_practice\API_practice\bin\Debug\TMDbLib.xml
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\API_practice\API_practice\obj\Debug\API_practice.csprojAssemblyReference.cache
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\API_practice\API_practice\obj\Debug\API_practice.csproj.CoreCompileInputs.cache
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\API_practice\API_practice\obj\Debug\API_practice.csproj.CopyComplete
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\API_practice\API_practice\obj\Debug\API_practice.exe
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\API_practice\API_practice\obj\Debug\API_practice.pdb
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\API_practice\API_practice\obj\Debug\API_practice.Form1.resources
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\API_practice\API_practice\obj\Debug\API_practice.csproj.GenerateResource.cache
