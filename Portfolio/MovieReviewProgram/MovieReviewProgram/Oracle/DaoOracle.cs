@@ -17,12 +17,12 @@ namespace MovieReviewProgram.Oracle
 
         const string ORADB = "Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=XE)));User Id=c##scott;Password=1126;";
         OracleConnection conn;
-        OracleCommand cmd2;
+        OracleCommand cmd;
 
         public DaoOracle()
         {
             conn = new OracleConnection(ORADB);
-            cmd2 = new OracleCommand();
+            cmd = new OracleCommand();
             dbConnect();
         }
 
@@ -88,14 +88,14 @@ namespace MovieReviewProgram.Oracle
                 "id INT NOT NULL, " +
                 "name VARCHAR2(20) NOT NULL, " +
                 "pw VARCHAR2(20) NOT NULL, " +
-                "CONSTRAINT CUSTOMER_PK PRIMARY KEY(u_id))";
-                cmd2.Connection = conn;
-                cmd2.CommandText = query;
-                cmd2.ExecuteNonQuery();
+                "CONSTRAINT CUSTOMER_PK PRIMARY KEY(id))";
+                cmd.Connection = conn;
+                cmd.CommandText = query;
+                cmd.ExecuteNonQuery();
 
                 string querySeq = "CREATE SEQUENCE LOGIN_T_SEQ START WITH 1 INCREMENT BY 1";
-                cmd2.CommandText = querySeq;
-                cmd2.ExecuteNonQuery();
+                cmd.CommandText = querySeq;
+                cmd.ExecuteNonQuery();
                 Console.WriteLine("테이블, 시퀀스 생성 성공!");
             }
             catch (OracleException e)
@@ -109,13 +109,13 @@ namespace MovieReviewProgram.Oracle
             try
             {
                 string query = string.Format("DROP TABLE {0} CASCADE CONSTRAINTS", tableName);
-                cmd2.Connection = conn;
-                cmd2.CommandText = query;
-                cmd2.ExecuteNonQuery();
+                cmd.Connection = conn;
+                cmd.CommandText = query;
+                cmd.ExecuteNonQuery();
 
                 string querySeq = string.Format("DROP SEQUENCE {0}", sequenceName);
-                cmd2.CommandText = querySeq;
-                cmd2.ExecuteNonQuery();
+                cmd.CommandText = querySeq;
+                cmd.ExecuteNonQuery();
                 Console.WriteLine("테이블, 시퀀스 삭제 성공!");
             }
             catch (OracleException e)
