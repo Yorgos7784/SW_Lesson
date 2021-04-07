@@ -16,7 +16,7 @@ namespace MovieReviewProgram
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LonInForm());
+            Application.Run(new LogInForm());
         }
     }
 }

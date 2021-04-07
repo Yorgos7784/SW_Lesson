@@ -1,5 +1,6 @@
 ﻿using MovieReviewProgram.Model;
 using MovieReviewProgram.Oracle;
+using MovieReviewProgram.UI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,10 +13,10 @@ using System.Windows.Forms;
 
 namespace MovieReviewProgram
 {
-    public partial class LonInForm : Form
+    public partial class LogInForm : Form
     {
         DaoOracle oracle;
-        public LonInForm()
+        public LogInForm()
         {
             InitializeComponent();
             oracle = new DaoOracle();
@@ -33,7 +34,12 @@ namespace MovieReviewProgram
 
         private void dropTable_Click(object sender, EventArgs e)
         {
-            oracle.dropTables("USER_TABLE", "USER_TABLE_SEQUENCE");
+            oracle.dropTables("LOGIN_T", "LOGIN_T_SEQ");
+        }
+
+        private void signUpBtn_Click(object sender, EventArgs e)
+        {
+            new signUpForm().ShowDialog();
         }
     }
 }

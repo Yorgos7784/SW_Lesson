@@ -75,7 +75,7 @@ namespace MovieReviewProgram.Oracle
                     MessageBox.Show("누락된 정보가 있습니다.\n값을 입력해주세요.", "누락된 정보");
                     break;
                 case 955:
-                    MessageBox.Show("테이블이 이미 존재합니다.", "테이블 에러");
+                    //MessageBox.Show("테이블이 이미 존재합니다.", "테이블 에러");
                     break;
             }
         }
@@ -88,7 +88,7 @@ namespace MovieReviewProgram.Oracle
                 "id INT NOT NULL, " +
                 "name VARCHAR2(20) NOT NULL, " +
                 "pw VARCHAR2(20) NOT NULL, " +
-                "CONSTRAINT CUSTOMER_PK PRIMARY KEY(id))";
+                "CONSTRAINT LOGIN_PK PRIMARY KEY(id))";
                 cmd.Connection = conn;
                 cmd.CommandText = query;
                 cmd.ExecuteNonQuery();

@@ -1,7 +1,7 @@
 ﻿
 namespace MovieReviewProgram
 {
-    partial class LonInForm
+    partial class LogInForm
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.
@@ -29,7 +29,7 @@ namespace MovieReviewProgram
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LonInForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogInForm));
             this.cxFlatPictureBox1 = new CxFlatUI.CxFlatPictureBox();
             this.uiLabel1 = new Sunny.UI.UILabel();
             this.programExit = new Sunny.UI.UISymbolButton();
@@ -57,7 +57,7 @@ namespace MovieReviewProgram
             // uiLabel1
             // 
             this.uiLabel1.Font = new System.Drawing.Font("Newtext Bk BT", 47.99999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel1.Location = new System.Drawing.Point(108, 82);
+            this.uiLabel1.Location = new System.Drawing.Point(115, 82);
             this.uiLabel1.Name = "uiLabel1";
             this.uiLabel1.Size = new System.Drawing.Size(272, 118);
             this.uiLabel1.TabIndex = 1;
@@ -166,6 +166,7 @@ namespace MovieReviewProgram
             this.signUpBtn.Symbol = 61543;
             this.signUpBtn.TabIndex = 4;
             this.signUpBtn.Text = "Sign Up";
+            this.signUpBtn.Click += new System.EventHandler(this.signUpBtn_Click);
             // 
             // dropTable
             // 
@@ -183,7 +184,7 @@ namespace MovieReviewProgram
             this.dropTable.UseVisualStyleBackColor = true;
             this.dropTable.Click += new System.EventHandler(this.dropTable_Click);
             // 
-            // LonInForm
+            // LogInForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -200,7 +201,7 @@ namespace MovieReviewProgram
             this.Controls.Add(this.uiLabel1);
             this.Controls.Add(this.cxFlatPictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "LonInForm";
+            this.Name = "LogInForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.LonInForm_Load);
