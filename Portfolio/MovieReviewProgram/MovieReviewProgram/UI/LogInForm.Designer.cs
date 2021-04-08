@@ -39,7 +39,6 @@ namespace MovieReviewProgram
             this.uiLabel3 = new Sunny.UI.UILabel();
             this.logInBtn = new Sunny.UI.UISymbolButton();
             this.signUpBtn = new Sunny.UI.UISymbolButton();
-            this.dropTable = new MaterialSkin.Controls.MaterialFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.cxFlatPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,7 +99,7 @@ namespace MovieReviewProgram
             this.idInput.SelectionLength = 0;
             this.idInput.SelectionStart = 0;
             this.idInput.Size = new System.Drawing.Size(164, 38);
-            this.idInput.TabIndex = 3;
+            this.idInput.TabIndex = 1;
             this.idInput.TabStop = false;
             this.idInput.UseSystemPasswordChar = false;
             // 
@@ -118,7 +117,7 @@ namespace MovieReviewProgram
             this.pwInput.SelectionLength = 0;
             this.pwInput.SelectionStart = 0;
             this.pwInput.Size = new System.Drawing.Size(164, 38);
-            this.pwInput.TabIndex = 3;
+            this.pwInput.TabIndex = 2;
             this.pwInput.TabStop = false;
             this.pwInput.UseSystemPasswordChar = false;
             // 
@@ -154,6 +153,7 @@ namespace MovieReviewProgram
             this.logInBtn.Size = new System.Drawing.Size(100, 35);
             this.logInBtn.TabIndex = 4;
             this.logInBtn.Text = "Log In";
+            this.logInBtn.Click += new System.EventHandler(this.logInBtn_Click);
             // 
             // signUpBtn
             // 
@@ -168,29 +168,12 @@ namespace MovieReviewProgram
             this.signUpBtn.Text = "Sign Up";
             this.signUpBtn.Click += new System.EventHandler(this.signUpBtn_Click);
             // 
-            // dropTable
-            // 
-            this.dropTable.AutoSize = true;
-            this.dropTable.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.dropTable.Depth = 0;
-            this.dropTable.Location = new System.Drawing.Point(253, 62);
-            this.dropTable.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.dropTable.MouseState = MaterialSkin.MouseState.HOVER;
-            this.dropTable.Name = "dropTable";
-            this.dropTable.Primary = false;
-            this.dropTable.Size = new System.Drawing.Size(87, 36);
-            this.dropTable.TabIndex = 5;
-            this.dropTable.Text = "테이블삭제";
-            this.dropTable.UseVisualStyleBackColor = true;
-            this.dropTable.Click += new System.EventHandler(this.dropTable_Click);
-            // 
             // LogInForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(494, 504);
-            this.Controls.Add(this.dropTable);
             this.Controls.Add(this.signUpBtn);
             this.Controls.Add(this.logInBtn);
             this.Controls.Add(this.pwInput);
@@ -207,7 +190,6 @@ namespace MovieReviewProgram
             this.Load += new System.EventHandler(this.LonInForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cxFlatPictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -222,7 +204,6 @@ namespace MovieReviewProgram
         private Sunny.UI.UILabel uiLabel3;
         private Sunny.UI.UISymbolButton logInBtn;
         private Sunny.UI.UISymbolButton signUpBtn;
-        private MaterialSkin.Controls.MaterialFlatButton dropTable;
     }
 }
 

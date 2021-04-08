@@ -18,7 +18,7 @@ namespace API_practice
             TMDbClient client = new TMDbClient("e1505e132578f77683ee1878346d1255");
 
             // 영화 제목 가져오기
-            Movie movie = client.GetMovieAsync(47964).Result;
+            Movie movie = client.GetMovieAsync(120).Result;
             Console.WriteLine($"Movie name : {movie.Title}");
             Console.WriteLine(movie.PosterPath);
 
@@ -36,7 +36,7 @@ namespace API_practice
             SearchContainer<SearchMovie> results = client.SearchMovieAsync("the lord of the ring").Result;
             Console.WriteLine($"Got {results.Results.Count:N0} of {results.TotalResults:N0} results");
             foreach (SearchMovie result in results.Results)
-                Console.WriteLine(result.Title);
+                Console.WriteLine(result.Title + " : " + result.Id);
             Console.WriteLine();
 
             // 영화 콜렉션 검색

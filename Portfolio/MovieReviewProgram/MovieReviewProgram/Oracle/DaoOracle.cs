@@ -1,4 +1,5 @@
-﻿using Oracle.ManagedDataAccess.Client;
+﻿using MovieReviewProgram.Model;
+using Oracle.ManagedDataAccess.Client;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -77,6 +78,9 @@ namespace MovieReviewProgram.Oracle
                 case 955:
                     //MessageBox.Show("테이블이 이미 존재합니다.", "테이블 에러");
                     break;
+                case 1:
+                    //MessageBox.Show("아이디가 이미 존재합니다.", "아이디 오류");
+                    break;
             }
         }
 
@@ -85,18 +89,14 @@ namespace MovieReviewProgram.Oracle
             try
             {
                 string query = "CREATE TABLE LOGIN_T(" +
-                "id INT NOT NULL, " +
-                "name VARCHAR2(20) NOT NULL, " +
-                "pw VARCHAR2(20) NOT NULL, " +
-                "CONSTRAINT LOGIN_PK PRIMARY KEY(id))";
+                "user_id VARCHAR2(20) NOT NULL, " +
+                "user_pw VARCHAR2(50) NOT NULL, " +
+                "CONSTRAINT LOGIN_PK PRIMARY KEY(user_id))";
                 cmd.Connection = conn;
                 cmd.CommandText = query;
                 cmd.ExecuteNonQuery();
 
-                string querySeq = "CREATE SEQUENCE LOGIN_T_SEQ START WITH 1 INCREMENT BY 1";
-                cmd.CommandText = querySeq;
-                cmd.ExecuteNonQuery();
-                Console.WriteLine("테이블, 시퀀스 생성 성공!");
+                Console.WriteLine("테이블 생성 성공!");
             }
             catch (OracleException e)
             {
@@ -122,7 +122,69 @@ namespace MovieReviewProgram.Oracle
             {
                 errorMsg(e, "dropTables()");
             }
-            
+        }
+        
+        public void dropTables(string tableName)
+        {
+            try
+            {
+                string query = string.Format("DROP TABLE {0} CASCADE CONSTRAINTS", tableName);
+                cmd.Connection = conn;
+                cmd.CommandText = query;
+                cmd.ExecuteNonQuery();
+                Console.WriteLine("테이블 제거 성공");
+            }
+            catch (OracleException e)
+            {
+                errorMsg(e, "dropTables()");
+            }
+        }
+
+        public void insertUser(User user)
+        {
+            try
+            {
+                string query = string.Format("INSERT INTO LOGIN_T VALUES ('{0}', '{1}')", user.Id, user.Pw);
+                cmd.Connection = conn;
+                cmd.CommandText = query;
+                cmd.ExecuteNonQuery();
+                Console.WriteLine("데이터 추가 완료");
+                MessageBox.Show("가입이 완료되었습니다.", "가입 완료");
+            }
+            catch (OracleException e)
+            {
+                errorMsg(e, "insertUser()");
+            }
+        }
+
+        public List<User> selectUsers()
+        {
+            List<User> users = new List<User>();
+            try
+            {
+                string query = "SELECT USER_ID, USER_PW FROM LOGIN_T";
+                cmd.Connection = conn;
+                cmd.CommandText = query;
+                cmd.CommandType = System.Data.CommandType.Text;
+                OracleDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        users.Add(new User(Convert.ToString(reader["USER_ID"]),Convert.ToString(reader["USER_PW"])));
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("데이터가 존재하지 않습니다.");
+                }
+                reader.Close();
+            }
+            catch (OracleException e)
+            {
+                errorMsg(e, "selectUsers()");
+            }
+            return users;
         }
     }
 }

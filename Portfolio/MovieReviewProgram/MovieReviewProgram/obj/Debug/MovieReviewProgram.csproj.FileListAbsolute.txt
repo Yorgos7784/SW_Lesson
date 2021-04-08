@@ -13,7 +13,6 @@ C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\ob
 C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Debug\MovieReviewProgram.exe
 C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Debug\MovieReviewProgram.pdb
 C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\bin\Debug\Oracle.ManagedDataAccess.dll
-C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Debug\MovieReviewProgram.LonInForm.resources
 D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\bin\Debug\MovieReviewProgram.exe.config
 D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\bin\Debug\MovieReviewProgram.exe
 D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\bin\Debug\MovieReviewProgram.pdb
@@ -30,3 +29,6 @@ D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReview
 D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Debug\MovieReviewProgram.csproj.CopyComplete
 D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Debug\MovieReviewProgram.exe
 D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Debug\MovieReviewProgram.pdb
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Debug\MovieReviewProgram.LogInForm.resources
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Debug\MovieReviewProgram.UI.signUpForm.resources
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Debug\MovieReviewProgram.UI.MainForm.resources
