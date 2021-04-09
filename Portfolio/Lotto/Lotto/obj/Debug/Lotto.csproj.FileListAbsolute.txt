@@ -12,3 +12,7 @@ C:\Users\KB\Desktop\SW_Lesson\Portfolio\Lotto\Lotto\bin\Debug\MaterialSkin.dll
 C:\Users\KB\Desktop\SW_Lesson\Portfolio\Lotto\Lotto\bin\Debug\SunnyUI.Common.dll
 C:\Users\KB\Desktop\SW_Lesson\Portfolio\Lotto\Lotto\bin\Debug\SunnyUI.dll
 C:\Users\KB\Desktop\SW_Lesson\Portfolio\Lotto\Lotto\obj\Debug\Lotto.csproj.CopyComplete
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\Lotto\Lotto\obj\Debug\Lotto.csprojAssemblyReference.cache
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\Lotto\Lotto\bin\Debug\Newtonsoft.Json.dll
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\Lotto\Lotto\bin\Debug\System.Net.Json.dll
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\Lotto\Lotto\bin\Debug\Newtonsoft.Json.xml
