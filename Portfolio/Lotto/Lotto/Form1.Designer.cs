@@ -196,6 +196,8 @@ namespace Lotto
             this.resultRound.TabStop = false;
             this.resultRound.Text = "~957까지";
             this.resultRound.UseSystemPasswordChar = false;
+            this.resultRound.Click += new System.EventHandler(this.resultRound_Click);
+            this.resultRound.Leave += new System.EventHandler(this.resultRound_Leave);
             // 
             // uiLabel1
             // 

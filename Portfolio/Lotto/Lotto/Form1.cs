@@ -30,20 +30,7 @@ namespace Lotto
                 if(round >= 958)
                 {
                     int[] preNums = getNums(957);
-                    int[] randNums = randNum(preNums);
-                    int copy = 0;
-                    for (int i = 0; i < randNums.Length; i++)
-                    {
-                        for (int j = i; j < randNums.Length; j++)
-                        {
-                            if (randNums[i] > randNums[j])
-                            {
-                                copy = randNums[i];
-                                randNums[i] = randNums[j];
-                                randNums[j] = copy;
-                            }
-                        }
-                    }
+                    int[] randNums = sortArr(randNum(preNums));
 
                     getResult(randNums);
 
@@ -55,21 +42,7 @@ namespace Lotto
 
                     int[] preNums = getNums(round - 1);
 
-                    int[] randNums = randNum(preNums);
-
-                    int copy = 0;
-                    for (int i = 0; i < randNums.Length; i++)
-                    {
-                        for (int j = i; j < randNums.Length; j++)
-                        {
-                            if (randNums[i] > randNums[j])
-                            {
-                                copy = randNums[i];
-                                randNums[i] = randNums[j];
-                                randNums[j] = copy;
-                            }
-                        }
-                    }
+                    int[] randNums = sortArr(randNum(preNums));
 
                     getResult(nowNums, randNums);
 
@@ -184,7 +157,6 @@ namespace Lotto
                 }
             }
 
-
             if (count >= 6)
                 resultText.Text = "1등!!";
             else if (count == 5)
@@ -267,16 +239,17 @@ namespace Lotto
         // 연속된 번호 체크
         public bool getContinue(int[] nums)
         {
-            bool checker = true;
-            for (int i = 0; i < nums.Length; i++)
+            nums = sortArr(nums);
+            int count = 0;
+            for (int i = 0; i < nums.Length-1; i++)
             {
-                for (int j = 0; j < i; j++)
-                {
-                    if (nums[i] == nums[j] + 2 || nums[i] == nums[j] - 2)
-                        checker = false;
-                }
+                if (nums[i] == nums[i + 1] - 1)
+                    count++;
             }
-            return checker;
+            if (count >= 2)
+                return false;
+            else
+                return true;
         }
 
         // 홀짝 비율 체크
@@ -292,10 +265,8 @@ namespace Lotto
                 else
                     holcount++;
             }
-            if (holcount >= 2 && jjackcount >= 2)
-            {
+            if (holcount >= 2 || jjackcount >= 2)
                 checker = true;
-            }
             return checker;
         }
 
@@ -308,7 +279,6 @@ namespace Lotto
                 if(nums[i] == 43 || nums[i] == 27 || nums[i] == 34 || nums[i] == 17 || nums[i] == 4 || nums[i] == 13)
                     checker = true;
             }
-
             return checker;
         }
 
@@ -343,7 +313,8 @@ namespace Lotto
         // 회차별 당첨결과 가져오기
         public int[] getNums(int round)
         {
-            string strReturnValue = GetHttpLottoString("https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=" + round);
+            string strReturnValue = GetHttpLottoString("https://www.dhlottery.co.kr/" +
+                "common.do?method=getLottoNumber&drwNo=" + round);
             if (strReturnValue == "")
             {
                 MessageBox.Show("불러오기 실패", "오류");
@@ -370,9 +341,37 @@ namespace Lotto
             return nums;
         }
 
+        public int[] sortArr(int[] nums)
+        {
+            int copy = 0;
+            for (int i = 0; i < nums.Length; i++)
+            {
+                for (int j = i; j < nums.Length; j++)
+                {
+                    if (nums[i] > nums[j])
+                    {
+                        copy = nums[i];
+                        nums[i] = nums[j];
+                        nums[j] = copy;
+                    }
+                }
+            }
+            return nums;
+        }
+
         private void exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void resultRound_Click(object sender, EventArgs e)
+        {
+            resultRound.Text = "";
+        }
+
+        private void resultRound_Leave(object sender, EventArgs e)
+        {
+            resultRound.Text = "~957까지";
         }
     }
 }
