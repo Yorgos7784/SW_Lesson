@@ -22,7 +22,6 @@ D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReview
 D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\bin\Debug\SunnyUI.Common.dll
 D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\bin\Debug\SunnyUI.dll
 D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Debug\MovieReviewProgram.csprojAssemblyReference.cache
-D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Debug\MovieReviewProgram.LonInForm.resources
 D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Debug\MovieReviewProgram.Properties.Resources.resources
 D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Debug\MovieReviewProgram.csproj.GenerateResource.cache
 D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Debug\MovieReviewProgram.csproj.CoreCompileInputs.cache
@@ -32,3 +31,6 @@ D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReview
 C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Debug\MovieReviewProgram.LogInForm.resources
 C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Debug\MovieReviewProgram.UI.signUpForm.resources
 C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Debug\MovieReviewProgram.UI.MainForm.resources
+D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Debug\MovieReviewProgram.UI.MainForm.resources
+D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Debug\MovieReviewProgram.LogInForm.resources
+D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Debug\MovieReviewProgram.UI.signUpForm.resources
