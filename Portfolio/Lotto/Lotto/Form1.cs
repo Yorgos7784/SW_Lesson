@@ -42,7 +42,7 @@ namespace Lotto
 
                     int[] preNums = getNums(round - 1);
 
-                    int[] randNums = sortArr(randNum(preNums));
+                    int[] randNums = bubbleSort(randNum(preNums));
 
                     getResult(nowNums, randNums);
 
@@ -239,7 +239,8 @@ namespace Lotto
         // 연속된 번호 체크
         public bool getContinue(int[] nums)
         {
-            nums = sortArr(nums);
+            // 정렬방식1. Array.Sort
+            Array.Sort(nums);
             int count = 0;
             for (int i = 0; i < nums.Length-1; i++)
             {
@@ -313,8 +314,7 @@ namespace Lotto
         // 회차별 당첨결과 가져오기
         public int[] getNums(int round)
         {
-            string strReturnValue = GetHttpLottoString("https://www.dhlottery.co.kr/" +
-                "common.do?method=getLottoNumber&drwNo=" + round);
+            string strReturnValue = GetHttpLottoString("https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=" + round);
             if (strReturnValue == "")
             {
                 MessageBox.Show("불러오기 실패", "오류");
@@ -341,18 +341,36 @@ namespace Lotto
             return nums;
         }
 
+        // 정렬방식2. 선택 정렬
         public int[] sortArr(int[] nums)
         {
-            int copy = 0;
             for (int i = 0; i < nums.Length; i++)
             {
                 for (int j = i; j < nums.Length; j++)
                 {
                     if (nums[i] > nums[j])
                     {
-                        copy = nums[i];
+                        int copy = nums[i];
                         nums[i] = nums[j];
                         nums[j] = copy;
+                    }
+                }
+            }
+            return nums;
+        }
+        
+        // 정렬방식3. 버블 정렬
+        public int[] bubbleSort(int[] nums)
+        {
+            for (int i = 0; i < nums.Length; i++)
+            {
+                for (int j = 0; j < nums.Length-1; j++)
+                {
+                    if (nums[j] > nums[j+1])
+                    {
+                        int copy = nums[j];
+                        nums[j] = nums[j + 1];
+                        nums[j + 1] = copy;
                     }
                 }
             }

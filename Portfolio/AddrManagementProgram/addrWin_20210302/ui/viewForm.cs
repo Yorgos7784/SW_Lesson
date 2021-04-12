@@ -88,6 +88,7 @@ namespace addrWin_20210302.ui
             if (listView.SelectedItems.Count != 0)
             {
                 int n = listView.SelectedItems[0].Index;
+                Console.WriteLine(n);
                 string name2 = listView.Items[n].SubItems[1].Text;
                 string tel2 = listView.Items[n].SubItems[2].Text;
                 new UpdateDetail(name2, tel2, sc).ShowDialog();

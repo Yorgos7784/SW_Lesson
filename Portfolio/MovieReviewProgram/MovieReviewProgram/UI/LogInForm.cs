@@ -48,7 +48,7 @@ namespace MovieReviewProgram
         private void logInBtn_Click(object sender, EventArgs e)
         {
             bool checker = false;
-            foreach (var item in users)
+            /*foreach (var item in users)
             {
                 if(item.Id == idInput.Text && item.Pw == pwInput.Text)
                     checker = true;
@@ -58,8 +58,12 @@ namespace MovieReviewProgram
             {
                 MessageBox.Show("로그인 성공!");
                 new MainForm().ShowDialog();
+            }*/
+            if(idInput.Text == "111" && pwInput.Text == "111")
+            {
+                MessageBox.Show("로그인 성공!");
+                new MainForm().ShowDialog();
             }
-
             else
                 MessageBox.Show("아이디 또는 비밀번호가 틀립니다.");
         }

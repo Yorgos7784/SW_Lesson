@@ -34,8 +34,8 @@ namespace MovieReviewProgram.UI
             this.cxFlatButton3 = new CxFlatUI.Controls.CxFlatButton();
             this.cxFlatButton4 = new CxFlatUI.Controls.CxFlatButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.uiLabel1 = new Sunny.UI.UILabel();
             this.uiSymbolButton1 = new Sunny.UI.UISymbolButton();
+            this.uiLabel1 = new Sunny.UI.UILabel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,6 +49,7 @@ namespace MovieReviewProgram.UI
             this.cxFlatButton1.TabIndex = 0;
             this.cxFlatButton1.Text = "영화 찾기";
             this.cxFlatButton1.TextColor = System.Drawing.Color.White;
+            this.cxFlatButton1.Click += new System.EventHandler(this.cxFlatButton1_Click);
             // 
             // cxFlatButton2
             // 
@@ -94,16 +95,6 @@ namespace MovieReviewProgram.UI
             this.panel1.Size = new System.Drawing.Size(650, 48);
             this.panel1.TabIndex = 1;
             // 
-            // uiLabel1
-            // 
-            this.uiLabel1.Font = new System.Drawing.Font("Microsoft YaHei", 14F);
-            this.uiLabel1.Location = new System.Drawing.Point(18, 0);
-            this.uiLabel1.Name = "uiLabel1";
-            this.uiLabel1.Size = new System.Drawing.Size(196, 48);
-            this.uiLabel1.TabIndex = 0;
-            this.uiLabel1.Text = "인생은 영화처럼";
-            this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // uiSymbolButton1
             // 
             this.uiSymbolButton1.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -125,6 +116,16 @@ namespace MovieReviewProgram.UI
             this.uiSymbolButton1.Symbol = 61453;
             this.uiSymbolButton1.TabIndex = 2;
             this.uiSymbolButton1.Click += new System.EventHandler(this.uiSymbolButton1_Click);
+            // 
+            // uiLabel1
+            // 
+            this.uiLabel1.Font = new System.Drawing.Font("Microsoft YaHei", 14F);
+            this.uiLabel1.Location = new System.Drawing.Point(18, 0);
+            this.uiLabel1.Name = "uiLabel1";
+            this.uiLabel1.Size = new System.Drawing.Size(196, 48);
+            this.uiLabel1.TabIndex = 0;
+            this.uiLabel1.Text = "인생은 영화처럼";
+            this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // MainForm
             // 

@@ -14,3 +14,5 @@ C:\Users\KB\Desktop\SW_Lesson\Portfolio\API_practice\API_practice\obj\Debug\API_
 C:\Users\KB\Desktop\SW_Lesson\Portfolio\API_practice\API_practice\obj\Debug\API_practice.pdb
 C:\Users\KB\Desktop\SW_Lesson\Portfolio\API_practice\API_practice\obj\Debug\API_practice.Form1.resources
 C:\Users\KB\Desktop\SW_Lesson\Portfolio\API_practice\API_practice\obj\Debug\API_practice.csproj.GenerateResource.cache
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\API_practice\API_practice\bin\Debug\System.Net.Json.dll
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\API_practice\API_practice\obj\Debug\API_practice.Form2.resources
