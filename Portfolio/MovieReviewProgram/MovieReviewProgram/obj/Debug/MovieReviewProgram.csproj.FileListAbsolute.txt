@@ -42,3 +42,11 @@ C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\ob
 C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Debug\MovieReviewProgram.csproj.CopyComplete
 C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Debug\MovieReviewProgram.exe
 C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Debug\MovieReviewProgram.pdb
+D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\bin\Debug\Newtonsoft.Json.dll
+D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\bin\Debug\TMDbLib.dll
+D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\bin\Debug\Newtonsoft.Json.xml
+D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\bin\Debug\TMDbLib.xml
+D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Debug\MovieReviewProgram.UI.MovieDetailForm.resources
+D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Debug\MovieReviewProgram.UI.SearchMovieForm.resources

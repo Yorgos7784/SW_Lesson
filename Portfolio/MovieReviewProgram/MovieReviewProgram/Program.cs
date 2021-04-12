@@ -1,5 +1,6 @@
 ﻿using MovieReviewProgram.Model;
 using MovieReviewProgram.Oracle;
+using MovieReviewProgram.UI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace MovieReviewProgram
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LogInForm());
+            Application.Run(new MainForm());
         }
     }
 }

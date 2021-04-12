@@ -23,3 +23,28 @@ C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\ob
 C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Release\MovieReviewProgram.csproj.CopyComplete
 C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Release\MovieReviewProgram.exe
 C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Release\MovieReviewProgram.pdb
+D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\bin\Release\MovieReviewProgram.exe.config
+D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\bin\Release\MovieReviewProgram.exe
+D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\bin\Release\MovieReviewProgram.pdb
+D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\bin\Release\CxFlatUI.dll
+D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\bin\Release\MaterialSkin.dll
+D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\bin\Release\Newtonsoft.Json.dll
+D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\bin\Release\Oracle.ManagedDataAccess.dll
+D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\bin\Release\SunnyUI.Common.dll
+D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\bin\Release\SunnyUI.dll
+D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\bin\Release\System.Diagnostics.DiagnosticSource.dll
+D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\bin\Release\TMDbLib.dll
+D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\bin\Release\Newtonsoft.Json.xml
+D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\bin\Release\System.Diagnostics.DiagnosticSource.xml
+D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\bin\Release\TMDbLib.xml
+D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Release\MovieReviewProgram.UI.MainForm.resources
+D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Release\MovieReviewProgram.LogInForm.resources
+D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Release\MovieReviewProgram.Properties.Resources.resources
+D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Release\MovieReviewProgram.UI.MovieDetailForm.resources
+D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Release\MovieReviewProgram.UI.SearchMovieForm.resources
+D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Release\MovieReviewProgram.UI.signUpForm.resources
+D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Release\MovieReviewProgram.csproj.GenerateResource.cache
+D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Release\MovieReviewProgram.csproj.CoreCompileInputs.cache
+D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Release\MovieReviewProgram.csproj.CopyComplete
+D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Release\MovieReviewProgram.exe
+D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Release\MovieReviewProgram.pdb
