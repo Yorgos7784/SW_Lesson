@@ -13,11 +13,9 @@ C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\bi
 C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\bin\Release\System.Diagnostics.DiagnosticSource.xml
 C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\bin\Release\TMDbLib.xml
 C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Release\MovieReviewProgram.UI.MainForm.resources
-C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Release\MovieReviewProgram.LogInForm.resources
 C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Release\MovieReviewProgram.Properties.Resources.resources
 C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Release\MovieReviewProgram.UI.MovieDetailForm.resources
 C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Release\MovieReviewProgram.UI.SearchMovieForm.resources
-C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Release\MovieReviewProgram.UI.signUpForm.resources
 C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Release\MovieReviewProgram.csproj.GenerateResource.cache
 C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Release\MovieReviewProgram.csproj.CoreCompileInputs.cache
 C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Release\MovieReviewProgram.csproj.CopyComplete
@@ -48,3 +46,5 @@ D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReview
 D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Release\MovieReviewProgram.csproj.CopyComplete
 D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Release\MovieReviewProgram.exe
 D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Release\MovieReviewProgram.pdb
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Release\MovieReviewProgram.csprojAssemblyReference.cache
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Release\MovieReviewProgram.UI.SearchPersonForm.resources
