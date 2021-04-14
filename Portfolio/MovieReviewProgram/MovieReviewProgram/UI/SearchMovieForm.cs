@@ -13,14 +13,12 @@ namespace MovieReviewProgram.UI
 {
     partial class SearchMovieForm : Form
     {
-        TMDbClient client;
         MovieApi ma;
         List<int> ids = new List<int>();
 
-        public SearchMovieForm(TMDbClient client, MovieApi ma)
+        public SearchMovieForm(MovieApi ma)
         {
             InitializeComponent();
-            this.client = client;
             this.ma = ma;
         }
 
@@ -64,7 +62,7 @@ namespace MovieReviewProgram.UI
             try
             {
                 // 포스터 불러오기
-                Bitmap DownloadImage = ma.getMoviePoster(id);
+                Bitmap DownloadImage = ma.getMovieImage(id);
                 moviePoster.Image = DownloadImage;
                 moviePoster.SizeMode = PictureBoxSizeMode.Zoom;
             }
@@ -106,7 +104,7 @@ namespace MovieReviewProgram.UI
             {
                 int n = movieSearchList.SelectedItems[0].Index;
                 int id = ids[n];
-                new MovieDetailForm(id, client, ma).ShowDialog();
+                new MovieDetailForm(id, ma).ShowDialog();
             }
             else
             {

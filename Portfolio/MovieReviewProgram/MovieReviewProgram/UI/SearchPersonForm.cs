@@ -15,13 +15,11 @@ namespace MovieReviewProgram.UI
 {
     partial class SearchPersonForm : Form
     {
-        TMDbClient client;
         MovieApi ma;
         List<int> ids = new List<int>();
-        public SearchPersonForm(TMDbClient client, MovieApi ma)
+        public SearchPersonForm(MovieApi ma)
         {
             InitializeComponent();
-            this.client = client;
             this.ma = ma;
         }
 
@@ -42,14 +40,12 @@ namespace MovieReviewProgram.UI
 
         public void getPersonList()
         {
-            // 영화 리스트 초기화
             personSearchList.Items.Clear();
             ids.Clear();
 
             List<PersonInfo> persons = ma.searchPerson(personInput.Text);
             foreach (PersonInfo person in persons)
             {
-                // 불러온 목록 리스트에 추가
                 personSearchList.Items.Add(new ListViewItem(new String[] { person.Name }));
                 ids.Add(person.Id);
             }
@@ -98,6 +94,20 @@ namespace MovieReviewProgram.UI
             catch (FormatException)
             {
 
+            }
+        }
+
+        private void personDetail_Click(object sender, EventArgs e)
+        {
+            if (personSearchList.SelectedItems.Count != 0)
+            {
+                int n = personSearchList.SelectedItems[0].Index;
+                int id = ids[n];
+                new PersonDetailForm(id, ma).ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("선택된 항목이 없습니다.", "선택한 항목 없음");
             }
         }
     }

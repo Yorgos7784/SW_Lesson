@@ -51,18 +51,18 @@ namespace MovieReviewProgram.UI
             this.uiSymbolButton1.FillPressColor = System.Drawing.Color.Maroon;
             this.uiSymbolButton1.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.uiSymbolButton1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiSymbolButton1.IsCircle = true;
-            this.uiSymbolButton1.Location = new System.Drawing.Point(602, 6);
+            this.uiSymbolButton1.Location = new System.Drawing.Point(551, 7);
             this.uiSymbolButton1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiSymbolButton1.Name = "uiSymbolButton1";
             this.uiSymbolButton1.RectColor = System.Drawing.Color.Brown;
             this.uiSymbolButton1.RectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.uiSymbolButton1.RectPressColor = System.Drawing.Color.Maroon;
             this.uiSymbolButton1.RectSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.uiSymbolButton1.Size = new System.Drawing.Size(38, 35);
+            this.uiSymbolButton1.Size = new System.Drawing.Size(90, 35);
             this.uiSymbolButton1.Style = Sunny.UI.UIStyle.Custom;
             this.uiSymbolButton1.Symbol = 61453;
             this.uiSymbolButton1.TabIndex = 2;
+            this.uiSymbolButton1.Text = "Close";
             this.uiSymbolButton1.Click += new System.EventHandler(this.uiSymbolButton1_Click);
             // 
             // panel1
@@ -78,12 +78,13 @@ namespace MovieReviewProgram.UI
             // 
             // uiLabel1
             // 
-            this.uiLabel1.Font = new System.Drawing.Font("Microsoft YaHei", 14F);
+            this.uiLabel1.Font = new System.Drawing.Font("Orbit-B BT", 18.25F, System.Drawing.FontStyle.Bold);
+            this.uiLabel1.ForeColor = System.Drawing.Color.White;
             this.uiLabel1.Location = new System.Drawing.Point(18, 0);
             this.uiLabel1.Name = "uiLabel1";
             this.uiLabel1.Size = new System.Drawing.Size(196, 48);
             this.uiLabel1.TabIndex = 0;
-            this.uiLabel1.Text = "인생은 영화처럼";
+            this.uiLabel1.Text = "Search Person";
             this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // personSearchList
@@ -136,6 +137,7 @@ namespace MovieReviewProgram.UI
             this.personDetail.TabIndex = 11;
             this.personDetail.Text = "인물 정보";
             this.personDetail.TextColor = System.Drawing.Color.White;
+            this.personDetail.Click += new System.EventHandler(this.personDetail_Click);
             // 
             // searchBtn
             // 

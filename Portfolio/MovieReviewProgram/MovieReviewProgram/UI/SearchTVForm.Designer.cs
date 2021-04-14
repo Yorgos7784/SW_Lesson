@@ -1,7 +1,7 @@
 ﻿
 namespace MovieReviewProgram.UI
 {
-    partial class SearchMovieForm
+    partial class SearchTVForm
     {
         /// <summary>
         /// Required designer variable.
@@ -32,16 +32,16 @@ namespace MovieReviewProgram.UI
             this.uiSymbolButton1 = new Sunny.UI.UISymbolButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.uiLabel1 = new Sunny.UI.UILabel();
-            this.movieSearchList = new System.Windows.Forms.ListView();
-            this.mName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.mReleaseDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.movieInput = new CxFlatUI.CxFlatTextBox();
-            this.searchBtn = new CxFlatUI.Controls.CxFlatButton();
-            this.movieDetail = new CxFlatUI.Controls.CxFlatButton();
+            this.tvSearchList = new System.Windows.Forms.ListView();
+            this.tvName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tvCountry = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tvImage = new CxFlatUI.CxFlatPictureBox();
             this.close = new CxFlatUI.Controls.CxFlatButton();
-            this.moviePoster = new CxFlatUI.CxFlatPictureBox();
+            this.tvDetail = new CxFlatUI.Controls.CxFlatButton();
+            this.searchBtn = new CxFlatUI.Controls.CxFlatButton();
+            this.tvInput = new CxFlatUI.CxFlatTextBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.moviePoster)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tvImage)).BeginInit();
             this.SuspendLayout();
             // 
             // uiSymbolButton1
@@ -75,7 +75,7 @@ namespace MovieReviewProgram.UI
             this.panel1.Location = new System.Drawing.Point(-4, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(650, 48);
-            this.panel1.TabIndex = 2;
+            this.panel1.TabIndex = 14;
             // 
             // uiLabel1
             // 
@@ -83,78 +83,44 @@ namespace MovieReviewProgram.UI
             this.uiLabel1.ForeColor = System.Drawing.Color.White;
             this.uiLabel1.Location = new System.Drawing.Point(18, 0);
             this.uiLabel1.Name = "uiLabel1";
-            this.uiLabel1.Size = new System.Drawing.Size(196, 48);
+            this.uiLabel1.Size = new System.Drawing.Size(227, 48);
             this.uiLabel1.TabIndex = 0;
-            this.uiLabel1.Text = "Search Movie";
+            this.uiLabel1.Text = "Search TV Show";
             this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // movieSearchList
+            // tvSearchList
             // 
-            this.movieSearchList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.mName,
-            this.mReleaseDate});
-            this.movieSearchList.FullRowSelect = true;
-            this.movieSearchList.HideSelection = false;
-            this.movieSearchList.Location = new System.Drawing.Point(12, 54);
-            this.movieSearchList.Name = "movieSearchList";
-            this.movieSearchList.Size = new System.Drawing.Size(305, 544);
-            this.movieSearchList.TabIndex = 3;
-            this.movieSearchList.UseCompatibleStateImageBehavior = false;
-            this.movieSearchList.View = System.Windows.Forms.View.Details;
-            this.movieSearchList.Click += new System.EventHandler(this.movieSearchList_Click);
+            this.tvSearchList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.tvName,
+            this.tvCountry});
+            this.tvSearchList.FullRowSelect = true;
+            this.tvSearchList.HideSelection = false;
+            this.tvSearchList.Location = new System.Drawing.Point(12, 54);
+            this.tvSearchList.Name = "tvSearchList";
+            this.tvSearchList.Size = new System.Drawing.Size(305, 544);
+            this.tvSearchList.TabIndex = 15;
+            this.tvSearchList.UseCompatibleStateImageBehavior = false;
+            this.tvSearchList.View = System.Windows.Forms.View.Details;
+            this.tvSearchList.Click += new System.EventHandler(this.tvSearchList_Click);
             // 
-            // mName
+            // tvName
             // 
-            this.mName.Text = "영화 제목";
-            this.mName.Width = 150;
+            this.tvName.Text = "이름";
+            this.tvName.Width = 150;
             // 
-            // mReleaseDate
+            // tvCountry
             // 
-            this.mReleaseDate.Text = "개봉일";
-            this.mReleaseDate.Width = 150;
+            this.tvCountry.Text = "국가";
+            this.tvCountry.Width = 150;
             // 
-            // movieInput
+            // tvImage
             // 
-            this.movieInput.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.movieInput.Hint = "";
-            this.movieInput.Location = new System.Drawing.Point(344, 64);
-            this.movieInput.MaxLength = 32767;
-            this.movieInput.Multiline = false;
-            this.movieInput.Name = "movieInput";
-            this.movieInput.PasswordChar = '\0';
-            this.movieInput.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.movieInput.SelectedText = "";
-            this.movieInput.SelectionLength = 0;
-            this.movieInput.SelectionStart = 0;
-            this.movieInput.Size = new System.Drawing.Size(274, 38);
-            this.movieInput.TabIndex = 4;
-            this.movieInput.TabStop = false;
-            this.movieInput.UseSystemPasswordChar = false;
-            this.movieInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.movieInput_KeyPress);
-            // 
-            // searchBtn
-            // 
-            this.searchBtn.ButtonType = CxFlatUI.ButtonType.Primary;
-            this.searchBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.searchBtn.Location = new System.Drawing.Point(515, 118);
-            this.searchBtn.Name = "searchBtn";
-            this.searchBtn.Size = new System.Drawing.Size(99, 35);
-            this.searchBtn.TabIndex = 5;
-            this.searchBtn.Text = "검색";
-            this.searchBtn.TextColor = System.Drawing.Color.White;
-            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
-            // 
-            // movieDetail
-            // 
-            this.movieDetail.ButtonType = CxFlatUI.ButtonType.Primary;
-            this.movieDetail.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.movieDetail.Location = new System.Drawing.Point(373, 557);
-            this.movieDetail.Name = "movieDetail";
-            this.movieDetail.Size = new System.Drawing.Size(99, 35);
-            this.movieDetail.TabIndex = 5;
-            this.movieDetail.Text = "영화 정보";
-            this.movieDetail.TextColor = System.Drawing.Color.White;
-            this.movieDetail.Click += new System.EventHandler(this.movieDetail_Click);
+            this.tvImage.BackColor = System.Drawing.Color.Transparent;
+            this.tvImage.Location = new System.Drawing.Point(356, 167);
+            this.tvImage.Name = "tvImage";
+            this.tvImage.Size = new System.Drawing.Size(250, 375);
+            this.tvImage.TabIndex = 20;
+            this.tvImage.TabStop = false;
             // 
             // close
             // 
@@ -163,38 +129,72 @@ namespace MovieReviewProgram.UI
             this.close.Location = new System.Drawing.Point(490, 557);
             this.close.Name = "close";
             this.close.Size = new System.Drawing.Size(99, 35);
-            this.close.TabIndex = 5;
+            this.close.TabIndex = 17;
             this.close.Text = "뒤로가기";
             this.close.TextColor = System.Drawing.Color.White;
             this.close.Click += new System.EventHandler(this.close_Click);
             // 
-            // moviePoster
+            // tvDetail
             // 
-            this.moviePoster.BackColor = System.Drawing.Color.Transparent;
-            this.moviePoster.Location = new System.Drawing.Point(356, 167);
-            this.moviePoster.Name = "moviePoster";
-            this.moviePoster.Size = new System.Drawing.Size(250, 375);
-            this.moviePoster.TabIndex = 6;
-            this.moviePoster.TabStop = false;
+            this.tvDetail.ButtonType = CxFlatUI.ButtonType.Primary;
+            this.tvDetail.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.tvDetail.Location = new System.Drawing.Point(373, 557);
+            this.tvDetail.Name = "tvDetail";
+            this.tvDetail.Size = new System.Drawing.Size(99, 35);
+            this.tvDetail.TabIndex = 18;
+            this.tvDetail.Text = "시리즈 정보";
+            this.tvDetail.TextColor = System.Drawing.Color.White;
+            this.tvDetail.Click += new System.EventHandler(this.tvDetail_Click);
             // 
-            // SearchMovieForm
+            // searchBtn
+            // 
+            this.searchBtn.ButtonType = CxFlatUI.ButtonType.Primary;
+            this.searchBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.searchBtn.Location = new System.Drawing.Point(515, 118);
+            this.searchBtn.Name = "searchBtn";
+            this.searchBtn.Size = new System.Drawing.Size(99, 35);
+            this.searchBtn.TabIndex = 19;
+            this.searchBtn.Text = "검색";
+            this.searchBtn.TextColor = System.Drawing.Color.White;
+            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
+            // 
+            // tvInput
+            // 
+            this.tvInput.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.tvInput.Hint = "";
+            this.tvInput.Location = new System.Drawing.Point(344, 64);
+            this.tvInput.MaxLength = 32767;
+            this.tvInput.Multiline = false;
+            this.tvInput.Name = "tvInput";
+            this.tvInput.PasswordChar = '\0';
+            this.tvInput.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tvInput.SelectedText = "";
+            this.tvInput.SelectionLength = 0;
+            this.tvInput.SelectionStart = 0;
+            this.tvInput.Size = new System.Drawing.Size(274, 38);
+            this.tvInput.TabIndex = 16;
+            this.tvInput.TabStop = false;
+            this.tvInput.UseSystemPasswordChar = false;
+            this.tvInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tvInput_KeyPress);
+            // 
+            // SearchTVForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(644, 604);
-            this.Controls.Add(this.moviePoster);
-            this.Controls.Add(this.close);
-            this.Controls.Add(this.movieDetail);
-            this.Controls.Add(this.searchBtn);
-            this.Controls.Add(this.movieInput);
-            this.Controls.Add(this.movieSearchList);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.tvSearchList);
+            this.Controls.Add(this.tvImage);
+            this.Controls.Add(this.close);
+            this.Controls.Add(this.tvDetail);
+            this.Controls.Add(this.searchBtn);
+            this.Controls.Add(this.tvInput);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "SearchMovieForm";
+            this.Name = "SearchTVForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "SearchMovie";
+            this.Text = "TVSearchForm";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.moviePoster)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tvImage)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -204,13 +204,13 @@ namespace MovieReviewProgram.UI
         private Sunny.UI.UISymbolButton uiSymbolButton1;
         private System.Windows.Forms.Panel panel1;
         private Sunny.UI.UILabel uiLabel1;
-        private System.Windows.Forms.ListView movieSearchList;
-        private System.Windows.Forms.ColumnHeader mName;
-        private System.Windows.Forms.ColumnHeader mReleaseDate;
-        private CxFlatUI.CxFlatTextBox movieInput;
-        private CxFlatUI.Controls.CxFlatButton searchBtn;
-        private CxFlatUI.Controls.CxFlatButton movieDetail;
+        private System.Windows.Forms.ListView tvSearchList;
+        private System.Windows.Forms.ColumnHeader tvName;
+        private CxFlatUI.CxFlatPictureBox tvImage;
         private CxFlatUI.Controls.CxFlatButton close;
-        private CxFlatUI.CxFlatPictureBox moviePoster;
+        private CxFlatUI.Controls.CxFlatButton tvDetail;
+        private CxFlatUI.Controls.CxFlatButton searchBtn;
+        private CxFlatUI.CxFlatTextBox tvInput;
+        private System.Windows.Forms.ColumnHeader tvCountry;
     }
 }

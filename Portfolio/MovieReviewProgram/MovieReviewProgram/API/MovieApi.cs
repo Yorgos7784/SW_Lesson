@@ -12,6 +12,7 @@ using TMDbLib.Objects.General;
 using TMDbLib.Objects.Movies;
 using TMDbLib.Objects.People;
 using TMDbLib.Objects.Search;
+using TMDbLib.Objects.TvShows;
 
 namespace MovieReviewProgram.API
 {
@@ -38,7 +39,46 @@ namespace MovieReviewProgram.API
             return movies;
         }
 
-        public Bitmap getMoviePoster(int id)
+        public List<PersonInfo> searchPerson(string castName)
+        {
+            List<PersonInfo> persons = new List<PersonInfo>();
+            SearchContainer<SearchPerson> results = client.SearchPersonAsync(castName).Result;
+            Console.WriteLine($"Got {results.Results.Count:N0} of {results.TotalResults:N0} results");
+            System.Windows.Forms.MessageBox.Show($"Got {results.Results.Count:N0} of {results.TotalResults:N0} results", "검색 완료");
+            foreach (SearchPerson person in results.Results)
+            {
+                persons.Add(new PersonInfo(person.Id, person.Name));
+            }
+            return persons;
+        }
+
+        public int searchPersonId(string name)
+        {
+            SearchContainer<SearchPerson> results = client.SearchPersonAsync(name).Result;
+            return results.Results[0].Id;
+        }
+
+        public List<TVInfo> searchTV(string tvName)
+        {
+            List<TVInfo> tvs = new List<TVInfo>();
+            SearchContainer<SearchTv> results = client.SearchTvShowAsync(tvName).Result;
+            System.Windows.Forms.MessageBox.Show($"Got {results.Results.Count:N0} of {results.TotalResults:N0} results", "검색 완료");
+            foreach (SearchTv result in results.Results)
+            {
+                string country = "";
+                for (int i = 0; i < result.OriginCountry.Count; i++)
+                {
+                    if (i == result.OriginCountry.Count - 1)
+                        country += result.OriginCountry[i];
+                    else
+                        country += result.OriginCountry[i] + ", ";
+                }
+                tvs.Add(new TVInfo(result.Id, result.Name, country));
+            }
+            return tvs;
+        }
+
+        public Bitmap getMovieImage(int id)
         {
             Movie movie1 = client.GetMovieAsync(id).Result;
             WebClient Downloader = new WebClient();
@@ -55,36 +95,39 @@ namespace MovieReviewProgram.API
             Bitmap DownloadImage = Bitmap.FromStream(ImageStream) as Bitmap;
             return DownloadImage;
         }
-        
-        public Bitmap getMovieImage(Movie movie1)
+
+        public Bitmap getTvImage(int id)
         {
+            TvShow tv = client.GetTvShowAsync(id).Result;
             WebClient Downloader = new WebClient();
-            Stream ImageStream = Downloader.OpenRead("https://www.themoviedb.org/t/p/w600_and_h900_bestv2" + movie1.PosterPath);
+            Stream ImageStream = Downloader.OpenRead("https://www.themoviedb.org/t/p/w600_and_h900_bestv2" + tv.PosterPath);
             Bitmap DownloadImage = Bitmap.FromStream(ImageStream) as Bitmap;
             return DownloadImage;
         }
 
-        public List<PersonInfo> searchPerson(string castName)
-        {
-            List<PersonInfo> persons = new List<PersonInfo>();
-            SearchContainer<SearchPerson> results = client.SearchPersonAsync(castName).Result;
-            Console.WriteLine($"Got {results.Results.Count:N0} of {results.TotalResults:N0} results");
-            System.Windows.Forms.MessageBox.Show($"Got {results.Results.Count:N0} of {results.TotalResults:N0} results", "검색 완료");
-            foreach (SearchPerson person in results.Results)
-            {
-                persons.Add(new PersonInfo(person.Id, person.Name));
-            }
-            return persons;
-        }
-
         public async Task<Movie> getMovieAsync(int id)
         {
-            return await client.GetMovieAsync(id, MovieMethods.Credits | MovieMethods.Reviews);
+            return await client.GetMovieAsync(id, MovieMethods.Credits);
         }
 
-        public Person gerPerson(int id)
+        public async Task<Person> getPersonAsync(int id)
         {
-            return client.GetPersonAsync(id).Result;
+            return await client.GetPersonAsync(id, PersonMethods.MovieCredits);
+        }
+
+        public async Task<TvShow> getTvShowAsync(int id)
+        {
+            return await client.GetTvShowAsync(id, TvShowMethods.Credits);
+        }
+
+        public string getDate(string date)
+        {
+            string result = "";
+            for (int i = 0; i < 10; i++)
+            {
+                result += date[i];
+            }
+            return result;
         }
     }
 }

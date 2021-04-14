@@ -29,6 +29,9 @@ namespace MovieReviewProgram.UI
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.windowClose = new Sunny.UI.UISymbolButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.uiLabel1 = new Sunny.UI.UILabel();
@@ -41,11 +44,15 @@ namespace MovieReviewProgram.UI
             this.uiLabel6 = new Sunny.UI.UILabel();
             this.releaseDate = new Sunny.UI.UILabel();
             this.uiLabel8 = new Sunny.UI.UILabel();
-            this.cast = new Sunny.UI.UILabel();
-            this.uiLabel3 = new Sunny.UI.UILabel();
-            this.mReview = new Sunny.UI.UILabel();
+            this.uiLabel5 = new Sunny.UI.UILabel();
+            this.overView = new Sunny.UI.UILabel();
+            this.castList = new Sunny.UI.UIDataGridView();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.character = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aboutAc = new CxFlatUI.Controls.CxFlatButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.moviePoster)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.castList)).BeginInit();
             this.SuspendLayout();
             // 
             // windowClose
@@ -56,18 +63,18 @@ namespace MovieReviewProgram.UI
             this.windowClose.FillPressColor = System.Drawing.Color.Maroon;
             this.windowClose.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.windowClose.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.windowClose.IsCircle = true;
-            this.windowClose.Location = new System.Drawing.Point(745, 6);
+            this.windowClose.Location = new System.Drawing.Point(693, 7);
             this.windowClose.MinimumSize = new System.Drawing.Size(1, 1);
             this.windowClose.Name = "windowClose";
             this.windowClose.RectColor = System.Drawing.Color.Brown;
             this.windowClose.RectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.windowClose.RectPressColor = System.Drawing.Color.Maroon;
             this.windowClose.RectSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.windowClose.Size = new System.Drawing.Size(38, 35);
+            this.windowClose.Size = new System.Drawing.Size(90, 35);
             this.windowClose.Style = Sunny.UI.UIStyle.Custom;
             this.windowClose.Symbol = 61453;
             this.windowClose.TabIndex = 2;
+            this.windowClose.Text = "Close";
             this.windowClose.Click += new System.EventHandler(this.windowClose_Click);
             // 
             // panel1
@@ -83,17 +90,18 @@ namespace MovieReviewProgram.UI
             // 
             // uiLabel1
             // 
-            this.uiLabel1.Font = new System.Drawing.Font("Microsoft YaHei", 14F);
+            this.uiLabel1.Font = new System.Drawing.Font("Orbit-B BT", 18.25F, System.Drawing.FontStyle.Bold);
+            this.uiLabel1.ForeColor = System.Drawing.Color.White;
             this.uiLabel1.Location = new System.Drawing.Point(18, 0);
             this.uiLabel1.Name = "uiLabel1";
             this.uiLabel1.Size = new System.Drawing.Size(196, 48);
             this.uiLabel1.TabIndex = 0;
-            this.uiLabel1.Text = "인생은 영화처럼";
+            this.uiLabel1.Text = "Movie Info";
             this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // moviePoster
             // 
-            this.moviePoster.Location = new System.Drawing.Point(19, 95);
+            this.moviePoster.Location = new System.Drawing.Point(31, 95);
             this.moviePoster.Name = "moviePoster";
             this.moviePoster.Size = new System.Drawing.Size(350, 525);
             this.moviePoster.TabIndex = 4;
@@ -102,7 +110,7 @@ namespace MovieReviewProgram.UI
             // mName
             // 
             this.mName.Font = new System.Drawing.Font("Microsoft YaHei", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mName.Location = new System.Drawing.Point(410, 76);
+            this.mName.Location = new System.Drawing.Point(412, 76);
             this.mName.Name = "mName";
             this.mName.Size = new System.Drawing.Size(323, 76);
             this.mName.TabIndex = 5;
@@ -121,14 +129,19 @@ namespace MovieReviewProgram.UI
             // 
             // mDirector
             // 
-            this.mDirector.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.mDirector.AutoSize = true;
+            this.mDirector.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mDirector.ForeColor = System.Drawing.Color.DodgerBlue;
             this.mDirector.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.mDirector.Location = new System.Drawing.Point(491, 164);
+            this.mDirector.Location = new System.Drawing.Point(493, 169);
             this.mDirector.Name = "mDirector";
-            this.mDirector.Size = new System.Drawing.Size(250, 30);
+            this.mDirector.Size = new System.Drawing.Size(71, 21);
             this.mDirector.TabIndex = 6;
             this.mDirector.Text = "Director";
             this.mDirector.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.mDirector.Click += new System.EventHandler(this.mDirector_Click);
+            this.mDirector.MouseEnter += new System.EventHandler(this.mDirector_MouseEnter);
+            this.mDirector.MouseLeave += new System.EventHandler(this.mDirector_MouseLeave);
             // 
             // uiLabel4
             // 
@@ -165,7 +178,7 @@ namespace MovieReviewProgram.UI
             // 
             this.releaseDate.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
             this.releaseDate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.releaseDate.Location = new System.Drawing.Point(527, 224);
+            this.releaseDate.Location = new System.Drawing.Point(528, 224);
             this.releaseDate.Name = "releaseDate";
             this.releaseDate.Size = new System.Drawing.Size(213, 30);
             this.releaseDate.TabIndex = 6;
@@ -175,54 +188,102 @@ namespace MovieReviewProgram.UI
             // uiLabel8
             // 
             this.uiLabel8.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel8.Location = new System.Drawing.Point(412, 254);
+            this.uiLabel8.Location = new System.Drawing.Point(412, 365);
             this.uiLabel8.Name = "uiLabel8";
             this.uiLabel8.Size = new System.Drawing.Size(57, 30);
             this.uiLabel8.TabIndex = 6;
-            this.uiLabel8.Text = "Cast : ";
+            this.uiLabel8.Text = "Cast";
             this.uiLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // cast
+            // uiLabel5
             // 
-            this.cast.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.cast.Location = new System.Drawing.Point(464, 260);
-            this.cast.Name = "cast";
-            this.cast.Size = new System.Drawing.Size(269, 129);
-            this.cast.TabIndex = 6;
-            this.cast.Text = "Cast";
-            this.cast.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiLabel5.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiLabel5.Location = new System.Drawing.Point(412, 254);
+            this.uiLabel5.Name = "uiLabel5";
+            this.uiLabel5.Size = new System.Drawing.Size(109, 30);
+            this.uiLabel5.TabIndex = 6;
+            this.uiLabel5.Text = "Overview";
+            this.uiLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // uiLabel3
+            // overView
             // 
-            this.uiLabel3.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel3.Location = new System.Drawing.Point(412, 404);
-            this.uiLabel3.Name = "uiLabel3";
-            this.uiLabel3.Size = new System.Drawing.Size(73, 30);
-            this.uiLabel3.TabIndex = 6;
-            this.uiLabel3.Text = "Review";
-            this.uiLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.overView.Font = new System.Drawing.Font("Microsoft YaHei", 9F);
+            this.overView.Location = new System.Drawing.Point(415, 283);
+            this.overView.Name = "overView";
+            this.overView.Size = new System.Drawing.Size(359, 81);
+            this.overView.TabIndex = 6;
+            this.overView.Text = "Cast";
+            this.overView.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // mReview
+            // castList
             // 
-            this.mReview.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mReview.Location = new System.Drawing.Point(412, 458);
-            this.mReview.Name = "mReview";
-            this.mReview.Size = new System.Drawing.Size(347, 179);
-            this.mReview.TabIndex = 6;
-            this.mReview.Text = "Review";
-            this.mReview.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
+            this.castList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            this.castList.BackgroundColor = System.Drawing.Color.White;
+            this.castList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.castList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            this.castList.ColumnHeadersHeight = 32;
+            this.castList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.castList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.name,
+            this.character});
+            this.castList.EnableHeadersVisualStyles = false;
+            this.castList.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.castList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            this.castList.Location = new System.Drawing.Point(416, 398);
+            this.castList.Name = "castList";
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            this.castList.RowsDefaultCellStyle = dataGridViewCellStyle15;
+            this.castList.RowTemplate.Height = 29;
+            this.castList.SelectedIndex = -1;
+            this.castList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.castList.ShowGridLine = true;
+            this.castList.Size = new System.Drawing.Size(358, 256);
+            this.castList.TabIndex = 7;
+            // 
+            // name
+            // 
+            this.name.HeaderText = "PerFormer";
+            this.name.Name = "name";
+            this.name.Width = 160;
+            // 
+            // character
+            // 
+            this.character.HeaderText = "Role";
+            this.character.Name = "character";
+            this.character.Width = 160;
+            // 
+            // aboutAc
+            // 
+            this.aboutAc.ButtonType = CxFlatUI.ButtonType.Primary;
+            this.aboutAc.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.aboutAc.Location = new System.Drawing.Point(603, 370);
+            this.aboutAc.Name = "aboutAc";
+            this.aboutAc.Size = new System.Drawing.Size(171, 23);
+            this.aboutAc.TabIndex = 8;
+            this.aboutAc.Text = "About Actor/Actress";
+            this.aboutAc.TextColor = System.Drawing.Color.White;
+            this.aboutAc.Click += new System.EventHandler(this.aboutAc_Click);
             // 
             // MovieDetailForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(786, 666);
+            this.Controls.Add(this.aboutAc);
+            this.Controls.Add(this.castList);
             this.Controls.Add(this.mDirector);
-            this.Controls.Add(this.mReview);
-            this.Controls.Add(this.cast);
+            this.Controls.Add(this.overView);
             this.Controls.Add(this.releaseDate);
             this.Controls.Add(this.genre);
-            this.Controls.Add(this.uiLabel3);
+            this.Controls.Add(this.uiLabel5);
             this.Controls.Add(this.uiLabel8);
             this.Controls.Add(this.uiLabel6);
             this.Controls.Add(this.uiLabel4);
@@ -237,7 +298,9 @@ namespace MovieReviewProgram.UI
             this.Load += new System.EventHandler(this.MovieDetailForm_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.moviePoster)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.castList)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -255,8 +318,11 @@ namespace MovieReviewProgram.UI
         private Sunny.UI.UILabel uiLabel6;
         private Sunny.UI.UILabel releaseDate;
         private Sunny.UI.UILabel uiLabel8;
-        private Sunny.UI.UILabel cast;
-        private Sunny.UI.UILabel uiLabel3;
-        private Sunny.UI.UILabel mReview;
+        private Sunny.UI.UILabel uiLabel5;
+        private Sunny.UI.UILabel overView;
+        private Sunny.UI.UIDataGridView castList;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn character;
+        private CxFlatUI.Controls.CxFlatButton aboutAc;
     }
 }

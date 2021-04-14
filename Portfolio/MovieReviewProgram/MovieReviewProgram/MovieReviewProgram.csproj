@@ -109,9 +109,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="API\MovieApi.cs" />
-    <Compile Include="Model\LogWriter.cs" />
+    <Compile Include="Common\LogWriter.cs" />
     <Compile Include="Model\MovieInfo.cs" />
     <Compile Include="Model\PersonInfo.cs" />
+    <Compile Include="Model\TVInfo.cs" />
     <Compile Include="UI\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +124,12 @@
     </Compile>
     <Compile Include="UI\MovieDetailForm.Designer.cs">
       <DependentUpon>MovieDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PersonDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PersonDetailForm.Designer.cs">
+      <DependentUpon>PersonDetailForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\SearchMovieForm.cs">
       <SubType>Form</SubType>
@@ -137,6 +144,18 @@
     </Compile>
     <Compile Include="UI\SearchPersonForm.Designer.cs">
       <DependentUpon>SearchPersonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SearchTVForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SearchTVForm.Designer.cs">
+      <DependentUpon>SearchTVForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TvDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\TvDetailForm.Designer.cs">
+      <DependentUpon>TvDetailForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="UI\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -153,11 +172,20 @@
     <EmbeddedResource Include="UI\MovieDetailForm.resx">
       <DependentUpon>MovieDetailForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\PersonDetailForm.resx">
+      <DependentUpon>PersonDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\SearchMovieForm.resx">
       <DependentUpon>SearchMovieForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\SearchPersonForm.resx">
       <DependentUpon>SearchPersonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SearchTVForm.resx">
+      <DependentUpon>SearchTVForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\TvDetailForm.resx">
+      <DependentUpon>TvDetailForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

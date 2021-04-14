@@ -29,42 +29,25 @@ namespace MovieReviewProgram.UI
         /// </summary>
         private void InitializeComponent()
         {
-            this.cxFlatButton1 = new CxFlatUI.Controls.CxFlatButton();
-            this.cxFlatButton4 = new CxFlatUI.Controls.CxFlatButton();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.uiSymbolButton1 = new Sunny.UI.UISymbolButton();
             this.uiLabel1 = new Sunny.UI.UILabel();
-            this.cxFlatButton2 = new CxFlatUI.Controls.CxFlatButton();
+            this.searchMovieBtn = new Sunny.UI.UIImageButton();
+            this.searchTvBtn = new Sunny.UI.UIImageButton();
+            this.searchPersonBtn = new Sunny.UI.UIImageButton();
+            this.uiImageButton1 = new Sunny.UI.UIImageButton();
+            this.uiImageButton2 = new Sunny.UI.UIImageButton();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.searchMovieBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchTvBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchPersonBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // cxFlatButton1
-            // 
-            this.cxFlatButton1.ButtonType = CxFlatUI.ButtonType.Primary;
-            this.cxFlatButton1.Font = new System.Drawing.Font("Segoe UI", 30F);
-            this.cxFlatButton1.Location = new System.Drawing.Point(16, 67);
-            this.cxFlatButton1.Name = "cxFlatButton1";
-            this.cxFlatButton1.Size = new System.Drawing.Size(303, 258);
-            this.cxFlatButton1.TabIndex = 0;
-            this.cxFlatButton1.Text = "영화 찾기";
-            this.cxFlatButton1.TextColor = System.Drawing.Color.White;
-            this.cxFlatButton1.Click += new System.EventHandler(this.cxFlatButton1_Click);
-            // 
-            // cxFlatButton4
-            // 
-            this.cxFlatButton4.ButtonType = CxFlatUI.ButtonType.Primary;
-            this.cxFlatButton4.Font = new System.Drawing.Font("Segoe UI", 30F);
-            this.cxFlatButton4.Location = new System.Drawing.Point(16, 331);
-            this.cxFlatButton4.Name = "cxFlatButton4";
-            this.cxFlatButton4.Size = new System.Drawing.Size(303, 258);
-            this.cxFlatButton4.TabIndex = 0;
-            this.cxFlatButton4.Text = "장르별";
-            this.cxFlatButton4.TextColor = System.Drawing.Color.White;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Controls.Add(this.uiSymbolButton1);
             this.panel1.Controls.Add(this.uiLabel1);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.panel1.Location = new System.Drawing.Point(-4, 0);
@@ -72,74 +55,120 @@ namespace MovieReviewProgram.UI
             this.panel1.Size = new System.Drawing.Size(650, 48);
             this.panel1.TabIndex = 1;
             // 
-            // uiSymbolButton1
-            // 
-            this.uiSymbolButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiSymbolButton1.FillColor = System.Drawing.Color.Brown;
-            this.uiSymbolButton1.FillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.uiSymbolButton1.FillPressColor = System.Drawing.Color.Maroon;
-            this.uiSymbolButton1.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.uiSymbolButton1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiSymbolButton1.IsCircle = true;
-            this.uiSymbolButton1.Location = new System.Drawing.Point(602, 6);
-            this.uiSymbolButton1.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiSymbolButton1.Name = "uiSymbolButton1";
-            this.uiSymbolButton1.RectColor = System.Drawing.Color.Brown;
-            this.uiSymbolButton1.RectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.uiSymbolButton1.RectPressColor = System.Drawing.Color.Maroon;
-            this.uiSymbolButton1.RectSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.uiSymbolButton1.Size = new System.Drawing.Size(38, 35);
-            this.uiSymbolButton1.Style = Sunny.UI.UIStyle.Custom;
-            this.uiSymbolButton1.Symbol = 61453;
-            this.uiSymbolButton1.TabIndex = 2;
-            this.uiSymbolButton1.Click += new System.EventHandler(this.uiSymbolButton1_Click);
-            // 
             // uiLabel1
             // 
-            this.uiLabel1.Font = new System.Drawing.Font("Microsoft YaHei", 14F);
+            this.uiLabel1.Font = new System.Drawing.Font("Orbit-B BT", 18.25F, System.Drawing.FontStyle.Bold);
+            this.uiLabel1.ForeColor = System.Drawing.Color.White;
             this.uiLabel1.Location = new System.Drawing.Point(18, 0);
             this.uiLabel1.Name = "uiLabel1";
             this.uiLabel1.Size = new System.Drawing.Size(196, 48);
             this.uiLabel1.TabIndex = 0;
-            this.uiLabel1.Text = "인생은 영화처럼";
+            this.uiLabel1.Text = "Movie Library";
             this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // cxFlatButton2
+            // searchMovieBtn
             // 
-            this.cxFlatButton2.ButtonType = CxFlatUI.ButtonType.Primary;
-            this.cxFlatButton2.Font = new System.Drawing.Font("Segoe UI", 30F);
-            this.cxFlatButton2.Location = new System.Drawing.Point(325, 67);
-            this.cxFlatButton2.Name = "cxFlatButton2";
-            this.cxFlatButton2.Size = new System.Drawing.Size(303, 258);
-            this.cxFlatButton2.TabIndex = 0;
-            this.cxFlatButton2.Text = "인물 찾기";
-            this.cxFlatButton2.TextColor = System.Drawing.Color.White;
-            this.cxFlatButton2.Click += new System.EventHandler(this.cxFlatButton2_Click);
+            this.searchMovieBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.searchMovieBtn.Font = new System.Drawing.Font("HY동녘B", 25F, System.Drawing.FontStyle.Bold);
+            this.searchMovieBtn.ForeColor = System.Drawing.Color.White;
+            this.searchMovieBtn.Image = ((System.Drawing.Image)(resources.GetObject("searchMovieBtn.Image")));
+            this.searchMovieBtn.Location = new System.Drawing.Point(16, 67);
+            this.searchMovieBtn.Name = "searchMovieBtn";
+            this.searchMovieBtn.Size = new System.Drawing.Size(303, 258);
+            this.searchMovieBtn.TabIndex = 2;
+            this.searchMovieBtn.TabStop = false;
+            this.searchMovieBtn.Text = "Search Movie";
+            this.searchMovieBtn.Click += new System.EventHandler(this.searchMovieBtn_Click);
+            // 
+            // searchTvBtn
+            // 
+            this.searchTvBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.searchTvBtn.Font = new System.Drawing.Font("HY동녘B", 25F, System.Drawing.FontStyle.Bold);
+            this.searchTvBtn.ForeColor = System.Drawing.Color.White;
+            this.searchTvBtn.Image = ((System.Drawing.Image)(resources.GetObject("searchTvBtn.Image")));
+            this.searchTvBtn.Location = new System.Drawing.Point(325, 67);
+            this.searchTvBtn.Name = "searchTvBtn";
+            this.searchTvBtn.Size = new System.Drawing.Size(303, 258);
+            this.searchTvBtn.TabIndex = 2;
+            this.searchTvBtn.TabStop = false;
+            this.searchTvBtn.Text = "Search TV Show";
+            this.searchTvBtn.Click += new System.EventHandler(this.searchTvBtn_Click);
+            // 
+            // searchPersonBtn
+            // 
+            this.searchPersonBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.searchPersonBtn.Font = new System.Drawing.Font("HY동녘B", 25F, System.Drawing.FontStyle.Bold);
+            this.searchPersonBtn.ForeColor = System.Drawing.Color.White;
+            this.searchPersonBtn.Image = ((System.Drawing.Image)(resources.GetObject("searchPersonBtn.Image")));
+            this.searchPersonBtn.Location = new System.Drawing.Point(16, 331);
+            this.searchPersonBtn.Name = "searchPersonBtn";
+            this.searchPersonBtn.Size = new System.Drawing.Size(303, 258);
+            this.searchPersonBtn.TabIndex = 2;
+            this.searchPersonBtn.TabStop = false;
+            this.searchPersonBtn.Text = "Search Person";
+            this.searchPersonBtn.Click += new System.EventHandler(this.searchPersonBtn_Click);
+            // 
+            // uiImageButton1
+            // 
+            this.uiImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiImageButton1.Font = new System.Drawing.Font("HY동녘B", 25F, System.Drawing.FontStyle.Bold);
+            this.uiImageButton1.ForeColor = System.Drawing.Color.White;
+            this.uiImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("uiImageButton1.Image")));
+            this.uiImageButton1.Location = new System.Drawing.Point(325, 331);
+            this.uiImageButton1.Name = "uiImageButton1";
+            this.uiImageButton1.Size = new System.Drawing.Size(303, 128);
+            this.uiImageButton1.TabIndex = 3;
+            this.uiImageButton1.TabStop = false;
+            this.uiImageButton1.Text = "About Program";
+            this.uiImageButton1.Click += new System.EventHandler(this.uiImageButton1_Click);
+            // 
+            // uiImageButton2
+            // 
+            this.uiImageButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiImageButton2.Font = new System.Drawing.Font("HY동녘B", 30F, System.Drawing.FontStyle.Bold);
+            this.uiImageButton2.ForeColor = System.Drawing.Color.White;
+            this.uiImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("uiImageButton2.Image")));
+            this.uiImageButton2.Location = new System.Drawing.Point(325, 461);
+            this.uiImageButton2.Name = "uiImageButton2";
+            this.uiImageButton2.Size = new System.Drawing.Size(303, 128);
+            this.uiImageButton2.TabIndex = 3;
+            this.uiImageButton2.TabStop = false;
+            this.uiImageButton2.Text = "Program Exit";
+            this.uiImageButton2.Click += new System.EventHandler(this.uiImageButton2_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(644, 604);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(646, 604);
+            this.Controls.Add(this.uiImageButton2);
+            this.Controls.Add(this.uiImageButton1);
+            this.Controls.Add(this.searchPersonBtn);
+            this.Controls.Add(this.searchTvBtn);
+            this.Controls.Add(this.searchMovieBtn);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.cxFlatButton4);
-            this.Controls.Add(this.cxFlatButton2);
-            this.Controls.Add(this.cxFlatButton1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MainForm_KeyPress);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.searchMovieBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchTvBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchPersonBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton2)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private CxFlatUI.Controls.CxFlatButton cxFlatButton1;
-        private CxFlatUI.Controls.CxFlatButton cxFlatButton4;
         private System.Windows.Forms.Panel panel1;
         private Sunny.UI.UILabel uiLabel1;
-        private Sunny.UI.UISymbolButton uiSymbolButton1;
-        private CxFlatUI.Controls.CxFlatButton cxFlatButton2;
+        private Sunny.UI.UIImageButton searchMovieBtn;
+        private Sunny.UI.UIImageButton searchTvBtn;
+        private Sunny.UI.UIImageButton searchPersonBtn;
+        private Sunny.UI.UIImageButton uiImageButton1;
+        private Sunny.UI.UIImageButton uiImageButton2;
     }
 }

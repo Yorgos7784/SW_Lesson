@@ -27,14 +27,43 @@ namespace MovieReviewProgram.UI
             Application.Exit();
         }
 
-        private void cxFlatButton1_Click(object sender, EventArgs e)
+        private void searchMovieBtn_Click(object sender, EventArgs e)
         {
-            new SearchMovieForm(client, ma).ShowDialog();
+            new SearchMovieForm(ma).ShowDialog();
         }
 
-        private void cxFlatButton2_Click(object sender, EventArgs e)
+        private void searchTvBtn_Click(object sender, EventArgs e)
         {
-            new SearchPersonForm(client, ma).ShowDialog();
+            new SearchTVForm(ma).ShowDialog();
+        }
+
+        private void searchPersonBtn_Click(object sender, EventArgs e)
+        {
+            new SearchPersonForm(ma).ShowDialog();
+        }
+
+        private void uiImageButton2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void uiImageButton1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Created By Yorgos 2021.04.14");
+        }
+
+        private void MainForm_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            try
+            {
+                const char ESC_KEY = (char)Keys.Escape;
+                if (e.KeyChar == ESC_KEY)
+                    Application.Exit();
+            }
+            catch (FormatException)
+            {
+
+            }
         }
     }
 }
