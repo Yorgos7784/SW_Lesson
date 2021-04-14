@@ -105,6 +105,14 @@ namespace MovieReviewProgram.API
             return DownloadImage;
         }
 
+        public Bitmap noImage()
+        {
+            WebClient Downloader = new WebClient();
+            Stream ImageStream = Downloader.OpenRead("https://i.stack.imgur.com/y9DpT.jpg");
+            Bitmap DownloadImage = Bitmap.FromStream(ImageStream) as Bitmap;
+            return DownloadImage;
+        }
+
         public async Task<Movie> getMovieAsync(int id)
         {
             return await client.GetMovieAsync(id, MovieMethods.Credits);
@@ -122,12 +130,20 @@ namespace MovieReviewProgram.API
 
         public string getDate(string date)
         {
-            string result = "";
-            for (int i = 0; i < 10; i++)
+            try
             {
-                result += date[i];
+                string result = "";
+                for (int i = 0; i < 10; i++)
+                {
+                    result += date[i];
+                }
+                return result;
             }
-            return result;
+            catch (Exception)
+            {
+                return "None";
+            }
+            
         }
     }
 }

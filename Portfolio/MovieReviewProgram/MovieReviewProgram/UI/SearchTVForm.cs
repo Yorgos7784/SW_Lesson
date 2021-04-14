@@ -69,7 +69,7 @@ namespace MovieReviewProgram.UI
             {
                 // 이미지가 존재하지 않을때
                 //MessageBox.Show("이미지가 없습니다.", "이미지 없음");
-                tvImage.Image = Image.FromFile("C:/Users/KB/Desktop/SW_Lesson/Portfolio/MovieReviewProgram/MovieReviewProgram/img/NoImage.jpg");
+                tvImage.Image = ma.noImage();
                 tvImage.SizeMode = PictureBoxSizeMode.Zoom;
             }
         }
