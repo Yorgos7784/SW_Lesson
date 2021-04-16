@@ -1,0 +1,10 @@
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\ParkingManagementProgram\ParkingManagementProgram\bin\Debug\ParkingManagementProgram.exe.config
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\ParkingManagementProgram\ParkingManagementProgram\bin\Debug\ParkingManagementProgram.exe
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\ParkingManagementProgram\ParkingManagementProgram\bin\Debug\ParkingManagementProgram.pdb
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\ParkingManagementProgram\ParkingManagementProgram\obj\Debug\ParkingManagementProgram.Form1.resources
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\ParkingManagementProgram\ParkingManagementProgram\obj\Debug\ParkingManagementProgram.Properties.Resources.resources
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\ParkingManagementProgram\ParkingManagementProgram\obj\Debug\ParkingManagementProgram.csproj.GenerateResource.cache
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\ParkingManagementProgram\ParkingManagementProgram\obj\Debug\ParkingManagementProgram.csproj.CoreCompileInputs.cache
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\ParkingManagementProgram\ParkingManagementProgram\obj\Debug\ParkingManagementProgram.exe
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\ParkingManagementProgram\ParkingManagementProgram\obj\Debug\ParkingManagementProgram.pdb
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\ParkingManagementProgram\ParkingManagementProgram\obj\Debug\ParkingManagementProgram.csprojAssemblyReference.cache
