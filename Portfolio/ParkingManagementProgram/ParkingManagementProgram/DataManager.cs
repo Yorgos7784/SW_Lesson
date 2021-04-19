@@ -8,6 +8,8 @@ namespace ParkingManagementProgram
     class DataManager
     {
         public static List<ParkingCar> Cars = new List<ParkingCar>();
+        
+        // static이기때문에 DataManager 생성하자마자 메모리에 올라감
         static DataManager()
         {
             Load();
@@ -84,7 +86,7 @@ namespace ParkingManagementProgram
                 for (int i = 0; i < 5; i++)
                 {
                     booksOutput += "<car>\n";
-                    booksOutput += $"   <parkingSpot>{i}</parkingSpot>\n";
+                    booksOutput += $"   <parkingSpot>{i+1}</parkingSpot>\n";
                     booksOutput += "   <carNumber></carNumber>\n";
                     booksOutput += "   <driverName></driverName>\n";
                     booksOutput += "   <phoneNumber></phoneNumber>\n";
@@ -113,7 +115,5 @@ namespace ParkingManagementProgram
                 writer.WriteLine(contents);
             }
         }
-
-
     }
 }

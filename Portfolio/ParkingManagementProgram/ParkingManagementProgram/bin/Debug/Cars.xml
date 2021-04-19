@@ -1,37 +1,37 @@
 <cars>
 <car>
-   <parkingSpot>0</parkingSpot>
-   <carNumber></carNumber>
-   <driverName></driverName>
-   <phoneNumber></phoneNumber>
-   <parkingTime></parkingTime>
-</car>
-<car>
    <parkingSpot>1</parkingSpot>
-   <carNumber></carNumber>
-   <driverName></driverName>
-   <phoneNumber></phoneNumber>
-   <parkingTime></parkingTime>
+   <carNumber>21고 1594</carNumber>
+   <driverName>황창식</driverName>
+   <phoneNumber>010-1111-2222</phoneNumber>
+   <parkingTime>2021-04-19 오전 11:17:55</parkingTime>
 </car>
 <car>
    <parkingSpot>2</parkingSpot>
-   <carNumber></carNumber>
-   <driverName></driverName>
-   <phoneNumber></phoneNumber>
-   <parkingTime></parkingTime>
+   <carNumber>21고 1594</carNumber>
+   <driverName>김길동</driverName>
+   <phoneNumber>010-1234-5678</phoneNumber>
+   <parkingTime>2021-04-19 오전 11:18:13</parkingTime>
 </car>
 <car>
    <parkingSpot>3</parkingSpot>
-   <carNumber></carNumber>
-   <driverName></driverName>
-   <phoneNumber></phoneNumber>
-   <parkingTime></parkingTime>
+   <carNumber>21고 1594</carNumber>
+   <driverName>홍길동</driverName>
+   <phoneNumber>010-4567-8912</phoneNumber>
+   <parkingTime>2021-04-19 오전 11:18:32</parkingTime>
 </car>
 <car>
    <parkingSpot>4</parkingSpot>
    <carNumber></carNumber>
    <driverName></driverName>
    <phoneNumber></phoneNumber>
-   <parkingTime></parkingTime>
+   <parkingTime>2021-04-19 오전 10:56:56</parkingTime>
+</car>
+<car>
+   <parkingSpot>5</parkingSpot>
+   <carNumber></carNumber>
+   <driverName></driverName>
+   <phoneNumber></phoneNumber>
+   <parkingTime>2021-04-19 오전 10:57:01</parkingTime>
 </car>
 </cars>

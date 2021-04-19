@@ -40,3 +40,58 @@
    위치: System.IO.File.InternalReadAllText(String path, Encoding encoding, Boolean checkHost)
    위치: System.IO.File.ReadAllText(String path)
    위치: ParkingManagementProgram.DataManager.Load() 파일 C:\Users\KB\Desktop\SW_Lesson\Portfolio\ParkingManagementProgram\ParkingManagementProgram\DataManager.cs:줄 21
+[2021-04-19 10:24:54]주차버튼 클릭
+'C:\Users\KB\Desktop\SW_Lesson\Portfolio\ParkingManagementProgram\ParkingManagementProgram\bin\Debug\Cars.xml' 파일을 찾을 수 없습니다.
+   위치: System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   위치: System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   위치: System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   위치: System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   위치: System.IO.File.InternalReadAllText(String path, Encoding encoding, Boolean checkHost)
+   위치: System.IO.File.ReadAllText(String path)
+   위치: ParkingManagementProgram.DataManager.Load() 파일 C:\Users\KB\Desktop\SW_Lesson\Portfolio\ParkingManagementProgram\ParkingManagementProgram\DataManager.cs:줄 23
+[2021-04-19 10:26:10]주차버튼 클릭
+[2021-04-19 10:26:14]주차버튼 클릭
+[2021-04-19 10:26:15]주차버튼 클릭
+[2021-04-19 10:26:18]주차버튼 클릭
+[2021-04-19 10:26:21]주차버튼 클릭
+[2021-04-19 10:26:30]조회버튼 클릭
+[2021-04-19 10:26:53]주차버튼 클릭
+[2021-04-19 10:26:55]1번에는 이미 주차되어 있습니다.
+[2021-04-19 10:27:01]주차버튼 클릭
+[2021-04-19 10:34:50]주차버튼 클릭
+[2021-04-19 10:34:51]11에 주차 할 수 없습니다.
+[2021-04-19 10:56:32]출차버튼 클릭
+[2021-04-19 10:56:34]주차공간 1에 21고 9832차량이 출차되었습니다.
+[2021-04-19 10:56:39]출차버튼 클릭
+[2021-04-19 10:56:40]주차공간 3에 21고 9832차량이 출차되었습니다.
+[2021-04-19 10:56:42]출차버튼 클릭
+[2021-04-19 10:56:43]주차된 차가 없습니다.
+[2021-04-19 10:56:51]출차버튼 클릭
+[2021-04-19 10:56:52]주차공간 2에 차량이 출차되었습니다.
+[2021-04-19 10:56:56]출차버튼 클릭
+[2021-04-19 10:56:57]주차공간 4에 차량이 출차되었습니다.
+[2021-04-19 10:57:01]출차버튼 클릭
+[2021-04-19 10:57:02]주차공간 5에 차량이 출차되었습니다.
+[2021-04-19 11:17:55]주차버튼 클릭
+[2021-04-19 11:18:13]주차버튼 클릭
+[2021-04-19 11:18:32]주차버튼 클릭
+[2021-04-19 11:27:50]조회버튼 클릭
+[2021-04-19 11:27:52]조회버튼 클릭
+[2021-04-19 11:27:53]조회버튼 클릭
+[2021-04-19 11:27:53]조회버튼 클릭
+[2021-04-19 11:28:08]조회버튼 클릭
+[2021-04-19 11:28:13]조회버튼 클릭
+[2021-04-19 11:28:36]조회버튼 클릭
+[2021-04-19 11:28:40]조회버튼 클릭
+[2021-04-19 11:28:47]조회버튼 클릭
+[2021-04-19 11:33:06]조회버튼 클릭
+[2021-04-19 11:33:07]4에 주차된 차량이 없습니다.
+[2021-04-19 11:33:21]조회버튼 클릭
+[2021-04-19 11:33:22]4에 주차된 차량이 없습니다.
+[2021-04-19 11:33:34]조회버튼 클릭
+[2021-04-19 11:33:35]4에 주차된 차량이 없습니다.
+[2021-04-19 11:36:13]조회버튼 클릭
+[2021-04-19 11:36:18]조회버튼 클릭
+[2021-04-19 11:38:53]조회버튼 클릭
+[2021-04-19 11:38:58]조회버튼 클릭
+[2021-04-19 11:39:00]4에 주차된 차가 없습니다.
