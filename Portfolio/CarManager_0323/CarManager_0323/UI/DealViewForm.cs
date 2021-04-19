@@ -33,7 +33,7 @@ namespace CarManager_0323.UI
             {
                 int n = dealList.SelectedItems[0].Index;
                 string cus_name = dealList.Items[n].SubItems[1].Text;
-                new CustDetailViewForm(oracle, cus_name).ShowDialog();
+                new CustDetailViewForm(oracle, cus_name).Show();
             }
             dealList.Items.Clear();
             initDealView();
@@ -46,7 +46,7 @@ namespace CarManager_0323.UI
                 int n = dealList.SelectedItems[0].Index;
                 string car_name = dealList.Items[n].SubItems[2].Text;
                 string car_price = dealList.Items[n].SubItems[3].Text;
-                new CarDetailViewForm(oracle, car_name, car_price).ShowDialog();
+                new CarDetailViewForm(oracle, car_name, car_price).Show();
             }
             dealList.Items.Clear();
             initDealView();
@@ -58,7 +58,7 @@ namespace CarManager_0323.UI
             {
                 int n = dealList.SelectedItems[0].Index;
                 string s_name = dealList.Items[n].SubItems[4].Text;
-
+                new SellerDetailViewForm(oracle, s_name).Show();
             }
             dealList.Items.Clear();
             initDealView();

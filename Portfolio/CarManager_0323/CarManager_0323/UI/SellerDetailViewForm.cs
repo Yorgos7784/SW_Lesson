@@ -1,4 +1,6 @@
 ﻿using CarManager_0323.DB;
+using CarManager_0323.Model;
+using CarManager_0323.Util;
 using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
@@ -15,6 +17,9 @@ namespace CarManager_0323.UI
     partial class SellerDetailViewForm : MaterialForm
     {
         string sName;
+        string sTel;
+        int count;
+        Seller seller;
         DaoOracle oracle;
         
         public SellerDetailViewForm(DaoOracle oracle, string sName)
@@ -22,6 +27,36 @@ namespace CarManager_0323.UI
             InitializeComponent();
             this.oracle = oracle;
             this.sName = sName;
+        }
+
+        private void SellerDetailViewForm_Load(object sender, EventArgs e)
+        {
+            count = oracle.sellerCount(sName);
+            if(count == 1)
+            {
+                seller = oracle.selectSeller(sName);
+            }
+            else
+            {
+                sTel = new MessageBoxUtil().getInst().myInputBox("판매원의 전화번호를 입력하세요.", "이름 중복", "");
+                seller = oracle.selectSeller(sName, sTel);
+            }
+            
+            sellerName.Text = seller.Name;
+            sellerTel.Text = seller.Tel;
+            sellerEmail.Text = seller.Email;
+            sellerGrade.Text = seller.Grade;
+            sellerDeri.Text = seller.Derijum;
+        }
+
+        private void cusCancel_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void cusOK_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -618,6 +618,23 @@ namespace CarManager_0323.DB
             }
         }
 
+        public void updateSeller(Seller seller, string sName)
+        {
+            try
+            {
+                string query = string.Format("UPDATE SELLER_T SET S_NAME='{0}', S_TEL='{1}', S_EMAIL='{2}', S_GRADE='{3}', S_DERIJUM='{4}' WHERE S_NAME='{5}'", seller.Name, seller.Tel, seller.Email, seller.Grade, seller.Derijum, sName);
+                cmd.Connection = conn;
+                cmd.CommandText = query;
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("수정되었습니다.", "수정 완료");
+            }
+            catch (OracleException e)
+            {
+                errorMsg(e, "updateSeller()");
+            }
+        }
+
+
         public int tableChecker(string tableName)
         {
             int count = 0;
@@ -649,12 +666,43 @@ namespace CarManager_0323.DB
             return count;
         }
 
-        public int cusCount(string tableName, string data)
+        public int cusCount(string data)
         {
             int count = 0;
             try
             {
-                string query = string.Format("select count(*) from {0} where c_name = '{1}'", tableName, data);
+                string query = string.Format("select count(*) from customer_t where c_name = '{1}'", data);
+                cmd.Connection = conn;
+                cmd.CommandText = query;
+                cmd.CommandType = System.Data.CommandType.Text;
+                OracleDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        count = Convert.ToInt32(reader["count(*)"]);
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("데이터가 존재하지 않습니다.");
+                }
+                reader.Close();
+
+            }
+            catch (OracleException e)
+            {
+                errorMsg(e, "tableChecker()");
+            }
+            return count;
+        }
+        
+        public int sellerCount(string data)
+        {
+            int count = 0;
+            try
+            {
+                string query = string.Format("select count(*) from seller_t where s_name = '{1}'", data);
                 cmd.Connection = conn;
                 cmd.CommandText = query;
                 cmd.CommandType = System.Data.CommandType.Text;

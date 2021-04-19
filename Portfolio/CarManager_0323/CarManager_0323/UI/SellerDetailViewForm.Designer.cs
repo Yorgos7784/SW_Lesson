@@ -54,6 +54,7 @@ namespace CarManager_0323.UI
             this.cusCancel.Symbol = 61453;
             this.cusCancel.TabIndex = 49;
             this.cusCancel.Text = "나가기";
+            this.cusCancel.Click += new System.EventHandler(this.cusCancel_Click);
             // 
             // cusOK
             // 
@@ -66,6 +67,7 @@ namespace CarManager_0323.UI
             this.cusOK.Size = new System.Drawing.Size(131, 35);
             this.cusOK.TabIndex = 50;
             this.cusOK.Text = "수정";
+            this.cusOK.Click += new System.EventHandler(this.cusOK_Click);
             // 
             // sellerDeri
             // 
@@ -232,6 +234,7 @@ namespace CarManager_0323.UI
             this.Controls.Add(this.name);
             this.Name = "SellerDetailViewForm";
             this.Text = "판매자 상세 정보";
+            this.Load += new System.EventHandler(this.SellerDetailViewForm_Load);
             this.ResumeLayout(false);
 
         }

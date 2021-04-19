@@ -35,7 +35,7 @@ namespace CarManager_0323.UI
 
         private void CustDetailViewForm_Load(object sender, EventArgs e)
         {
-            count = oracle.cusCount("CUSTOMER_T", cus_name);
+            count = oracle.cusCount(cus_name);
             if(count == 1)
             {
                 Customer customer = oracle.selectCustomer(cus_name);
