@@ -29,9 +29,9 @@ namespace MovieReviewProgram.UI
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.windowClose = new Sunny.UI.UISymbolButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.uiLabel1 = new Sunny.UI.UILabel();
@@ -50,6 +50,7 @@ namespace MovieReviewProgram.UI
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.character = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aboutAc = new CxFlatUI.Controls.CxFlatButton();
+            this.uiSymbolButton1 = new Sunny.UI.UISymbolButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.moviePoster)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.castList)).BeginInit();
@@ -82,7 +83,7 @@ namespace MovieReviewProgram.UI
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.Controls.Add(this.windowClose);
             this.panel1.Controls.Add(this.uiLabel1);
-            this.panel1.Font = new System.Drawing.Font("굵은안상수체", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.panel1.Location = new System.Drawing.Point(-4, 1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(791, 48);
@@ -90,7 +91,7 @@ namespace MovieReviewProgram.UI
             // 
             // uiLabel1
             // 
-            this.uiLabel1.Font = new System.Drawing.Font("Orbit-B BT", 18.25F, System.Drawing.FontStyle.Bold);
+            this.uiLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F, System.Drawing.FontStyle.Bold);
             this.uiLabel1.ForeColor = System.Drawing.Color.White;
             this.uiLabel1.Location = new System.Drawing.Point(18, 0);
             this.uiLabel1.Name = "uiLabel1";
@@ -217,18 +218,18 @@ namespace MovieReviewProgram.UI
             // 
             // castList
             // 
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
-            this.castList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
+            this.castList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.castList.BackgroundColor = System.Drawing.Color.White;
             this.castList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.castList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.castList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.castList.ColumnHeadersHeight = 32;
             this.castList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.castList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -239,8 +240,8 @@ namespace MovieReviewProgram.UI
             this.castList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
             this.castList.Location = new System.Drawing.Point(416, 398);
             this.castList.Name = "castList";
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-            this.castList.RowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            this.castList.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.castList.RowTemplate.Height = 29;
             this.castList.SelectedIndex = -1;
             this.castList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -272,11 +273,25 @@ namespace MovieReviewProgram.UI
             this.aboutAc.TextColor = System.Drawing.Color.White;
             this.aboutAc.Click += new System.EventHandler(this.aboutAc_Click);
             // 
+            // uiSymbolButton1
+            // 
+            this.uiSymbolButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiSymbolButton1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.uiSymbolButton1.Location = new System.Drawing.Point(210, 63);
+            this.uiSymbolButton1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiSymbolButton1.Name = "uiSymbolButton1";
+            this.uiSymbolButton1.Size = new System.Drawing.Size(171, 23);
+            this.uiSymbolButton1.Symbol = 61444;
+            this.uiSymbolButton1.TabIndex = 9;
+            this.uiSymbolButton1.Text = "Add Favorite";
+            this.uiSymbolButton1.Click += new System.EventHandler(this.uiSymbolButton1_Click);
+            // 
             // MovieDetailForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(786, 666);
+            this.Controls.Add(this.uiSymbolButton1);
             this.Controls.Add(this.aboutAc);
             this.Controls.Add(this.castList);
             this.Controls.Add(this.mDirector);
@@ -324,5 +339,6 @@ namespace MovieReviewProgram.UI
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn character;
         private CxFlatUI.Controls.CxFlatButton aboutAc;
+        private Sunny.UI.UISymbolButton uiSymbolButton1;
     }
 }

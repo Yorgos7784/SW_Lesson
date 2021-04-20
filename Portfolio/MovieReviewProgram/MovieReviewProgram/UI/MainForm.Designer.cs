@@ -37,12 +37,14 @@ namespace MovieReviewProgram.UI
             this.searchPersonBtn = new Sunny.UI.UIImageButton();
             this.uiImageButton1 = new Sunny.UI.UIImageButton();
             this.uiImageButton2 = new Sunny.UI.UIImageButton();
+            this.favoriteMovieBtn = new Sunny.UI.UIImageButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.searchMovieBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchTvBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchPersonBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiImageButton2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.favoriteMovieBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -57,7 +59,7 @@ namespace MovieReviewProgram.UI
             // 
             // uiLabel1
             // 
-            this.uiLabel1.Font = new System.Drawing.Font("Orbit-B BT", 18.25F, System.Drawing.FontStyle.Bold);
+            this.uiLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F, System.Drawing.FontStyle.Bold);
             this.uiLabel1.ForeColor = System.Drawing.Color.White;
             this.uiLabel1.Location = new System.Drawing.Point(18, 0);
             this.uiLabel1.Name = "uiLabel1";
@@ -69,7 +71,7 @@ namespace MovieReviewProgram.UI
             // searchMovieBtn
             // 
             this.searchMovieBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.searchMovieBtn.Font = new System.Drawing.Font("HY동녘B", 25F, System.Drawing.FontStyle.Bold);
+            this.searchMovieBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold);
             this.searchMovieBtn.ForeColor = System.Drawing.Color.White;
             this.searchMovieBtn.Image = ((System.Drawing.Image)(resources.GetObject("searchMovieBtn.Image")));
             this.searchMovieBtn.Location = new System.Drawing.Point(16, 67);
@@ -83,7 +85,7 @@ namespace MovieReviewProgram.UI
             // searchTvBtn
             // 
             this.searchTvBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.searchTvBtn.Font = new System.Drawing.Font("HY동녘B", 25F, System.Drawing.FontStyle.Bold);
+            this.searchTvBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold);
             this.searchTvBtn.ForeColor = System.Drawing.Color.White;
             this.searchTvBtn.Image = ((System.Drawing.Image)(resources.GetObject("searchTvBtn.Image")));
             this.searchTvBtn.Location = new System.Drawing.Point(325, 67);
@@ -97,7 +99,7 @@ namespace MovieReviewProgram.UI
             // searchPersonBtn
             // 
             this.searchPersonBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.searchPersonBtn.Font = new System.Drawing.Font("HY동녘B", 25F, System.Drawing.FontStyle.Bold);
+            this.searchPersonBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold);
             this.searchPersonBtn.ForeColor = System.Drawing.Color.White;
             this.searchPersonBtn.Image = ((System.Drawing.Image)(resources.GetObject("searchPersonBtn.Image")));
             this.searchPersonBtn.Location = new System.Drawing.Point(16, 331);
@@ -111,12 +113,13 @@ namespace MovieReviewProgram.UI
             // uiImageButton1
             // 
             this.uiImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiImageButton1.Font = new System.Drawing.Font("HY동녘B", 25F, System.Drawing.FontStyle.Bold);
+            this.uiImageButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
             this.uiImageButton1.ForeColor = System.Drawing.Color.White;
             this.uiImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("uiImageButton1.Image")));
-            this.uiImageButton1.Location = new System.Drawing.Point(325, 331);
+            this.uiImageButton1.Location = new System.Drawing.Point(468, 331);
             this.uiImageButton1.Name = "uiImageButton1";
-            this.uiImageButton1.Size = new System.Drawing.Size(303, 128);
+            this.uiImageButton1.Size = new System.Drawing.Size(160, 128);
+            this.uiImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.uiImageButton1.TabIndex = 3;
             this.uiImageButton1.TabStop = false;
             this.uiImageButton1.Text = "About Program";
@@ -125,16 +128,31 @@ namespace MovieReviewProgram.UI
             // uiImageButton2
             // 
             this.uiImageButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiImageButton2.Font = new System.Drawing.Font("HY동녘B", 30F, System.Drawing.FontStyle.Bold);
+            this.uiImageButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
             this.uiImageButton2.ForeColor = System.Drawing.Color.White;
             this.uiImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("uiImageButton2.Image")));
-            this.uiImageButton2.Location = new System.Drawing.Point(325, 461);
+            this.uiImageButton2.Location = new System.Drawing.Point(468, 461);
             this.uiImageButton2.Name = "uiImageButton2";
-            this.uiImageButton2.Size = new System.Drawing.Size(303, 128);
+            this.uiImageButton2.Size = new System.Drawing.Size(160, 128);
+            this.uiImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.uiImageButton2.TabIndex = 3;
             this.uiImageButton2.TabStop = false;
             this.uiImageButton2.Text = "Program Exit";
             this.uiImageButton2.Click += new System.EventHandler(this.uiImageButton2_Click);
+            // 
+            // favoriteMovieBtn
+            // 
+            this.favoriteMovieBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.favoriteMovieBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold);
+            this.favoriteMovieBtn.ForeColor = System.Drawing.Color.White;
+            this.favoriteMovieBtn.Image = ((System.Drawing.Image)(resources.GetObject("favoriteMovieBtn.Image")));
+            this.favoriteMovieBtn.Location = new System.Drawing.Point(325, 331);
+            this.favoriteMovieBtn.Name = "favoriteMovieBtn";
+            this.favoriteMovieBtn.Size = new System.Drawing.Size(137, 258);
+            this.favoriteMovieBtn.TabIndex = 2;
+            this.favoriteMovieBtn.TabStop = false;
+            this.favoriteMovieBtn.Text = "Favorite";
+            this.favoriteMovieBtn.Click += new System.EventHandler(this.favoriteMovieBtn_Click);
             // 
             // MainForm
             // 
@@ -144,6 +162,7 @@ namespace MovieReviewProgram.UI
             this.ClientSize = new System.Drawing.Size(646, 604);
             this.Controls.Add(this.uiImageButton2);
             this.Controls.Add(this.uiImageButton1);
+            this.Controls.Add(this.favoriteMovieBtn);
             this.Controls.Add(this.searchPersonBtn);
             this.Controls.Add(this.searchTvBtn);
             this.Controls.Add(this.searchMovieBtn);
@@ -158,6 +177,7 @@ namespace MovieReviewProgram.UI
             ((System.ComponentModel.ISupportInitialize)(this.searchPersonBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiImageButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiImageButton2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.favoriteMovieBtn)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -170,5 +190,6 @@ namespace MovieReviewProgram.UI
         private Sunny.UI.UIImageButton searchPersonBtn;
         private Sunny.UI.UIImageButton uiImageButton1;
         private Sunny.UI.UIImageButton uiImageButton2;
+        private Sunny.UI.UIImageButton favoriteMovieBtn;
     }
 }

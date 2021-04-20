@@ -633,6 +633,22 @@ namespace CarManager_0323.DB
                 errorMsg(e, "updateSeller()");
             }
         }
+        
+        public void updateSeller(Seller seller, string sName, string sTel)
+        {
+            try
+            {
+                string query = string.Format("UPDATE SELLER_T SET S_NAME='{0}', S_TEL='{1}', S_EMAIL='{2}', S_GRADE='{3}', S_DERIJUM='{4}' WHERE S_NAME='{5}' AND S_TEL='{6}'", seller.Name, seller.Tel, seller.Email, seller.Grade, seller.Derijum, sName, sTel);
+                cmd.Connection = conn;
+                cmd.CommandText = query;
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("수정되었습니다.", "수정 완료");
+            }
+            catch (OracleException e)
+            {
+                errorMsg(e, "updateSeller()");
+            }
+        }
 
 
         public int tableChecker(string tableName)
@@ -671,7 +687,7 @@ namespace CarManager_0323.DB
             int count = 0;
             try
             {
-                string query = string.Format("select count(*) from customer_t where c_name = '{1}'", data);
+                string query = string.Format("select count(*) from customer_t where c_name = '{0}'", data);
                 cmd.Connection = conn;
                 cmd.CommandText = query;
                 cmd.CommandType = System.Data.CommandType.Text;
@@ -702,7 +718,7 @@ namespace CarManager_0323.DB
             int count = 0;
             try
             {
-                string query = string.Format("select count(*) from seller_t where s_name = '{1}'", data);
+                string query = string.Format("select count(*) from seller_t where s_name = '{0}'", data);
                 cmd.Connection = conn;
                 cmd.CommandText = query;
                 cmd.CommandType = System.Data.CommandType.Text;

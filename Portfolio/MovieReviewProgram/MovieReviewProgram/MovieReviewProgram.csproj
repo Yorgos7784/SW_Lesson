@@ -109,10 +109,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="API\MovieApi.cs" />
+    <Compile Include="Common\DataManager.cs" />
     <Compile Include="Common\LogWriter.cs" />
     <Compile Include="Model\MovieInfo.cs" />
     <Compile Include="Model\PersonInfo.cs" />
     <Compile Include="Model\TVInfo.cs" />
+    <Compile Include="UI\FavoriteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FavoriteForm.Designer.cs">
+      <DependentUpon>FavoriteForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +164,9 @@
     <Compile Include="UI\TvDetailForm.Designer.cs">
       <DependentUpon>TvDetailForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\FavoriteForm.resx">
+      <DependentUpon>FavoriteForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>

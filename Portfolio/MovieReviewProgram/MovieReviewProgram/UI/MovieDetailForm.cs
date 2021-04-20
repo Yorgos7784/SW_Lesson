@@ -1,4 +1,6 @@
 ﻿using MovieReviewProgram.API;
+using MovieReviewProgram.Common;
+using MovieReviewProgram.Model;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -12,6 +14,7 @@ namespace MovieReviewProgram.UI
     {
         int id;
         MovieApi ma;
+        Movie movie1;
         public MovieDetailForm(int id, MovieApi ma)
         {
             InitializeComponent();
@@ -22,7 +25,7 @@ namespace MovieReviewProgram.UI
         private async void MovieDetailForm_Load(object sender, EventArgs e)
         {
             // 영화 전체 정보 불러오기
-            Movie movie1 = await ma.getMovieAsync(id);
+            movie1 = await ma.getMovieAsync(id);
 
             // 영화 포스터
             setImage();
@@ -35,7 +38,7 @@ namespace MovieReviewProgram.UI
 
             // 영화 장르
             List<Genre> genres = movie1.Genres;
-            genre.Text = Convert.ToString(genres[0].Name);
+            genre.Text = genres[0].Name;
 
             // 영화 개봉일
             releaseDate.Text = ma.getDate(movie1.ReleaseDate.ToString());
@@ -137,6 +140,21 @@ namespace MovieReviewProgram.UI
         {
             mDirector.ForeColor = Color.LightSkyBlue;
             mDirector.Cursor = Cursors.Hand;
+        }
+
+        private void uiSymbolButton1_Click(object sender, EventArgs e)
+        {
+            foreach (var item in DataManager.movies)
+            {
+                if (movie1.Id == item.MovieId)
+                {
+                    MessageBox.Show("이미 추가되어 있습니다.", "추가 오류");
+                    return;
+                }
+            }
+            DataManager.movies.Add(new MovieInfo(movie1.Title, movie1.Id, movie1.Genres[0].Name, movie1.ReleaseDate.ToString()));
+            MessageBox.Show("즐겨찾기에 추가되었습니다.", "추가 완료");
+            DataManager.Save();
         }
     }
 }

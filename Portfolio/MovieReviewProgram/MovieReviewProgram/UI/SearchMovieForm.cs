@@ -88,6 +88,7 @@ namespace MovieReviewProgram.UI
             {
                 int n = movieSearchList.SelectedItems[0].Index;
                 int id = ids[n];
+                Console.WriteLine(id);
                 getMoviePoster(id);
             }
             else
@@ -99,7 +100,6 @@ namespace MovieReviewProgram.UI
         // 선택한 영화 상세항목
         private void movieDetail_Click(object sender, EventArgs e)
         {
-            
             if (movieSearchList.SelectedItems.Count != 0)
             {
                 int n = movieSearchList.SelectedItems[0].Index;
@@ -124,6 +124,11 @@ namespace MovieReviewProgram.UI
             {
 
             }
+        }
+
+        private void SearchMovieForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

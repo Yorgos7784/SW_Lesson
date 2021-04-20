@@ -1,4 +1,5 @@
 ﻿using MovieReviewProgram.API;
+using MovieReviewProgram.Common;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -44,6 +45,7 @@ namespace MovieReviewProgram.UI
 
         private void uiImageButton2_Click(object sender, EventArgs e)
         {
+            DataManager.Save();
             Application.Exit();
         }
 
@@ -64,6 +66,11 @@ namespace MovieReviewProgram.UI
             {
 
             }
+        }
+
+        private void favoriteMovieBtn_Click(object sender, EventArgs e)
+        {
+            new FavoriteForm(ma).ShowDialog();
         }
     }
 }

@@ -56,7 +56,19 @@ namespace CarManager_0323.UI
 
         private void cusOK_Click(object sender, EventArgs e)
         {
-
+            seller.Name = sellerName.Text;
+            seller.Tel = sellerTel.Text;
+            seller.Email = sellerEmail.Text;
+            seller.Grade = sellerGrade.Text;
+            seller.Derijum = sellerDeri.Text;
+            if (count == 1)
+            {
+                oracle.updateSeller(seller, sName);
+            }
+            else
+            {
+                oracle.updateSeller(seller, sName, sTel);
+            }
         }
     }
 }
