@@ -46,7 +46,6 @@ D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReview
 D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Release\MovieReviewProgram.pdb
 C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Release\MovieReviewProgram.UI.SearchPersonForm.resources
 C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Release\MovieReviewProgram.UI.PersonDetailForm.resources
-C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Release\MovieReviewProgram.csprojAssemblyReference.cache
 C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Release\MovieReviewProgram.UI.SearchTVForm.resources
 C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Release\MovieReviewProgram.UI.TvDetailForm.resources
 D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Release\MovieReviewProgram.UI.PersonDetailForm.resources
@@ -84,3 +83,4 @@ C:\Users\KB\Desktop\MovieReviewProgram\MovieReviewProgram\obj\Release\MovieRevie
 C:\Users\KB\Desktop\MovieReviewProgram\MovieReviewProgram\obj\Release\MovieReviewProgram.csproj.CopyComplete
 C:\Users\KB\Desktop\MovieReviewProgram\MovieReviewProgram\obj\Release\MovieReviewProgram.exe
 C:\Users\KB\Desktop\MovieReviewProgram\MovieReviewProgram\obj\Release\MovieReviewProgram.pdb
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\MovieReviewProgram\MovieReviewProgram\obj\Release\MovieReviewProgram.UI.FavoriteForm.resources
