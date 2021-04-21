@@ -12,22 +12,20 @@ namespace MovieReviewProgram.UI
     partial class PersonDetailForm : Form
     {
         int id;
-        MovieApi ma;
         List<MovieInfo> movies = new List<MovieInfo>();
-        public PersonDetailForm(int id, MovieApi ma)
+        public PersonDetailForm(int id)
         {
             InitializeComponent();
             this.id = id;
-            this.ma = ma;
         }
 
         private async void PersonDetailForm_Load(object sender, EventArgs e)
         {
-            Person person = await ma.getPersonAsync(id);
+            Person person = await MovieApi.getPersonAsync(id);
             Console.WriteLine(person.KnownForDepartment);
             setImage();
             personName.Text = person.Name;
-            birth.Text = ma.getDate(person.Birthday.ToString());
+            birth.Text = MovieApi.getDate(person.Birthday.ToString());
             place.Text = person.PlaceOfBirth;
             biography.Text = person.Biography;
             biography.TextAlign = ContentAlignment.TopLeft;
@@ -39,7 +37,7 @@ namespace MovieReviewProgram.UI
             try
             {
                 // 포스터 불러오기
-                Bitmap DownloadImage = ma.getPersonImage(id);
+                Bitmap DownloadImage = MovieApi.getPersonImage(id);
                 personImage.Image = DownloadImage;
                 personImage.SizeMode = PictureBoxSizeMode.Zoom;
             }
@@ -47,7 +45,7 @@ namespace MovieReviewProgram.UI
             {
                 // 이미지가 존재하지 않을때
                 //MessageBox.Show("이미지가 없습니다.", "이미지 없음");
-                personImage.Image = ma.noImage();
+                personImage.Image = MovieApi.noImage();
                 personImage.SizeMode = PictureBoxSizeMode.Zoom;
             }
         }
@@ -95,7 +93,7 @@ namespace MovieReviewProgram.UI
                         id = movie.MovieId;
                     }
                 }
-                new MovieDetailForm(id, ma).ShowDialog();
+                new MovieDetailForm(id).ShowDialog();
             }
             catch (Exception)
             {

@@ -14,13 +14,11 @@ namespace MovieReviewProgram.UI
 {
     partial class SearchTVForm : Form
     {
-        MovieApi ma;
         List<int> ids = new List<int>();
 
-        public SearchTVForm(MovieApi ma)
+        public SearchTVForm()
         {
             InitializeComponent();
-            this.ma = ma;
         }
 
         private void searchBtn_Click(object sender, EventArgs e)
@@ -33,7 +31,7 @@ namespace MovieReviewProgram.UI
             tvSearchList.Items.Clear();
             ids.Clear();
 
-            List<TVInfo> tvs = ma.searchTV(tvInput.Text);
+            List<TVInfo> tvs = MovieApi.searchTV(tvInput.Text);
             foreach (TVInfo tv in tvs)
             {
                 // 불러온 목록 리스트에 추가
@@ -61,7 +59,7 @@ namespace MovieReviewProgram.UI
             try
             {
                 // 포스터 불러오기
-                Bitmap DownloadImage = ma.getTvImage(id);
+                Bitmap DownloadImage = MovieApi.getTvImage(id);
                 tvImage.Image = DownloadImage;
                 tvImage.SizeMode = PictureBoxSizeMode.Zoom;
             }
@@ -69,7 +67,7 @@ namespace MovieReviewProgram.UI
             {
                 // 이미지가 존재하지 않을때
                 //MessageBox.Show("이미지가 없습니다.", "이미지 없음");
-                tvImage.Image = ma.noImage();
+                tvImage.Image = MovieApi.noImage();
                 tvImage.SizeMode = PictureBoxSizeMode.Zoom;
             }
         }
@@ -104,7 +102,7 @@ namespace MovieReviewProgram.UI
             {
                 int n = tvSearchList.SelectedItems[0].Index;
                 int id = ids[n];
-                new TvDetailForm(id, ma).ShowDialog();
+                new TvDetailForm(id).ShowDialog();
             }
             else
             {

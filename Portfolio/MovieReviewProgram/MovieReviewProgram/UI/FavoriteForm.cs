@@ -15,11 +15,9 @@ namespace MovieReviewProgram.UI
     partial class FavoriteForm : Form
     {
         List<int> ids = new List<int>();
-        MovieApi ma;
-        public FavoriteForm(MovieApi ma)
+        public FavoriteForm()
         {
             InitializeComponent();
-            this.ma = ma;
         }
 
         private void uiSymbolButton1_Click(object sender, EventArgs e)
@@ -50,7 +48,7 @@ namespace MovieReviewProgram.UI
                 try
                 {
                     // 포스터 불러오기
-                    Bitmap DownloadImage = ma.getMovieImage(id);
+                    Bitmap DownloadImage = MovieApi.getMovieImage(id);
                     moviePoster.Image = DownloadImage;
                     moviePoster.SizeMode = PictureBoxSizeMode.Zoom;
                 }
@@ -58,7 +56,7 @@ namespace MovieReviewProgram.UI
                 {
                     // 이미지가 존재하지 않을때
                     //MessageBox.Show("이미지가 없습니다.", "이미지 없음");
-                    moviePoster.Image = ma.noImage();
+                    moviePoster.Image = MovieApi.noImage();
                     moviePoster.SizeMode = PictureBoxSizeMode.Zoom;
                 }
             }
@@ -74,7 +72,7 @@ namespace MovieReviewProgram.UI
             {
                 int n = favoriteMoiveList.SelectedItems[0].Index;
                 int id = ids[n];
-                new MovieDetailForm(id, ma).ShowDialog();
+                new MovieDetailForm(id).ShowDialog();
             }
             else
             {

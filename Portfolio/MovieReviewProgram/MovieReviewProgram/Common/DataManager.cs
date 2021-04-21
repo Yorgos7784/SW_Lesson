@@ -17,6 +17,7 @@ namespace MovieReviewProgram.Common
             Load();
         }
 
+        // xml파일에 있는 정보들을 List에 추가
         public static void Load()
         {
             movies.Clear();
@@ -42,25 +43,25 @@ namespace MovieReviewProgram.Common
                 printLog(ex.Message);
                 printLog(ex.StackTrace);
 
-                // 만약 파일이 없어서 진입한 경우
-                CreateFile(); // 파일 생성
-                Save(); // 파일저장
-                Load(); // 다시 불러오기
-                // Load함수에 문제가 있을 시 무한루프에 빠진다.
+                CreateFile();
+                Save();
+                Load();
             }
         }
 
+        // 파일 생성
         private static void CreateFile()
         {
             string fileName = @"./Movies.xml";
-            StreamWriter writer = File.CreateText(fileName);// 파일이 없으면 해당 파일 생성
-            writer.Dispose(); // 메모리 해제
+            StreamWriter writer = File.CreateText(fileName);
+            writer.Dispose();
         }
 
         public static void Save()
         {
             string booksOutput = string.Empty;
             booksOutput += "<movies>\n";
+            // 파일이 있을경우 List에 새로 추가한 데이터를 xml에 저장
             if (movies.Count > 0)
             {
                 foreach (var item in movies)
@@ -75,7 +76,8 @@ namespace MovieReviewProgram.Common
 
             }
 
-            else //xml파일에 아무것도 없는 경우
+            // List에 아무것도 없는 경우 임시 데이터 하나를 추가
+            else
             {
                 booksOutput += "<movie>\n";
                 booksOutput += "   <movieTitle>타오르는 여인의 초상</movieTitle>\n";
@@ -88,18 +90,16 @@ namespace MovieReviewProgram.Common
             File.WriteAllText(@"./Movies.xml", booksOutput);
         }
 
-        // 두번째 파라미터를 적지 않으면 name에는 parkingHistory가 들어감
+        // 로그파일 기록
         public static void printLog(string contents, string name = "favoriteMovies")
         {
             string directory = "favoriteMovies";
             DirectoryInfo di = new DirectoryInfo(directory);
             if (!di.Exists)
             {
-                di.Create(); // 폴더만들기
+                di.Create();
             }
 
-            // @ : \ 하나 쌉가능 (없으면 \\)
-            //using (StreamWriter writer = new StreamWriter(@"parkingHistory\parkingHistory.txt", true))
             using (StreamWriter writer = new StreamWriter(directory + @"\" + name + ".txt", true))
             {
                 writer.WriteLine(contents);

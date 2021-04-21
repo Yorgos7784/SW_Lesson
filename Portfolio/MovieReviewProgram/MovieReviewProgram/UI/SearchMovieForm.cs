@@ -13,13 +13,11 @@ namespace MovieReviewProgram.UI
 {
     partial class SearchMovieForm : Form
     {
-        MovieApi ma;
         List<int> ids = new List<int>();
 
-        public SearchMovieForm(MovieApi ma)
+        public SearchMovieForm()
         {
             InitializeComponent();
-            this.ma = ma;
         }
 
         private void close_Click(object sender, EventArgs e)
@@ -41,11 +39,13 @@ namespace MovieReviewProgram.UI
                 ids.Clear();
 
                 // 검색한 영화 목록 불러오기
-                List<MovieInfo> movies = ma.searchMovies(movieInput.Text);
+                List<MovieInfo> movies = MovieApi.searchMovies(movieInput.Text);
                 foreach (MovieInfo movie in movies)
                 {
                     // 불러온 목록 리스트에 추가
-                    movieSearchList.Items.Add(new ListViewItem(new String[] { movie.MovieTitle, movie.MovieReleaseDate }));
+                    movieSearchList.Items.Add(new ListViewItem(new String[] { 
+                        movie.MovieTitle, 
+                        movie.MovieReleaseDate }));
                     ids.Add(movie.MovieId);
                 }
             }
@@ -62,7 +62,7 @@ namespace MovieReviewProgram.UI
             try
             {
                 // 포스터 불러오기
-                Bitmap DownloadImage = ma.getMovieImage(id);
+                Bitmap DownloadImage = MovieApi.getMovieImage(id);
                 moviePoster.Image = DownloadImage;
                 moviePoster.SizeMode = PictureBoxSizeMode.Zoom;
             }
@@ -70,7 +70,7 @@ namespace MovieReviewProgram.UI
             {
                 // 이미지가 존재하지 않을때
                 //MessageBox.Show("이미지가 없습니다.", "이미지 없음");
-                moviePoster.Image = ma.noImage();
+                moviePoster.Image = MovieApi.noImage();
                 moviePoster.SizeMode = PictureBoxSizeMode.Zoom;
             }
 
@@ -104,7 +104,7 @@ namespace MovieReviewProgram.UI
             {
                 int n = movieSearchList.SelectedItems[0].Index;
                 int id = ids[n];
-                new MovieDetailForm(id, ma).ShowDialog();
+                new MovieDetailForm(id).ShowDialog();
             }
             else
             {

@@ -13,19 +13,17 @@ namespace MovieReviewProgram.UI
     partial class MovieDetailForm : Form
     {
         int id;
-        MovieApi ma;
         Movie movie1;
-        public MovieDetailForm(int id, MovieApi ma)
+        public MovieDetailForm(int id)
         {
             InitializeComponent();
             this.id = id;
-            this.ma = ma;
         }
 
         private async void MovieDetailForm_Load(object sender, EventArgs e)
         {
             // 영화 전체 정보 불러오기
-            movie1 = await ma.getMovieAsync(id);
+            movie1 = await MovieApi.getMovieAsync(id);
 
             // 영화 포스터
             setImage();
@@ -41,7 +39,7 @@ namespace MovieReviewProgram.UI
             genre.Text = genres[0].Name;
 
             // 영화 개봉일
-            releaseDate.Text = ma.getDate(movie1.ReleaseDate.ToString());
+            releaseDate.Text = MovieApi.getDate(movie1.ReleaseDate.ToString());
 
             // 줄거리
             overView.Text = movie1.Overview;
@@ -57,7 +55,7 @@ namespace MovieReviewProgram.UI
             try
             {
                 // 포스터 불러오기
-                Bitmap DownloadImage = ma.getMovieImage(id);
+                Bitmap DownloadImage = MovieApi.getMovieImage(id);
                 moviePoster.Image = DownloadImage;
                 moviePoster.SizeMode = PictureBoxSizeMode.Zoom;
             }
@@ -65,7 +63,7 @@ namespace MovieReviewProgram.UI
             {
                 // 이미지가 존재하지 않을때
                 //MessageBox.Show("이미지가 없습니다.", "이미지 없음");
-                moviePoster.Image = ma.noImage();
+                moviePoster.Image = MovieApi.noImage();
                 moviePoster.SizeMode = PictureBoxSizeMode.Zoom;
             }
         }
@@ -115,8 +113,8 @@ namespace MovieReviewProgram.UI
             {
                 string acName = castList.Rows[castList.SelectedRows[0].Index].Cells[0].Value.ToString();
                 Console.WriteLine(acName);
-                int id = ma.searchPersonId(acName);
-                new PersonDetailForm(id, ma).ShowDialog();
+                int id = MovieApi.searchPersonId(acName);
+                new PersonDetailForm(id).ShowDialog();
             }
             catch (Exception)
             {
@@ -126,8 +124,8 @@ namespace MovieReviewProgram.UI
 
         private void mDirector_Click(object sender, EventArgs e)
         {
-            int id = ma.searchPersonId(mDirector.Text);
-            new PersonDetailForm(id, ma).ShowDialog();
+            int id = MovieApi.searchPersonId(mDirector.Text);
+            new PersonDetailForm(id).ShowDialog();
         }
 
         private void mDirector_MouseLeave(object sender, EventArgs e)

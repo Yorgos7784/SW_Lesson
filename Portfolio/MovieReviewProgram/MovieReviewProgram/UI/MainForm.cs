@@ -15,12 +15,9 @@ namespace MovieReviewProgram.UI
 {
     public partial class MainForm : Form
     {
-        TMDbClient client = new TMDbClient("e1505e132578f77683ee1878346d1255");
-        MovieApi ma;
         public MainForm()
         {
             InitializeComponent();
-            ma = new MovieApi(client);
         }
 
         private void uiSymbolButton1_Click(object sender, EventArgs e)
@@ -30,17 +27,17 @@ namespace MovieReviewProgram.UI
 
         private void searchMovieBtn_Click(object sender, EventArgs e)
         {
-            new SearchMovieForm(ma).ShowDialog();
+            new SearchMovieForm().ShowDialog();
         }
 
         private void searchTvBtn_Click(object sender, EventArgs e)
         {
-            new SearchTVForm(ma).ShowDialog();
+            new SearchTVForm().ShowDialog();
         }
 
         private void searchPersonBtn_Click(object sender, EventArgs e)
         {
-            new SearchPersonForm(ma).ShowDialog();
+            new SearchPersonForm().ShowDialog();
         }
 
         private void uiImageButton2_Click(object sender, EventArgs e)
@@ -70,7 +67,7 @@ namespace MovieReviewProgram.UI
 
         private void favoriteMovieBtn_Click(object sender, EventArgs e)
         {
-            new FavoriteForm(ma).ShowDialog();
+            new FavoriteForm().ShowDialog();
         }
     }
 }

@@ -18,15 +18,10 @@ namespace MovieReviewProgram.API
 {
     class MovieApi
     {
-        TMDbClient client;
-        //TMDbClient client = new TMDbClient("e1505e132578f77683ee1878346d1255");
+        private static TMDbClient client = new TMDbClient("e1505e132578f77683ee1878346d1255");
 
-        public MovieApi(TMDbClient client)
-        {
-            this.client = client;
-        }
-
-        public List<MovieInfo> searchMovies(string movieName)
+        // 이름으로 영화 검색
+        public static List<MovieInfo> searchMovies(string movieName)
         {
             List<MovieInfo> movies = new List<MovieInfo>();
             SearchContainer<SearchMovie> results = client.SearchMovieAsync(movieName).Result;
@@ -39,7 +34,8 @@ namespace MovieReviewProgram.API
             return movies;
         }
 
-        public List<PersonInfo> searchPerson(string castName)
+        // 이름으로 인물 검색
+        public static List<PersonInfo> searchPerson(string castName)
         {
             List<PersonInfo> persons = new List<PersonInfo>();
             SearchContainer<SearchPerson> results = client.SearchPersonAsync(castName).Result;
@@ -52,13 +48,15 @@ namespace MovieReviewProgram.API
             return persons;
         }
 
-        public int searchPersonId(string name)
+        // 인물 ID
+        public static int searchPersonId(string name)
         {
             SearchContainer<SearchPerson> results = client.SearchPersonAsync(name).Result;
             return results.Results[0].Id;
         }
 
-        public List<TVInfo> searchTV(string tvName)
+        // 제목으로 TV 시리즈 검색
+        public static List<TVInfo> searchTV(string tvName)
         {
             List<TVInfo> tvs = new List<TVInfo>();
             SearchContainer<SearchTv> results = client.SearchTvShowAsync(tvName).Result;
@@ -78,16 +76,19 @@ namespace MovieReviewProgram.API
             return tvs;
         }
 
-        public Bitmap getMovieImage(int id)
+        // 영화 포스터 불러오기
+        public static Bitmap getMovieImage(int id)
         {
             Movie movie1 = client.GetMovieAsync(id).Result;
             WebClient Downloader = new WebClient();
-            Stream ImageStream = Downloader.OpenRead("https://www.themoviedb.org/t/p/w600_and_h900_bestv2" + movie1.PosterPath);
+            Stream ImageStream = Downloader.OpenRead("https://www.themoviedb.org/t/p/w600_and_h900_bestv2"
+                + movie1.PosterPath);
             Bitmap DownloadImage = Bitmap.FromStream(ImageStream) as Bitmap;
             return DownloadImage;
         }
         
-        public Bitmap getPersonImage(int id)
+        // 인물 사진 불러오기
+        public static Bitmap getPersonImage(int id)
         {
             Person person = client.GetPersonAsync(id).Result;
             WebClient Downloader = new WebClient();
@@ -96,7 +97,8 @@ namespace MovieReviewProgram.API
             return DownloadImage;
         }
 
-        public Bitmap getTvImage(int id)
+        // TV 이미지 불러오기
+        public static Bitmap getTvImage(int id)
         {
             TvShow tv = client.GetTvShowAsync(id).Result;
             WebClient Downloader = new WebClient();
@@ -105,7 +107,8 @@ namespace MovieReviewProgram.API
             return DownloadImage;
         }
 
-        public Bitmap noImage()
+        // 온라인 이미지가 없을 시
+        public static Bitmap noImage()
         {
             WebClient Downloader = new WebClient();
             Stream ImageStream = Downloader.OpenRead("https://i.stack.imgur.com/y9DpT.jpg");
@@ -113,22 +116,26 @@ namespace MovieReviewProgram.API
             return DownloadImage;
         }
 
-        public async Task<Movie> getMovieAsync(int id)
+        // 특정 영화 정보 불러오기
+        public static async Task<Movie> getMovieAsync(int id)
         {
             return await client.GetMovieAsync(id, MovieMethods.Credits);
         }
 
-        public async Task<Person> getPersonAsync(int id)
+        // 특정 인물 정보 불러오기
+        public static async Task<Person> getPersonAsync(int id)
         {
             return await client.GetPersonAsync(id, PersonMethods.MovieCredits);
         }
 
-        public async Task<TvShow> getTvShowAsync(int id)
+        // 특정 TV시리즈 정보 불러오기
+        public static async Task<TvShow> getTvShowAsync(int id)
         {
             return await client.GetTvShowAsync(id, TvShowMethods.Credits);
         }
 
-        public string getDate(string date)
+        // 날자정보 자르기
+        public static string getDate(string date)
         {
             try
             {

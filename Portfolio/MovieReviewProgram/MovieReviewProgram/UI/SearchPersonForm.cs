@@ -15,12 +15,10 @@ namespace MovieReviewProgram.UI
 {
     partial class SearchPersonForm : Form
     {
-        MovieApi ma;
         List<int> ids = new List<int>();
-        public SearchPersonForm(MovieApi ma)
+        public SearchPersonForm()
         {
             InitializeComponent();
-            this.ma = ma;
         }
 
         private void searchBtn_Click(object sender, EventArgs e)
@@ -43,7 +41,7 @@ namespace MovieReviewProgram.UI
             personSearchList.Items.Clear();
             ids.Clear();
 
-            List<PersonInfo> persons = ma.searchPerson(personInput.Text);
+            List<PersonInfo> persons = MovieApi.searchPerson(personInput.Text);
             foreach (PersonInfo person in persons)
             {
                 personSearchList.Items.Add(new ListViewItem(new String[] { person.Name }));
@@ -70,7 +68,7 @@ namespace MovieReviewProgram.UI
             try
             {
                 // 포스터 불러오기
-                Bitmap DownloadImage = ma.getPersonImage(id);
+                Bitmap DownloadImage = MovieApi.getPersonImage(id);
                 personImage.Image = DownloadImage;
                 personImage.SizeMode = PictureBoxSizeMode.Zoom;
             }
@@ -78,7 +76,7 @@ namespace MovieReviewProgram.UI
             {
                 // 이미지가 존재하지 않을때
                 //MessageBox.Show("이미지가 없습니다.", "이미지 없음");
-                personImage.Image = ma.noImage();
+                personImage.Image = MovieApi.noImage();
                 personImage.SizeMode = PictureBoxSizeMode.Zoom;
             }
         }
@@ -103,7 +101,7 @@ namespace MovieReviewProgram.UI
             {
                 int n = personSearchList.SelectedItems[0].Index;
                 int id = ids[n];
-                new PersonDetailForm(id, ma).ShowDialog();
+                new PersonDetailForm(id).ShowDialog();
             }
             else
             {
