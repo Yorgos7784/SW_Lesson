@@ -13,7 +13,10 @@ namespace CarManager_0323.DB
         const string CREATE_TB_ERROR = "테이블+시퀀스 생성";
         const string DROP_TB_ERROR = "테이블+시퀀스 삭제";
 
-        const string ORADB = "Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=XE)));User Id=c##scott;Password=1126;";
+        const string ORADB = "Data Source=(DESCRIPTION=(ADDRESS_LIST=" +
+            "(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521)))" +
+            "(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=XE)));" +
+            "User Id=c##scott;Password=1126;";
         OracleConnection conn;
         OracleCommand cmd;
 
@@ -25,6 +28,7 @@ namespace CarManager_0323.DB
         }
 
         // ~ : 소멸자 - 객체가 소멸될 때
+        // 객체가 소멸 할 때 DB 접속 해제
         ~DaoOracle()
         {
             dbClose();
@@ -204,27 +208,13 @@ namespace CarManager_0323.DB
             }
         }
 
-        public void insertCar()
-        {
-            try
-            {
-                string query = "INSERT INTO CAR VALUES (CAR_SEQ.NEXTVAL,'그랜저', '은색', '현대', 40000000, '2021년')";
-                cmd.Connection = conn;
-                cmd.CommandText = query;
-                cmd.ExecuteNonQuery();
-                Console.WriteLine("데이터 추가 성공!!");
-            }
-            catch (OracleException e)
-            {
-                errorMsg(e, "insertCar()");
-            }
-        }
-
         public void insertCar(Car car)
         {
             try
             {
-                string query = string.Format("INSERT INTO CAR_T VALUES (CAR_T_SEQ.NEXTVAL,'{0}', '{1}', '{2}', {3}, '{4}')", car.Model, car.Color, car.Company, car.Price, car.Year);
+                string query = string.Format("INSERT INTO CAR_T VALUES " +
+                    "(CAR_T_SEQ.NEXTVAL,'{0}', '{1}', '{2}', {3}, '{4}')",
+                    car.Model, car.Color, car.Company, car.Price, car.Year);
                 cmd.Connection = conn;
                 cmd.CommandText = query;
                 cmd.ExecuteNonQuery();
@@ -232,42 +222,6 @@ namespace CarManager_0323.DB
             catch (OracleException e)
             {
                 errorMsg(e, "insertCar()");
-            }
-        }
-
-        public void insertCar(Car car, List<Deal> list)
-        {
-            try
-            {
-                string query = string.Format("INSERT INTO CAR_T VALUES (CAR_T_SEQ.NEXTVAL,'{0}', '{1}', '{2}', {3}, '{4}')", car.Model, car.Color, car.Company, car.Price, car.Year);
-                cmd.Connection = conn;
-                cmd.CommandText = query;
-                cmd.ExecuteNonQuery();
-                Console.WriteLine("데이터 추가 성공!!");
-                MessageBox.Show("추가되었습니다", "추가 완료");
-                list[0].Car = car;
-            }
-            catch (OracleException e)
-            {
-                errorMsg(e, "insertCar()");
-            }
-        }
-
-        public void insertCustomer()
-        {
-            try
-            {
-                string query = "INSERT INTO CUSTOMER VALUES (CUSTOMER_SEQ.NEXTVAL,'홍길동', '010-1234-5678', '조선 한양 홍대감댁', 'hong@naver.com')";
-                cmd.Connection = conn;
-                cmd.CommandText = query;
-                cmd.ExecuteNonQuery();
-                Console.WriteLine("데이터 추가 성공!!");
-                MessageBox.Show("추가되었습니다", "추가 완료");
-            }
-
-            catch (OracleException e)
-            {
-                errorMsg(e, "insertCustomer()");
             }
         }
 
@@ -286,41 +240,6 @@ namespace CarManager_0323.DB
             }
         }
 
-        public void insertCustomer(Customer customer, List<Deal> list)
-        {
-            try
-            {
-                string query = string.Format("INSERT INTO CUSTOMER_T VALUES (CUSTOMER_T_SEQ.NEXTVAL,'{0}', '{1}', '{2}', '{3}')", customer.Name, customer.Tel, customer.Addr, customer.Email);
-                cmd.Connection = conn;
-                cmd.CommandText = query;
-                cmd.ExecuteNonQuery();
-                Console.WriteLine("데이터 추가 성공!!");
-                MessageBox.Show("추가되었습니다", "추가 완료");
-                list[0].Customer = customer;
-            }
-            catch (OracleException e)
-            {
-                errorMsg(e, "insertCustomer()");
-            }
-        }
-
-        public void insertSeller()
-        {
-            try
-            {
-                string query = "INSERT INTO SELLER VALUES (SELLER_SEQ.NEXTVAL,'전우치', '010-9876-5432', 'jun@gmail.com', '사원', '동대구점')";
-                cmd.Connection = conn;
-                cmd.CommandText = query;
-                cmd.ExecuteNonQuery();
-                Console.WriteLine("데이터 추가 성공!!");
-                MessageBox.Show("추가되었습니다", "추가 완료");
-            }
-            catch (OracleException e)
-            {
-                errorMsg(e, "insertSeller()");
-            }
-        }
-
         public void insertSeller(Seller seller)
         {
             try
@@ -329,24 +248,6 @@ namespace CarManager_0323.DB
                 cmd.Connection = conn;
                 cmd.CommandText = query;
                 cmd.ExecuteNonQuery();
-            }
-            catch (OracleException e)
-            {
-                errorMsg(e, "insertSeller()");
-            }
-        }
-
-        public void insertSeller(Seller seller, List<Deal> list)
-        {
-            try
-            {
-                string query = string.Format("INSERT INTO SELLER_T VALUES (SELLER_T_SEQ.NEXTVAL,'{0}', '{1}', '{2}', '{3}', '{4}')", seller.Name, seller.Tel, seller.Email, seller.Grade, seller.Derijum);
-                cmd.Connection = conn;
-                cmd.CommandText = query;
-                cmd.ExecuteNonQuery();
-                Console.WriteLine("데이터 추가 성공!!");
-                MessageBox.Show("추가되었습니다", "추가 완료");
-                list[0].Seller = seller;
             }
             catch (OracleException e)
             {
@@ -649,8 +550,39 @@ namespace CarManager_0323.DB
                 errorMsg(e, "updateSeller()");
             }
         }
-
-
+        
+        public void deleteAllDeal()
+        {
+            try
+            {
+                string query = "DELETE FROM DEAL_T";
+                cmd.Connection = conn;
+                cmd.CommandText = query;
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("삭제되었습니다.", "삭제완료");
+            }
+            catch (OracleException e)
+            {
+                errorMsg(e, "deleteDeal()");
+            }
+        }
+        
+        public void deleteAllDeal1()
+        {
+            try
+            {
+                string query = "DELETE FROM DEAL_T";
+                cmd.Connection = conn;
+                cmd.CommandText = query;
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("삭제되었습니다.", "삭제완료");
+            }
+            catch (OracleException e)
+            {
+                errorMsg(e, "deleteDeal()");
+            }
+        }
+        
         public int tableChecker(string tableName)
         {
             int count = 0;

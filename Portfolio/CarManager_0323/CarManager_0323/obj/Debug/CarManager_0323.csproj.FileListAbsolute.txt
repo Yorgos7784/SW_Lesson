@@ -54,9 +54,6 @@ C:\Users\KB\Desktop\SW_Lesson\Portfolio\CarManager_0323\CarManager_0323\obj\Debu
 C:\Users\KB\Desktop\SW_Lesson\Portfolio\CarManager_0323\CarManager_0323\obj\Debug\CarManager_0323.UI.CarDetailViewForm.resources
 C:\Users\KB\Desktop\SW_Lesson\Portfolio\CarManager_0323\CarManager_0323\obj\Debug\CarManager_0323.UI.CustDetailViewForm.resources
 C:\Users\KB\Desktop\SW_Lesson\Portfolio\CarManager_0323\CarManager_0323\obj\Debug\CarManager_0323.UI.DealViewForm.resources
-C:\Users\KB\Desktop\SW_Lesson\Portfolio\CarManager_0323\CarManager_0323\obj\Debug\CarManager_0323.UI.InstCarForm.resources
-C:\Users\KB\Desktop\SW_Lesson\Portfolio\CarManager_0323\CarManager_0323\obj\Debug\CarManager_0323.UI.InstCustomerForm.resources
-C:\Users\KB\Desktop\SW_Lesson\Portfolio\CarManager_0323\CarManager_0323\obj\Debug\CarManager_0323.UI.InstSellerForm.resources
 C:\Users\KB\Desktop\SW_Lesson\Portfolio\CarManager_0323\CarManager_0323\obj\Debug\CarManager_0323.MainForm.resources
 C:\Users\KB\Desktop\SW_Lesson\Portfolio\CarManager_0323\CarManager_0323\obj\Debug\CarManager_0323.Properties.Resources.resources
 C:\Users\KB\Desktop\SW_Lesson\Portfolio\CarManager_0323\CarManager_0323\obj\Debug\CarManager_0323.csproj.GenerateResource.cache
@@ -88,3 +85,4 @@ D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\CarManager_0323\CarManager_032
 D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\CarManager_0323\CarManager_0323\obj\Debug\CarManager_0323.csproj.CopyComplete
 D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\CarManager_0323\CarManager_0323\obj\Debug\CarManager_0323.exe
 D:\응용 SW 개발자 과정\SW_Lesson\Portfolio\CarManager_0323\CarManager_0323\obj\Debug\CarManager_0323.pdb
+C:\Users\KB\Desktop\SW_Lesson\Portfolio\CarManager_0323\CarManager_0323\obj\Debug\CarManager_0323.UI.SellerDetailViewForm.resources

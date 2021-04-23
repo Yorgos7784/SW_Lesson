@@ -68,6 +68,7 @@
     <Compile Include="Model\Car.cs" />
     <Compile Include="Model\Customer.cs" />
     <Compile Include="Model\Deal.cs" />
+    <Compile Include="Model\DealIds.cs" />
     <Compile Include="Model\ListModel.cs" />
     <Compile Include="Model\Seller.cs" />
     <Compile Include="UI\AddDealForm.cs">
@@ -93,24 +94,6 @@
     </Compile>
     <Compile Include="UI\DealViewForm.Designer.cs">
       <DependentUpon>DealViewForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\InstCarForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\InstCarForm.Designer.cs">
-      <DependentUpon>InstCarForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\InstCustomerForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\InstCustomerForm.Designer.cs">
-      <DependentUpon>InstCustomerForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\InstSellerForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\InstSellerForm.Designer.cs">
-      <DependentUpon>InstSellerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\MainForm.cs">
       <SubType>Form</SubType>
@@ -138,15 +121,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\DealViewForm.resx">
       <DependentUpon>DealViewForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\InstCarForm.resx">
-      <DependentUpon>InstCarForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\InstCustomerForm.resx">
-      <DependentUpon>InstCustomerForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\InstSellerForm.resx">
-      <DependentUpon>InstSellerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
