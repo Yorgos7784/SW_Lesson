@@ -12,19 +12,16 @@ namespace CarManager_0323.UI
     partial class DealViewForm : MaterialForm
     {
         private DaoOracle oracle;
-        private DealHandler dHandler;
 
         public DealViewForm()
         {
             InitializeComponent();
         }
 
-        public DealViewForm(DaoOracle oracle, DealHandler dHandler)
+        public DealViewForm(DaoOracle oracle)
         {
             InitializeComponent();
             this.oracle = oracle;
-            this.dHandler = dHandler;
-
         }
 
         private void cusInfo_Click(object sender, EventArgs e)
@@ -121,5 +118,14 @@ namespace CarManager_0323.UI
             Close();
         }
 
+        private void uiButton1_Click(object sender, EventArgs e)
+        {
+            oracle.deleteAllDeal();
+            oracle.deleteAllCar();
+            oracle.deleteAllSeller();
+            oracle.deleteAllCust();
+            MessageBox.Show("데이터 전체 삭제 완료", "삭제 왼료");
+            initDealView();
+        }
     }
 }

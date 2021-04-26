@@ -559,7 +559,6 @@ namespace CarManager_0323.DB
                 cmd.Connection = conn;
                 cmd.CommandText = query;
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("삭제되었습니다.", "삭제완료");
             }
             catch (OracleException e)
             {
@@ -567,15 +566,44 @@ namespace CarManager_0323.DB
             }
         }
         
-        public void deleteAllDeal1()
+        public void deleteAllCar()
         {
             try
             {
-                string query = "DELETE FROM DEAL_T";
+                string query = "DELETE FROM CAR_T";
                 cmd.Connection = conn;
                 cmd.CommandText = query;
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("삭제되었습니다.", "삭제완료");
+            }
+            catch (OracleException e)
+            {
+                errorMsg(e, "deleteDeal()");
+            }
+        }
+        
+        public void deleteAllSeller()
+        {
+            try
+            {
+                string query = "DELETE FROM SELLER_T";
+                cmd.Connection = conn;
+                cmd.CommandText = query;
+                cmd.ExecuteNonQuery();
+            }
+            catch (OracleException e)
+            {
+                errorMsg(e, "deleteDeal()");
+            }
+        }
+        
+        public void deleteAllCust()
+        {
+            try
+            {
+                string query = "DELETE FROM CUSTOMER_T";
+                cmd.Connection = conn;
+                cmd.CommandText = query;
+                cmd.ExecuteNonQuery();
             }
             catch (OracleException e)
             {
@@ -588,7 +616,8 @@ namespace CarManager_0323.DB
             int count = 0;
             try
             {
-                string query = string.Format("select count(*) from all_tables where table_name = '{0}'", tableName);
+                string query = string.Format("select count(*) from all_tables " +
+                    "where table_name = '{0}'", tableName);
                 cmd.Connection = conn;
                 cmd.CommandText = query;
                 cmd.CommandType = System.Data.CommandType.Text;
@@ -619,7 +648,8 @@ namespace CarManager_0323.DB
             int count = 0;
             try
             {
-                string query = string.Format("select count(*) from customer_t where c_name = '{0}'", data);
+                string query = string.Format("select count(*) from customer_t " +
+                    "where c_name = '{0}'", data);
                 cmd.Connection = conn;
                 cmd.CommandText = query;
                 cmd.CommandType = System.Data.CommandType.Text;

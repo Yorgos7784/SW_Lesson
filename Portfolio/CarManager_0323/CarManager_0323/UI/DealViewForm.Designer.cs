@@ -40,6 +40,7 @@ namespace CarManager_0323.UI
             this.viewClose = new Sunny.UI.UIButton();
             this.carInfo = new Sunny.UI.UIButton();
             this.sellerInfo = new Sunny.UI.UIButton();
+            this.uiButton1 = new Sunny.UI.UIButton();
             this.SuspendLayout();
             // 
             // dealList
@@ -145,12 +146,25 @@ namespace CarManager_0323.UI
             this.sellerInfo.Text = "판매원 상세 정보";
             this.sellerInfo.Click += new System.EventHandler(this.sellerInfo_Click);
             // 
+            // uiButton1
+            // 
+            this.uiButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiButton1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.uiButton1.Location = new System.Drawing.Point(554, 205);
+            this.uiButton1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiButton1.Name = "uiButton1";
+            this.uiButton1.Size = new System.Drawing.Size(135, 35);
+            this.uiButton1.TabIndex = 5;
+            this.uiButton1.Text = "거래 전체 삭제";
+            this.uiButton1.Click += new System.EventHandler(this.uiButton1_Click);
+            // 
             // DealViewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(706, 450);
             this.Controls.Add(this.viewClose);
+            this.Controls.Add(this.uiButton1);
             this.Controls.Add(this.sellerInfo);
             this.Controls.Add(this.carInfo);
             this.Controls.Add(this.cusInfo);
@@ -176,5 +190,6 @@ namespace CarManager_0323.UI
         private System.Windows.Forms.ColumnHeader deal_date;
         private Sunny.UI.UIButton carInfo;
         private Sunny.UI.UIButton sellerInfo;
+        private Sunny.UI.UIButton uiButton1;
     }
 }

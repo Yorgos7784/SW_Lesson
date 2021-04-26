@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{21335333-4CA1-4BCF-AE69-52C10EB68A9C}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>CarManager_0323</RootNamespace>
     <AssemblyName>CarManager_0323</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>

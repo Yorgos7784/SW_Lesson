@@ -112,9 +112,6 @@ namespace CarManager_0323
             if (checker >= 1)
             {
                 List<Deal> list = dHandler.getOrderList();
-                //dao.insertDeal(list[0]);
-                /*dao.insertDeal(list[0].Seller, list[0].Customer, list[0].Car);
-                dHandler.dealListClear();*/
                 new AddDealForm(dao, list, dHandler).ShowDialog();
             }
             else
@@ -130,7 +127,7 @@ namespace CarManager_0323
 
         private void selectDeal_Click(object sender, EventArgs e)
         {
-            new DealViewForm(dao, dHandler).ShowDialog();
+            new DealViewForm(dao).ShowDialog();
         }
 
         private void info_Click(object sender, EventArgs e)
